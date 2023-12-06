@@ -1,0 +1,27 @@
+{
+  "resolution": {
+    "designWidth": 720,
+    "designHeight": 1280,
+    "screenMode": "vertical",
+    "backgroundColor": "rgba(0, 0, 0, 1)"
+  },
+  "2D": {
+    "defaultFont": "MicrosoftYaHei"
+  },
+  "3D": {
+    "lightClusterCount": {
+      "x": 12,
+      "y": 12,
+      "z": 12
+    }
+  },
+  "physics2D": {
+    "gravity": {
+      "y": 500
+    }
+  },
+  "modules": {
+    "laya.d3": false,
+    "laya.ui": true
+  }
+}
