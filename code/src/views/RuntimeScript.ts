@@ -1,13 +1,13 @@
 const { regClass } = Laya;
-import { Door } from "../Main";
+import { GameFSM } from "../GameFSM";
 import { RuntimeScriptBase } from "./RuntimeScript.generated";
 
 @regClass()
 export class RuntimeScript extends RuntimeScriptBase {
-    private door: Door;
+    private gameFSM: GameFSM;
 
     onEnable(): void {
-        this.door = new Door(10086);
+        this.gameFSM = new GameFSM(10086);
         this.tab.selectHandler = Laya.Handler.create(this, this.onTabSelected, null, false);
         this.timerLoop(10, this, this.changeStateText);
     }
@@ -16,19 +16,19 @@ export class RuntimeScript extends RuntimeScriptBase {
         console.log("onTab selected========", index);
         switch (index) {
             case 0:
-                this.door.open();
+                this.gameFSM.open();
                 break;
             case 1:
-                this.door.close();
+                this.gameFSM.close();
                 break;
             case 2:
-                this.door.lock();
+                this.gameFSM.lock();
                 break;
             case 3:
-                this.door.unlock(10086);
+                this.gameFSM.unlock(10086);
                 break;
             case 4:
-                this.door.break();
+                this.gameFSM.break();
                 break;
             default:
                 break;
@@ -36,7 +36,7 @@ export class RuntimeScript extends RuntimeScriptBase {
     }
 
     private changeStateText(): void {
-        this.txtState.text = this.door.getState();
+        this.txtState.text = this.gameFSM.getState();
     }
 
 }
