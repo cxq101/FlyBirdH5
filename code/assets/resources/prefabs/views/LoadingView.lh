@@ -1,6 +1,7 @@
 {
   "_$ver": 1,
   "_$id": "m7ihf5yabw",
+  "_$runtime": "res://bfdb40fe-8c9c-4cfb-920f-c116cf656b86",
   "_$type": "Box",
   "name": "Box",
   "width": 720,
@@ -15,7 +16,7 @@
       "_$id": "r3m2h5np",
       "_$var": true,
       "_$type": "ProgressBar",
-      "name": "bar",
+      "name": "progress",
       "x": 100,
       "y": 1056,
       "width": 520,

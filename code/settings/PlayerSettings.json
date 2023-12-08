@@ -3,7 +3,7 @@
     "designWidth": 720,
     "designHeight": 1280,
     "screenMode": "vertical",
-    "backgroundColor": "rgba(0, 0, 0, 1)"
+    "backgroundColor": "rgba(15, 200, 178, 1)"
   },
   "2D": {
     "defaultFont": "MicrosoftYaHei"
@@ -23,5 +23,10 @@
   "modules": {
     "laya.d3": false,
     "laya.ui": true
+  },
+  "splash": {
+    "backgroundColor": "rgba(11, 237, 232, 1)",
+    "image": "resources/layaAir.png",
+    "enabledInPreview": true
   }
 }
