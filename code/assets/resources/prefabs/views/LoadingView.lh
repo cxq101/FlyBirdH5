@@ -1,0 +1,47 @@
+{
+  "_$ver": 1,
+  "_$id": "m7ihf5yabw",
+  "_$type": "Box",
+  "name": "Box",
+  "width": 720,
+  "height": 1280,
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "bgColor": "rgba(255, 255, 255, 1)",
+  "_$child": [
+    {
+      "_$id": "r3m2h5np",
+      "_$var": true,
+      "_$type": "ProgressBar",
+      "name": "bar",
+      "x": 100,
+      "y": 1056,
+      "width": 520,
+      "height": 24,
+      "left": 100,
+      "right": 100,
+      "bottom": 200,
+      "skin": "res://ae3de75e-ee9f-478d-9f8b-ede75a4fc296",
+      "value": 0.275
+    },
+    {
+      "_$id": "8im2b2jg",
+      "_$var": true,
+      "_$type": "Label",
+      "name": "lblProgress",
+      "x": 300,
+      "y": 1056,
+      "width": 120,
+      "height": 28,
+      "centerX": 0,
+      "text": "Label",
+      "fontSize": 20,
+      "color": "#FFFFFF",
+      "align": "center",
+      "valign": "middle",
+      "padding": "0,0,0,0"
+    }
+  ]
+}

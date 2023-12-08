@@ -10,8 +10,12 @@
   "name": "Root",
   "_$comp": [
     {
-      "_$type": "7bad1742-6eed-4d8d-81c0-501dc5bf03d6",
-      "scriptPath": "../src/Main.ts"
+      "_$type": "ff98e29a-3e94-41c3-b4f2-b652e2bd33c2",
+      "scriptPath": "../src/Boot.ts",
+      "loadingPrefab": {
+        "_$uuid": "62458a87-76ec-4cf5-8c59-e530d7142755",
+        "_$type": "Prefab"
+      }
     }
   ],
   "_$child": [
@@ -50,31 +54,6 @@
       "labelStrokeColor": null,
       "labelAlign": null,
       "strokeColors": null
-    },
-    {
-      "_$id": "q1ftpwyx",
-      "_$type": "Sprite",
-      "name": "Sprite",
-      "x": 351.99999999999994,
-      "y": 170,
-      "width": 100,
-      "height": 100
-    },
-    {
-      "_$id": "bpwdopwa",
-      "_$type": "Sprite",
-      "name": "Boot",
-      "x": 318,
-      "y": 276,
-      "width": 100,
-      "height": 100,
-      "_$comp": [
-        {
-          "_$type": "ff98e29a-3e94-41c3-b4f2-b652e2bd33c2",
-          "scriptPath": "../src/Boot.ts",
-          "text": ""
-        }
-      ]
     }
   ]
 }
