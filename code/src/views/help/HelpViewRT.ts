@@ -6,7 +6,7 @@ import { HelpViewRTBase } from "./HelpViewRT.generated";
 @regClass()
 export class HelpViewRT extends HelpViewRTBase {
     private onClickClose(): void {
-        ViewMgr.ins.close(EViewKey.Test);
+        ViewMgr.ins.close(EViewKey.HelpView);
     }
     
     onAwake(): void {

@@ -1,0 +1,81 @@
+{
+  "_$ver": 1,
+  "_$id": "4bxp47bw4u",
+  "_$runtime": "res://c1a39dd1-03e4-46b1-aa39-546cb4647930",
+  "_$type": "Box",
+  "name": "Box",
+  "width": 720,
+  "height": 1280,
+  "_mouseState": 2,
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "_$comp": [
+    {
+      "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+      "scriptPath": "../src/core/UI/BaseView.ts"
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "4hfznhgx",
+      "_$type": "Image",
+      "name": "Image",
+      "x": 87,
+      "y": 124,
+      "width": 546,
+      "height": 812,
+      "centerX": 0,
+      "skin": "res://dda0809b-cfe4-41b3-a392-8bd79c456ee1",
+      "sizeGrid": "15,15,15,15,0",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "dceuk0pr",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnClose",
+      "x": 87,
+      "y": 1000,
+      "width": 546,
+      "height": 60,
+      "_mouseState": 2,
+      "centerX": 0,
+      "centerY": 390,
+      "skin": "res://60a9086c-a9c2-4e01-a563-355c117b509e",
+      "label": "X",
+      "labelSize": 30
+    },
+    {
+      "_$id": "o36uhulx",
+      "_$var": true,
+      "_$type": "List",
+      "name": "list",
+      "x": 121,
+      "y": 161,
+      "width": 478,
+      "height": 742,
+      "_mouseState": 2,
+      "centerX": 0,
+      "itemTemplate": {
+        "_$ref": "7op8p7vv",
+        "_$tmpl": "itemRender"
+      },
+      "repeatX": 1,
+      "repeatY": 5,
+      "spaceY": 5,
+      "scrollType": 2,
+      "_$child": [
+        {
+          "_$id": "7op8p7vv",
+          "_$prefab": "9d3ff59b-703a-4a3d-99dd-d70582cf99d9",
+          "name": "SkinItem",
+          "active": true,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  ]
+}

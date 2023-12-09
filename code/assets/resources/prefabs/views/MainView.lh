@@ -1,0 +1,89 @@
+{
+  "_$ver": 1,
+  "_$id": "3z44b8b1w4",
+  "_$runtime": "res://5c88af03-d808-4f96-9f92-84ae8e060e86",
+  "_$type": "Box",
+  "name": "Box",
+  "width": 720,
+  "height": 1280,
+  "_mouseState": 2,
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "_$comp": [
+    {
+      "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+      "scriptPath": "../src/core/UI/BaseView.ts"
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "jjbgxkdq",
+      "_$var": true,
+      "_$type": "Box",
+      "name": "boxLogo",
+      "x": 118,
+      "y": 543,
+      "width": 464,
+      "height": 200,
+      "bgColor": "rgba(255, 255, 255, 1)"
+    },
+    {
+      "_$id": "3z7tyi5w",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnSkin",
+      "x": 158,
+      "y": 1061,
+      "width": 120,
+      "height": 40,
+      "_mouseState": 2,
+      "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
+      "label": "皮肤",
+      "labelSize": 20
+    },
+    {
+      "_$id": "23i5jcbi",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnPractice",
+      "x": 348,
+      "y": 1059,
+      "width": 120,
+      "height": 40,
+      "_mouseState": 2,
+      "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
+      "label": "训练模式",
+      "labelSize": 20
+    },
+    {
+      "_$id": "xmx96raw",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnHelp",
+      "x": 430,
+      "y": 959,
+      "width": 40,
+      "height": 40,
+      "_mouseState": 2,
+      "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
+      "label": "!",
+      "labelSize": 20
+    },
+    {
+      "_$id": "19ffflhy",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnPlay",
+      "x": 286,
+      "y": 1155,
+      "width": 120,
+      "height": 40,
+      "_mouseState": 2,
+      "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
+      "label": "开始",
+      "labelSize": 20
+    }
+  ]
+}

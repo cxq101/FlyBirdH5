@@ -1,0 +1,98 @@
+{
+  "_$ver": 1,
+  "_$id": "cli3lgk9ok",
+  "_$runtime": "res://d1fba140-2b2d-4574-ad50-0483d319147f",
+  "_$type": "Box",
+  "name": "Box",
+  "width": 470,
+  "height": 160,
+  "_mouseState": 2,
+  "_$child": [
+    {
+      "_$id": "alvtcmr1",
+      "_$var": true,
+      "_$type": "Image",
+      "name": "imgBg",
+      "width": 470,
+      "height": 160,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "skin": "res://8daa4e1f-cba7-4117-b0d3-eb5c7ad9eefa",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "u2s7gu57",
+      "_$type": "Image",
+      "name": "imgAvatar",
+      "x": 20,
+      "y": 30,
+      "width": 100,
+      "height": 100,
+      "left": 20,
+      "centerY": 0,
+      "skin": "res://1bf8f30e-7636-4afd-9207-6e10b7a20d15",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "9k6951hb",
+      "_$type": "Label",
+      "name": "lblName",
+      "x": 141,
+      "y": 66,
+      "width": 120,
+      "height": 28,
+      "left": 141,
+      "centerY": 0,
+      "text": "Label",
+      "fontSize": 30,
+      "color": "#FFFFFF",
+      "padding": "0,0,0,0"
+    },
+    {
+      "_$id": "sz8asjgv",
+      "_$var": true,
+      "_$type": "Label",
+      "name": "lblUsing",
+      "x": 350,
+      "y": 66,
+      "width": 120,
+      "height": 28,
+      "right": 0,
+      "centerY": 0,
+      "text": "SkinView0",
+      "fontSize": 30,
+      "color": "rgba(6, 179, 90, 1)",
+      "padding": "0,0,0,0"
+    },
+    {
+      "_$id": "rh5ax6n0",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnUnlockOrUse",
+      "x": 350,
+      "y": 60,
+      "width": 120,
+      "height": 40,
+      "_mouseState": 2,
+      "right": 0,
+      "centerY": 0,
+      "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
+      "label": "解锁",
+      "labelSize": 20,
+      "_$child": [
+        {
+          "_$id": "y7kcamom",
+          "_$var": true,
+          "_$type": "Image",
+          "name": "imgVideo",
+          "width": 25,
+          "height": 25,
+          "skin": "res://c13c1b8e-c516-4a0f-98ad-e356f45f0365",
+          "color": "#ffffff"
+        }
+      ]
+    }
+  ]
+}

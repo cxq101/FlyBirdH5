@@ -25,8 +25,8 @@
     "laya.ui": true
   },
   "splash": {
+    "enabled": false,
     "backgroundColor": "rgba(11, 237, 232, 1)",
-    "image": "resources/layaAir.png",
-    "enabledInPreview": true
+    "image": "resources/layaAir.png"
   }
 }

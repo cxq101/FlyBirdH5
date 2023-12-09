@@ -2,10 +2,10 @@
 
 
 /**
- * resources/prefabs/views/Help.lh
+ * resources/prefabs/views/SkinView.lh
  */
-export class HelpViewRTBase extends Laya.Box {
+export class SkinViewRTBase extends Laya.Box {
     public btnClose!: Laya.Button;
-    public lblDesc!: Laya.Label;
+    public list!: Laya.List;
 }
 

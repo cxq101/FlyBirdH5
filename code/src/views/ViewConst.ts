@@ -1,8 +1,7 @@
 export enum EViewKey {
-    Test = "test",
-    Bag = "bag",
-    MainUI = "mainUI",
-    Login = "login",
+    HelpView = "HelpView",
+    MainView = "MainView",
+    SkinView = "SkinView",
 }
 
 export enum EViewLayer {

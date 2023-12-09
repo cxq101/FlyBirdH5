@@ -32,8 +32,25 @@
       "height": 40,
       "_mouseState": 2,
       "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
-      "label": "Title",
+      "label": "返回",
       "labelSize": 20
+    },
+    {
+      "_$id": "mog36yx5",
+      "_$var": true,
+      "_$type": "Label",
+      "name": "lblDesc",
+      "x": 100,
+      "y": 185,
+      "width": 499,
+      "height": 459,
+      "text": "这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本",
+      "fontSize": 24,
+      "color": "#FFFFFF",
+      "italic": true,
+      "wordWrap": true,
+      "leading": 25,
+      "padding": "0,0,0,0"
     }
   ]
 }
