@@ -1,11 +1,15 @@
 const { regClass } = Laya;
 import { ViewMgr } from "../../core/UI/ViewMgr";
+import { model } from "../../core/mvc/MVCDecorator";
 import { EViewKey } from "../ViewConst";
 import { ESkinItemStatus } from "./SkinConst";
+import { SkinModel } from "./SkinModel";
 import { SkinViewRTBase } from "./SkinViewRT.generated";
 
 @regClass()
 export class SkinViewRT extends SkinViewRTBase {
+    // @model("SkinModel")
+    // model: SkinModel;
     private onClickClose(): void {
         ViewMgr.ins.close(EViewKey.SkinView);
     }
@@ -34,14 +38,6 @@ export class SkinViewRT extends SkinViewRTBase {
     onAwake(): void {
         this.btnClose.on(Laya.Event.CLICK, this.onClickClose);
         this.list.mouseHandler = new Laya.Handler(this, this.onItemMouse, null, false);
-        let arr = [];
-        for (let i = 1; i < 9; i++) {
-            arr.push({
-                imgAvatar: `resources/icon/avatar/m${i}.png`,
-                lblName: `Fuck_${i}`,
-                status: (i % 3 == 0) ? ESkinItemStatus.Idle : (i % 3 == 1) ? ESkinItemStatus.Locked : ESkinItemStatus.Working,
-            });
-        }
-        this.list.array = arr;
+        // this.list.array = this.model.getList();
     }
 }

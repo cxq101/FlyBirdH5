@@ -6,5 +6,4 @@ import { EventDispatcher } from "./EventDispatcher";
  * desc: 
  */
 export class Model extends EventDispatcher {
-    name: number;
 }
