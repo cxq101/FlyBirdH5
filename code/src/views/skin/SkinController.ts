@@ -8,8 +8,26 @@ import { SkinModel } from "./SkinModel";
  * desc: 
  */
 export class SkinController extends Controller {
-    constructor() {
+    private static _ins: SkinController;
+    public static get ins(): SkinController {
+        if (this._ins == null) {
+            this._ins = new SkinController();
+        }
+        return this._ins;
+    }
+
+    private model: SkinModel;
+    
+    private constructor() {
         super();
-        console.log("skin ctrl  init======");
+        this.model = SkinModel.ins;
+    }
+
+    unlcok(id: string): void {
+        this.model.unlock(id);
+    }
+
+    adventure(id: string): void {
+        this.model.adventure(id);
     }
 }

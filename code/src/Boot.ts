@@ -94,9 +94,6 @@ export class Boot extends Laya.Script {
         this.loadingNode.value = 0.05;
         await PromiseEx.delay(200);
 
-        // 初始化储存数据
-        LocalStorageUtils.init();
-
         // 初始化场景层级
         this.buildScene();
         this.loadingNode.desc = "100001";

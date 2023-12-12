@@ -5,40 +5,35 @@
  * TODO:
  * 1.数据校验，防止篡改和失效；如字段缺失，或违法
  */
-
-interface IGameLocalData {
-    skinId: string;
-    idleSkinIds: string[];
-}
-
-export class GameLocalData {
-    static getData(): IGameLocalData {
-        return {
-            skinId: "100001",
-            idleSkinIds: [],
-        }
-    }
-}
-
 export class LocalStorageUtils {
-    static gameData: IGameLocalData;
-    private static GAME_DATA_KEY: string = "gameDataKey";
-    
-    private static load(key: string): any {
-        return Laya.LocalStorage.getJSON(key);
-    }
+    static _game: any;
+    private static GAME_KEY: string = "_game_";
 
-    private static save(key: string, data: any): void {
-        Laya.LocalStorage.setJSON(key, data);
-    }
-
-    static init(): void {
-        const key = LocalStorageUtils.GAME_DATA_KEY;
-        this.gameData = this.load(key);
-        if (this.gameData == null) {    
-            this.gameData = GameLocalData.getData();
-            this.save(key, this.gameData);
+    static get game(): any {
+        if (this._game == null) {
+            this._game = Laya.LocalStorage.getJSON(LocalStorageUtils.GAME_KEY) || {};
         }
+        return this._game;
     }
+    
+    private static saveGame(): void {
+        console.log("saveGame=========", this.game);
+        Laya.LocalStorage.setJSON(LocalStorageUtils.GAME_KEY, this.game);
+    }
+
+    static save(key: string, data: any): void {
+        this.game[key] = data;
+        Laya.CallLater.I.callLater(this, this.saveGame);
+    }
+
+    static saveNow(key: string, data: any): void {
+        this.game[key] = data;
+        Laya.CallLater.I.runCallLater(this, this.saveGame);
+    }
+
+    static load(key: string): any {
+        return this.game[key];
+    }
+
 }
 

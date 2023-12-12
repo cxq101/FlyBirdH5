@@ -15,7 +15,7 @@ export class SkinItemRT extends SkinItemRTBase {
         let status = value.status;
         if (status != null) {
             let isLocked = status == ESkinItemStatus.Locked;
-            let isWorking = status == ESkinItemStatus.Working;
+            let isWorking = status == ESkinItemStatus.Adventure;
             this.imgBg.skin = `atlas/comp/img_bg${isLocked ? 4 : 5}.png`;
             this.imgVideo.visible = isLocked;
             this.lblUsing.visible = isWorking;
