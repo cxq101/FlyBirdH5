@@ -24,37 +24,32 @@ export class Player extends Laya.Script {
     @property({ type: Number, tips: "重力加速度" })
     private grav: number = -9.8;
     
-    @property({ type: [Background] })
-    private backgrounds: Background[];
-
     private startPosY: number = 0;
 
     private pressTimestamp: number = 0;
 
     private _velocityX: number = 0;
-
     private velocityY: number = 0;
+
+    public velocityHandler: Laya.Handler | null;
 
     private get isPressing(): boolean {
         return this.pressTimestamp > 0;
     }
+    
+    private get velocityX(): number {
+        return this._velocityX;
+    }
 
     private set velocityX(v: number) {
         this._velocityX = v;
-        this.onVelocityXChanged(v);
+        this.velocityHandler && this.velocityHandler.runWith(v);
     }
 
     private addForce(force: number): void {
         const radians = MathUtil.degreesToRadians(this.degrees);
         this.velocityX = force * Math.cos(radians);
         this.velocityY = force * Math.sin(radians);
-    }
-
-
-    private onVelocityXChanged(v: number): void {
-        this.backgrounds.forEach(bg => {
-            bg.velocity = -v;
-        })
     }
 
     onStart(): void {
@@ -70,14 +65,13 @@ export class Player extends Laya.Script {
             this.velocityX = this.velocityY = 0;
         }
     }
-    
+
     onKeyDown(evt: Laya.Event): void {
         if (this.isPressing) return;
         switch (evt.keyCode) {
             case Laya.Keyboard.A:
             case Laya.Keyboard.D:
                 this.pressTimestamp = Date.now();
-                console.log("pressTime========down=", this.pressTimestamp);
                 break;
             default:
                 break;
@@ -90,7 +84,6 @@ export class Player extends Laya.Script {
             case Laya.Keyboard.A:
             case Laya.Keyboard.D:
                 let pressTime = Date.now() - this.pressTimestamp;
-                console.log("pressTime=======up==", pressTime);
                 pressTime = pressTime > this.maxTime ? this.maxTime : pressTime;
                 let force = pressTime * this.forceVelocity * 0.001;
                 this.addForce(force);
@@ -99,6 +92,9 @@ export class Player extends Laya.Script {
             default:
                 break;
         }
+    }
 
+    onDestroy(): void {
+        this.velocityHandler = null;
     }
 }
