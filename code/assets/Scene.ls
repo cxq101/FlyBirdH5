@@ -19,15 +19,6 @@
   ],
   "_$child": [
     {
-      "_$id": "40ffxfnx",
-      "_$type": "Box",
-      "name": "Box",
-      "x": 267,
-      "y": 699,
-      "width": 200,
-      "height": 200
-    },
-    {
       "_$id": "02sqed4s",
       "_$type": "Sprite",
       "name": "backgroundRoot",
@@ -39,7 +30,24 @@
         {
           "_$type": "d5bbea0a-1696-4dc2-8d55-4c7122947b61",
           "scriptPath": "../src/level/BackgroundRoot.ts",
-          "backgrounds": [],
+          "backgrounds": [
+            {
+              "_$ref": "txcudw5m",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            },
+            {
+              "_$ref": "oj72opq1",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            },
+            {
+              "_$ref": "mgpiu8rh",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            },
+            {
+              "_$ref": "n5pa5irq",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            }
+          ],
           "player": {
             "_$ref": "iig1hp5z",
             "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
@@ -136,6 +144,25 @@
       "_$comp": [
         {
           "_$override": "cddd039b-38f1-49c0-9946-08429b716ebf"
+        }
+      ]
+    },
+    {
+      "_$id": "g83div3t",
+      "_$type": "Sprite",
+      "name": "obstacleRoot",
+      "width": 100,
+      "height": 100,
+      "_$child": [
+        {
+          "_$id": "uq8akar9",
+          "_$type": "Box",
+          "name": "Box",
+          "x": 334,
+          "y": 1147,
+          "width": 150,
+          "height": 40,
+          "bgColor": "rgba(255, 255, 255, 1)"
         }
       ]
     }
