@@ -8,8 +8,6 @@ import { SkinViewRTBase } from "./SkinViewRT.generated";
 
 @regClass()
 export class SkinViewRT extends SkinViewRTBase {
-    // @model("SkinModel")
-    // model: SkinModel;
     private onClickClose(): void {
         ViewMgr.ins.close(EViewKey.SkinView);
     }
@@ -38,6 +36,6 @@ export class SkinViewRT extends SkinViewRTBase {
     onAwake(): void {
         this.btnClose.on(Laya.Event.CLICK, this.onClickClose);
         this.list.mouseHandler = new Laya.Handler(this, this.onItemMouse, null, false);
-        // this.list.array = this.model.getList();
+        this.list.array = SkinModel.ins.getList();
     }
 }

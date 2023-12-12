@@ -1,6 +1,7 @@
 import { controller, register } from "../../core/mvc/MVCDecorator";
 import { Model } from "../../core/mvc/Model";
 import { ConfigUtils, ConfigUtilsMap, SkinConfigData } from "../../utils/ConfigUtils";
+import { LocalStorageUtils } from "../../utils/LocalStorageUtils";
 import { ESkinItemStatus } from "./SkinConst";
 
 /**
@@ -8,22 +9,33 @@ import { ESkinItemStatus } from "./SkinConst";
  * time: 2023/12/09 19:31:50
  * desc: 
  */
-@register("SkinModel")
 export class SkinModel extends Model {
-    constructor() {
+    private static _ins: SkinModel;
+    public static get ins(): SkinModel {
+        if (!this._ins) {
+            this._ins = new SkinModel();
+        }
+        return this._ins;
+    }
+
+    private constructor() {
         super();
-        console.log("skin model  init======");
+    }
+    
+    private checkStatus(id: string): ESkinItemStatus {
+        let gameData = LocalStorageUtils.gameData;
+        return gameData.skinId === id ? ESkinItemStatus.Working : gameData.idleSkinIds.some(idleId => idleId === id) ? ESkinItemStatus.Idle : ESkinItemStatus.Locked
     }
 
     getList(): any[] {
         let arr = [];
-        const configs: SkinConfigData[] = ConfigUtils.get("dsda");
+        const configs: SkinConfigData[] = ConfigUtils.get("skin");
         for (let i = 0; i < configs.length; i++) {
             const conf = configs[i];
             arr.push({
                 lblName: conf.name,
                 imgAvatar: `resources/icon/avatar/${conf.icon}.png`,
-                status: (i % 3 == 0) ? ESkinItemStatus.Idle : (i % 3 == 1) ? ESkinItemStatus.Locked : ESkinItemStatus.Working,
+                status: this.checkStatus(conf.id),
             });
         }
         return arr;

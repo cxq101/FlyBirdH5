@@ -4,6 +4,7 @@ import { SceneRegUtils } from "./core/UI/SceneRegUtils";
 import { ViewRegUtils } from "./core/UI/ViewRegUtils";
 import { Controller } from "./core/mvc/Controller";
 import { mvc } from "./core/mvc/MVCInstance";
+import { LocalStorageUtils } from "./utils/LocalStorageUtils";
 import { PromiseEx } from "./utils/PromiseEx";
 import { EViewKey, EViewLayer, ViewLayerZOrder } from "./views/ViewConst";
 import { LoadingViewRT } from "./views/loading/LoadingViewRT";
@@ -76,10 +77,6 @@ export class Boot extends Laya.Script {
 
     //组件被激活后执行，此时所有节点和组件均已创建完毕，此方法只执行一次
     onAwake(): void {
-        let t0 = new SkinModel();
-        let t1 = new SkinController();
-        console.log(t0, t1);
-
         this.gameFSM = new GameFSM();
         let node = this.loadingPrefab.create() as LoadingViewRT;
         this.loadingNode = node;
@@ -97,6 +94,9 @@ export class Boot extends Laya.Script {
         this.loadingNode.value = 0.05;
         await PromiseEx.delay(200);
 
+        // 初始化储存数据
+        LocalStorageUtils.init();
+
         // 初始化场景层级
         this.buildScene();
         this.loadingNode.desc = "100001";
@@ -113,27 +113,4 @@ export class Boot extends Laya.Script {
         this.loadingNode.desc = "100004";
         this.loadRes();
     }
-}
-
-
-
-
-function classD(target: any) {
-    console.log("this classD=====", target.name);
-}
-
-function propD(target: any, key: string) {
-    console.log("this propD=====", target.name, key);
-}
-
-@classD
-class A {
-    @propD
-    propA: string;
-}
-
-@classD
-class B {
-    @propD
-    propB: string;
 }

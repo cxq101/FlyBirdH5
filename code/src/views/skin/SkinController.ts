@@ -7,11 +7,7 @@ import { SkinModel } from "./SkinModel";
  * time: 2023/12/09 19:32:14
  * desc: 
  */
-@register("SkinController")
 export class SkinController extends Controller {
-    @model("SkinModel")
-    model: SkinModel;
-
     constructor() {
         super();
         console.log("skin ctrl  init======");

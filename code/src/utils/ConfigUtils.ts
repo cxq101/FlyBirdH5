@@ -2,6 +2,10 @@
  * author: cxq
  * time: 2023/12/11 08:57:49
  * desc: 
+ * TODO:
+ * 1.参数key没有被约束；
+ * 2.目前是通过json进行加载，需要支持压缩包以及二进制；
+ * 3.解析出来目前是any类型的数据；
  */
 
 import { ConfigPath } from "../const/ConfigPath";
