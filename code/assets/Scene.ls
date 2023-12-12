@@ -1,7 +1,6 @@
 {
   "_$ver": 1,
   "_$id": "lx8mwule",
-  "_$runtime": "res://98f54826-e04b-4b52-8144-9775e19253d5",
   "_$type": "Scene",
   "left": 0,
   "right": 0,
@@ -20,42 +19,125 @@
   ],
   "_$child": [
     {
-      "_$id": "y9azuesr",
-      "_$var": true,
-      "_$type": "Text",
-      "name": "txtState",
-      "x": 342,
-      "y": 357,
-      "width": 120,
-      "height": 30,
-      "visible": false,
-      "text": "Text",
-      "fontSize": 20,
-      "color": "#FFFFFF",
-      "leading": 2
+      "_$id": "40ffxfnx",
+      "_$type": "Box",
+      "name": "Box",
+      "x": 267,
+      "y": 699,
+      "width": 200,
+      "height": 200
     },
     {
-      "_$id": "dwzj6vqm",
-      "_$var": true,
-      "_$type": "Tab",
-      "name": "tab",
-      "x": 13,
-      "y": 461,
-      "width": 700,
-      "height": 35,
-      "visible": false,
-      "_mouseState": 2,
-      "skin": "res://9eb4836d-78c4-4be3-aa53-70a613fef28d",
-      "stateNum": 1,
-      "labels": "open,close,lock,unlock,break",
-      "space": 15,
-      "selectedIndex": 0,
-      "labelFont": null,
-      "labelSize": 20,
-      "labelStroke": null,
-      "labelStrokeColor": null,
-      "labelAlign": null,
-      "strokeColors": null
+      "_$id": "txcudw5m",
+      "_$type": "Image",
+      "name": "Image(1)",
+      "x": -720,
+      "width": 2160,
+      "height": 1280,
+      "skin": "res://4a7d0c91-a6a2-45f7-80a4-2ff5a6745db9",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "velocity": 0,
+          "velocityScale": 0.2
+        }
+      ]
+    },
+    {
+      "_$id": "oj72opq1",
+      "_$type": "Image",
+      "name": "Image(2)",
+      "x": -720,
+      "width": 2160,
+      "height": 1280,
+      "skin": "res://835e933a-514a-4c32-bb5d-0e677df07d8d",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "velocity": 0,
+          "velocityScale": 0.5
+        }
+      ]
+    },
+    {
+      "_$id": "mgpiu8rh",
+      "_$type": "Image",
+      "name": "Image(3)",
+      "x": -720,
+      "width": 2160,
+      "height": 1280,
+      "skin": "res://d090a1d2-cc8f-443e-b800-edffbeac5434",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "velocity": 0,
+          "velocityScale": 1
+        }
+      ]
+    },
+    {
+      "_$id": "n5pa5irq",
+      "_$type": "Image",
+      "name": "Image(4)",
+      "x": -720,
+      "width": 2160,
+      "height": 1280,
+      "skin": "res://d8f443f2-46d6-49fe-8748-f78952938390",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "velocity": 0,
+          "velocityScale": 1
+        }
+      ]
+    },
+    {
+      "_$id": "783bv39y",
+      "_$type": "Image",
+      "name": "Player",
+      "x": 131,
+      "y": 1056,
+      "width": 132,
+      "height": 132,
+      "skin": "res://cbb8db55-b424-4832-b54f-7481d9606fab",
+      "useSourceSize": true,
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf",
+          "scriptPath": "../src/level/Player.ts",
+          "degrees": 45,
+          "forceVelocity": 500,
+          "maxTime": 2000,
+          "grav": -98,
+          "backgrounds": [
+            {
+              "_$ref": "txcudw5m",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            },
+            {
+              "_$ref": "oj72opq1",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            },
+            {
+              "_$ref": "mgpiu8rh",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            },
+            {
+              "_$ref": "n5pa5irq",
+              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

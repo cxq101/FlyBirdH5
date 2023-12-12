@@ -3,7 +3,7 @@
     "designWidth": 720,
     "designHeight": 1280,
     "screenMode": "vertical",
-    "backgroundColor": "rgba(15, 200, 178, 1)"
+    "backgroundColor": "rgba(86, 192, 202, 1)"
   },
   "2D": {
     "defaultFont": "MicrosoftYaHei"

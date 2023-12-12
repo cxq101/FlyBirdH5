@@ -16,12 +16,20 @@ export class MathUtil {
 
     /**
      * 弧度转换成角度
+     * @param radians
+     * @return
+     */
+    public static radiansToDegrees(radians: number): number {
+        return radians * this.ONE_RADIANS;
+    }
+
+    /**
+     * 角度转换成弧度
      * @param degrees
      * @return
-     *
      */
-    public static getAngle(radians: number): number {
-        return radians * this.ONE_RADIANS;
+    public static degreesToRadians(degrees: number): number {
+        return (degrees * Math.PI) / 180;
     }
 
     /**
