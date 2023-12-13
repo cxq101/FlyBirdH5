@@ -47,11 +47,7 @@
               "_$ref": "n5pa5irq",
               "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
             }
-          ],
-          "player": {
-            "_$ref": "iig1hp5z",
-            "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
-          }
+          ]
         }
       ],
       "_$child": [
@@ -69,8 +65,7 @@
             {
               "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
               "scriptPath": "../src/level/Background.ts",
-              "velocity": 0,
-              "velocityScale": 0.2
+              "moveScale": 0.3
             }
           ]
         },
@@ -88,8 +83,7 @@
             {
               "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
               "scriptPath": "../src/level/Background.ts",
-              "velocity": 0,
-              "velocityScale": 0.5
+              "moveScale": 0.6
             }
           ]
         },
@@ -107,8 +101,7 @@
             {
               "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
               "scriptPath": "../src/level/Background.ts",
-              "velocity": 0,
-              "velocityScale": 1
+              "moveScale": 1
             }
           ]
         },
@@ -126,24 +119,9 @@
             {
               "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
               "scriptPath": "../src/level/Background.ts",
-              "velocity": 0,
-              "velocityScale": 1
+              "moveScale": 1
             }
           ]
-        }
-      ]
-    },
-    {
-      "_$id": "iig1hp5z",
-      "_$prefab": "71cac087-be04-4e1c-af5c-d7dce6e12802",
-      "name": "Player",
-      "active": true,
-      "x": 131,
-      "y": 1056,
-      "visible": true,
-      "_$comp": [
-        {
-          "_$override": "cddd039b-38f1-49c0-9946-08429b716ebf"
         }
       ]
     },
@@ -153,16 +131,103 @@
       "name": "obstacleRoot",
       "width": 100,
       "height": 100,
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 1
+        },
+        {
+          "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
+          "scriptPath": "../src/level/ObstacleRoot.ts"
+        }
+      ],
       "_$child": [
         {
           "_$id": "uq8akar9",
           "_$type": "Box",
-          "name": "Box",
+          "name": "obstacle",
           "x": 334,
           "y": 1147,
           "width": 150,
           "height": 40,
           "bgColor": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "_$id": "0ppn7heo",
+          "_$type": "Box",
+          "name": "obstacle(1)",
+          "x": 608,
+          "y": 1147,
+          "width": 150,
+          "height": 40,
+          "bgColor": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "_$id": "excvlxmt",
+          "_$type": "Box",
+          "name": "obstacle(2)",
+          "x": 970,
+          "y": 1141,
+          "width": 150,
+          "height": 40,
+          "bgColor": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "_$id": "ktcjmth5",
+          "_$type": "Box",
+          "name": "obstacle(3)",
+          "x": 1244,
+          "y": 1133,
+          "width": 150,
+          "height": 40,
+          "bgColor": "rgba(255, 255, 255, 1)"
+        },
+        {
+          "_$id": "0066z7fi",
+          "_$type": "Box",
+          "name": "obstacle(4)",
+          "x": 1626,
+          "y": 1135,
+          "width": 150,
+          "height": 40,
+          "bgColor": "rgba(255, 255, 255, 1)"
+        }
+      ]
+    },
+    {
+      "_$id": "iig1hp5z",
+      "_$prefab": "71cac087-be04-4e1c-af5c-d7dce6e12802",
+      "name": "Player",
+      "active": true,
+      "x": 131.00000000000006,
+      "y": 1056,
+      "visible": true
+    },
+    {
+      "_$id": "bwewqklu",
+      "_$type": "Sprite",
+      "name": "LevelCamera",
+      "x": 321.9999999999999,
+      "y": 845,
+      "width": 100,
+      "height": 100,
+      "_$comp": [
+        {
+          "_$type": "dbaae76a-a75c-4382-a42b-2cd24de86b01",
+          "scriptPath": "../src/level/LevelCamera.ts",
+          "player": {
+            "_$ref": "iig1hp5z",
+            "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
+          },
+          "backgroundRoot": {
+            "_$ref": "02sqed4s",
+            "_$type": "d5bbea0a-1696-4dc2-8d55-4c7122947b61"
+          },
+          "obstacleRoot": {
+            "_$ref": "g83div3t",
+            "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b"
+          }
         }
       ]
     }

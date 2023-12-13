@@ -9,11 +9,8 @@ const { regClass, property } = Laya;
 export class Background extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    @property({ type: Number, tips: "移动速度" })
-    velocity: number = 0;
-
     @property({ type: Number, tips: "移动视差比例" })
-    velocityScale: number = 1;
+    moveScale: number = 1;
 
     /** 初始宽度为原始宽度的3倍 */
     private readonly repeatX: number = 3;
@@ -39,8 +36,8 @@ export class Background extends Laya.Script {
         this.textureWidth = this.owner.width / this.repeatX;
     }
 
-    onUpdate(): void {
-        this.owner.x += this.velocity * this.velocityScale * Laya.timer.delta * 0.001;
+    move(distance: number): void {
+        this.owner.x += distance * this.moveScale;
         if (this.isOutOfBounds()) {
             this.resetPos();
         }

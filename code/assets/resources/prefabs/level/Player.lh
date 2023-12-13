@@ -1,9 +1,9 @@
 {
   "_$ver": 1,
-  "_$id": "783bv39y",
+  "_$id": "iig1hp5z",
   "_$type": "Image",
   "name": "Player",
-  "x": 131,
+  "x": 131.00000000000006,
   "y": 1056,
   "width": 132,
   "height": 132,
@@ -14,28 +14,18 @@
     {
       "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf",
       "scriptPath": "../src/level/Player.ts",
-      "degrees": 45,
-      "forceVelocity": 500,
-      "maxTime": 2000,
-      "grav": -98,
-      "backgrounds": [
-        {
-          "_$ref": "txcudw5m",
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-        },
-        {
-          "_$ref": "oj72opq1",
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-        },
-        {
-          "_$ref": "mgpiu8rh",
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-        },
-        {
-          "_$ref": "n5pa5irq",
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-        }
-      ]
+      "grav": -1600
+    },
+    {
+      "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6",
+      "scriptPath": "../src/level/InputManager.ts",
+      "degrees": 35,
+      "forceVelocity": 800,
+      "maxTime": 1800,
+      "player": {
+        "_$ref": "iig1hp5z",
+        "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
+      }
     }
   ]
 }

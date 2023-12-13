@@ -1,5 +1,4 @@
 import { MathUtil } from "../utils/MathUtils";
-import { Background } from "./Background";
 
 /**
  * author: cxq
@@ -12,44 +11,20 @@ const { property, regClass } = Laya;
 export class Player extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    @property({ type: Number, tips: "默认的弹跳角度" })
-    private degrees: number;
-
-    @property({ type: Number, tips: "跳跃力度增长系数" })
-    private forceVelocity: number;
-
-    @property({ type: Number, tips: "点击有效时间" })
-    private maxTime: number = 0;
+    velocityX: number = 0;
+    velocityY: number = 0;
 
     @property({ type: Number, tips: "重力加速度" })
     private grav: number = -9.8;
     
     private startPosY: number = 0;
 
-    private pressTimestamp: number = 0;
-
-    private _velocityX: number = 0;
-    private velocityY: number = 0;
-
-    public velocityHandler: Laya.Handler | null;
-
-    private get isPressing(): boolean {
-        return this.pressTimestamp > 0;
-    }
-    
-    private get velocityX(): number {
-        return this._velocityX;
-    }
-
-    private set velocityX(v: number) {
-        this._velocityX = v;
-        this.velocityHandler && this.velocityHandler.runWith(v);
-    }
-
-    private addForce(force: number): void {
-        const radians = MathUtil.degreesToRadians(this.degrees);
-        this.velocityX = force * Math.cos(radians);
-        this.velocityY = force * Math.sin(radians);
+    addForce(force: number, degrees: number): void {
+        const radians = MathUtil.degreesToRadians(degrees);
+        const velocityX = force * Math.cos(radians);
+        const velocityY = force * Math.sin(radians);
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
     }
 
     onStart(): void {
@@ -66,35 +41,4 @@ export class Player extends Laya.Script {
         }
     }
 
-    onKeyDown(evt: Laya.Event): void {
-        if (this.isPressing) return;
-        switch (evt.keyCode) {
-            case Laya.Keyboard.A:
-            case Laya.Keyboard.D:
-                this.pressTimestamp = Date.now();
-                break;
-            default:
-                break;
-        }
-    }
-
-    onKeyUp(evt: Laya.Event): void {
-        if (!this.isPressing) return;
-        switch (evt.keyCode) {
-            case Laya.Keyboard.A:
-            case Laya.Keyboard.D:
-                let pressTime = Date.now() - this.pressTimestamp;
-                pressTime = pressTime > this.maxTime ? this.maxTime : pressTime;
-                let force = pressTime * this.forceVelocity * 0.001;
-                this.addForce(force);
-                this.pressTimestamp = 0;
-                break;
-            default:
-                break;
-        }
-    }
-
-    onDestroy(): void {
-        this.velocityHandler = null;
-    }
 }
