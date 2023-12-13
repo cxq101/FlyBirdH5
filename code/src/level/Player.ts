@@ -19,6 +19,10 @@ export class Player extends Laya.Script {
     
     private startPosY: number = 0;
 
+    get isGround(): boolean {
+        return this.owner.y >= this.startPosY;
+    }
+
     addForce(force: number, degrees: number): void {
         const radians = MathUtil.degreesToRadians(degrees);
         const velocityX = force * Math.cos(radians);
@@ -35,10 +39,8 @@ export class Player extends Laya.Script {
         if (this.velocityX === 0 && this.velocityY === 0) return;
         const delta = Laya.timer.delta * 0.001;
         this.owner.y -= this.velocityY * delta;
+        this.owner.y = Math.min(this.owner.y, this.startPosY);
         this.velocityY += this.grav * delta;
-        if (this.owner.y > this.startPosY) {
-            this.velocityX = this.velocityY = 0;
-        }
+        this.isGround && (this.velocityX = this.velocityY = 0);
     }
-
 }

@@ -18,6 +18,9 @@ export class InputManager extends Laya.Script {
     @property({ type: Number, tips: "点击有效时间" })
     private maxTime: number = 0;
 
+    @property({ type: Number, tips: "最小促发力度" })
+    private minForce: number = 250;
+
     @property({ type: Player })
     player: Player;
 
@@ -28,7 +31,7 @@ export class InputManager extends Laya.Script {
     }
 
     onKeyDown(evt: Laya.Event): void {
-        if (this.isPressing) return;
+        if (!this.player.isGround || this.isPressing) return;
         switch (evt.keyCode) {
             case Laya.Keyboard.A:
             case Laya.Keyboard.D:
@@ -40,13 +43,14 @@ export class InputManager extends Laya.Script {
     }
 
     onKeyUp(evt: Laya.Event): void {
-        if (!this.isPressing) return;
+        if (!this.player.isGround || !this.isPressing) return;
         switch (evt.keyCode) {
             case Laya.Keyboard.A:
             case Laya.Keyboard.D:
                 let pressTime = Date.now() - this.pressTimestamp;
                 pressTime = pressTime > this.maxTime ? this.maxTime : pressTime;
                 let force = pressTime * this.forceVelocity * 0.001;
+                force = Math.max(force, this.minForce); 
                 this.player.addForce(force, this.degrees);
                 this.pressTimestamp = 0;
                 break;
