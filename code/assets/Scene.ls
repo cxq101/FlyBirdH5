@@ -19,272 +19,42 @@
   ],
   "_$child": [
     {
-      "_$id": "02sqed4s",
+      "_$id": "o2x7b8qz",
       "_$type": "Sprite",
-      "name": "backgroundRoot",
-      "x": 321.9999999999999,
-      "y": 473.0000000000001,
+      "name": "LoadHelper",
+      "active": false,
+      "x": 325,
+      "y": 184,
       "width": 100,
       "height": 100,
       "_$comp": [
         {
-          "_$type": "d5bbea0a-1696-4dc2-8d55-4c7122947b61",
-          "scriptPath": "../src/level/BackgroundRoot.ts",
-          "backgrounds": [
-            {
-              "_$ref": "txcudw5m",
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-            },
-            {
-              "_$ref": "oj72opq1",
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-            },
-            {
-              "_$ref": "mgpiu8rh",
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-            },
-            {
-              "_$ref": "n5pa5irq",
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
-            }
-          ]
-        }
-      ],
-      "_$child": [
-        {
-          "_$id": "txcudw5m",
-          "_$type": "Image",
-          "name": "Image(1)",
-          "x": -1042,
-          "y": -473.0000000000001,
-          "width": 2160,
-          "height": 1280,
-          "skin": "res://4a7d0c91-a6a2-45f7-80a4-2ff5a6745db9",
-          "color": "#ffffff",
-          "_$comp": [
-            {
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-              "scriptPath": "../src/level/Background.ts",
-              "moveScale": 0.3
-            }
-          ]
-        },
-        {
-          "_$id": "oj72opq1",
-          "_$type": "Image",
-          "name": "Image(2)",
-          "x": -1042,
-          "y": -473.0000000000001,
-          "width": 2160,
-          "height": 1280,
-          "skin": "res://835e933a-514a-4c32-bb5d-0e677df07d8d",
-          "color": "#ffffff",
-          "_$comp": [
-            {
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-              "scriptPath": "../src/level/Background.ts",
-              "moveScale": 0.6
-            }
-          ]
-        },
-        {
-          "_$id": "mgpiu8rh",
-          "_$type": "Image",
-          "name": "Image(3)",
-          "x": -1042,
-          "y": -473.0000000000001,
-          "width": 2160,
-          "height": 1280,
-          "skin": "res://d090a1d2-cc8f-443e-b800-edffbeac5434",
-          "color": "#ffffff",
-          "_$comp": [
-            {
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-              "scriptPath": "../src/level/Background.ts",
-              "moveScale": 1
-            }
-          ]
-        },
-        {
-          "_$id": "n5pa5irq",
-          "_$type": "Image",
-          "name": "Image(4)",
-          "x": -1042,
-          "y": -473.0000000000001,
-          "width": 2160,
-          "height": 1280,
-          "skin": "res://d8f443f2-46d6-49fe-8748-f78952938390",
-          "color": "#ffffff",
-          "_$comp": [
-            {
-              "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-              "scriptPath": "../src/level/Background.ts",
-              "moveScale": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_$id": "g83div3t",
-      "_$type": "Sprite",
-      "name": "obstacleRoot",
-      "width": 100,
-      "height": 100,
-      "_$comp": [
-        {
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-          "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1
-        },
-        {
-          "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
-          "scriptPath": "../src/level/ObstacleRoot.ts",
-          "player": {
-            "_$ref": "iig1hp5z",
-            "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
-          },
-          "obstacles": [
-            {
-              "_$ref": "uq8akar9",
-              "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
-            }
-          ]
-        }
-      ],
-      "_$child": [
-        {
-          "_$id": "uq8akar9",
-          "_$type": "Box",
-          "name": "obstacle",
-          "x": 334,
-          "y": 1147,
-          "width": 150,
-          "height": 40,
-          "bgColor": "rgba(255, 255, 255, 1)",
-          "_$comp": [
-            {
-              "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-              "scriptPath": "../src/level/Obstacle.ts",
-              "degrees": 135,
-              "force": 800,
-              "player": null
-            }
-          ]
-        },
-        {
-          "_$id": "0ppn7heo",
-          "_$type": "Box",
-          "name": "obstacle(1)",
-          "x": 608,
-          "y": 1147,
-          "width": 150,
-          "height": 40,
-          "bgColor": "rgba(255, 255, 255, 1)",
-          "_$comp": [
-            {
-              "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-              "scriptPath": "../src/level/Obstacle.ts",
-              "degrees": null,
-              "force": null,
-              "player": null
-            }
-          ]
-        },
-        {
-          "_$id": "excvlxmt",
-          "_$type": "Box",
-          "name": "obstacle(2)",
-          "x": 970,
-          "y": 1141,
-          "width": 150,
-          "height": 40,
-          "bgColor": "rgba(255, 255, 255, 1)",
-          "_$comp": [
-            {
-              "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-              "scriptPath": "../src/level/Obstacle.ts",
-              "degrees": null,
-              "force": null,
-              "player": null
-            }
-          ]
-        },
-        {
-          "_$id": "ktcjmth5",
-          "_$type": "Box",
-          "name": "obstacle(3)",
-          "x": 1244,
-          "y": 1133,
-          "width": 150,
-          "height": 40,
-          "bgColor": "rgba(255, 255, 255, 1)",
-          "_$comp": [
-            {
-              "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-              "scriptPath": "../src/level/Obstacle.ts",
-              "degrees": null,
-              "force": null,
-              "player": null
-            }
-          ]
-        },
-        {
-          "_$id": "0066z7fi",
-          "_$type": "Box",
-          "name": "obstacle(4)",
-          "x": 1626,
-          "y": 1135,
-          "width": 150,
-          "height": 40,
-          "bgColor": "rgba(255, 255, 255, 1)",
-          "_$comp": [
-            {
-              "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-              "scriptPath": "../src/level/Obstacle.ts",
-              "degrees": null,
-              "force": null,
-              "player": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "_$id": "iig1hp5z",
-      "_$prefab": "71cac087-be04-4e1c-af5c-d7dce6e12802",
-      "name": "Player",
-      "active": true,
-      "x": 131.00000000000006,
-      "y": 1056,
-      "visible": true
-    },
-    {
-      "_$id": "bwewqklu",
-      "_$type": "Sprite",
-      "name": "LevelCamera",
-      "x": 321.9999999999999,
-      "y": 845,
-      "width": 100,
-      "height": 100,
-      "_$comp": [
-        {
-          "_$type": "dbaae76a-a75c-4382-a42b-2cd24de86b01",
-          "scriptPath": "../src/level/LevelCamera.ts",
-          "player": {
-            "_$ref": "iig1hp5z",
-            "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
+          "_$type": "8d2adf04-dadc-4558-9b65-b226c8178714",
+          "scriptPath": "../src/LoadHelper.ts",
+          "playerPrefab": {
+            "_$uuid": "71cac087-be04-4e1c-af5c-d7dce6e12802",
+            "_$type": "Prefab"
           },
           "backgroundRoot": {
-            "_$ref": "02sqed4s",
-            "_$type": "d5bbea0a-1696-4dc2-8d55-4c7122947b61"
+            "_$uuid": "c87d95ec-40e6-4d9e-8873-c792ed072d99",
+            "_$type": "Prefab"
           },
-          "obstacleRoot": {
-            "_$ref": "g83div3t",
-            "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b"
+          "levelCamera": {
+            "_$uuid": "f52f13c2-5641-41d9-b595-df58a169bb21",
+            "_$type": "Prefab"
           }
         }
       ]
+    },
+    {
+      "_$id": "ruuvev8y",
+      "_$type": "Image",
+      "name": "Image",
+      "width": 720,
+      "height": 1280,
+      "skin": "res://dd0ec17e-980e-47ca-b8a6-357051a48300",
+      "useSourceSize": true,
+      "color": "#ffffff"
     }
   ]
 }

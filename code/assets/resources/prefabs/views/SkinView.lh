@@ -14,7 +14,8 @@
   "_$comp": [
     {
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
-      "scriptPath": "../src/core/UI/BaseView.ts"
+      "scriptPath": "../src/core/UI/BaseView.ts",
+      "fadeTime": 300
     }
   ],
   "_$child": [

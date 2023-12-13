@@ -84,7 +84,7 @@ export class ViewMgr extends Singleton<ViewMgr>() {
     * @param key 窗口名
     * @param arg 参数
     */
-    public close(key: IViewKey, mode: EViewCloseMode = EViewCloseMode.HIDE): void {
+    private _close(key: IViewKey, mode: EViewCloseMode = EViewCloseMode.HIDE): void {
         let view: BaseView = this.getShowView(key);
         if (view) {
             this.deleteShowView(key);
@@ -102,11 +102,26 @@ export class ViewMgr extends Singleton<ViewMgr>() {
                     break;
                 case EViewCloseMode.DESTROY:
                     viewOwner.removeSelf();
-                    view.destroy();
+                    viewOwner.destroy();
                     break;
                 default:
                     break;
             }
+        } else {
+            console.warn("warning!!!, viewMgr try to close invalid view ", key, mode);
+        }
+    }
+
+    /**
+    * 关闭窗口 直接关闭
+    * @param key 窗口名
+    * @param arg 参数
+    */
+    public close(key: IViewKey, mode: EViewCloseMode = EViewCloseMode.HIDE): void {
+        let view: BaseView = this.getShowView(key);
+        if (view) {
+            view.exitAniHandler = new Laya.Handler(this, this._close, [key, mode]);
+            view.exitAnim();
         } else {
             console.warn("warning!!!, viewMgr try to close invalid view ", key, mode);
         }

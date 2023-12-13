@@ -42,6 +42,7 @@ export class SceneRegUtils {
         const w = Laya.stage.width;
         const h = Laya.stage.height;
         node.size(w, h);
+        node.mouseEnabled = true;
         node.mouseThrough = true;
         root.addChild(node);
         this._map.set(key, node);

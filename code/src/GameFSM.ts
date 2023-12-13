@@ -1,6 +1,5 @@
-import { t, StateMachine, Callback } from "./core/FSM/StateMatchine";
+import { t, StateMachine } from "./core/FSM/StateMatchine";
 import { ViewMgr } from "./core/UI/ViewMgr";
-import { PromiseEx } from "./utils/PromiseEx";
 import { EViewKey } from "./views/ViewConst";
 
 enum GameStates {

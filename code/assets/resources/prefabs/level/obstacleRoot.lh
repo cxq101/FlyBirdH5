@@ -1,0 +1,127 @@
+{
+  "_$ver": 1,
+  "_$id": "g83div3t",
+  "_$type": "Sprite",
+  "name": "obstacleRoot",
+  "active": false,
+  "width": 100,
+  "height": 100,
+  "_$comp": [
+    {
+      "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+      "scriptPath": "../src/level/Background.ts",
+      "moveScale": 1
+    },
+    {
+      "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
+      "scriptPath": "../src/level/ObstacleRoot.ts",
+      "player": {
+        "_$ref": "iig1hp5z",
+        "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
+      },
+      "obstacles": [
+        {
+          "_$ref": "uq8akar9",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        }
+      ]
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "uq8akar9",
+      "_$type": "Box",
+      "name": "obstacle",
+      "x": 334,
+      "y": 1147,
+      "width": 150,
+      "height": 40,
+      "bgColor": "rgba(255, 255, 255, 1)",
+      "_$comp": [
+        {
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
+          "scriptPath": "../src/level/Obstacle.ts",
+          "degrees": 135,
+          "force": 800,
+          "player": null
+        }
+      ]
+    },
+    {
+      "_$id": "0ppn7heo",
+      "_$type": "Box",
+      "name": "obstacle(1)",
+      "x": 608,
+      "y": 1147,
+      "width": 150,
+      "height": 40,
+      "bgColor": "rgba(255, 255, 255, 1)",
+      "_$comp": [
+        {
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
+          "scriptPath": "../src/level/Obstacle.ts",
+          "degrees": null,
+          "force": null,
+          "player": null
+        }
+      ]
+    },
+    {
+      "_$id": "excvlxmt",
+      "_$type": "Box",
+      "name": "obstacle(2)",
+      "x": 970,
+      "y": 1141,
+      "width": 150,
+      "height": 40,
+      "bgColor": "rgba(255, 255, 255, 1)",
+      "_$comp": [
+        {
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
+          "scriptPath": "../src/level/Obstacle.ts",
+          "degrees": null,
+          "force": null,
+          "player": null
+        }
+      ]
+    },
+    {
+      "_$id": "ktcjmth5",
+      "_$type": "Box",
+      "name": "obstacle(3)",
+      "x": 1244,
+      "y": 1133,
+      "width": 150,
+      "height": 40,
+      "bgColor": "rgba(255, 255, 255, 1)",
+      "_$comp": [
+        {
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
+          "scriptPath": "../src/level/Obstacle.ts",
+          "degrees": null,
+          "force": null,
+          "player": null
+        }
+      ]
+    },
+    {
+      "_$id": "0066z7fi",
+      "_$type": "Box",
+      "name": "obstacle(4)",
+      "x": 1626,
+      "y": 1135,
+      "width": 150,
+      "height": 40,
+      "bgColor": "rgba(255, 255, 255, 1)",
+      "_$comp": [
+        {
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
+          "scriptPath": "../src/level/Obstacle.ts",
+          "degrees": null,
+          "force": null,
+          "player": null
+        }
+      ]
+    }
+  ]
+}

@@ -14,13 +14,13 @@ const { regClass, property } = Laya;
 export class LevelCamera extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    @property({ type: Player })
+    //@property({ type: Player })
     player: Player;
 
-    @property({ type: BackgroundRoot })
+    //@property({ type: BackgroundRoot })
     backgroundRoot: BackgroundRoot;
 
-    @property({ type: ObstacleRoot })
+    //@property({ type: ObstacleRoot })
     obstacleRoot: ObstacleRoot;
 
     private totalDistance: number = 0;
