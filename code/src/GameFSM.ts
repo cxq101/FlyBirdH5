@@ -63,7 +63,7 @@ export class GameFSM extends StateMachine<GameStates, GameEvents> {
 
     private async onEnterHome(): Promise<void> {
         this.logger.log("GameFSM==========onEnterHome");
-        ViewMgr.ins.open(EViewKey.MainView);
+        // ViewMgr.ins.open(EViewKey.MainView);
         // return this.dispatch(GameEvents.breakComplete);
     }
 
@@ -106,8 +106,5 @@ export class GameFSM extends StateMachine<GameStates, GameEvents> {
     }
     loadComplete(): void {
         this.dispatch(GameEvents.loadComplete);
-    }
-    enterHome(): void {
-        this.dispatch(GameEvents.enterHome);
     }
 }

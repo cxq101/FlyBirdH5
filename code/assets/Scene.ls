@@ -14,6 +14,10 @@
       "loadingPrefab": {
         "_$uuid": "62458a87-76ec-4cf5-8c59-e530d7142755",
         "_$type": "Prefab"
+      },
+      "loadHelper": {
+        "_$ref": "o2x7b8qz",
+        "_$type": "8d2adf04-dadc-4558-9b65-b226c8178714"
       }
     }
   ],
@@ -45,16 +49,6 @@
           }
         }
       ]
-    },
-    {
-      "_$id": "ruuvev8y",
-      "_$type": "Image",
-      "name": "Image",
-      "width": 720,
-      "height": 1280,
-      "skin": "res://dd0ec17e-980e-47ca-b8a6-357051a48300",
-      "useSourceSize": true,
-      "color": "#ffffff"
     }
   ]
 }

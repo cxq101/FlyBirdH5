@@ -1,4 +1,5 @@
 import { GameFSM } from "./GameFSM";
+import { LoadHelper } from "./LoadHelper";
 import { ConfigPath } from "./const/ConfigPath";
 import { SceneRegUtils } from "./core/UI/SceneRegUtils";
 import { ViewRegUtils } from "./core/UI/ViewRegUtils";
@@ -19,6 +20,9 @@ export class Boot extends Laya.Script {
 
     @property({ type: Laya.Prefab })
     private loadingPrefab: Laya.Prefab;
+    @property({ type: LoadHelper })
+    private loadHelper: LoadHelper;
+    
     private loadingNode: LoadingViewRT;
 
     private gameFSM: GameFSM;
@@ -63,7 +67,8 @@ export class Boot extends Laya.Script {
             this.loadingNode.desc = "100005";
             this.loadingNode.value = 1.0;
             Laya.Scene.hideLoadingPage(0);
-            this.gameFSM.loadComplete();
+            this.loadHelper.createBackgroundRoot();
+            //this.gameFSM.loadComplete();
         });
     }
 
