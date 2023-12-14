@@ -10,16 +10,15 @@ import { Player } from "./level/Player";
 const { regClass, property } = Laya;
 
 @regClass()
-export class LoadHelper extends Laya.Script {
-    @property({ type: Laya.Prefab })
-    backgroundRootPrefab: Laya.Prefab;
- 
-    @property({ type: Laya.Prefab })
-    testLevelPrefab: Laya.Prefab;
- 
+export class LevelLoader extends Laya.Script {
     @property({ type: Laya.Prefab })
     playerPrefab: Laya.Prefab;
+    
+    @property({ type: Laya.Prefab })
+    testLevelPrefab: Laya.Prefab;
 
+    @property({ type: Laya.Prefab })
+    backgroundRootPrefab: Laya.Prefab;
     // @property({ type: Laya.Prefab })
     // level: Laya.Prefab;
     private _testLevel: Level;

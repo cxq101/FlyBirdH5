@@ -1,11 +1,5 @@
-import { GameFSM } from "./GameFSM";
-import { LoadHelper } from "./LoadHelper";
-import { ConfigPath } from "./const/ConfigPath";
-import { SceneRegUtils } from "./core/UI/SceneRegUtils";
-import { ViewRegUtils } from "./core/UI/ViewRegUtils";
-import { PromiseEx } from "./utils/PromiseEx";
+import { LevelLoader } from "./LevelLoader";
 import { Game } from "./views/Game";
-import { EViewKey, EViewLayer, ViewLayerZOrder } from "./views/ViewConst";
 import { LoadingViewRT } from "./views/loading/LoadingViewRT";
 
 const { regClass, property } = Laya;
@@ -17,8 +11,8 @@ export class Boot extends Laya.Script {
 
     @property({ type: Laya.Prefab })
     private loadingPrefab: Laya.Prefab;
-    @property({ type: LoadHelper })
-    public loadHelper: LoadHelper;
+    @property({ type: LevelLoader })
+    public levelLoader: LevelLoader;
 
     private _loadingNode: LoadingViewRT;
 

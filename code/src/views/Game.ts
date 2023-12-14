@@ -95,7 +95,7 @@ export class Game extends Singleton<Game>() {
             this._boot.setLoading({ desc: "100005", value:  1.0 });
 
             Laya.Scene.hideLoadingPage(0);
-            this._boot.loadHelper.createBackgroundRoot();
+            this._boot.levelLoader.createBackgroundRoot();
             Laya.timer.once(1000, this, () => {
                 this._fsm.dispatch(GameEvents.loadComplete);
             })
@@ -124,7 +124,7 @@ export class Game extends Singleton<Game>() {
 
     private onEnterLevelHandler(): void {
         ViewMgr.ins.close(EViewKey.MainView);
-        
+        this._boot.levelLoader.createTestLevel();
         // 1.先弹出遮罩层；
         
         // 2.创建角色；
@@ -157,5 +157,9 @@ export class Game extends Singleton<Game>() {
 
     private onBackHomeHandler(): void {
 
+    }
+
+    public enterLevel(): void {
+        this._fsm.dispatch(GameEvents.enterLevel);
     }
 }

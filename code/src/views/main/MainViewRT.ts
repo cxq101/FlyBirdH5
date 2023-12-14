@@ -1,6 +1,7 @@
 const { regClass } = Laya;
 import { GameFSM } from "../../GameFSM";
 import { ViewMgr } from "../../core/UI/ViewMgr";
+import { Game } from "../Game";
 import { EViewKey } from "../ViewConst";
 import { MainViewRTBase } from "./MainViewRT.generated";
 
@@ -15,7 +16,7 @@ export class MainViewRT extends MainViewRTBase {
     }
 
     private onClickPlay(): void {
-        // GameFSM.ins.enterLevel(0);
+        Game.ins.enterLevel();
     }
 
     onAwake(): void {

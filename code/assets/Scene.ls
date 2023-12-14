@@ -15,9 +15,9 @@
         "_$uuid": "62458a87-76ec-4cf5-8c59-e530d7142755",
         "_$type": "Prefab"
       },
-      "loadHelper": {
+      "levelLoader": {
         "_$ref": "o2x7b8qz",
-        "_$type": "8d2adf04-dadc-4558-9b65-b226c8178714"
+        "_$type": "4aed0491-68f4-4b0a-a959-fcfc5204605d"
       }
     }
   ],
@@ -25,16 +25,16 @@
     {
       "_$id": "o2x7b8qz",
       "_$type": "Sprite",
-      "name": "LoadHelper",
+      "name": "LevelLoader",
       "active": false,
-      "x": 325,
-      "y": 184,
+      "x": 325.00000000000006,
+      "y": 183.9999999999999,
       "width": 100,
       "height": 100,
       "_$comp": [
         {
-          "_$type": "8d2adf04-dadc-4558-9b65-b226c8178714",
-          "scriptPath": "../src/LoadHelper.ts",
+          "_$type": "4aed0491-68f4-4b0a-a959-fcfc5204605d",
+          "scriptPath": "../src/LevelLoader.ts",
           "backgroundRootPrefab": {
             "_$uuid": "c87d95ec-40e6-4d9e-8873-c792ed072d99",
             "_$type": "Prefab"
