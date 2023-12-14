@@ -1,23 +1,28 @@
-import { IViewKey } from "./UIInterface";
+import { IViewKey, IViewParam } from "./UIInterface";
+import { ViewMgr } from "./ViewMgr";
 
 const { regClass, property } = Laya;
 
 @regClass()
 export class BaseView extends Laya.Script {
     declare owner: Laya.Sprite;
+
     @property({ type: Number })
     private fadeTime: number = 0;
+
+    public key: IViewKey;
+    private param: IViewParam;
     
     public exitAniHandler: Laya.Handler;
-
-    private _view: Laya.Sprite;
-    public key: IViewKey;
     private _viewAni: Laya.Tween = new Laya.Tween();
     private _viewAniHandler: Laya.Handler = new Laya.Handler();
 
-
     set enabledTouch(v: boolean) {
         this.owner.mouseEnabled = v;
+    }
+
+    get enabledTouch(): boolean {
+        return this.owner.mouseEnabled;
     }
 
     protected enterAnim(): void {
@@ -45,26 +50,18 @@ export class BaseView extends Laya.Script {
         this.exitAniHandler && this.exitAniHandler.run();
     }
 
-    onAwake(): void {
-        this._view = this.owner as Laya.Sprite;
-    }
-
     onDestroy(): void {
         this._viewAni.clear();
         this._viewAniHandler.clear();
         this._viewAni = this._viewAniHandler = null;
     }
 
-    initialize(): void {
-
+    initParams(param: IViewParam): void {
+        this.param = param;
     }
 
-    show(): void {
-        this._view.visible = true;
-    }
-
-    hide(): void {
-        this._view.visible = false;
+    getParams(): IViewParam {
+        return this.param;
     }
 
     onEnable(): void {
@@ -73,5 +70,13 @@ export class BaseView extends Laya.Script {
 
     onDisable(): void {
 
+    }
+
+    closeSelf(): void {
+        ViewMgr.ins.close(this.key);
+    }
+
+    onClickExtra(): void {
+        this.enabledTouch && this.closeSelf();
     }
 }

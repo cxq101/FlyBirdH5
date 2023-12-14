@@ -1,3 +1,5 @@
+import { BaseView } from "./BaseView";
+
 /**
  * view 黑色背景
  * 1.防止点击穿透
@@ -5,6 +7,7 @@
  * 3.遮罩的样式由用户决定
  */
 export class ViewMask {
+    private _view: BaseView;
     private _mask: Laya.Sprite;
     private _hitArea: Laya.Sprite;
 
@@ -17,6 +20,7 @@ export class ViewMask {
     }
 
     private onClick(): void {
+        this._view.onClickExtra();
         console.log("viewmask======= onclick");
     }
 
@@ -31,23 +35,39 @@ export class ViewMask {
         this._hitArea.on(Laya.Event.CLICK, this, this.onClick);
     }
 
-    show(root: Laya.Sprite, index: number, mouseEnabled: boolean, alpha: number = 0.8): void {
+    show(view: BaseView, alpha: number = 0.8): void {
+        this._view = view;
+        let parent = view.owner.parent as Laya.Sprite;
+        let index = parent.getChildIndex(view.owner);
+
         if (!this._mask) {
             this._mask = new Laya.Sprite();
-            this.initArea();
         }
-        root.addChildAt(this._mask, index);
-        root.addChildAt(this._hitArea, index);
+        parent.addChildAt(this._mask, index);
         this.onResize();
         this._mask.alpha = alpha;
-        this._hitArea.mouseEnabled = mouseEnabled;
         Laya.stage.off(Laya.Event.RESIZE, this, this.onResize);
         Laya.stage.on(Laya.Event.RESIZE, this, this.onResize);
     }
 
     hide(): void {
+        this._view = null;
         this._mask.removeSelf();
-        this._hitArea.removeSelf();
         Laya.stage.off(Laya.Event.RESIZE, this, this.onResize);
+    }
+
+    openExtraClick(view: BaseView): void {
+        this._view = view;
+        if (!this._hitArea) {
+            this.initArea();
+        }
+        let parent = view.owner.parent as Laya.Sprite;
+        let index = parent.getChildIndex(view.owner);
+        parent.addChildAt(this._hitArea, index);
+    }
+    
+    closeExtraClick(): void {
+        this._view = null;
+        this._hitArea.removeSelf();
     }
 }

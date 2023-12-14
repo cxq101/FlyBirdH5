@@ -13,7 +13,7 @@ export class ViewRegUtils {
             return;
         }
 
-        this._map.set(key, { key, layer, options, prefab });
+        this._map.set(key, { key, parent: layer, options, prefab });
     }
 
     static get(id: IViewKey): IViewReg {

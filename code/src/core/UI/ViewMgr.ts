@@ -13,7 +13,7 @@ interface IViewState {
 
 export class ViewMgr extends Singleton<ViewMgr>() {
     /** 黑色遮罩 */
-    // private _mask: ViewMask = new ViewMask();
+    private _mask: ViewMask = new ViewMask();
     // 记录显示中的view
     private _showMap: Map<IViewKey, BaseView> = new Map();
     // 记录隐藏中的view
@@ -57,9 +57,7 @@ export class ViewMgr extends Singleton<ViewMgr>() {
         params = Object.assign({}, options, params);
         // 在缓存列表去查找
         view = this.createFromHideMap(key);
-        if (view) {
-            //view.options = params;
-        } else {
+        if (!view) {
             // const cls = regData.cls;
             // view = new cls(key, params, regData.skin);//创建窗口对象
             // view.on(ViewEvent.LOAD_START, this, this.showLoading);
@@ -69,13 +67,20 @@ export class ViewMgr extends Singleton<ViewMgr>() {
             let prefab: Laya.Prefab = Laya.loader.getRes(regData.prefab);
             let sp: Laya.Sprite = Laya.Pool.getItemByCreateFun("TP", prefab.create, prefab);
             view = sp.getComponent(BaseView);
+            view.key = regData.key;
+            if (!view) {
+                console.error("该窗口没有View脚本组件" + key);
+                return;
+            }
         }
+        view.initParams(params);
 
-        if (SceneRegUtils.tryAddChild(regData.layer, view.owner as Laya.Sprite)) {
-            // options.showMask && this._mask.show(view);
+        if (SceneRegUtils.tryAddChild(regData.parent, view.owner as Laya.Sprite)) {
+            options.showMask && this._mask.show(view);
+            options.extraClick && this._mask.openExtraClick(view);
             this._showMap.set(key, view);
         } else {
-            console.error("没有对应的父层级", key, regData.layer);
+            console.error("没有对应的父层级", key, regData.parent);
         }
     }
 
@@ -89,7 +94,9 @@ export class ViewMgr extends Singleton<ViewMgr>() {
         if (view) {
             this.deleteShowView(key);
             let viewOwner = view.owner as Laya.Sprite;
-            //options.showMask && this._mask.hide();
+            let options = view.getParams();
+            options.showMask && this._mask.hide();
+            options.extraClick && this._mask.closeExtraClick();
             switch (mode) {
                 case EViewCloseMode.HIDE:
                     viewOwner.removeSelf();

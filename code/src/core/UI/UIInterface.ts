@@ -4,7 +4,7 @@ export type IViewLayer = string;
 export type IViewReg = { 
     key: IViewKey;
     prefab?: string;// prefab url
-    layer: IViewLayer;
+    parent: IViewLayer;
     options: IViewParam;
     //cls: new(id: IViewKey, param: IViewParam, skin: string) => BaseView;
 }

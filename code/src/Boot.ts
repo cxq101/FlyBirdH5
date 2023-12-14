@@ -47,8 +47,8 @@ export class Boot extends Laya.Script {
     private registerAllView(): void {
         const k = EViewKey, l = EViewLayer;
         ViewRegUtils.register(k.HelpView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_Help);
-        ViewRegUtils.register(k.MainView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_MainView);
-        ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_SkinView);
+        ViewRegUtils.register(k.MainView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_MainView);
+        ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_SkinView);
         // ViewRegUtils.register(k.Bag, l.UISystem, { showMask: true, extraClick: true, enterAnim: true }, "skins/bag/BagView.scene");
         // ViewRegUtils.register(k.Login, l.UISystem, { showMask: true, extraClick: false, enterAnim: false }, "skins/login/LoginView.scene");
     }
@@ -68,7 +68,9 @@ export class Boot extends Laya.Script {
             this.loadingNode.value = 1.0;
             Laya.Scene.hideLoadingPage(0);
             this.loadHelper.createBackgroundRoot();
-            //this.gameFSM.loadComplete();
+            Laya.timer.once(1000, this, () => {
+                this.gameFSM.loadComplete();
+            })
         });
     }
 
