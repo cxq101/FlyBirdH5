@@ -5,11 +5,15 @@ export class ConfigPath {
     static LH_MainView = "resources/prefabs/views/MainView.lh";
     static LH_SkinView = "resources/prefabs/views/SkinView.lh";
 
+    static LEVEL_0 = "resources/prefabs/level/chapter/Level0.lh";;
+
     static EnterLoadList = [
         {url: ConfigPath.JSON_Skin, type: Laya.Loader.JSON},
 
         {url: ConfigPath.LH_Help, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_MainView, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_SkinView, type: Laya.Loader.HIERARCHY},
+
+        {url: ConfigPath.LEVEL_0, type: Laya.Loader.HIERARCHY},
     ];
 }

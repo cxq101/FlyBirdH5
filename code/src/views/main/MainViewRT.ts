@@ -1,4 +1,5 @@
 const { regClass } = Laya;
+import { GameFSM } from "../../GameFSM";
 import { ViewMgr } from "../../core/UI/ViewMgr";
 import { EViewKey } from "../ViewConst";
 import { MainViewRTBase } from "./MainViewRT.generated";
@@ -13,8 +14,13 @@ export class MainViewRT extends MainViewRTBase {
         ViewMgr.ins.open(EViewKey.SkinView);
     }
 
+    private onClickPlay(): void {
+        // GameFSM.ins.enterLevel(0);
+    }
+
     onAwake(): void {
         this.btnHelp.on(Laya.Event.CLICK, this.onClickHelp);
         this.btnSkin.on(Laya.Event.CLICK, this.onClickSkin);
+        this.btnPlay.on(Laya.Event.CLICK, this.onClickPlay);
     }
 }

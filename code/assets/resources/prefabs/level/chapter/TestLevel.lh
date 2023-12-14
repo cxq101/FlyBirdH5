@@ -1,0 +1,58 @@
+{
+  "_$ver": 1,
+  "_$id": "yg8cbvm6",
+  "_$type": "Sprite",
+  "name": "TestLevel",
+  "width": 1000,
+  "height": 100,
+  "_$comp": [
+    {
+      "_$type": "81d36ae9-c41d-47cc-b112-cc4568ccd384",
+      "scriptPath": "../src/level/Level.ts",
+      "spawnPointNode": {
+        "_$ref": "dz84iggd"
+      },
+      "obstacleRoot": null
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "ev0np8qp",
+      "_$prefab": "47199fde-be59-43c9-851b-ef819fb34222",
+      "name": "obstacleRoot",
+      "active": true,
+      "x": 0,
+      "y": 0,
+      "visible": true,
+      "height": 1280
+    },
+    {
+      "_$id": "3kns7eqm",
+      "_$type": "Sprite",
+      "name": "itemRoot",
+      "width": 100,
+      "height": 1280,
+      "_$child": [
+        {
+          "_$id": "sfqp0cbj",
+          "_$type": "Box",
+          "name": "finalAward",
+          "x": 3611,
+          "y": 772,
+          "width": 200,
+          "height": 200,
+          "bgColor": "rgba(3, 228, 86, 1)"
+        }
+      ]
+    },
+    {
+      "_$id": "dz84iggd",
+      "_$type": "Sprite",
+      "name": "spawnPoint",
+      "x": 318,
+      "y": 356,
+      "width": 100,
+      "height": 100
+    }
+  ]
+}

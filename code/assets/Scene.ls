@@ -35,16 +35,16 @@
         {
           "_$type": "8d2adf04-dadc-4558-9b65-b226c8178714",
           "scriptPath": "../src/LoadHelper.ts",
-          "playerPrefab": {
-            "_$uuid": "71cac087-be04-4e1c-af5c-d7dce6e12802",
-            "_$type": "Prefab"
-          },
-          "backgroundRoot": {
+          "backgroundRootPrefab": {
             "_$uuid": "c87d95ec-40e6-4d9e-8873-c792ed072d99",
             "_$type": "Prefab"
           },
-          "levelCamera": {
-            "_$uuid": "f52f13c2-5641-41d9-b595-df58a169bb21",
+          "testLevelPrefab": {
+            "_$uuid": "22bacdad-5bc3-4ab4-99ea-89201788de40",
+            "_$type": "Prefab"
+          },
+          "playerPrefab": {
+            "_$uuid": "71cac087-be04-4e1c-af5c-d7dce6e12802",
             "_$type": "Prefab"
           }
         }

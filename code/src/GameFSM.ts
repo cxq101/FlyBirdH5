@@ -12,7 +12,7 @@ enum GameStates {
     win = "win",
 }
 
-enum GameEvents {
+export enum GameEvents {
     load = 100,
     loadComplete,
     enterHome,
@@ -27,6 +27,17 @@ enum GameEvents {
 
 export class GameFSM extends StateMachine<GameStates, GameEvents> {
     private readonly _id = `GameFSM_${Math.floor(Math.random() * 10000)}`;
+
+    public onLoadHandler: Laya.Handler;
+    public onLoadCompleteHandler: Laya.Handler;
+    public onEnterHomeHandler: Laya.Handler;
+    public onEnterLevelHandler: Laya.Handler;
+    public onWinHandler: Laya.Handler;
+    public onPauseHandler: Laya.Handler;
+    public onNextLevelHandler: Laya.Handler;
+    public onResumeHandler: Laya.Handler;
+    public onRestartLevelHandler: Laya.Handler;
+    public onBackHomeHandler: Laya.Handler;
 
     constructor(init = GameStates.init) {
         super(init);
@@ -56,54 +67,42 @@ export class GameFSM extends StateMachine<GameStates, GameEvents> {
     }
 
     private async onLoad(): Promise<void> {
-        this.logger.log("GameFSM==========onLoad");
-        // await PromiseEx.delay(3000);
-        // this.dispatch(GameEvents.loadComplete);
+        this.onLoadHandler && this.onLoadHandler.run();
     }
 
     private async onEnterHome(): Promise<void> {
-        this.logger.log("GameFSM==========onEnterHome");
-        ViewMgr.ins.open(EViewKey.MainView);
+        this.onEnterHomeHandler && this.onEnterHomeHandler.run();
     }
 
     private async onLoadComplete(): Promise<void> {
-        this.logger.log("GameFSM==========onLoadComplete");
-        return this.dispatch(GameEvents.enterHome);
+        this.onLoadCompleteHandler && this.onLoadCompleteHandler.run();
     }
 
     private async onEnterLevel(): Promise<void> {
-        this.logger.log("GameFSM==========onEnterLevel");
-        // return this.dispatch(GameEvents.breakComplete);
+        this.onEnterLevelHandler && this.onEnterLevelHandler.run();
     }
 
     private async onWin(): Promise<void> {
-        this.logger.log("GameFSM==========onWin");
+        this.onWinHandler && this.onWinHandler.run();
     }
     
     private async onPause(): Promise<void> {
-        this.logger.log("GameFSM==========onPause");
+        this.onPauseHandler && this.onPauseHandler.run();
     }
 
     private async onNextLevel(): Promise<void> {
-        this.logger.log("GameFSM==========onNextLevel");
+        this.onNextLevelHandler && this.onNextLevelHandler.run();
     }
 
     private async onResume(): Promise<void> {
-        this.logger.log("GameFSM==========onResume");
+        this.onResumeHandler && this.onResumeHandler.run();
     }
     
     private async onRestartLevel(): Promise<void> {
-        this.logger.log("GameFSM==========onRestartLevel");
+        this.onRestartLevelHandler && this.onRestartLevelHandler.run();
     }
 
     private async onBackHome(): Promise<void> {
-        this.logger.log("GameFSM==========onBackHome");
-    }
-
-    load(): void {
-        this.dispatch(GameEvents.load);
-    }
-    loadComplete(): void {
-        this.dispatch(GameEvents.loadComplete);
+        this.onBackHomeHandler && this.onBackHomeHandler.run();
     }
 }

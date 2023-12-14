@@ -1,4 +1,6 @@
 import { BackgroundRoot } from "./level/BackgroundRoot";
+import { Level } from "./level/Level";
+import { Player } from "./level/Player";
 
 /**
  * author: cxq
@@ -10,21 +12,38 @@ const { regClass, property } = Laya;
 @regClass()
 export class LoadHelper extends Laya.Script {
     @property({ type: Laya.Prefab })
+    backgroundRootPrefab: Laya.Prefab;
+ 
+    @property({ type: Laya.Prefab })
+    testLevelPrefab: Laya.Prefab;
+ 
+    @property({ type: Laya.Prefab })
     playerPrefab: Laya.Prefab;
 
-    @property({ type: Laya.Prefab })
-    backgroundRoot: Laya.Prefab;
+    // @property({ type: Laya.Prefab })
+    // level: Laya.Prefab;
+    private _testLevel: Level;
     
-    @property({ type: Laya.Prefab })
-    levelCamera: Laya.Prefab;
-    
-    private backgroundRoot2: BackgroundRoot;
+    private _backgroundRoot: BackgroundRoot;
+
+    get root(): Laya.Sprite {
+        return this.owner.parent as Laya.Sprite; 
+    }
     
     createBackgroundRoot(): void {
-        let root = this.owner.parent;
-        let node = this.backgroundRoot.create();
-        root.addChild(node);
-        this.backgroundRoot2 = node.getComponent(BackgroundRoot);
-        this.backgroundRoot2.enterAnim();
+        let node = this.backgroundRootPrefab.create();
+        this.root.addChild(node);
+        this._backgroundRoot = node.getComponent(BackgroundRoot);
+        this._backgroundRoot.enterAnim();
+    }
+
+    createTestLevel(): void {
+        let levelNode = this.testLevelPrefab.create();
+        this.root.addChild(levelNode);
+
+        let playerNode = this.playerPrefab.create() as Laya.Sprite;
+        
+        let level = levelNode.getComponent(Level);
+        level.init(playerNode, this._backgroundRoot);
     }
 }
