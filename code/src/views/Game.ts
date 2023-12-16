@@ -79,6 +79,7 @@ export class Game extends Singleton<Game>() {
         ViewRegUtils.register(k.MainView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_MainView);
         ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_SkinView);
         ViewRegUtils.register(k.HelpView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_Help);
+        ViewRegUtils.register(k.HudView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_Hud);
     }
 
     private loadRes(): void {
@@ -125,6 +126,8 @@ export class Game extends Singleton<Game>() {
     private onEnterLevelHandler(): void {
         ViewMgr.ins.close(EViewKey.MainView);
         this._boot.levelLoader.createTestLevel();
+        ViewMgr.ins.close(EViewKey.MainView);
+
         // 1.先弹出遮罩层；
         
         // 2.创建角色；

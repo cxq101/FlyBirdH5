@@ -1,0 +1,54 @@
+{
+  "_$ver": 1,
+  "_$id": "uzq0k1gu",
+  "_$runtime": "res://0d9cff6a-5053-49a3-b517-4e64c9145575",
+  "_$type": "Box",
+  "name": "HUD",
+  "width": 720,
+  "height": 1280,
+  "_mouseState": 2,
+  "_$comp": [
+    {
+      "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+      "scriptPath": "../src/core/UI/BaseView.ts",
+      "fadeTime": 300
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "dex91b30",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnBack",
+      "x": 92,
+      "y": 1160,
+      "width": 128,
+      "height": 128,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 0.8,
+      "scaleY": 0.8,
+      "_mouseState": 2,
+      "stateNum": 1,
+      "skin": "res://6a8c65af-459d-4756-ab23-63dab6df9d5f",
+      "label": "",
+      "labelSize": 20,
+      "labelStrokeColor": "#32556b",
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "_$comp": [
+        {
+          "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+          "scriptPath": "../src/core/UI/BaseView.ts",
+          "fadeTime": 300
+        },
+        {
+          "_$type": "64521eff-7e49-4566-9899-03615e713814",
+          "scriptPath": "../src/UIComponents/ScaleButton.ts",
+          "duration": 100,
+          "scale": 0.9,
+          "isAnchorCenterRequired": true
+        }
+      ]
+    }
+  ]
+}

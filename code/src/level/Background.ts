@@ -2,6 +2,7 @@
  * author: cxq
  * time: 2023/12/12 15:22:31
  * desc: 背景视差移动
+ * MTC
  */
 const { regClass, property } = Laya;
 
