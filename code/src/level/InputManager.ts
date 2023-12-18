@@ -34,6 +34,8 @@ export class InputManager extends Laya.Script {
     
     init(target: IInputTarget): void {
         this._target = target;
+        Laya.stage.on(Laya.Event.MOUSE_UP, this, this.onStageMouseUp);
+        Laya.stage.on(Laya.Event.MOUSE_DOWN, this, this.onStageMouseDown);
     }
 
     hasTarget(): boolean {
@@ -82,8 +84,25 @@ export class InputManager extends Laya.Script {
         }
     }
 
+    onStageMouseDown(evt: Laya.Event): void {
+        if (!this._target.enabledInput || this.isPressing) return;
+        this.pressTimestamp = Date.now();
+    }
+
+    onStageMouseUp(evt: Laya.Event): void {
+        if (!this._target.enabledInput || !this.isPressing) return;
+        let pressTime = Date.now() - this.pressTimestamp;
+        pressTime = pressTime > this.maxTime ? this.maxTime : pressTime;
+        let force = pressTime * this.forceVelocity * 0.001;
+        force = Math.max(force, this.minForce); 
+        this._target.addForce(force, this.degrees);
+        this.pressTimestamp = 0;
+    }
+
     onDestroy(): void {
         this._target = null;
         this.pressTimestamp = 0;
+        Laya.stage.off(Laya.Event.MOUSE_UP, this, this.onStageMouseUp);
+        Laya.stage.off(Laya.Event.MOUSE_DOWN, this, this.onStageMouseDown);
     }
 }
