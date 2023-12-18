@@ -3,6 +3,8 @@
  * time: 2023/12/12 15:22:31
  * desc: 背景视差移动
  * MTC
+ * todo:
+ * 1.屏幕宽度适应问题
  */
 const { regClass, property } = Laya;
 
@@ -26,6 +28,7 @@ export class Background extends Laya.Script {
     private resetPos(): void {
         let real = this.owner.x - this.startPosX;
         this.owner.x = this.startPosX + real % this.textureWidth;
+        console.log("distance------2--", this.owner.x, this.distance);
     }
 
     private isOutOfBounds(): boolean {
@@ -39,6 +42,7 @@ export class Background extends Laya.Script {
 
     move(distance: number): void {
         this.owner.x += distance * this.moveScale;
+        console.log("distance------1--", this.owner.x, this.distance);
         if (this.isOutOfBounds()) {
             this.resetPos();
         }

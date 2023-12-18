@@ -1,4 +1,7 @@
-import { Player } from "./Player";
+export interface IInputTarget {
+    enabledInput: boolean;
+    addForce(force: number, degrees: number): void;
+}
 
 /**
  * author: cxq
@@ -10,28 +13,35 @@ const { regClass, property } = Laya;
 @regClass()
 export class InputManager extends Laya.Script {
     @property({ type: Number, tips: "默认的弹跳角度" })
-    private degrees: number;
+    private degrees: number = 35;
 
     @property({ type: Number, tips: "跳跃力度增长系数" })
-    private forceVelocity: number;
+    private forceVelocity: number = 800;
 
     @property({ type: Number, tips: "点击有效时间" })
-    private maxTime: number = 0;
+    private maxTime: number = 1800;
 
     @property({ type: Number, tips: "最小促发力度" })
     private minForce: number = 250;
 
-    @property({ type: Player })
-    player: Player;
+    private _target: IInputTarget;
 
     private pressTimestamp: number = 0;
 
     private get isPressing(): boolean {
         return this.pressTimestamp > 0;
     }
+    
+    init(target: IInputTarget): void {
+        this._target = target;
+    }
+
+    hasTarget(): boolean {
+        return this._target != null;
+    }
 
     onKeyDown(evt: Laya.Event): void {
-        if (!this.player.isGround || this.isPressing) return;
+        if (!this._target.enabledInput || this.isPressing) return;
         switch (evt.keyCode) {
             case Laya.Keyboard.A:
             case Laya.Keyboard.D:
@@ -43,7 +53,7 @@ export class InputManager extends Laya.Script {
     }
 
     onKeyUp(evt: Laya.Event): void {
-        if (!this.player.isGround || !this.isPressing) return;
+        if (!this._target.enabledInput || !this.isPressing) return;
         switch (evt.keyCode) {
             case Laya.Keyboard.A:
             case Laya.Keyboard.D:
@@ -51,7 +61,7 @@ export class InputManager extends Laya.Script {
                 pressTime = pressTime > this.maxTime ? this.maxTime : pressTime;
                 let force = pressTime * this.forceVelocity * 0.001;
                 force = Math.max(force, this.minForce); 
-                this.player.addForce(force, this.degrees);
+                this._target.addForce(force, this.degrees);
                 this.pressTimestamp = 0;
                 break;
             default:
@@ -62,10 +72,10 @@ export class InputManager extends Laya.Script {
     onKeyPress(evt: Laya.Event): void {
         switch (evt.keyCode) {
             case Laya.Keyboard.Q:
-                this.player.addForce(this.forceVelocity * this.maxTime * 0.001, 180 - this.degrees);
+                this._target.addForce(this.forceVelocity * this.maxTime * 0.001, 180 - this.degrees);
                 break;
             case Laya.Keyboard.E:
-                this.player.addForce(this.forceVelocity * this.maxTime * 0.001, this.degrees);
+                this._target.addForce(this.forceVelocity * this.maxTime * 0.001, this.degrees);
                 break;
             default:
                 break;

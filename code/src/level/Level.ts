@@ -1,4 +1,6 @@
 import { BackgroundRoot } from "./BackgroundRoot";
+import { InputManager } from "./InputManager";
+import { LevelCamera } from "./LevelCamera";
 import { ObstacleRoot } from "./ObstacleRoot";
 import { Player } from "./Player";
 
@@ -25,23 +27,41 @@ export class Level extends Laya.Script {
     }
 
     public player: Player; 
- 
+    public levelCamera: LevelCamera;
+    public inputManager: InputManager;
     public backgroundRoot: BackgroundRoot;
 
-    private _playerMoveDistance: number = 0;
+    private checkCollision(): void {
+        if (!this.player.isGround) return;
+        const playerBounds = this.player.owner.getBounds();
+        this.obstacleRoot.obstacles.forEach(o => {
+            let obstaclesBounds = (o.owner as Laya.Sprite).getBounds().clone();
+            obstaclesBounds.x += this.owner.x;
+            if (obstaclesBounds.intersects(playerBounds)) {
+                this.player.addForce(o.force, o.degrees);
+            }
+        });
+    }
 
-    init(playerNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
-        this.backgroundRoot = backgroundRoot;
+    init(inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
+        playerNode.pos(...this.spawnPoint);
+        this.owner.addChild(playerNode);
         this.player = playerNode.getComponent(Player);
+
+        this.owner.addChild(inputManagerNode);
+        this.inputManager = inputManagerNode.getComponent(InputManager);
+        this.inputManager.init(this.player);
+
+        this.owner.addChild(cameraNode);
+        this.levelCamera = cameraNode.getComponent(LevelCamera);
+        this.levelCamera.init(this.player);
+        this.levelCamera.addFollower(backgroundRoot);
+        this.levelCamera.addFollower(this.obstacleRoot);
+
+        this.backgroundRoot = backgroundRoot;
     }
     
     onUpdate(): void {
-        if (!this.player) return;
-        const velocityX = this.player.velocityX;
-        if (velocityX == 0) return;
-        let distance = velocityX * Laya.timer.delta * 0.001;
-        this._playerMoveDistance += distance;
-        this.obstacleRoot.move(-distance);
-        this.backgroundRoot.move(-distance);
+        this.checkCollision();
     }
 }

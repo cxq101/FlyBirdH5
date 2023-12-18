@@ -1,5 +1,6 @@
 export enum EViewKey {
     HudView = "HudView",
+    PauseView = "PauseView",
     HelpView = "HelpView",
     MainView = "MainView",
     SkinView = "SkinView",

@@ -1,0 +1,18 @@
+{
+  "_$ver": 1,
+  "_$id": "adx8z5x6",
+  "_$type": "Sprite",
+  "name": "InputManager",
+  "width": 100,
+  "height": 100,
+  "_$comp": [
+    {
+      "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6",
+      "scriptPath": "../src/level/InputManager.ts",
+      "degrees": 35,
+      "forceVelocity": 800,
+      "maxTime": 1800,
+      "minForce": 250
+    }
+  ]
+}

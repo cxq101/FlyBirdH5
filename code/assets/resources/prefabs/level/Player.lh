@@ -15,17 +15,6 @@
       "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf",
       "scriptPath": "../src/level/Player.ts",
       "grav": -1600
-    },
-    {
-      "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6",
-      "scriptPath": "../src/level/InputManager.ts",
-      "degrees": 35,
-      "forceVelocity": 800,
-      "maxTime": 1800,
-      "player": {
-        "_$ref": "iig1hp5z",
-        "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
-      }
     }
   ]
 }

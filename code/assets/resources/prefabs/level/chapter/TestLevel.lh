@@ -4,7 +4,7 @@
   "_$type": "Sprite",
   "name": "TestLevel",
   "width": 1000,
-  "height": 100,
+  "height": 1280,
   "_$comp": [
     {
       "_$type": "81d36ae9-c41d-47cc-b112-cc4568ccd384",
@@ -12,7 +12,10 @@
       "spawnPointNode": {
         "_$ref": "dz84iggd"
       },
-      "obstacleRoot": null
+      "obstacleRoot": {
+        "_$ref": "ev0np8qp",
+        "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b"
+      }
     }
   ],
   "_$child": [
@@ -49,8 +52,8 @@
       "_$id": "dz84iggd",
       "_$type": "Sprite",
       "name": "spawnPoint",
-      "x": 318,
-      "y": 356,
+      "x": 298,
+      "y": 1084,
       "width": 100,
       "height": 100
     }

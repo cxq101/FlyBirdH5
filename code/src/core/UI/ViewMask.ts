@@ -16,7 +16,7 @@ export class ViewMask {
         const h = Laya.stage.height >> 0;
         this._mask.size(w, h);
         this._mask.graphics.clear();
-        this._mask.graphics.drawRect(0, 0, w, h, "#0000ff");
+        this._mask.graphics.drawRect(0, 0, w, h, "#000000");
     }
 
     private onClick(): void {

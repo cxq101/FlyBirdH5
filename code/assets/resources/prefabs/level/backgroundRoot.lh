@@ -3,7 +3,6 @@
   "_$id": "02sqed4s",
   "_$type": "Sprite",
   "name": "backgroundRoot",
-  "active": false,
   "width": 720,
   "height": 1280,
   "_$comp": [
@@ -44,7 +43,8 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.3
+          "moveScale": 0.3,
+          "startPosX": -720
         }
       ]
     },
@@ -61,7 +61,8 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.6
+          "moveScale": 0.6,
+          "startPosX": -720
         }
       ]
     },
@@ -78,7 +79,8 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1
+          "moveScale": 1,
+          "startPosX": -720
         }
       ]
     },
@@ -95,7 +97,8 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1
+          "moveScale": 1,
+          "startPosX": -720
         }
       ]
     },
@@ -112,7 +115,8 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1
+          "moveScale": 1,
+          "startPosX": 0
         }
       ]
     }

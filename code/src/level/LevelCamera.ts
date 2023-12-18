@@ -3,10 +3,13 @@
  * time: 2023/12/13 08:48:23
  * desc: 
  */
+export interface ICameraFocusTarget {
+    velocityX: number;
+}
 
-import { BackgroundRoot } from "./BackgroundRoot";
-import { ObstacleRoot } from "./ObstacleRoot";
-import { Player } from "./Player";
+export interface ICameraFollower {
+    move(distance: number): void;
+}
 
 const { regClass, property } = Laya;
 
@@ -14,23 +17,33 @@ const { regClass, property } = Laya;
 export class LevelCamera extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    //@property({ type: Player })
-    player: Player;
+    private _totalDistance: number = 0;
+    private _followers: ICameraFollower[];
+    private _focusTarget: ICameraFocusTarget;
+    
+    get totalDistance(): number {
+        return this._totalDistance;
+    }
 
-    //@property({ type: BackgroundRoot })
-    backgroundRoot: BackgroundRoot;
+    init(target: ICameraFocusTarget): void {
+        this._followers = [];
+        this._focusTarget = target;
+    }
 
-    //@property({ type: ObstacleRoot })
-    obstacleRoot: ObstacleRoot;
+    addFollower(f: ICameraFollower): void {
+        this._followers.push(f);
+    }
 
-    private totalDistance: number = 0;
+    isInit(): boolean {
+        return this._focusTarget != null;
+    }
     
     onUpdate(): void {
-        const velocityX = this.player.velocityX;
-        if (velocityX == 0) return;
-        let distance = velocityX * Laya.timer.delta * 0.001;
-        this.totalDistance += distance;
-        this.obstacleRoot.move(-distance);
-        this.backgroundRoot.move(-distance);
+        if (!this.isInit()) return;
+        const delta = Laya.timer.delta * 0.001;
+        let distance = this._focusTarget.velocityX * delta;
+        if (distance == 0) return;
+        this._totalDistance += distance;
+        this._followers.forEach(follow => follow.move(-distance));
     }
 }

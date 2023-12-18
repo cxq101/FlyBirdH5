@@ -1,13 +1,13 @@
 const { regClass } = Laya;
 import { ViewMgr } from "../../core/UI/ViewMgr";
+import { Game } from "../Game";
 import { EViewKey } from "../ViewConst";
 import { HudViewRTBase } from "./HudViewRT.generated";
 
 @regClass()
 export class HudViewRT extends HudViewRTBase {
     private onClickBack(): void {
-        ViewMgr.ins.close(EViewKey.HudView);   
-        ViewMgr.ins.close(EViewKey.HudView);   
+        Game.ins.pause();
     }
     
     onAwake(): void {

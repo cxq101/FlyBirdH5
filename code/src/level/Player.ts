@@ -23,6 +23,10 @@ export class Player extends Laya.Script {
         return this.owner.y >= this.startPosY;
     }
 
+    get enabledInput(): boolean {
+        return this.isGround;
+    }
+
     addForce(force: number, degrees: number): void {
         const radians = MathUtil.degreesToRadians(degrees);
         const velocityX = force * Math.cos(radians);

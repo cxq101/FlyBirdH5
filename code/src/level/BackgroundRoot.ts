@@ -1,5 +1,4 @@
 import { Background } from "./Background";
-import { Player } from "./Player";
 
 /**
  * author: cxq

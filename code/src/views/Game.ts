@@ -80,6 +80,7 @@ export class Game extends Singleton<Game>() {
         ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_SkinView);
         ViewRegUtils.register(k.HelpView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_Help);
         ViewRegUtils.register(k.HudView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_Hud);
+        ViewRegUtils.register(k.PauseView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_PauseView);
     }
 
     private loadRes(): void {
@@ -126,16 +127,7 @@ export class Game extends Singleton<Game>() {
     private onEnterLevelHandler(): void {
         ViewMgr.ins.close(EViewKey.MainView);
         this._boot.levelLoader.createTestLevel();
-        ViewMgr.ins.close(EViewKey.MainView);
-
-        // 1.先弹出遮罩层；
-        
-        // 2.创建角色；
-        // 3.创建关卡障碍物；不会全部创建 根据当前位置创建；是否要引入tilemap？
-        // 4.创建item道具
-        // 5.隐层遮罩层；
-
-        // 开始
+        ViewMgr.ins.open(EViewKey.HudView);
     }
 
     private onWinHandler(): void {
@@ -143,7 +135,8 @@ export class Game extends Singleton<Game>() {
     }
 
     private onPauseHandler(): void {
-
+        ViewMgr.ins.close(EViewKey.HudView);   
+        ViewMgr.ins.open(EViewKey.PauseView);   
     }
 
     private onNextLevelHandler(): void {
@@ -151,7 +144,8 @@ export class Game extends Singleton<Game>() {
     }
 
     private onResumeHandler(): void {
-
+        ViewMgr.ins.open(EViewKey.HudView);   
+        ViewMgr.ins.close(EViewKey.PauseView);   
     }
 
     private onRestartLevelHandler(): void {
@@ -164,5 +158,21 @@ export class Game extends Singleton<Game>() {
 
     public enterLevel(): void {
         this._fsm.dispatch(GameEvents.enterLevel);
+    }
+    
+    public pause(): void {
+        this._fsm.dispatch(GameEvents.pause);
+    }
+
+    public resume(): void {
+        this._fsm.dispatch(GameEvents.resume);
+    }
+
+    public restartLevel(): void {
+        this._fsm.dispatch(GameEvents.restartLevel);
+    }
+
+    public backHome(): void {
+        this._fsm.dispatch(GameEvents.backHome);
     }
 }
