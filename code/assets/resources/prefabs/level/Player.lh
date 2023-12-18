@@ -1,20 +1,38 @@
 {
   "_$ver": 1,
-  "_$id": "iig1hp5z",
-  "_$type": "Image",
+  "_$id": "1zsssyf5",
+  "_$type": "Sprite",
   "name": "Player",
   "x": 131.00000000000006,
   "y": 1056,
-  "width": 132,
-  "height": 132,
-  "skin": "res://cbb8db55-b424-4832-b54f-7481d9606fab",
-  "useSourceSize": true,
-  "color": "#ffffff",
+  "width": 110,
+  "height": 110,
+  "anchorX": 0.5,
+  "anchorY": 1,
   "_$comp": [
     {
       "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf",
       "scriptPath": "../src/level/Player.ts",
-      "grav": -1600
+      "grav": -1600,
+      "imgIcon": {
+        "_$ref": "pb05kpyr"
+      }
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "pb05kpyr",
+      "_$type": "Image",
+      "name": "Icon",
+      "x": 7,
+      "y": 5,
+      "width": 97,
+      "height": 105,
+      "bottom": 0,
+      "centerX": 0,
+      "skin": "res://1bf8f30e-7636-4afd-9207-6e10b7a20d15",
+      "useSourceSize": true,
+      "color": "#ffffff"
     }
   ]
 }

@@ -22,7 +22,8 @@
   },
   "modules": {
     "laya.d3": false,
-    "laya.ui": true
+    "laya.ui": true,
+    "laya.physics2D": false
   },
   "splash": {
     "enabled": false,

@@ -63,7 +63,7 @@ export class MathUtil {
      * @param list
      * @returns
      */
-    public static randElement<T>(list: T[]): T | null{
+    public static randElement<T>(list: T[]): T | null {
         if (list == null || list.length == 0) {
             return null;
         }
@@ -77,5 +77,17 @@ export class MathUtil {
      */
     public static chance(value: number): boolean {
         return Math.random() < value;
+    }
+
+    /**
+     * 判断两区间是否部分重叠
+     * @param m0 区间0 起始值
+     * @param m1 区间0 结束值
+     * @param n0 区间1 起始值
+     * @param n1 区间1 起始值
+     * @returns 
+     */
+    public static isRangesPartiallyOverlap(m0: number, m1: number, n0: number, n1: number): boolean {
+        return (m0 <= n1 && n1 <= m1) || (n0 <= m1 && m1 <= n1);
     }
 }

@@ -7,6 +7,7 @@ const { regClass, property } = Laya;
 
 @regClass()
 export class Obstacle extends Laya.Script {
+    declare owner: Laya.Sprite;
     @property({ type: Number, tips: "默认的弹跳角度" })
     degrees: number;
 

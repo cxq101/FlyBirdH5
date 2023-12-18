@@ -14,10 +14,33 @@
     {
       "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
       "scriptPath": "../src/level/ObstacleRoot.ts",
-      "player": null,
       "obstacles": [
         {
-          "_$ref": "uq8akar9",
+          "_$ref": "4w1evbxo",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        },
+        {
+          "_$ref": "79iy6plp",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        },
+        {
+          "_$ref": "zsbupgbn",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        },
+        {
+          "_$ref": "43b1604w",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        },
+        {
+          "_$ref": "dpl6pguk",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        },
+        {
+          "_$ref": "dzod60up",
+          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
+        },
+        {
+          "_$ref": "0695txgz",
           "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f"
         }
       ]
@@ -25,137 +48,67 @@
   ],
   "_$child": [
     {
-      "_$id": "uq8akar9",
-      "_$type": "Box",
+      "_$id": "4w1evbxo",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
       "name": "obstacle",
+      "active": true,
       "x": 670,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": 135,
-          "force": 800,
-          "player": null
-        }
-      ]
+      "visible": true
     },
     {
-      "_$id": "0ppn7heo",
-      "_$type": "Box",
-      "name": "obstacle(1)",
+      "_$id": "79iy6plp",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+      "name": "obstacle(7)",
+      "active": true,
       "x": 1038,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": null,
-          "force": null,
-          "player": null
-        }
-      ]
+      "visible": true
     },
     {
-      "_$id": "excvlxmt",
-      "_$type": "Box",
-      "name": "obstacle(2)",
+      "_$id": "zsbupgbn",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+      "name": "obstacle(8)",
+      "active": true,
       "x": 1378,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": null,
-          "force": null,
-          "player": null
-        }
-      ]
+      "visible": true
     },
     {
-      "_$id": "ktcjmth5",
-      "_$type": "Box",
-      "name": "obstacle(3)",
+      "_$id": "43b1604w",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+      "name": "obstacle(9)",
+      "active": true,
       "x": 1754,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": null,
-          "force": null,
-          "player": null
-        }
-      ]
+      "visible": true
     },
     {
-      "_$id": "0066z7fi",
-      "_$type": "Box",
-      "name": "obstacle(4)",
+      "_$id": "dpl6pguk",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+      "name": "obstacle(10)",
+      "active": true,
       "x": 2100,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": null,
-          "force": null,
-          "player": null
-        }
-      ]
+      "visible": true
     },
     {
-      "_$id": "uvjzydtw",
-      "_$type": "Box",
-      "name": "obstacle(5)",
+      "_$id": "dzod60up",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+      "name": "obstacle(11)",
+      "active": true,
       "x": 2724,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": null,
-          "force": null,
-          "player": null
-        }
-      ]
+      "visible": true
     },
     {
-      "_$id": "50zcgyp1",
-      "_$type": "Box",
-      "name": "obstacle(6)",
+      "_$id": "0695txgz",
+      "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+      "name": "obstacle(12)",
+      "active": true,
       "x": 3188,
       "y": 1151,
-      "width": 150,
-      "height": 40,
-      "bgColor": "rgba(255, 255, 255, 1)",
-      "_$comp": [
-        {
-          "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-          "scriptPath": "../src/level/Obstacle.ts",
-          "degrees": null,
-          "force": null,
-          "player": null
-        }
-      ]
+      "visible": true
     }
   ]
 }

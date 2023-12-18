@@ -1,3 +1,4 @@
+import { MathUtil } from "../utils/MathUtils";
 import { BackgroundRoot } from "./BackgroundRoot";
 import { InputManager } from "./InputManager";
 import { LevelCamera } from "./LevelCamera";
@@ -18,32 +19,60 @@ export class Level extends Laya.Script {
     @property({ type: Laya.Sprite, tips: "玩家出生坐标对象" })
     private spawnPointNode: Laya.Sprite;
 
+    @property({ type: Laya.Sprite, tips: "地面高度对象" })
+    private groundNode: Laya.Sprite;
+
     @property({ type: ObstacleRoot })
     private obstacleRoot: ObstacleRoot;
 
-    get spawnPoint(): [number, number] {
-        const {x, y} = this.spawnPointNode;
-        return [x, y];
-    }
+    private _isInit: boolean = false;
 
     public player: Player; 
     public levelCamera: LevelCamera;
     public inputManager: InputManager;
     public backgroundRoot: BackgroundRoot;
 
+    get spawnPoint(): [number, number] {
+        const {x, y} = this.spawnPointNode;
+        return [x, y];
+    }
+
+    get groundY(): number {
+        return this.groundNode.y;
+    }
+
+    private checkPlayerGround(): void {
+        if (!this._isInit) return;
+        const currState = this.player.isGround;
+        const isGround = this.player.isBelowHeight(this.groundY);
+        this.player.isGround = isGround;
+        if (!currState && isGround) {
+            this.player.stop();
+            this.player.owner.y = this.groundY;
+        }
+    }
+
+    private getRang(sp: Laya.Sprite): [number, number] {
+        let p = Laya.Point.create();
+        sp.localToGlobal(p);
+        return [p.x, p.x + sp.width];
+    }
+
     private checkCollision(): void {
+        if (!this._isInit) return;
         if (!this.player.isGround) return;
-        const playerBounds = this.player.owner.getBounds();
+        const [playerX, playerW] = this.getRang(this.player.owner);
         this.obstacleRoot.obstacles.forEach(o => {
-            let obstaclesBounds = (o.owner as Laya.Sprite).getBounds().clone();
-            obstaclesBounds.x += this.owner.x;
-            if (obstaclesBounds.intersects(playerBounds)) {
+            let [obstacleX, obstacleW] = this.getRang(o.owner as Laya.Sprite);
+            if (MathUtil.isRangesPartiallyOverlap(playerX, playerW, obstacleX, obstacleW)) {
                 this.player.addForce(o.force, o.degrees);
             }
         });
     }
 
     init(inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
+        if (this._isInit) return;
+        this._isInit = true;
         playerNode.pos(...this.spawnPoint);
         this.owner.addChild(playerNode);
         this.player = playerNode.getComponent(Player);
@@ -59,9 +88,12 @@ export class Level extends Laya.Script {
         this.levelCamera.addFollower(this.obstacleRoot);
 
         this.backgroundRoot = backgroundRoot;
+
+        this.obstacleRoot.alignToHeight(this.groundY);
     }
     
     onUpdate(): void {
+        this.checkPlayerGround();
         this.checkCollision();
     }
 }

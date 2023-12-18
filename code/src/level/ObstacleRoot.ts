@@ -18,4 +18,8 @@ export class ObstacleRoot extends Laya.Script {
     move(distance: number): void {
         this.owner.x += distance;
     }
+
+    alignToHeight(h: number): void {
+        this.obstacles.forEach(o => o.owner.y = h);
+    }
 }

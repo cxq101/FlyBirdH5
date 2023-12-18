@@ -16,15 +16,30 @@ export class Player extends Laya.Script {
 
     @property({ type: Number, tips: "重力加速度" })
     private grav: number = -9.8;
+
+    @property({ type: Laya.Image, tips: "icon" })
+    private imgIcon: Laya.Image;
     
-    private startPosY: number = 0;
+    private _isGround: boolean = false;
 
     get isGround(): boolean {
-        return this.owner.y >= this.startPosY;
+        return this._isGround;
+    }
+
+    set isGround(v: boolean) {
+        this._isGround = v;
     }
 
     get enabledInput(): boolean {
         return this.isGround;
+    }
+
+    isBelowHeight(y: number): boolean {
+        return this.owner.y >= y;
+    }
+    
+    stop(): void {
+        this.velocityX = this.velocityY = 0;
     }
 
     addForce(force: number, degrees: number): void {
@@ -35,16 +50,11 @@ export class Player extends Laya.Script {
         this.velocityY = velocityY;
     }
 
-    onStart(): void {
-        this.startPosY = this.owner.y;
-    }
-
     onUpdate(): void {
-        if (this.velocityX === 0 && this.velocityY === 0) return;
         const delta = Laya.timer.delta * 0.001;
         this.owner.y -= this.velocityY * delta;
-        this.owner.y = Math.min(this.owner.y, this.startPosY);
-        this.velocityY += this.grav * delta;
-        this.isGround && (this.velocityX = this.velocityY = 0);
+        if (!this.isGround) {
+            this.velocityY += this.grav * delta;
+        }
     }
 }

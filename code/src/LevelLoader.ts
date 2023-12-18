@@ -24,8 +24,7 @@ export class LevelLoader extends Laya.Script {
 
     @property({ type: Laya.Prefab })
     backgroundRootPrefab: Laya.Prefab;
-    // @property({ type: Laya.Prefab })
-    // level: Laya.Prefab;
+    
     private _testLevel: Level;
     
     private _backgroundRoot: BackgroundRoot;

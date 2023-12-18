@@ -1,0 +1,19 @@
+{
+  "_$ver": 1,
+  "_$id": "uq8akar9",
+  "_$type": "Box",
+  "name": "obstacle",
+  "x": 670,
+  "y": 1151,
+  "width": 150,
+  "height": 40,
+  "bgColor": "rgba(255, 255, 255, 1)",
+  "_$comp": [
+    {
+      "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
+      "scriptPath": "../src/level/Obstacle.ts",
+      "degrees": 135,
+      "force": 800
+    }
+  ]
+}
