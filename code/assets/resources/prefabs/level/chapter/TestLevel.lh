@@ -65,7 +65,7 @@
       "_$type": "Sprite",
       "name": "groundPoint",
       "x": 261,
-      "y": 1000,
+      "y": 1070,
       "width": 100,
       "height": 100
     }

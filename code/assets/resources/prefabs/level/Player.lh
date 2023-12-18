@@ -9,13 +9,21 @@
   "height": 110,
   "anchorX": 0.5,
   "anchorY": 1,
+  "_gcmds": [],
   "_$comp": [
     {
       "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf",
       "scriptPath": "../src/level/Player.ts",
+      "degrees": 35,
+      "forceVelocity": 800,
+      "maxTime": 1800,
+      "minForce": 250,
       "grav": -1600,
       "imgIcon": {
         "_$ref": "pb05kpyr"
+      },
+      "collisionBox": {
+        "_$ref": "jvxvhaqc"
       }
     }
   ],
@@ -33,6 +41,17 @@
       "skin": "res://1bf8f30e-7636-4afd-9207-6e10b7a20d15",
       "useSourceSize": true,
       "color": "#ffffff"
+    },
+    {
+      "_$id": "jvxvhaqc",
+      "_$type": "Box",
+      "name": "Box",
+      "x": 28,
+      "y": 10,
+      "width": 60,
+      "height": 100,
+      "bottom": 0,
+      "centerX": 3
     }
   ]
 }

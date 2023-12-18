@@ -52,18 +52,12 @@ export class Level extends Laya.Script {
         }
     }
 
-    private getRang(sp: Laya.Sprite): [number, number] {
-        let p = Laya.Point.create();
-        sp.localToGlobal(p);
-        return [p.x, p.x + sp.width];
-    }
-
     private checkCollision(): void {
         if (!this._isInit) return;
         if (!this.player.isGround) return;
-        const [playerX, playerW] = this.getRang(this.player.owner);
+        const [playerX, playerW] = this.player.getGlobalCollisionRange();
         this.obstacleRoot.obstacles.forEach(o => {
-            let [obstacleX, obstacleW] = this.getRang(o.owner as Laya.Sprite);
+            let [obstacleX, obstacleW] = o.getGlobalCollisionRange();
             if (MathUtil.isRangesPartiallyOverlap(playerX, playerW, obstacleX, obstacleW)) {
                 this.player.addForce(o.force, o.degrees);
             }

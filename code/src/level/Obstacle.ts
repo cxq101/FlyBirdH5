@@ -23,4 +23,10 @@ export class Obstacle extends Laya.Script {
 
     onUpdate(): void {
     }
+
+    getGlobalCollisionRange(): [number, number] {
+        let p = Laya.Point.create();
+        this.owner.localToGlobal(p);
+        return [p.x, p.x + this.owner.width];
+    }
 }
