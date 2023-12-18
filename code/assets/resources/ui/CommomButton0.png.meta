@@ -6,9 +6,9 @@
     "generateMipmap": true,
     "sizeGrid": [
       15,
-      20,
       15,
-      18,
+      15,
+      15,
       0
     ]
   }

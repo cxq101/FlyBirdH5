@@ -29,7 +29,7 @@
       "width": 546,
       "height": 812,
       "centerX": 0,
-      "skin": "res://dda0809b-cfe4-41b3-a392-8bd79c456ee1",
+      "skin": "res://ce260562-333c-46e4-9513-c757b208267a",
       "sizeGrid": "15,15,15,15,0",
       "color": "#ffffff"
     },
@@ -45,7 +45,8 @@
       "_mouseState": 2,
       "centerX": 0,
       "centerY": 390,
-      "skin": "res://60a9086c-a9c2-4e01-a563-355c117b509e",
+      "stateNum": 1,
+      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "X",
       "labelSize": 30
     },

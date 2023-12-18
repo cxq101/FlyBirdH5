@@ -1,10 +1,11 @@
 import { BaseView } from "./BaseView";
 
 /**
+ * TODO
  * view 黑色背景
- * 1.防止点击穿透
- * 2.点击界面外回调
- * 3.遮罩的样式由用户决定
+ * 1.点击界面外回调
+ * 2.遮罩的样式由用户决定
+ * 3.消失动画
  */
 export class ViewMask {
     private _view: BaseView;

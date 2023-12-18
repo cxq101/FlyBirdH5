@@ -11,12 +11,14 @@ import { SceneRegUtils } from "../core/UI/SceneRegUtils";
 import { ViewMgr } from "../core/UI/ViewMgr";
 import { ViewRegUtils } from "../core/UI/ViewRegUtils";
 import { Singleton } from "../core/base/Singleton";
+import { Level } from "../level/Level";
 import { PromiseEx } from "../utils/PromiseEx";
 import { ViewLayerZOrder, EViewKey, EViewLayer } from "./ViewConst";
 
 export class Game extends Singleton<Game>() {
     private _fsm: GameFSM;
     private _boot: Boot;
+    private _level: Level;
 
     public init(boot: Boot): void {
         this._boot = boot;
@@ -126,7 +128,7 @@ export class Game extends Singleton<Game>() {
 
     private onEnterLevelHandler(): void {
         ViewMgr.ins.close(EViewKey.MainView);
-        this._boot.levelLoader.createTestLevel();
+        this._level = this._boot.levelLoader.loadLevel();
         ViewMgr.ins.open(EViewKey.HudView);
     }
 
@@ -153,7 +155,10 @@ export class Game extends Singleton<Game>() {
     }
 
     private onBackHomeHandler(): void {
-
+        this._boot.levelLoader.unloadLevel(this._level);
+        this._level = null;
+        ViewMgr.ins.close(EViewKey.PauseView);
+        ViewMgr.ins.open(EViewKey.MainView);
     }
 
     public enterLevel(): void {

@@ -81,4 +81,9 @@ export class InputManager extends Laya.Script {
                 break;
         }
     }
+
+    onDestroy(): void {
+        this._target = null;
+        this.pressTimestamp = 0;
+    }
 }

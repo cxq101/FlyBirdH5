@@ -28,7 +28,6 @@ export class Background extends Laya.Script {
     private resetPos(): void {
         let real = this.owner.x - this.startPosX;
         this.owner.x = this.startPosX + real % this.textureWidth;
-        console.log("distance------2--", this.owner.x, this.distance);
     }
 
     private isOutOfBounds(): boolean {
@@ -42,7 +41,6 @@ export class Background extends Laya.Script {
 
     move(distance: number): void {
         this.owner.x += distance * this.moveScale;
-        console.log("distance------1--", this.owner.x, this.distance);
         if (this.isOutOfBounds()) {
             this.resetPos();
         }

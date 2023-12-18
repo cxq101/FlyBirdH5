@@ -46,4 +46,9 @@ export class LevelCamera extends Laya.Script {
         this._totalDistance += distance;
         this._followers.forEach(follow => follow.move(-distance));
     }
+
+    onDestroy(): void {
+        this._totalDistance = 0;
+        this._followers = this._focusTarget = null;
+    }
 }

@@ -41,7 +41,7 @@ export class LevelLoader extends Laya.Script {
         this._backgroundRoot.enterAnim();
     }
 
-    createTestLevel(): void {
+    loadLevel(): Level {
         let levelNode = this.testLevelPrefab.create();
         this.root.addChild(levelNode);
 
@@ -51,5 +51,11 @@ export class LevelLoader extends Laya.Script {
         
         let level = levelNode.getComponent(Level);
         level.init(inputManagerNode, playerNode, cameraNode, this._backgroundRoot);
+        return level;
+    }
+
+    unloadLevel(level: Level): void {
+        let levelOwner = level.owner;
+        levelOwner.destroy();
     }
 }
