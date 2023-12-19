@@ -1,7 +1,5 @@
-import { controller, register } from "../../core/mvc/MVCDecorator";
 import { Model } from "../../core/mvc/Model";
-import { ConfigUtils, ConfigUtilsMap, SkinConfigData } from "../../utils/ConfigUtils";
-import { LocalStorageUtils } from "../../utils/LocalStorageUtils";
+import { ConfigUtils, SkinConfigData } from "../../utils/ConfigUtils";
 import { ESkinItemStatus, ISkinListData, SkinEvent } from "./SkinConst";
 import { SkinLocalData } from "./SkinLocalData";
 
@@ -18,13 +16,15 @@ export class SkinModel extends Model {
         }
         return this._ins;
     }
+    private _localData: SkinLocalData;
 
     private constructor() {
         super();
+        this._localData = new SkinLocalData();
     }
     
     checkStatus(id: string): ESkinItemStatus {
-        let localData = SkinLocalData.data;
+        let localData = this._localData.data;
         return localData.skinId === id ? ESkinItemStatus.Adventure : localData.idleSkinIds.some(idleId => idleId === id) ? ESkinItemStatus.Idle : ESkinItemStatus.Locked
     }
 
@@ -49,8 +49,8 @@ export class SkinModel extends Model {
             console.warn("unlock fail!!!, this skin is not exist!", id);
             return;
         }
-        SkinLocalData.data.idleSkinIds.push(id);
-        SkinLocalData.save();
+        this._localData.data.idleSkinIds.push(id);
+        this._localData.unlock(id);
         this.event(SkinEvent.Unlcok, id);
     }
 
@@ -60,8 +60,7 @@ export class SkinModel extends Model {
             console.warn("unlock fail!!!, this skin is not exist!", id);
             return;
         }
-        SkinLocalData.data.skinId = id;
-        SkinLocalData.save();
+        this._localData.adventure(id);
         this.event(SkinEvent.Adventure, id);
     }
 }

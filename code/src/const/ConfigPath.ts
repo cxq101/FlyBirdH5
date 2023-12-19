@@ -7,6 +7,7 @@ export class ConfigPath {
     static LH_MainView = "resources/prefabs/views/MainView.lh";
     static LH_SkinView = "resources/prefabs/views/SkinView.lh";
     static LH_PauseView = "resources/prefabs/views/PauseView.lh";
+    static LH_WinView = "resources/prefabs/views/WinView.lh";
 
     static EnterLoadList = [
         {url: ConfigPath.JSON_Skin, type: Laya.Loader.JSON},
@@ -16,5 +17,6 @@ export class ConfigPath {
         {url: ConfigPath.LH_MainView, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_SkinView, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_PauseView, type: Laya.Loader.HIERARCHY},
+        {url: ConfigPath.LH_WinView, type: Laya.Loader.HIERARCHY},
     ];
 }

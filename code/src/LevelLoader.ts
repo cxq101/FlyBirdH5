@@ -1,5 +1,6 @@
 import { BackgroundRoot } from "./level/BackgroundRoot";
 import { Level } from "./level/Level";
+import { LevelModel } from "./views/level/LevelModel";
 
 /**
  * author: cxq
@@ -40,7 +41,8 @@ export class LevelLoader extends Laya.Script {
         this._backgroundRoot.enterAnim();
     }
 
-    loadLevel(): Level {
+    loadLevel(levelId: number): Level {
+        LevelModel.ins.currLevelId = levelId;
         let levelNode = this.testLevelPrefab.create();
         this.root.addChild(levelNode);
 
@@ -55,6 +57,9 @@ export class LevelLoader extends Laya.Script {
 
     unloadLevel(level: Level): void {
         let levelOwner = level.owner;
+
+        LevelModel.ins.currLevelId = null;
+
         levelOwner.destroy();
     }
 }

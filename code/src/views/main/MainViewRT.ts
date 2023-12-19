@@ -16,7 +16,7 @@ export class MainViewRT extends MainViewRTBase {
     }
 
     private onClickPlay(): void {
-        Game.ins.enterLevel();
+        Game.ins.enterLevel(10001);
     }
 
     onAwake(): void {

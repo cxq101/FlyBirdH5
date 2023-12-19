@@ -18,6 +18,10 @@
       "obstacleRoot": {
         "_$ref": "ev0np8qp",
         "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b"
+      },
+      "itemRoot": {
+        "_$ref": "3kns7eqm",
+        "_$type": "467b4aa2-b001-4847-b1ba-b4a91471676f"
       }
     }
   ],
@@ -38,16 +42,36 @@
       "name": "itemRoot",
       "width": 100,
       "height": 1280,
+      "_$comp": [
+        {
+          "_$type": "467b4aa2-b001-4847-b1ba-b4a91471676f",
+          "scriptPath": "../src/level/ItemRoot.ts",
+          "items": [
+            {
+              "_$ref": "wa16isnu",
+              "_$type": "e67575fb-d5a7-4fb9-9631-8126353fa6e1"
+            }
+          ]
+        }
+      ],
       "_$child": [
         {
-          "_$id": "sfqp0cbj",
-          "_$type": "Box",
+          "_$id": "wa16isnu",
+          "_$type": "Image",
           "name": "finalAward",
           "x": 3611,
           "y": 772,
           "width": 200,
           "height": 200,
-          "bgColor": "rgba(3, 228, 86, 1)"
+          "_mouseState": 2,
+          "skin": "res://7f4c876a-cfd0-4912-83ed-8a2d21493ec9",
+          "color": "#ffffff",
+          "_$comp": [
+            {
+              "_$type": "e67575fb-d5a7-4fb9-9631-8126353fa6e1",
+              "scriptPath": "../src/level/FinalAward.ts"
+            }
+          ]
         }
       ]
     },

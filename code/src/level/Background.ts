@@ -45,4 +45,8 @@ export class Background extends Laya.Script {
             this.resetPos();
         }
     }
+
+    scrollTo(distance: number) : void {
+        
+    }
 }

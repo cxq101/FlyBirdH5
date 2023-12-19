@@ -1,3 +1,5 @@
+import { LevelModel } from "../views/level/LevelModel";
+
 /**
  * author: cxq
  * time: 2023/12/13 08:48:23
@@ -17,14 +19,9 @@ const { regClass, property } = Laya;
 export class LevelCamera extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    private _totalDistance: number = 0;
     private _followers: ICameraFollower[];
     private _focusTarget: ICameraFocusTarget;
     
-    get totalDistance(): number {
-        return this._totalDistance;
-    }
-
     init(target: ICameraFocusTarget): void {
         this._followers = [];
         this._focusTarget = target;
@@ -43,12 +40,12 @@ export class LevelCamera extends Laya.Script {
         const delta = Laya.timer.delta * 0.001;
         let distance = this._focusTarget.velocityX * delta;
         if (distance == 0) return;
-        this._totalDistance += distance;
+        LevelModel.ins.moveDistance(distance);
         this._followers.forEach(follow => follow.move(-distance));
     }
 
     onDestroy(): void {
-        this._totalDistance = 0;
+        LevelModel.ins.resetDistance();
         this._followers = this._focusTarget = null;
     }
 }

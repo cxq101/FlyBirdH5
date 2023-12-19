@@ -4,6 +4,7 @@ export enum EViewKey {
     HelpView = "HelpView",
     MainView = "MainView",
     SkinView = "SkinView",
+    WinView = "WinView",
 }
 
 export enum EViewLayer {

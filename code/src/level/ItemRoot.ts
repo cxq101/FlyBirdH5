@@ -1,3 +1,5 @@
+import { FinalAward } from "./FinalAward";
+import { Item } from "./Item";
 import { Obstacle } from "./Obstacle";
 
 /**
@@ -8,17 +10,13 @@ import { Obstacle } from "./Obstacle";
 const { regClass, property } = Laya;
 
 @regClass()
-export class ObstacleRoot extends Laya.Script {
+export class ItemRoot extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    @property({ type: [Obstacle] })
-    obstacles: Obstacle[] = [];
+    @property({ type: [Item], tips: "奖励和金币等物品" })
+    items: Item[];
 
     move(distance: number): void {
         this.owner.x += distance;
-    }
-
-    alignToHeight(h: number): void {
-        this.obstacles.forEach(o => o.owner.y = h);
     }
 }

@@ -1,8 +1,6 @@
 import { t, StateMachine } from "./core/FSM/StateMatchine";
-import { ViewMgr } from "./core/UI/ViewMgr";
-import { EViewKey } from "./views/ViewConst";
 
-enum GameStates {
+export enum GameStates {
     init= "init",
     loading= "loading",
     loaded = "loaded",
@@ -78,8 +76,8 @@ export class GameFSM extends StateMachine<GameStates, GameEvents> {
         this.onLoadCompleteHandler && this.onLoadCompleteHandler.run();
     }
 
-    private async onEnterLevel(): Promise<void> {
-        this.onEnterLevelHandler && this.onEnterLevelHandler.run();
+    private async onEnterLevel(levelId: number): Promise<void> {
+        this.onEnterLevelHandler && this.onEnterLevelHandler.runWith(levelId);
     }
 
     private async onWin(): Promise<void> {
@@ -90,8 +88,8 @@ export class GameFSM extends StateMachine<GameStates, GameEvents> {
         this.onPauseHandler && this.onPauseHandler.run();
     }
 
-    private async onNextLevel(): Promise<void> {
-        this.onNextLevelHandler && this.onNextLevelHandler.run();
+    private async onNextLevel(levelId: number): Promise<void> {
+        this.onNextLevelHandler && this.onNextLevelHandler.runWith(levelId);
     }
 
     private async onResume(): Promise<void> {

@@ -1,0 +1,141 @@
+{
+  "_$ver": 1,
+  "_$id": "iy0bomup",
+  "_$runtime": "res://dec3bab5-b11d-46b6-b949-cf197887bbf1",
+  "_$type": "Box",
+  "name": "Box",
+  "width": 720,
+  "height": 1280,
+  "_mouseState": 2,
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "_$comp": [
+    {
+      "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+      "scriptPath": "../src/core/UI/BaseView.ts",
+      "fadeTime": 0
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "c0eazup8",
+      "_$type": "Image",
+      "name": "Image",
+      "x": 110,
+      "y": 201.99999999999994,
+      "width": 500,
+      "height": 705,
+      "centerX": 0,
+      "skin": "res://ce260562-333c-46e4-9513-c757b208267a",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "cwd5gk58",
+      "_$type": "Image",
+      "name": "Image(1)",
+      "x": 270,
+      "y": 680,
+      "width": 180,
+      "height": 180,
+      "centerX": 0,
+      "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "frv9odye",
+      "_$type": "Image",
+      "name": "Image(2)",
+      "x": 270,
+      "y": 376,
+      "width": 180,
+      "height": 180,
+      "centerX": 0,
+      "skin": "res://7f4c876a-cfd0-4912-83ed-8a2d21493ec9",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "08682exa",
+      "_$type": "Image",
+      "name": "imgNewRecord",
+      "x": 350,
+      "y": 501.9999999999999,
+      "width": 180,
+      "height": 48,
+      "centerX": 80,
+      "skin": "res://8e48f8d6-644e-461c-84f5-153f70a800d7",
+      "color": "#ffffff",
+      "_$child": [
+        {
+          "_$id": "3ipf6ih7",
+          "_$type": "Label",
+          "name": "Label(4)",
+          "x": -160,
+          "y": 1.0000000000000568,
+          "width": 500,
+          "height": 50,
+          "centerX": 0,
+          "text": "已获得",
+          "fontSize": 32,
+          "color": "#FFFFFF",
+          "italic": true,
+          "align": "center",
+          "valign": "middle",
+          "padding": "0,0,0,0"
+        }
+      ]
+    },
+    {
+      "_$id": "nwx4xiid",
+      "_$type": "Label",
+      "name": "Label",
+      "x": 110,
+      "y": 323.99999999999994,
+      "width": 500,
+      "height": 50,
+      "centerX": 0,
+      "text": "新手奖励",
+      "fontSize": 46,
+      "color": "#FFFFFF",
+      "align": "center",
+      "valign": "middle",
+      "padding": "0,0,0,0"
+    },
+    {
+      "_$id": "ndym5o4v",
+      "_$type": "Label",
+      "name": "Label(2)",
+      "x": 111,
+      "y": 614.9999999999999,
+      "width": 500,
+      "height": 50,
+      "centerX": 1,
+      "text": "最终奖励",
+      "fontSize": 38,
+      "color": "#FFFFFF",
+      "italic": true,
+      "align": "center",
+      "valign": "middle",
+      "padding": "0,0,0,0"
+    },
+    {
+      "_$id": "4q44bthd",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnContinue",
+      "x": 111,
+      "y": 927.9999999999999,
+      "width": 500,
+      "height": 70,
+      "_mouseState": 2,
+      "centerX": 1,
+      "stateNum": 1,
+      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "label": "继续",
+      "labelSize": 32,
+      "labelBold": true,
+      "labelPadding": "10,0,0,0"
+    }
+  ]
+}

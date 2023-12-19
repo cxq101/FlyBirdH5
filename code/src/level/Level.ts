@@ -1,6 +1,8 @@
 import { MathUtil } from "../utils/MathUtils";
+import { Game } from "../views/Game";
 import { BackgroundRoot } from "./BackgroundRoot";
 import { InputManager } from "./InputManager";
+import { ItemRoot } from "./ItemRoot";
 import { LevelCamera } from "./LevelCamera";
 import { ObstacleRoot } from "./ObstacleRoot";
 import { Player } from "./Player";
@@ -24,6 +26,9 @@ export class Level extends Laya.Script {
 
     @property({ type: ObstacleRoot })
     private obstacleRoot: ObstacleRoot;
+
+    @property({ type: ItemRoot })
+    private itemRoot: ItemRoot;
 
     private _isInit: boolean = false;
 
@@ -52,7 +57,19 @@ export class Level extends Laya.Script {
         }
     }
 
-    private checkCollision(): void {
+    private checkItemCollision(): void {
+        if (!this._isInit) return;
+        if (Game.ins.isWin()) return;
+        const [playerX, playerW] = this.player.getGlobalCollisionRange();
+        this.itemRoot.items.forEach(item => {
+            let [obstacleX, obstacleW] = item.getGlobalCollisionRange();
+            if (MathUtil.isRangesPartiallyOverlap(playerX, playerW, obstacleX, obstacleW)) {
+                Game.ins.win();
+            }
+        });
+    }
+
+    private checkObstacleCollision(): void {
         if (!this._isInit) return;
         if (!this.player.isGround) return;
         const [playerX, playerW] = this.player.getGlobalCollisionRange();
@@ -79,6 +96,7 @@ export class Level extends Laya.Script {
         this.levelCamera = cameraNode.getComponent(LevelCamera);
         this.levelCamera.init(this.player);
         this.levelCamera.addFollower(backgroundRoot);
+        this.levelCamera.addFollower(this.itemRoot);
         this.levelCamera.addFollower(this.obstacleRoot);
 
         this.backgroundRoot = backgroundRoot;
@@ -88,6 +106,7 @@ export class Level extends Laya.Script {
     
     onUpdate(): void {
         this.checkPlayerGround();
-        this.checkCollision();
+        this.checkItemCollision();
+        this.checkObstacleCollision();
     }
 }

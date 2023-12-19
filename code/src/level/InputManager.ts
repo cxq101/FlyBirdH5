@@ -64,16 +64,28 @@ export class InputManager extends Laya.Script {
     //     }
     // }
 
-    onStageMouseDown(evt: Laya.Event): void {
+    onMouseDown(evt: Laya.Event): void {
         if (!this._target.enabledInput || this._isPressing) return;
         this._isPressing = true;
         this._target.onPressed();
     }
 
-    onStageMouseUp(evt: Laya.Event): void {
+    onMouseUp(evt: Laya.Event): void {
         if (!this._target.enabledInput || !this._isPressing) return;
         this._isPressing = false;
         this._target.onRelease();
+    }
+    
+    onStageMouseDown(evt: Laya.Event): void {
+        // if (!this._target.enabledInput || this._isPressing) return;
+        // this._isPressing = true;
+        // this._target.onPressed();
+    }
+
+    onStageMouseUp(evt: Laya.Event): void {
+        // if (!this._target.enabledInput || !this._isPressing) return;
+        // this._isPressing = false;
+        // this._target.onRelease();
     }
 
     onDestroy(): void {

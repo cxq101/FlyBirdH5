@@ -5,7 +5,7 @@
  */
 
 import { Boot } from "../Boot";
-import { GameEvents, GameFSM } from "../GameFSM";
+import { GameEvents, GameFSM, GameStates } from "../GameFSM";
 import { ConfigPath } from "../const/ConfigPath";
 import { SceneRegUtils } from "../core/UI/SceneRegUtils";
 import { ViewMgr } from "../core/UI/ViewMgr";
@@ -20,7 +20,7 @@ export class Game extends Singleton<Game>() {
     private _boot: Boot;
     private _level: Level;
 
-    public init(boot: Boot): void {
+    init(boot: Boot): void {
         this._boot = boot;
         
         this._fsm = new GameFSM();
@@ -83,6 +83,7 @@ export class Game extends Singleton<Game>() {
         ViewRegUtils.register(k.HelpView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_Help);
         ViewRegUtils.register(k.HudView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_Hud);
         ViewRegUtils.register(k.PauseView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_PauseView);
+        ViewRegUtils.register(k.WinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_WinView);
     }
 
     private loadRes(): void {
@@ -126,23 +127,26 @@ export class Game extends Singleton<Game>() {
         ViewMgr.ins.open(EViewKey.MainView);
     }
 
-    private onEnterLevelHandler(): void {
+    private onEnterLevelHandler(levelId: number): void {
         ViewMgr.ins.close(EViewKey.MainView);
-        this._level = this._boot.levelLoader.loadLevel();
+        this._level = this._boot.levelLoader.loadLevel(levelId);
         ViewMgr.ins.open(EViewKey.HudView);
     }
 
     private onWinHandler(): void {
-
+        ViewMgr.ins.close(EViewKey.HudView);   
+        ViewMgr.ins.open(EViewKey.WinView);   
     }
 
-    private onPauseHandler(): void {
+    private onPauseHandler(param: string): void {
+        console.log("param=======", param);
         ViewMgr.ins.close(EViewKey.HudView);   
         ViewMgr.ins.open(EViewKey.PauseView);   
     }
 
-    private onNextLevelHandler(): void {
-
+    private onNextLevelHandler(levelId: number): void {
+        this._level = this._boot.levelLoader.loadLevel(levelId);
+        ViewMgr.ins.close(EViewKey.WinView);
     }
 
     private onResumeHandler(): void {
@@ -161,23 +165,35 @@ export class Game extends Singleton<Game>() {
         ViewMgr.ins.open(EViewKey.MainView);
     }
 
-    public enterLevel(): void {
-        this._fsm.dispatch(GameEvents.enterLevel);
+    enterLevel(levelId: number): void {
+        this._fsm.dispatch(GameEvents.enterLevel, levelId);
     }
     
-    public pause(): void {
-        this._fsm.dispatch(GameEvents.pause);
+    pause(): void {
+        this._fsm.dispatch(GameEvents.pause, "param");
     }
 
-    public resume(): void {
+    resume(): void {
         this._fsm.dispatch(GameEvents.resume);
     }
 
-    public restartLevel(): void {
+    restartLevel(): void {
         this._fsm.dispatch(GameEvents.restartLevel);
     }
 
-    public backHome(): void {
+    backHome(): void {
         this._fsm.dispatch(GameEvents.backHome);
+    }
+
+    nextLevel(): void {
+        this._fsm.dispatch(GameEvents.nextLevel);
+    }
+
+    win(): void {
+        this._fsm.dispatch(GameEvents.win);
+    }
+
+    isWin(): boolean {
+        return this._fsm.getState() === GameStates.win;
     }
 }

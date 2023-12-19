@@ -4,33 +4,31 @@
  * desc: 
  */
 
-import { LocalStorageUtils } from "../../utils/LocalStorageUtils";
+import { LocalData } from "../../utils/LocalData";
 
 export interface ISkinLocalData {
     skinId: string;
     idleSkinIds: string[];
 }
 
-export class SkinLocalData {
+export class SkinLocalData extends LocalData<ISkinLocalData> {
     static readonly Key = "SkinLocalData";
     static readonly Default: ISkinLocalData = {
         skinId: "100001",
         idleSkinIds: ["100001"],
     }
 
-    private static _data: ISkinLocalData;
-
-    static get data(): ISkinLocalData {
-        if (this._data == null) {
-            this._data = LocalStorageUtils.load(SkinLocalData.Key);
-            if (this._data == null) {
-                this._data = SkinLocalData.Default;
-            }
-        }
-        return this._data;
+    constructor() {
+        super(SkinLocalData.Key, SkinLocalData.Default);
+    }
+    
+    unlock(id: string): void {
+        this.data.idleSkinIds.push(id);
+        this.save();
     }
 
-    static save(): void {
-        LocalStorageUtils.save(SkinLocalData.Key, this.data);
+    adventure(id: string): void {
+        this.data.skinId = id;
+        this.save();
     }
 }

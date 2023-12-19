@@ -6,5 +6,6 @@
  */
 export class HudViewRTBase extends Laya.Box {
     public btnBack!: Laya.Button;
+    public lblDistance!: Laya.Label;
 }
 
