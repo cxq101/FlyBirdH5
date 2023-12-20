@@ -1,4 +1,5 @@
 const { regClass } = Laya;
+import { PathUtils } from "../../utils/PathUtils";
 import { ESkinItemStatus } from "./SkinConst";
 import { SkinItemRTBase } from "./SkinItemRT.generated";
 
@@ -9,14 +10,13 @@ export class SkinItemRT extends SkinItemRTBase {
     }
 
     set dataSource(value: any) {
-        console.log("Skin Item  RT =========", value);
         super.dataSource = value;
         if (!value) return;
         let status = value.status;
         if (status != null) {
             let isLocked = status == ESkinItemStatus.Locked;
             let isWorking = status == ESkinItemStatus.Adventure;
-            this.imgBg.skin = `atlas/comp/img_bg${isLocked ? 4 : 5}.png`;
+            this.imgBg.skin = PathUtils.getUiImage(isLocked ? "CommonBox2" : "CommonBox3");
             this.imgVideo.visible = isLocked;
             this.lblUsing.visible = isWorking;
             this.btnUnlockOrUse.visible = !isWorking;

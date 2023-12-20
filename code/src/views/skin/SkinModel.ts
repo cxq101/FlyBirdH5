@@ -1,5 +1,6 @@
 import { Model } from "../../core/mvc/Model";
 import { ConfigUtils, SkinConfigData } from "../../utils/ConfigUtils";
+import { PathUtils } from "../../utils/PathUtils";
 import { ESkinItemStatus, ISkinListData, SkinEvent } from "./SkinConst";
 import { SkinLocalData } from "./SkinLocalData";
 
@@ -36,8 +37,8 @@ export class SkinModel extends Model {
             arr.push({
                 id: conf.id,
                 lblName: conf.name,
-                imgAvatar: `resources/icon/avatar/${conf.icon}.png`,
                 status: this.checkStatus(conf.id),
+                imgAvatar: PathUtils.getAvatar(conf.icon),
             });
         }
         return arr;
@@ -62,5 +63,12 @@ export class SkinModel extends Model {
         }
         this._localData.adventure(id);
         this.event(SkinEvent.Adventure, id);
+    }
+
+    getCurrentSkin(): string {
+        let id = this._localData.data.skinId;
+        const configs: SkinConfigData[] = ConfigUtils.get("skin");
+        let conf = configs.find(conf => conf.id === id);
+        return PathUtils.getAvatar(conf.icon);
     }
 }

@@ -19,7 +19,7 @@
       "right": 0,
       "top": 0,
       "bottom": 0,
-      "skin": "res://8daa4e1f-cba7-4117-b0d3-eb5c7ad9eefa",
+      "skin": "res://ba9af3ce-a816-4643-857c-374599b11c55",
       "color": "#ffffff"
     },
     {
@@ -32,7 +32,7 @@
       "height": 100,
       "left": 20,
       "centerY": 0,
-      "skin": "res://1bf8f30e-7636-4afd-9207-6e10b7a20d15",
+      "skin": "res://d179eb29-e0d1-4a67-9888-aa51485bb06f",
       "color": "#ffffff"
     },
     {
@@ -47,7 +47,7 @@
       "centerY": 0,
       "text": "Label",
       "fontSize": 30,
-      "color": "#FFFFFF",
+      "color": "rgba(126, 80, 80, 1)",
       "padding": "0,0,0,0"
     },
     {
@@ -71,14 +71,15 @@
       "_$var": true,
       "_$type": "Button",
       "name": "btnUnlockOrUse",
-      "x": 350,
+      "x": 332,
       "y": 60,
       "width": 120,
       "height": 40,
       "_mouseState": 2,
-      "right": 0,
+      "right": 18,
       "centerY": 0,
-      "skin": "res://d4cfd6a8-0d0a-475b-ac93-d85eaa646936",
+      "stateNum": 1,
+      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "解锁",
       "labelSize": 20,
       "_$child": [
@@ -87,9 +88,14 @@
           "_$var": true,
           "_$type": "Image",
           "name": "imgVideo",
-          "width": 25,
-          "height": 25,
-          "skin": "res://c13c1b8e-c516-4a0f-98ad-e356f45f0365",
+          "x": 83,
+          "y": -19,
+          "width": 64,
+          "height": 64,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "skin": "res://1133c693-896f-4139-947a-00c875a6985c",
+          "useSourceSize": true,
           "color": "#ffffff"
         }
       ]

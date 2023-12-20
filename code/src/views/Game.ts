@@ -79,7 +79,7 @@ export class Game extends Singleton<Game>() {
     private registerAllView(): void {
         const k = EViewKey, l = EViewLayer;
         ViewRegUtils.register(k.MainView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_MainView);
-        ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_SkinView);
+        ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_SkinView);
         ViewRegUtils.register(k.HelpView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_Help);
         ViewRegUtils.register(k.HudView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_Hud);
         ViewRegUtils.register(k.PauseView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_PauseView);

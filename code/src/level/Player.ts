@@ -1,4 +1,5 @@
 import { MathUtil } from "../utils/MathUtils";
+import { SkinModel } from "../views/skin/SkinModel";
 
 /**
  * author: cxq
@@ -107,6 +108,10 @@ export class Player extends Laya.Script {
         this._pressedTime = 0;
         this.imgIcon.scaleY = 1;
     }    
+
+    onStart(): void {
+        this.imgIcon.skin = SkinModel.ins.getCurrentSkin();
+    }
 
     onUpdate(): void {
         this.move();

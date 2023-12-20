@@ -80,7 +80,7 @@
       "_$type": "Sprite",
       "name": "spawnPoint",
       "x": 305,
-      "y": 681,
+      "y": 800,
       "width": 100,
       "height": 100
     },
