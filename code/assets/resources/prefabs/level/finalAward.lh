@@ -1,0 +1,19 @@
+{
+  "_$ver": 1,
+  "_$id": "0w99htt6",
+  "_$type": "Image",
+  "name": "finalAward",
+  "x": 3611,
+  "y": 772,
+  "width": 200,
+  "height": 200,
+  "_mouseState": 2,
+  "skin": "res://7f4c876a-cfd0-4912-83ed-8a2d21493ec9",
+  "color": "#ffffff",
+  "_$comp": [
+    {
+      "_$type": "e67575fb-d5a7-4fb9-9631-8126353fa6e1",
+      "scriptPath": "../src/level/FinalAward.ts"
+    }
+  ]
+}

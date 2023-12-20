@@ -67,7 +67,7 @@
       },
       "repeatX": 1,
       "repeatY": 5,
-      "spaceY": 5,
+      "spaceY": 20,
       "scrollType": 2,
       "_$child": [
         {

@@ -100,8 +100,37 @@ export class Level extends Laya.Script {
         LevelModel.ins.resetDistance();
     }
 
-    init(inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
+    private parsePrefabData(levelId: number): void {
+        let p: Laya.PrefabImpl =Laya.loader.getRes(`resources/prefabs/level/chapter/Level_${levelId}.lh`);
+        let roots = p.data._$child as { name: string, _$child: { name: string, visible: boolean, x: number, y: number, width: number, _$prefab: string }[] }[];
+        let itemRoot = roots.find(r => r.name === "itemRoot");
+        let obstacleRoot = roots.find(r => r.name === "obstacleRoot");
+        
+        obstacleRoot._$child.forEach((child) => {
+            let prefab = Laya.loader.getRes(child._$prefab) as Laya.Prefab;
+            let node = prefab.create() as Laya.Sprite;
+            node.x = child.x;
+            child.width != null && (node.width = child.width);
+            this.obstacleRoot.owner.addChild(node);
+            this.obstacleRoot.addItemNode(node);
+        });
+        this.obstacleRoot.alignToHeight(this.groundY);
+
+        itemRoot._$child.forEach((child) => {
+            let prefab = Laya.loader.getRes(child._$prefab) as Laya.Prefab;
+            let node = prefab.create() as Laya.Sprite;
+            node.x = child.x;
+            node.y = child.y;
+            child.width != null && (node.width = child.width);
+            this.itemRoot.owner.addChild(node);
+            this.itemRoot.addItemNode(node);
+        });
+    }
+
+    init(levelId: number, inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
         if (this._isInit) return;
+        LevelModel.ins.currLevelId = levelId;
+        this.parsePrefabData(levelId);
         this._isInit = true;
         playerNode.pos(...this.spawnPoint);
         this.owner.addChild(playerNode);
@@ -120,11 +149,19 @@ export class Level extends Laya.Script {
 
         this.backgroundRoot = backgroundRoot;
 
-        this.obstacleRoot.alignToHeight(this.groundY);
     }
 
     recordPlayerPos(): void {
         LevelModel.ins.recordPlayerPos(this.levelCamera.distance);
+    }
+
+    reEnterLevel(levelId: number): void {
+        LevelModel.ins.currLevelId = levelId;
+        this.levelCamera.backToStart();
+        LevelModel.ins.resetDistance();
+        this.itemRoot.removeAllObstacles();
+        this.obstacleRoot.removeAllObstacles();
+        this.parsePrefabData(levelId);
     }
 
     restart(): void {

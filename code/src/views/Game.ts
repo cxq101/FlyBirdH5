@@ -14,6 +14,7 @@ import { Singleton } from "../core/base/Singleton";
 import { Level } from "../level/Level";
 import { PromiseEx } from "../utils/PromiseEx";
 import { ViewLayerZOrder, EViewKey, EViewLayer } from "./ViewConst";
+import { LevelConst } from "./level/LevelConst";
 
 export class Game extends Singleton<Game>() {
     private _fsm: GameFSM;
@@ -138,15 +139,16 @@ export class Game extends Singleton<Game>() {
         ViewMgr.ins.open(EViewKey.WinView);   
     }
 
-    private onPauseHandler(param: string): void {
-        console.log("param=======", param);
+    private onPauseHandler(): void {
         ViewMgr.ins.close(EViewKey.HudView);   
         ViewMgr.ins.open(EViewKey.PauseView);   
     }
 
-    private onNextLevelHandler(levelId: number): void {
-        this._level = this._boot.levelLoader.loadLevel(levelId);
+    private onNextLevelHandler(): void {
+        const levelId = LevelConst.Level_10001;
+        this._level.reEnterLevel(levelId);
         ViewMgr.ins.close(EViewKey.WinView);
+        ViewMgr.ins.open(EViewKey.HudView);
     }
 
     private onResumeHandler(): void {

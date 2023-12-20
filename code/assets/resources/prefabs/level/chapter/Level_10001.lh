@@ -1,0 +1,166 @@
+{
+  "_$ver": 1,
+  "_$id": "o3vi3w6v",
+  "_$type": "Box",
+  "name": "Level_10001",
+  "y": 148,
+  "width": 8000,
+  "height": 1280,
+  "_$child": [
+    {
+      "_$id": "r06dpsk9",
+      "_$type": "Sprite",
+      "name": "obstacleRoot",
+      "width": 1,
+      "height": 1,
+      "_$child": [
+        {
+          "_$id": "xkaafpq4",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle",
+          "active": true,
+          "x": 670,
+          "y": 1151,
+          "visible": true
+        },
+        {
+          "_$id": "3woiei9v",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(7)",
+          "active": true,
+          "x": 1038,
+          "y": 1151,
+          "visible": true
+        },
+        {
+          "_$id": "7hkpke45",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(8)",
+          "active": true,
+          "x": 1378,
+          "y": 1151,
+          "visible": true
+        },
+        {
+          "_$id": "io6xxgc0",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(9)",
+          "active": true,
+          "x": 1754,
+          "y": 1151,
+          "visible": true
+        },
+        {
+          "_$id": "vcq5w3c6",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(10)",
+          "active": true,
+          "x": 2100,
+          "y": 1151,
+          "visible": true
+        },
+        {
+          "_$id": "rorpob68",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(11)",
+          "active": true,
+          "x": 2724,
+          "y": 1151,
+          "visible": true
+        },
+        {
+          "_$id": "z7psw2xb",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(12)",
+          "active": true,
+          "x": 3188,
+          "y": 1151,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "7pivgwq8",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(13)",
+          "active": true,
+          "x": 3620,
+          "y": 1149,
+          "visible": true
+        },
+        {
+          "_$id": "7hhq7efx",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(14)",
+          "active": true,
+          "x": 3988,
+          "y": 1148,
+          "visible": true
+        },
+        {
+          "_$id": "vlan37ca",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(15)",
+          "active": true,
+          "x": 4328,
+          "y": 1148,
+          "visible": true
+        },
+        {
+          "_$id": "6adjsovn",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(16)",
+          "active": true,
+          "x": 4704,
+          "y": 1148,
+          "visible": true
+        },
+        {
+          "_$id": "coy57a9y",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(17)",
+          "active": true,
+          "x": 5050,
+          "y": 1148,
+          "visible": true
+        },
+        {
+          "_$id": "q4bff0e7",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(18)",
+          "active": true,
+          "x": 5674,
+          "y": 1148,
+          "visible": true
+        },
+        {
+          "_$id": "onzl5v4h",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(19)",
+          "active": true,
+          "x": 6138,
+          "y": 1148,
+          "visible": true,
+          "width": 212
+        }
+      ]
+    },
+    {
+      "_$id": "ecfpuj8y",
+      "_$type": "Sprite",
+      "name": "itemRoot",
+      "width": 0,
+      "height": 0,
+      "_$child": [
+        {
+          "_$id": "9pfwg3mw",
+          "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",
+          "name": "finalAward",
+          "active": true,
+          "x": 6686,
+          "y": 765,
+          "visible": true
+        }
+      ]
+    }
+  ]
+}

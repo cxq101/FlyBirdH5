@@ -11,14 +11,29 @@ const { regClass, property } = Laya;
 export class ObstacleRoot extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    @property({ type: [Obstacle] })
     obstacles: Obstacle[] = [];
 
     move(distance: number): void {
         this.owner.x += distance;
     }
 
+    addItemNode(node: Laya.Node): void {
+        let obstacle = node.getComponent(Obstacle);
+        obstacle && this.obstacles.push(obstacle);
+    }
+
     alignToHeight(h: number): void {
         this.obstacles.forEach(o => o.owner.y = h);
+    }
+
+    removeAllObstacles(): void {
+        this.obstacles.forEach(o => {
+            o.owner.destroy();
+        });
+        this.obstacles = [];
+    }
+
+    onDestroy(): void {
+        this.obstacles = [];
     }
 }

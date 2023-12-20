@@ -20,13 +20,11 @@ export class LevelLoader extends Laya.Script {
     @property({ type: Laya.Prefab })
     playerPrefab: Laya.Prefab;
     
-    @property({ type: Laya.Prefab })
-    testLevelPrefab: Laya.Prefab;
+    @property({ type: Laya.Prefab, tips: "关卡基础控件" })
+    levelBasePrefab: Laya.Prefab;
 
     @property({ type: Laya.Prefab })
     backgroundRootPrefab: Laya.Prefab;
-    
-    private _testLevel: Level;
     
     private _backgroundRoot: BackgroundRoot;
 
@@ -42,8 +40,7 @@ export class LevelLoader extends Laya.Script {
     }
 
     loadLevel(levelId: number): Level {
-        LevelModel.ins.currLevelId = levelId;
-        let levelNode = this.testLevelPrefab.create();
+        let levelNode = this.levelBasePrefab.create();
         this.root.addChild(levelNode);
 
         let inputManagerNode = this.inputManagerPrefab.create() as Laya.Sprite;
@@ -51,7 +48,7 @@ export class LevelLoader extends Laya.Script {
         let playerNode = this.playerPrefab.create() as Laya.Sprite;
         
         let level = levelNode.getComponent(Level);
-        level.init(inputManagerNode, playerNode, cameraNode, this._backgroundRoot);
+        level.init(levelId, inputManagerNode, playerNode, cameraNode, this._backgroundRoot);
         return level;
     }
 

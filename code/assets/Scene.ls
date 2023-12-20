@@ -44,7 +44,7 @@
             "_$uuid": "71cac087-be04-4e1c-af5c-d7dce6e12802",
             "_$type": "Prefab"
           },
-          "testLevelPrefab": {
+          "levelBasePrefab": {
             "_$uuid": "22bacdad-5bc3-4ab4-99ea-89201788de40",
             "_$type": "Prefab"
           },

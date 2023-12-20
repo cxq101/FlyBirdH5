@@ -3,7 +3,7 @@
   "_$id": "yg8cbvm6",
   "_$type": "Sprite",
   "name": "TestLevel",
-  "width": 100000,
+  "width": 4334,
   "height": 1280,
   "_$comp": [
     {
@@ -28,50 +28,32 @@
   "_$child": [
     {
       "_$id": "ev0np8qp",
-      "_$prefab": "47199fde-be59-43c9-851b-ef819fb34222",
+      "_$type": "Sprite",
       "name": "obstacleRoot",
-      "active": true,
-      "x": 0,
-      "y": 0,
-      "visible": true,
-      "height": 1280
+      "width": 1,
+      "height": 1,
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 1
+        },
+        {
+          "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
+          "scriptPath": "../src/level/ObstacleRoot.ts"
+        }
+      ]
     },
     {
       "_$id": "3kns7eqm",
       "_$type": "Sprite",
       "name": "itemRoot",
-      "width": 100,
-      "height": 1280,
+      "width": 1,
+      "height": 1,
       "_$comp": [
         {
           "_$type": "467b4aa2-b001-4847-b1ba-b4a91471676f",
-          "scriptPath": "../src/level/ItemRoot.ts",
-          "items": [
-            {
-              "_$ref": "wa16isnu",
-              "_$type": "e67575fb-d5a7-4fb9-9631-8126353fa6e1"
-            }
-          ]
-        }
-      ],
-      "_$child": [
-        {
-          "_$id": "wa16isnu",
-          "_$type": "Image",
-          "name": "finalAward",
-          "x": 3611,
-          "y": 772,
-          "width": 200,
-          "height": 200,
-          "_mouseState": 2,
-          "skin": "res://7f4c876a-cfd0-4912-83ed-8a2d21493ec9",
-          "color": "#ffffff",
-          "_$comp": [
-            {
-              "_$type": "e67575fb-d5a7-4fb9-9631-8126353fa6e1",
-              "scriptPath": "../src/level/FinalAward.ts"
-            }
-          ]
+          "scriptPath": "../src/level/ItemRoot.ts"
         }
       ]
     },
