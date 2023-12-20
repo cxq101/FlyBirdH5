@@ -40,7 +40,7 @@ export class LevelModel extends Model {
     }
     
     set currLevelDistance(v: number) {
-        this._currLevelDistance = Math.max(v, 0);
+        this._currLevelDistance = v;
         this.event(LevelEvent.DistanceChanged, v);
         if (this._currLevelDistance > this.currLevelTopDistance) {
             this.currLevelTopDistance = v;
@@ -77,7 +77,8 @@ export class LevelModel extends Model {
     }
 
     private formatDistance(distance: number): number {
-        return Math.floor(distance * this._distanceRatio);
+        const real = Math.floor(distance * this._distanceRatio);
+        return Math.max(real, 0);
     }
 
     moveDistance(distance: number): void {

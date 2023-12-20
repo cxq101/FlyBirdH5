@@ -109,4 +109,8 @@ export class Level extends Laya.Script {
         this.checkItemCollision();
         this.checkObstacleCollision();
     }
+
+    backToStart(): void {
+        this.levelCamera.backToStart();
+    }
 }

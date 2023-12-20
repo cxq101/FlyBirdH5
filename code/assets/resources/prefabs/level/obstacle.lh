@@ -6,14 +6,29 @@
   "x": 670,
   "y": 1151,
   "width": 150,
-  "height": 40,
-  "bgColor": "rgba(255, 255, 255, 1)",
+  "height": 34,
+  "anchorY": 0.5,
   "_$comp": [
     {
       "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
       "scriptPath": "../src/level/Obstacle.ts",
       "degrees": 135,
       "force": 800
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "nto3fldb",
+      "_$type": "Image",
+      "name": "Image",
+      "width": 150,
+      "height": 34,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "skin": "res://49a918d1-cac1-49c6-897f-35147e00aae7",
+      "color": "#ffffff"
     }
   ]
 }

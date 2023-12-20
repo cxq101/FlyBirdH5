@@ -155,7 +155,9 @@ export class Game extends Singleton<Game>() {
     }
 
     private onRestartLevelHandler(): void {
-
+        ViewMgr.ins.close(EViewKey.PauseView);   
+        this._level.backToStart();
+        ViewMgr.ins.open(EViewKey.HudView);
     }
 
     private onBackHomeHandler(): void {
