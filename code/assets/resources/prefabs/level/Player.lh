@@ -15,8 +15,8 @@
       "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf",
       "scriptPath": "../src/level/Player.ts",
       "degrees": 35,
-      "forceVelocity": 800,
-      "maxTime": 1800,
+      "forceVelocity": 1000,
+      "maxTime": 1000,
       "minForce": 250,
       "grav": -1600,
       "imgIcon": {

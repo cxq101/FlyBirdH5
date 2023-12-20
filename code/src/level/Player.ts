@@ -51,6 +51,10 @@ export class Player extends Laya.Script {
         return this.isGround;
     }
 
+    get zoomVelocity(): number {
+        return (1 - 0.3) / this.maxTime;
+    }
+
     isBelowHeight(y: number): boolean {
         return this.owner.y >= y;
     }
@@ -113,7 +117,7 @@ export class Player extends Laya.Script {
         if (this._isPressed) {
             this._pressedTime += Laya.timer.delta;
             this._pressedTime = Math.min(this._pressedTime, this.maxTime);
-            this.imgIcon.scaleY = 1 - this._pressedTime * 0.000325;
+            this.imgIcon.scaleY = 1 - this._pressedTime * this.zoomVelocity;
         }
     }
 }
