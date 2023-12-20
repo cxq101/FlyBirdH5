@@ -15,12 +15,17 @@ export class HudViewRT extends HudViewRTBase {
         Game.ins.pause();
     }
 
+    private onClickScroll(): void {
+        Game.ins.scrollTo(LevelModel.ins.currLevelTopDistance);
+    }
+
     private onDistanceChanged(): void {
         this.updateDistance();
     }
     
     onAwake(): void {
         this.btnBack.on(Laya.Event.CLICK, this.onClickBack);
+        this.btnScroll.on(Laya.Event.CLICK, this.onClickScroll);
     }
 
     onEnable(): void {

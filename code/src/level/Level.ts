@@ -1,5 +1,6 @@
 import { MathUtil } from "../utils/MathUtils";
 import { Game } from "../views/Game";
+import { LevelModel } from "../views/level/LevelModel";
 import { BackgroundRoot } from "./BackgroundRoot";
 import { InputManager } from "./InputManager";
 import { ItemRoot } from "./ItemRoot";
@@ -46,19 +47,22 @@ export class Level extends Laya.Script {
         return this.groundNode.y;
     }
 
-    private checkPlayerGround(): void {
-        if (!this._isInit) return;
-        const currState = this.player.isGround;
-        const isGround = this.player.isBelowHeight(this.groundY);
-        this.player.isGround = isGround;
-        if (!currState && isGround) {
-            this.player.stop();
-            this.player.owner.y = this.groundY;
+    private checkPlayerGround(): boolean {
+        const lastState = this.player.isGround;
+        const newState = this.player.isBelowHeight(this.groundY);
+        if (lastState != newState) {
+            this.player.isGround = newState;
+            // 落地
+            if (!lastState && newState) {
+                this.player.stop();
+                this.player.owner.y = this.groundY;
+                return true;
+            }
         }
+        return false;
     }
 
     private checkItemCollision(): void {
-        if (!this._isInit) return;
         if (Game.ins.isWin()) return;
         const [playerX, playerW] = this.player.getGlobalCollisionRange();
         this.itemRoot.items.forEach(item => {
@@ -69,16 +73,31 @@ export class Level extends Laya.Script {
         });
     }
 
-    private checkObstacleCollision(): void {
-        if (!this._isInit) return;
-        if (!this.player.isGround) return;
+    private checkObstacleCollision(): boolean {
         const [playerX, playerW] = this.player.getGlobalCollisionRange();
-        this.obstacleRoot.obstacles.forEach(o => {
+        let collisionObstacle = this.obstacleRoot.obstacles.find(o => {
             let [obstacleX, obstacleW] = o.getGlobalCollisionRange();
-            if (MathUtil.isRangesPartiallyOverlap(playerX, playerW, obstacleX, obstacleW)) {
-                this.player.addForce(o.force, o.degrees);
-            }
+            return MathUtil.isRangesPartiallyOverlap(playerX, playerW, obstacleX, obstacleW);
         });
+        if (collisionObstacle) {
+            this.player.addForce(collisionObstacle.force, collisionObstacle.degrees);
+            return true;
+        }
+        return false;
+    }
+
+    onUpdate(): void {
+        if (!this._isInit) return;
+        if (this.checkPlayerGround()) {
+            if (!this.checkObstacleCollision()) {
+                this.recordPlayerPos();            
+            }
+        }
+        this.checkItemCollision();
+    }
+
+    onDestroy(): void {
+        LevelModel.ins.resetDistance();
     }
 
     init(inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
@@ -103,14 +122,23 @@ export class Level extends Laya.Script {
 
         this.obstacleRoot.alignToHeight(this.groundY);
     }
-    
-    onUpdate(): void {
-        this.checkPlayerGround();
-        this.checkItemCollision();
-        this.checkObstacleCollision();
+
+    recordPlayerPos(): void {
+        LevelModel.ins.recordPlayerPos(this.levelCamera.distance);
     }
 
-    backToStart(): void {
+    restart(): void {
         this.levelCamera.backToStart();
+        LevelModel.ins.resetDistance();
     }
+
+    scrollTo(pos: number): void {
+        this.player.hide();
+        this.inputManager.enabled = false;
+        this.levelCamera.scrollTo(pos, Laya.Handler.create(this, () => {
+            this.player.show();
+            this.inputManager.enabled = true;
+        }, null, true));
+    }
+    
 }

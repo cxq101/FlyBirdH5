@@ -64,6 +64,41 @@
       "fontSize": 30,
       "color": "#FFFFFF",
       "padding": "0,0,0,0"
+    },
+    {
+      "_$id": "un7qbpjt",
+      "_$var": true,
+      "_$type": "Button",
+      "name": "btnScroll",
+      "x": 216,
+      "y": 1192,
+      "width": 128,
+      "height": 48,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 0.8,
+      "scaleY": 0.8,
+      "_mouseState": 2,
+      "stateNum": 1,
+      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "label": "",
+      "labelSize": 20,
+      "labelStrokeColor": "#32556b",
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "_$comp": [
+        {
+          "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+          "scriptPath": "../src/core/UI/BaseView.ts",
+          "fadeTime": 300
+        },
+        {
+          "_$type": "64521eff-7e49-4566-9899-03615e713814",
+          "scriptPath": "../src/UIComponents/ScaleButton.ts",
+          "duration": 100,
+          "scale": 0.9,
+          "isAnchorCenterRequired": true
+        }
+      ]
     }
   ]
 }

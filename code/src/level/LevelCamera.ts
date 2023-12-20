@@ -1,5 +1,3 @@
-import { LevelModel } from "../views/level/LevelModel";
-
 /**
  * author: cxq
  * time: 2023/12/13 08:48:23
@@ -21,6 +19,33 @@ export class LevelCamera extends Laya.Script {
 
     private _followers: ICameraFollower[];
     private _focusTarget: ICameraFocusTarget;
+
+    public distance: number = 0;
+
+    public get moveToValue() : number {
+        return this.distance;
+    }
+
+    public set moveToValue(v : number) {
+        this.moveTo(v);
+    }
+    
+    private isInit(): boolean {
+        return this._focusTarget != null;
+    }
+
+    private moveTo(pos: number): void {
+        this.moveBy(pos - this.distance);
+    }
+
+    private moveBy(distance: number): void {
+        this.distance += distance;
+        this._followers.forEach(follow => follow.move(-distance));
+    }
+
+    private onScrollCompleted(handler: Laya.Handler): void {
+        handler && handler.run();
+    }
     
     init(target: ICameraFocusTarget): void {
         this._followers = [];
@@ -28,30 +53,26 @@ export class LevelCamera extends Laya.Script {
     }
 
     backToStart(): void {
-        const distance = LevelModel.ins.currLevelDistance;
-        this._followers.forEach(follow => follow.move(distance));
-        LevelModel.ins.resetDistance();
+        this.moveBy(-this.distance);
+    }
+
+    scrollTo(pos: number, scrollCompleted?: Laya.Handler): void {
+        Laya.Tween.to(this, { moveToValue: pos }, 800, Laya.Ease.expoIn, Laya.Handler.create(this, this.onScrollCompleted, [scrollCompleted]));
     }
 
     addFollower(f: ICameraFollower): void {
         this._followers.push(f);
     }
 
-    isInit(): boolean {
-        return this._focusTarget != null;
-    }
-    
     onUpdate(): void {
         if (!this.isInit()) return;
         const delta = Laya.timer.delta * 0.001;
         let distance = this._focusTarget.velocityX * delta;
         if (distance == 0) return;
-        LevelModel.ins.moveDistance(distance);
-        this._followers.forEach(follow => follow.move(-distance));
+        this.moveBy(distance);
     }
 
     onDestroy(): void {
-        LevelModel.ins.resetDistance();
         this._followers = this._focusTarget = null;
     }
 }

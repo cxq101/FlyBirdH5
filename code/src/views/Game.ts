@@ -156,7 +156,7 @@ export class Game extends Singleton<Game>() {
 
     private onRestartLevelHandler(): void {
         ViewMgr.ins.close(EViewKey.PauseView);   
-        this._level.backToStart();
+        this._level.restart();
         ViewMgr.ins.open(EViewKey.HudView);
     }
 
@@ -197,5 +197,9 @@ export class Game extends Singleton<Game>() {
 
     isWin(): boolean {
         return this._fsm.getState() === GameStates.win;
+    }
+
+    scrollTo(p: number): void {
+        this._level.scrollTo(p);
     }
 }

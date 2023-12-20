@@ -81,10 +81,14 @@ export class LevelModel extends Model {
         return Math.max(real, 0);
     }
 
-    moveDistance(distance: number): void {
+    recordPlayerPos(distance: number): void {
+        this.currLevelDistance = distance;
+    }
+
+    moveBy(distance: number): void {
         this.currLevelDistance += distance;
     }
-    
+
     resetDistance(): void {
         this.currLevelDistance = this.currLevelTopDistance = 0;
     }

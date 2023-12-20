@@ -61,6 +61,14 @@ export class Player extends Laya.Script {
         return [p.x, p.x + this.collisionBox.width];
     }
     
+    hide(): void {
+        this.owner.visible = false;
+    }
+
+    show(): void {
+        this.owner.visible = true;
+    }
+    
     stop(): void {
         this.velocityX = this.velocityY = 0;
     }
