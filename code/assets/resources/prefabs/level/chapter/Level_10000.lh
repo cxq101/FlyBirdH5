@@ -142,6 +142,24 @@
           "y": 1148,
           "visible": true,
           "width": 212
+        },
+        {
+          "_$id": "1w5b30q3",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(20)",
+          "active": true,
+          "x": 385,
+          "y": 1153,
+          "visible": true
+        },
+        {
+          "_$id": "eh4szc0l",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(21)",
+          "active": true,
+          "x": 14,
+          "y": 1155,
+          "visible": true
         }
       ]
     },

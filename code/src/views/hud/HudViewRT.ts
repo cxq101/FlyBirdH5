@@ -2,13 +2,25 @@ const { regClass } = Laya;
 import { Game } from "../Game";
 import { LevelEvent } from "../level/LevelConst";
 import { LevelModel } from "../level/LevelModel";
+import { SkinModel } from "../skin/SkinModel";
 import { HudViewRTBase } from "./HudViewRT.generated";
 
 @regClass()
 export class HudViewRT extends HudViewRTBase {
     private updateView(): void {
         this.updateDistance();
+        this.updateProgress();
         this.updateScrollButton();
+    }
+
+    private updateProgress(): void {
+        const isShowProgress = LevelModel.ins.isShowProgress();
+        this.progress.visible = isShowProgress;
+        if (isShowProgress) {
+            this.imgHead.skin = SkinModel.ins.getCurrentSkinHead();
+            this.progress.value = LevelModel.ins.currDistanceFormat * 0.01;
+            this.imgHead.x = this.progress.width * this.progress.value;
+        }
     }
 
     private updateDistance(): void {

@@ -30,6 +30,7 @@
       "_$id": "ev0np8qp",
       "_$type": "Sprite",
       "name": "obstacleRoot",
+      "x": 700,
       "width": 1,
       "height": 1,
       "_$comp": [
@@ -48,6 +49,7 @@
       "_$id": "3kns7eqm",
       "_$type": "Sprite",
       "name": "itemRoot",
+      "x": 700,
       "width": 1,
       "height": 1,
       "_$comp": [
@@ -61,7 +63,7 @@
       "_$id": "dz84iggd",
       "_$type": "Sprite",
       "name": "spawnPoint",
-      "x": 305,
+      "x": 300,
       "y": 800,
       "width": 100,
       "height": 100

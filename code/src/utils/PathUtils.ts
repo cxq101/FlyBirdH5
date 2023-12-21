@@ -8,6 +8,10 @@ export class PathUtils {
         return `resources/icon/avatar/${icon}.png`;
     }
 
+    static getHead(icon: string): string {
+        return `resources/icon/avatar/${icon}_head.png`;
+    }
+
     static getUiImage(icon: string): string {
         return `resources/ui/${icon}.png`;
     }

@@ -130,8 +130,11 @@ export class Level extends Laya.Script {
     init(levelId: number, inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
         if (this._isInit) return;
         LevelModel.ins.currId = levelId;
+        let realStartPos = this.obstacleRoot.owner.x - this.spawnPoint[0];
+        LevelModel.ins.setStartSpace(realStartPos);
 
         this.parsePrefabData(levelId);
+
         this._isInit = true;
         playerNode.pos(...this.spawnPoint);
         this.owner.addChild(playerNode);
@@ -149,7 +152,6 @@ export class Level extends Laya.Script {
         this.levelCamera.addFollower(this.obstacleRoot);
 
         this.backgroundRoot = backgroundRoot;
-
     }
 
     recordPlayerPos(): void {

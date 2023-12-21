@@ -71,4 +71,11 @@ export class SkinModel extends Model {
         let conf = configs.find(conf => conf.id === id);
         return PathUtils.getAvatar(conf.icon);
     }
+
+    getCurrentSkinHead(): string {
+        let id = this._localData.data.skinId;
+        const configs: SkinConfigData[] = ConfigUtils.get("skin");
+        let conf = configs.find(conf => conf.id === id);
+        return PathUtils.getHead(conf.icon);
+    }
 }

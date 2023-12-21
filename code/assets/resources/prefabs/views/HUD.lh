@@ -60,6 +60,7 @@
       "y": 20,
       "width": 120,
       "height": 28,
+      "visible": false,
       "left": 20,
       "top": 20,
       "text": "Label",
@@ -100,6 +101,80 @@
           "duration": 100,
           "scale": 0.9,
           "isAnchorCenterRequired": true
+        }
+      ]
+    },
+    {
+      "_$id": "oty2ta0b",
+      "_$var": true,
+      "_$type": "ProgressBar",
+      "name": "progress",
+      "x": 100,
+      "y": 375,
+      "width": 520,
+      "height": 24,
+      "visible": false,
+      "centerX": 0,
+      "skin": "res://ae3de75e-ee9f-478d-9f8b-ede75a4fc296",
+      "value": 0.275,
+      "_$child": [
+        {
+          "_$id": "umparrwz",
+          "_$var": true,
+          "_$type": "Image",
+          "name": "imgHead",
+          "x": 149,
+          "y": -55,
+          "width": 100,
+          "height": 105,
+          "anchorX": 1,
+          "centerY": -15,
+          "skin": "res://b3476d59-1d90-4f65-af3a-9bcbac4cd850",
+          "useSourceSize": true,
+          "color": "#ffffff"
+        },
+        {
+          "_$id": "rz6rnp1n",
+          "_$var": true,
+          "_$type": "Image",
+          "name": "imgAward",
+          "x": 499,
+          "y": -20,
+          "width": 64,
+          "height": 64,
+          "right": -43,
+          "centerY": 0,
+          "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032",
+          "useSourceSize": true,
+          "color": "#ffffff"
+        },
+        {
+          "_$id": "4mqmijn0",
+          "_$type": "Image",
+          "name": "Image",
+          "x": 276,
+          "y": -89,
+          "width": 222,
+          "height": 49,
+          "centerX": 126,
+          "skin": "res://ba9af3ce-a816-4643-857c-374599b11c55",
+          "color": "#ffffff",
+          "_$child": [
+            {
+              "_$id": "78w0tvk2",
+              "_$type": "Text",
+              "name": "Text",
+              "y": 17,
+              "width": 220,
+              "height": 30,
+              "text": "90%的玩家止步于此",
+              "fontSize": 20,
+              "color": "#FFFFFF",
+              "align": "center",
+              "wordWrap": true,
+              "leading": 2
+            }
+          ]
         }
       ]
     }

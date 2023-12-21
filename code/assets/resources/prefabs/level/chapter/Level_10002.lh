@@ -130,7 +130,8 @@
           "active": true,
           "x": 5674,
           "y": 1148,
-          "visible": true
+          "visible": true,
+          "height": 34
         },
         {
           "_$id": "onzl5v4h",
@@ -141,6 +142,63 @@
           "y": 1148,
           "visible": true,
           "width": 212
+        },
+        {
+          "_$id": "aymo3e57",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(20)",
+          "active": true,
+          "x": 6475,
+          "y": 1148,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "pq7xaptr",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(21)",
+          "active": true,
+          "x": 6818,
+          "y": 1148,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "zqoylesl",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(22)",
+          "active": true,
+          "x": 7176,
+          "y": 1148,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "96jb95jp",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(23)",
+          "active": true,
+          "x": 5381,
+          "y": 1148,
+          "visible": true
+        },
+        {
+          "_$id": "7edj9nmc",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(24)",
+          "active": true,
+          "x": 341,
+          "y": 1137,
+          "visible": true
+        },
+        {
+          "_$id": "lkq460ie",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(25)",
+          "active": true,
+          "x": 16,
+          "y": 1140,
+          "visible": true
         }
       ]
     },
@@ -156,9 +214,10 @@
           "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",
           "name": "finalAward",
           "active": true,
-          "x": 6686,
+          "x": 7556,
           "y": 765,
-          "visible": true
+          "visible": true,
+          "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032"
         }
       ]
     }

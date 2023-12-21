@@ -5,7 +5,7 @@
  */
 
 import { Model } from "../../core/mvc/Model";
-import { ELevelMode, LevelConst, LevelEvent } from "./LevelConst";
+import { LevelConst, LevelEvent } from "./LevelConst";
 import { LevelLocalData } from "./LevelLocalData";
 
 export class LevelModel extends Model {
@@ -17,7 +17,8 @@ export class LevelModel extends Model {
         return this._ins;
     }
 
-    private _distanceRatio = 0.01;
+    private _distanceRatio = 100 / 8000;
+    private _startSpace = 0;
     private _currId: number;
     private _freeJumpTimes: number;
 
@@ -83,8 +84,16 @@ export class LevelModel extends Model {
         return Math.max(real, 0);
     }
 
+    setStartSpace(v: number): void {
+        this._startSpace = v;
+    }
+
     isPracticeMode(): boolean {
         return this.currId == LevelConst.LevelPracticeId;
+    }
+
+    isShowProgress(): boolean {
+        return this.currId == LevelConst.Level_10002 && this.currDistance > this._startSpace;
     }
 
     isExistTop(): boolean {
