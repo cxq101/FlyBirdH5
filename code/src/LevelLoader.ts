@@ -55,7 +55,7 @@ export class LevelLoader extends Laya.Script {
     unloadLevel(level: Level): void {
         let levelOwner = level.owner;
 
-        LevelModel.ins.currLevelId = null;
+        LevelModel.ins.currId = null;
 
         levelOwner.destroy();
     }

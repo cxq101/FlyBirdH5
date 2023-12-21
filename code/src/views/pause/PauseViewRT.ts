@@ -1,19 +1,24 @@
 const { regClass } = Laya;
 import { Game } from "../Game";
 import { LevelModel } from "../level/LevelModel";
+import { SkinModel } from "../skin/SkinModel";
 import { PauseViewRTBase } from "./PauseViewRT.generated";
 
 @regClass()
 export class PauseViewRT extends PauseViewRTBase {
     private updateView(): void {
-        const current = LevelModel.ins.currLevelTopDistanceFormat;
-        const history = LevelModel.ins.currLevelHistoryTopDistanceFormat;
-        const isNewRecord = current > history;
-        this.lblCurrentScore.text = current.toString();
-        this.lblHistoryScore.text = isNewRecord ? current.toString() : history.toString();
-        this.imgNewRecord.visible = isNewRecord;
-        if (isNewRecord) {
-            LevelModel.ins.newRecord();
+        let isPracticeMode = LevelModel.ins.isPracticeMode();
+        this.boxNormal.visible = !isPracticeMode;
+        this.boxPractice.visible = isPracticeMode;
+
+        if (isPracticeMode) {
+            let isNewRecord = LevelModel.ins.checkExistNewRecord();
+            this.imgNewRecord.visible = isNewRecord;
+            this.lblCurrentScore.text = LevelModel.ins.currTopDistanceFormat.toString();
+            isNewRecord && LevelModel.ins.saveNewRecord();
+            this.lblHistoryScore.text = LevelModel.ins.currHistoryTopDistanceFormat.toString();
+        } else {
+            this.imgIcon.skin = SkinModel.ins.getCurrentSkin();
         }
     }
 

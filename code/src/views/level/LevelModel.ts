@@ -5,7 +5,7 @@
  */
 
 import { Model } from "../../core/mvc/Model";
-import { LevelEvent } from "./LevelConst";
+import { ELevelMode, LevelConst, LevelEvent } from "./LevelConst";
 import { LevelLocalData } from "./LevelLocalData";
 
 export class LevelModel extends Model {
@@ -18,62 +18,64 @@ export class LevelModel extends Model {
     }
 
     private _distanceRatio = 0.01;
-    private _currLevelId: number;
+    private _currId: number;
+    private _freeJumpTimes: number;
 
     private _localData: LevelLocalData;
     /** 当前关卡当前距离 */
-    private _currLevelDistance: number = 0;
+    private _currDistance: number = 0;
     /** 当前关卡最高距离 */
-    private _currLevelTopDistance: number = 0;
+    private _currTopDistance: number = 0;
 
     private constructor() {
         super();
         this._localData = new LevelLocalData();
     }
 
-    get currLevelId() : number {
-        return this._currLevelId;
+    get currId() : number {
+        return this._currId;
     }
 
-    set currLevelId(v : number) {
-        this._currLevelId = v;
+    set currId(v : number) {
+        this._currId = v;
+        this._freeJumpTimes = 1;
     }
     
-    set currLevelDistance(v: number) {
-        this._currLevelDistance = v;
+    set currDistance(v: number) {
+        this._currDistance = v;
         this.event(LevelEvent.DistanceChanged, v);
-        if (this._currLevelDistance > this.currLevelTopDistance) {
-            this.currLevelTopDistance = v;
+        if (this._currDistance > this.currTopDistance) {
+            this.currTopDistance = v;
             this.event(LevelEvent.TopDistanceChanged, v);
         }
     }
 
-    get currLevelDistance(): number {
-        return this._currLevelDistance;
+    get currDistance(): number {
+        return this._currDistance;
     }
 
-    set currLevelTopDistance(v: number) {
-        this._currLevelTopDistance = v;
+    set currTopDistance(v: number) {
+        this._currTopDistance = v;
     }
 
-    get currLevelTopDistance(): number {
-        return this._currLevelTopDistance;
+    get currTopDistance(): number {
+        return this._currTopDistance;
     }
 
-    get currLevelHistoryTopDistance(): number {
-        return this._localData.getHistoryRecord(this._currLevelId);
+    get currHistoryTopDistance(): number {
+        return this._localData.getHistoryRecord(this._currId);
     }
 
-    get currLevelDistanceFormat(): number {
-        return this.formatDistance(this.currLevelDistance);
+    get currDistanceFormat(): number {
+        return this.formatDistance(this.currDistance);
     }
 
-    get currLevelTopDistanceFormat(): number {
-        return this.formatDistance(this.currLevelTopDistance);
+    get currTopDistanceFormat(): number {
+        return this.formatDistance(this.currTopDistance);
     }
     
-    get currLevelHistoryTopDistanceFormat(): number {
-        return this.formatDistance(this.currLevelHistoryTopDistance);
+    get currHistoryTopDistanceFormat(): number {
+        return this.formatDistance(this.currHistoryTopDistance);
     }
 
     private formatDistance(distance: number): number {
@@ -81,19 +83,35 @@ export class LevelModel extends Model {
         return Math.max(real, 0);
     }
 
+    isPracticeMode(): boolean {
+        return this.currId == LevelConst.LevelPracticeId;
+    }
+
+    isExistTop(): boolean {
+        return this.currTopDistance > this.currDistance;
+    }
+
+    isExistFree(): boolean {
+        return this._freeJumpTimes > 0;
+    }
+
     recordPlayerPos(distance: number): void {
-        this.currLevelDistance = distance;
+        this.currDistance = distance;
     }
 
     moveBy(distance: number): void {
-        this.currLevelDistance += distance;
+        this.currDistance += distance;
     }
 
     resetDistance(): void {
-        this.currLevelDistance = this.currLevelTopDistance = 0;
+        this.currDistance = this.currTopDistance = 0;
     }
 
-    newRecord(): void {
-        this._localData.newHistoryRecord(this._currLevelId, this.currLevelTopDistance);        
+    checkExistNewRecord(): boolean {
+        return this.currTopDistanceFormat > this.currHistoryTopDistanceFormat;
+    }
+
+    saveNewRecord(): void {
+        this._localData.newHistoryRecord(this._currId, this.currTopDistance);        
     }
 }

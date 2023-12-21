@@ -6,9 +6,23 @@ import { HudViewRTBase } from "./HudViewRT.generated";
 
 @regClass()
 export class HudViewRT extends HudViewRTBase {
+    private updateView(): void {
+        this.updateDistance();
+        this.updateScrollButton();
+    }
+
     private updateDistance(): void {
-        const distance = LevelModel.ins.currLevelDistanceFormat;
-        this.lblDistance.text = `当前距离：${distance}`;
+        const isPractice = LevelModel.ins.isPracticeMode();
+        this.lblDistance.visible = isPractice;
+        if (isPractice) {
+            const distance = LevelModel.ins.currDistanceFormat;
+            this.lblDistance.text = `当前距离：${distance}`;
+        }
+    }
+
+    private updateScrollButton(): void {
+        const isExistTop = LevelModel.ins.isExistTop();
+        this.btnScroll.visible = isExistTop;
     }
 
     private onClickBack(): void {
@@ -16,20 +30,16 @@ export class HudViewRT extends HudViewRTBase {
     }
 
     private onClickScroll(): void {
-        Game.ins.scrollTo(LevelModel.ins.currLevelTopDistance);
+        Game.ins.scrollTo(LevelModel.ins.currTopDistance);
     }
 
-    private onDistanceChanged(): void {
-        this.updateDistance();
-    }
-    
     onAwake(): void {
         this.btnBack.on(Laya.Event.CLICK, this.onClickBack);
         this.btnScroll.on(Laya.Event.CLICK, this.onClickScroll);
     }
 
     onEnable(): void {
-        this.updateDistance();
-        LevelModel.ins.on(LevelEvent.DistanceChanged, this, this.onDistanceChanged);
+        this.updateView();
+        LevelModel.ins.on(LevelEvent.DistanceChanged, this, this.updateView);
     }
 }

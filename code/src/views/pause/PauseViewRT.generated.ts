@@ -5,9 +5,13 @@
  * resources/prefabs/views/PauseView.lh
  */
 export class PauseViewRTBase extends Laya.Box {
+    public boxPractice!: Laya.Box;
     public imgNewRecord!: Laya.Image;
     public lblCurrentScore!: Laya.Label;
     public lblHistoryScore!: Laya.Label;
+    public boxNormal!: Laya.Box;
+    public lblLeftScore!: Laya.Label;
+    public imgIcon!: Laya.Image;
     public btnResume!: Laya.Button;
     public btnMainMenu!: Laya.Button;
     public btnRestart!: Laya.Button;

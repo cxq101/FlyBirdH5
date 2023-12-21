@@ -102,7 +102,7 @@ export class Level extends Laya.Script {
 
     private parsePrefabData(levelId: number): void {
         let p: Laya.PrefabImpl =Laya.loader.getRes(`resources/prefabs/level/chapter/Level_${levelId}.lh`);
-        let roots = p.data._$child as { name: string, _$child: { name: string, visible: boolean, x: number, y: number, width: number, _$prefab: string }[] }[];
+        let roots = p.data._$child as { name: string, _$child?: { name: string, visible: boolean, x: number, y: number, width: number, _$prefab: string }[] }[];
         let itemRoot = roots.find(r => r.name === "itemRoot");
         let obstacleRoot = roots.find(r => r.name === "obstacleRoot");
         
@@ -116,7 +116,7 @@ export class Level extends Laya.Script {
         });
         this.obstacleRoot.alignToHeight(this.groundY);
 
-        itemRoot._$child.forEach((child) => {
+        itemRoot._$child && itemRoot._$child.forEach((child) => {
             let prefab = Laya.loader.getRes(child._$prefab) as Laya.Prefab;
             let node = prefab.create() as Laya.Sprite;
             node.x = child.x;
@@ -129,7 +129,8 @@ export class Level extends Laya.Script {
 
     init(levelId: number, inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
         if (this._isInit) return;
-        LevelModel.ins.currLevelId = levelId;
+        LevelModel.ins.currId = levelId;
+
         this.parsePrefabData(levelId);
         this._isInit = true;
         playerNode.pos(...this.spawnPoint);
@@ -156,7 +157,7 @@ export class Level extends Laya.Script {
     }
 
     reEnterLevel(levelId: number): void {
-        LevelModel.ins.currLevelId = levelId;
+        LevelModel.ins.currId = levelId;
         this.levelCamera.backToStart();
         LevelModel.ins.resetDistance();
         this.itemRoot.removeAllObstacles();

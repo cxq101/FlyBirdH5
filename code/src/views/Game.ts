@@ -145,7 +145,7 @@ export class Game extends Singleton<Game>() {
     }
 
     private onNextLevelHandler(): void {
-        const levelId = LevelConst.Level_10001;
+        const levelId = LevelConst.Level_10002;
         this._level.reEnterLevel(levelId);
         ViewMgr.ins.close(EViewKey.WinView);
         ViewMgr.ins.open(EViewKey.HudView);

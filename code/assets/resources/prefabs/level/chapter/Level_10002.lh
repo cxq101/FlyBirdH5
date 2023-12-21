@@ -1,22 +1,21 @@
 {
   "_$ver": 1,
-  "_$id": "739x2xqq",
+  "_$id": "o3vi3w6v",
   "_$type": "Box",
-  "name": "Level_10002",
-  "x": -3622,
-  "y": -272,
+  "name": "Level_10001",
+  "y": 148,
   "width": 8000,
   "height": 1280,
   "_$child": [
     {
-      "_$id": "ftwo7zm7",
+      "_$id": "r06dpsk9",
       "_$type": "Sprite",
       "name": "obstacleRoot",
       "width": 1,
       "height": 1,
       "_$child": [
         {
-          "_$id": "a0fdkqdw",
+          "_$id": "xkaafpq4",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle",
           "active": true,
@@ -25,7 +24,7 @@
           "visible": true
         },
         {
-          "_$id": "q9ibzf20",
+          "_$id": "3woiei9v",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(7)",
           "active": true,
@@ -34,7 +33,7 @@
           "visible": true
         },
         {
-          "_$id": "ejjzx0ra",
+          "_$id": "7hkpke45",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(8)",
           "active": true,
@@ -43,7 +42,7 @@
           "visible": true
         },
         {
-          "_$id": "bykoicc8",
+          "_$id": "io6xxgc0",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(9)",
           "active": true,
@@ -52,7 +51,7 @@
           "visible": true
         },
         {
-          "_$id": "n2mfxuvp",
+          "_$id": "vcq5w3c6",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(10)",
           "active": true,
@@ -61,7 +60,7 @@
           "visible": true
         },
         {
-          "_$id": "cdc8oxau",
+          "_$id": "rorpob68",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(11)",
           "active": true,
@@ -70,7 +69,7 @@
           "visible": true
         },
         {
-          "_$id": "muhwd3b6",
+          "_$id": "z7psw2xb",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(12)",
           "active": true,
@@ -80,7 +79,7 @@
           "width": 212
         },
         {
-          "_$id": "a5ev2te6",
+          "_$id": "7pivgwq8",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(13)",
           "active": true,
@@ -89,7 +88,7 @@
           "visible": true
         },
         {
-          "_$id": "huloouyl",
+          "_$id": "7hhq7efx",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(14)",
           "active": true,
@@ -98,7 +97,7 @@
           "visible": true
         },
         {
-          "_$id": "qiuut3i0",
+          "_$id": "vlan37ca",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(15)",
           "active": true,
@@ -107,7 +106,7 @@
           "visible": true
         },
         {
-          "_$id": "dlgr4wu9",
+          "_$id": "6adjsovn",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(16)",
           "active": true,
@@ -116,7 +115,7 @@
           "visible": true
         },
         {
-          "_$id": "ftajy9uq",
+          "_$id": "coy57a9y",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(17)",
           "active": true,
@@ -125,7 +124,7 @@
           "visible": true
         },
         {
-          "_$id": "9v2kgp3a",
+          "_$id": "q4bff0e7",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(18)",
           "active": true,
@@ -134,7 +133,7 @@
           "visible": true
         },
         {
-          "_$id": "asa25ncq",
+          "_$id": "onzl5v4h",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(19)",
           "active": true,
@@ -146,11 +145,22 @@
       ]
     },
     {
-      "_$id": "d5kw41ea",
+      "_$id": "ecfpuj8y",
       "_$type": "Sprite",
       "name": "itemRoot",
       "width": 0,
-      "height": 0
+      "height": 0,
+      "_$child": [
+        {
+          "_$id": "9pfwg3mw",
+          "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",
+          "name": "finalAward",
+          "active": true,
+          "x": 6686,
+          "y": 765,
+          "visible": true
+        }
+      ]
     }
   ]
 }

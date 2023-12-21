@@ -11,6 +11,7 @@ export class ConfigPath {
 
     static LH_Level_10000 = "resources/prefabs/level/chapter/Level_10000.lh";
     static LH_Level_10001 = "resources/prefabs/level/chapter/Level_10001.lh";
+    static LH_Level_10002 = "resources/prefabs/level/chapter/Level_10002.lh";
 
     static EnterLoadList = [
         {url: ConfigPath.JSON_Skin, type: Laya.Loader.JSON},
@@ -24,5 +25,6 @@ export class ConfigPath {
 
         {url: ConfigPath.LH_Level_10000, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Level_10001, type: Laya.Loader.HIERARCHY},
+        {url: ConfigPath.LH_Level_10002, type: Laya.Loader.HIERARCHY},
     ];
 }
