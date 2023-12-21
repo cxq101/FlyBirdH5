@@ -45,12 +45,22 @@ export class HudViewRT extends HudViewRTBase {
         Game.ins.scrollTo(LevelModel.ins.currTopDistance);
     }
 
+    private onClickContinue(): void {
+        this.btnBack.visible = true;
+        this.boxMask.visible = false;
+    }
+
     onAwake(): void {
-        this.btnBack.on(Laya.Event.CLICK, this.onClickBack);
-        this.btnScroll.on(Laya.Event.CLICK, this.onClickScroll);
+        this.btnBack.on(Laya.Event.CLICK, this, this.onClickBack);
+        this.btnScroll.on(Laya.Event.CLICK, this, this.onClickScroll);
+        this.btnContinue.on(Laya.Event.CLICK, this, this.onClickContinue);
     }
 
     onEnable(): void {
+        if (LevelModel.ins.isScrollClose) {
+            this.btnBack.visible = false;
+            this.boxMask.visible = true;
+        }
         this.updateView();
         LevelModel.ins.on(LevelEvent.DistanceChanged, this, this.updateView);
     }

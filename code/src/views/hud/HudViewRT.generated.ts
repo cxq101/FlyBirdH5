@@ -11,5 +11,7 @@ export class HudViewRTBase extends Laya.Box {
     public progress!: Laya.ProgressBar;
     public imgHead!: Laya.Image;
     public imgAward!: Laya.Image;
+    public boxMask!: Laya.Box;
+    public btnContinue!: Laya.Button;
 }
 

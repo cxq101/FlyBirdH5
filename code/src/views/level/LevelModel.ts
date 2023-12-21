@@ -22,6 +22,8 @@ export class LevelModel extends Model {
     private _currId: number;
     private _freeJumpTimes: number;
 
+    private _isScrollClose: boolean;
+
     private _localData: LevelLocalData;
     /** 当前关卡当前距离 */
     private _currDistance: number = 0;
@@ -40,6 +42,15 @@ export class LevelModel extends Model {
     set currId(v : number) {
         this._currId = v;
         this._freeJumpTimes = 1;
+    }
+    
+
+    get isScrollClose() : boolean {
+        return this._isScrollClose;
+    }
+
+    set isScrollClose(v : boolean) {
+        this._isScrollClose = v;
     }
     
     set currDistance(v: number) {
@@ -97,19 +108,19 @@ export class LevelModel extends Model {
     }
 
     isExistTop(): boolean {
-        return this.currTopDistance > this.currDistance;
+        return  this.currId == LevelConst.Level_10002 && this.currTopDistance > this.currDistance;
     }
 
     isExistFree(): boolean {
         return this._freeJumpTimes > 0;
     }
 
-    recordPlayerPos(distance: number): void {
-        this.currDistance = distance;
+    scrollEnd(): void {
+        this.recordPlayerPos(this.currTopDistance);
     }
 
-    moveBy(distance: number): void {
-        this.currDistance += distance;
+    recordPlayerPos(distance: number): void {
+        this.currDistance = distance;
     }
 
     resetDistance(): void {

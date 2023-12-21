@@ -152,7 +152,7 @@
           "_$id": "4mqmijn0",
           "_$type": "Image",
           "name": "Image",
-          "x": 276,
+          "x": 275,
           "y": -89,
           "width": 222,
           "height": 49,
@@ -175,6 +175,88 @@
               "leading": 2
             }
           ]
+        },
+        {
+          "_$id": "2mk5dvrq",
+          "_$type": "Box",
+          "name": "Box",
+          "x": 383,
+          "y": -28,
+          "width": 2,
+          "height": 80,
+          "centerX": 124,
+          "centerY": 0,
+          "bgColor": "rgba(19, 4, 4, 1)"
+        }
+      ]
+    },
+    {
+      "_$id": "hnnqvt9o",
+      "_$var": true,
+      "_$type": "Box",
+      "name": "boxMask",
+      "width": 720,
+      "height": 1280,
+      "visible": false,
+      "_mouseState": 2,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "_$child": [
+        {
+          "_$id": "ykkzo151",
+          "_$var": true,
+          "_$type": "Button",
+          "name": "btnContinue",
+          "x": 360,
+          "y": 794,
+          "width": 200,
+          "height": 60,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "_mouseState": 2,
+          "centerX": 0,
+          "centerY": 154,
+          "stateNum": 1,
+          "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+          "label": "继续",
+          "labelSize": 32,
+          "labelPadding": "8,0,0,0",
+          "labelStrokeColor": "#32556b",
+          "strokeColors": "#32556b,#32cc6b,#ff0000",
+          "_$comp": [
+            {
+              "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
+              "scriptPath": "../src/core/UI/BaseView.ts",
+              "fadeTime": 300
+            },
+            {
+              "_$type": "64521eff-7e49-4566-9899-03615e713814",
+              "scriptPath": "../src/UIComponents/ScaleButton.ts",
+              "duration": 100,
+              "scale": 0.9,
+              "isAnchorCenterRequired": true
+            }
+          ]
+        },
+        {
+          "_$id": "jg1x0scl",
+          "_$type": "Label",
+          "name": "Label",
+          "x": 193,
+          "y": 604,
+          "width": 334,
+          "height": 72,
+          "centerX": 0,
+          "centerY": 0,
+          "text": "诅咒已经消除！",
+          "fontSize": 40,
+          "color": "#FFFFFF",
+          "align": "center",
+          "padding": "0,0,0,0"
         }
       ]
     }

@@ -1,5 +1,7 @@
+import { ViewMgr } from "../core/UI/ViewMgr";
 import { MathUtil } from "../utils/MathUtils";
 import { Game } from "../views/Game";
+import { EViewKey } from "../views/ViewConst";
 import { LevelModel } from "../views/level/LevelModel";
 import { BackgroundRoot } from "./BackgroundRoot";
 import { InputManager } from "./InputManager";
@@ -175,9 +177,14 @@ export class Level extends Laya.Script {
     scrollTo(pos: number): void {
         this.player.hide();
         this.inputManager.enabled = false;
+        LevelModel.ins.isScrollClose = true;
+        ViewMgr.ins.close(EViewKey.HudView);
         this.levelCamera.scrollTo(pos, Laya.Handler.create(this, () => {
             this.player.show();
             this.inputManager.enabled = true;
+            LevelModel.ins.scrollEnd();
+            ViewMgr.ins.open(EViewKey.HudView);
+            LevelModel.ins.isScrollClose = false;
         }, null, true));
     }
     
