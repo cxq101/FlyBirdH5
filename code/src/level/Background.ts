@@ -37,6 +37,8 @@ export class Background extends Laya.Script {
     onStart(): void {
         this.startPosX = this.owner.x;
         this.textureWidth = this.owner.width / this.repeatX;
+        const stageW = Laya.stage.width;
+        this.owner.width = stageW * this.repeatX;
     }
 
     move(distance: number): void {
@@ -44,9 +46,5 @@ export class Background extends Laya.Script {
         if (this.isOutOfBounds()) {
             this.resetPos();
         }
-    }
-
-    scrollTo(distance: number) : void {
-        
     }
 }

@@ -27,17 +27,23 @@ export class Level extends Laya.Script {
     @property({ type: Laya.Sprite, tips: "地面高度对象" })
     private groundNode: Laya.Sprite;
 
-    @property({ type: ObstacleRoot })
+    @property({ type: ObstacleRoot, tips: "障碍物根节点" })
     private obstacleRoot: ObstacleRoot;
 
-    @property({ type: ItemRoot })
+    @property({ type: ItemRoot, tips: "物品根节点" })
     private itemRoot: ItemRoot;
+    
+    @property({ type: InputManager, tips: "关卡输入控制" })
+    private inputManager: InputManager;
 
     private _isInit: boolean = false;
 
-    public player: Player; 
+    @property({ type: Player, tips: "关卡输入控制" })
+    private player: Player; 
+
+    @property({ type: LevelCamera, tips: "关卡输入控制" })
     public levelCamera: LevelCamera;
-    public inputManager: InputManager;
+
     public backgroundRoot: BackgroundRoot;
 
     get spawnPoint(): [number, number] {
@@ -129,25 +135,20 @@ export class Level extends Laya.Script {
         });
     }
 
-    init(levelId: number, inputManagerNode: Laya.Sprite, playerNode: Laya.Sprite, cameraNode: Laya.Sprite, backgroundRoot: BackgroundRoot): void {
+    init(levelId: number, backgroundRoot: BackgroundRoot): void {
         if (this._isInit) return;
+        this._isInit = true;
         LevelModel.ins.currId = levelId;
+
         let realStartPos = this.obstacleRoot.owner.x - this.spawnPoint[0];
         LevelModel.ins.setStartSpace(realStartPos);
 
         this.parsePrefabData(levelId);
 
-        this._isInit = true;
-        playerNode.pos(...this.spawnPoint);
-        this.owner.addChild(playerNode);
-        this.player = playerNode.getComponent(Player);
+        this.player.spawn(...this.spawnPoint);
 
-        this.owner.addChild(inputManagerNode);
-        this.inputManager = inputManagerNode.getComponent(InputManager);
         this.inputManager.init(this.player);
 
-        this.owner.addChild(cameraNode);
-        this.levelCamera = cameraNode.getComponent(LevelCamera);
         this.levelCamera.init(this.player);
         this.levelCamera.addFollower(backgroundRoot);
         this.levelCamera.addFollower(this.itemRoot);

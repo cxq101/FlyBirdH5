@@ -3,8 +3,8 @@
   "_$id": "02sqed4s",
   "_$type": "Sprite",
   "name": "backgroundRoot",
-  "width": 720,
-  "height": 1280,
+  "width": 0,
+  "height": 0,
   "_$comp": [
     {
       "_$type": "d5bbea0a-1696-4dc2-8d55-4c7122947b61",
@@ -43,8 +43,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.3,
-          "startPosX": -720
+          "moveScale": 0.3
         }
       ]
     },
@@ -61,8 +60,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.6,
-          "startPosX": -720
+          "moveScale": 0.6
         }
       ]
     },
@@ -79,8 +77,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1,
-          "startPosX": -720
+          "moveScale": 1
         }
       ]
     },
@@ -97,26 +94,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1,
-          "startPosX": -720
-        }
-      ]
-    },
-    {
-      "_$id": "6p42ioa1",
-      "_$type": "Image",
-      "name": "Image(5)",
-      "width": 720,
-      "height": 1280,
-      "visible": false,
-      "skin": "res://dd0ec17e-980e-47ca-b8a6-357051a48300",
-      "color": "#ffffff",
-      "_$comp": [
-        {
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-          "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1,
-          "startPosX": 0
+          "moveScale": 1
         }
       ]
     }

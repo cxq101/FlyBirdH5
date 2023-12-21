@@ -17,10 +17,6 @@ export class BackgroundRoot extends Laya.Script {
     move(distance: number): void {
         this.backgrounds.forEach(bg => bg.move(distance));
     }
-    
-    scrollTo(distance: number): void {
-        this.backgrounds.forEach(bg => bg.scrollTo(distance));
-    }
 
     enterAnim(): void {
         Laya.Tween.from(this.owner,{ alpha: 0 }, 1000)

@@ -66,6 +66,11 @@ export class Player extends Laya.Script {
         return [p.x, p.x + this.collisionBox.width];
     }
     
+    spawn(x: number, y: number): void {
+        this.owner.pos(x, y);
+        this.show();
+    }
+
     hide(): void {
         this.owner.visible = false;
     }

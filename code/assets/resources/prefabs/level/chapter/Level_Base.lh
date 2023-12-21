@@ -2,7 +2,7 @@
   "_$ver": 1,
   "_$id": "yg8cbvm6",
   "_$type": "Sprite",
-  "name": "TestLevel",
+  "name": "LevelRoot",
   "width": 4334,
   "height": 1280,
   "_$comp": [
@@ -22,6 +22,18 @@
       "itemRoot": {
         "_$ref": "3kns7eqm",
         "_$type": "467b4aa2-b001-4847-b1ba-b4a91471676f"
+      },
+      "inputManager": {
+        "_$ref": "c23p57j4",
+        "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6"
+      },
+      "player": {
+        "_$ref": "vqq64c9r",
+        "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
+      },
+      "levelCamera": {
+        "_$ref": "wtfhhdmx",
+        "_$type": "dbaae76a-a75c-4382-a42b-2cd24de86b01"
       }
     }
   ],
@@ -34,11 +46,6 @@
       "width": 1,
       "height": 1,
       "_$comp": [
-        {
-          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
-          "scriptPath": "../src/level/Background.ts",
-          "moveScale": 1
-        },
         {
           "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
           "scriptPath": "../src/level/ObstacleRoot.ts"
@@ -76,6 +83,42 @@
       "y": 1070,
       "width": 100,
       "height": 100
+    },
+    {
+      "_$id": "c23p57j4",
+      "_$type": "Box",
+      "name": "InputManager",
+      "width": 4334,
+      "height": 1280,
+      "_mouseState": 2,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0,
+      "_$comp": [
+        {
+          "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6",
+          "scriptPath": "../src/level/InputManager.ts"
+        }
+      ]
+    },
+    {
+      "_$id": "wtfhhdmx",
+      "_$prefab": "f52f13c2-5641-41d9-b595-df58a169bb21",
+      "name": "LevelCamera",
+      "active": true,
+      "x": 0,
+      "y": 0,
+      "visible": true
+    },
+    {
+      "_$id": "vqq64c9r",
+      "_$prefab": "71cac087-be04-4e1c-af5c-d7dce6e12802",
+      "name": "Player",
+      "active": true,
+      "x": 2135,
+      "y": 834,
+      "visible": false
     }
   ]
 }
