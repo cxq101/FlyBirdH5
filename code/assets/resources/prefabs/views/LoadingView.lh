@@ -6,11 +6,8 @@
   "name": "Box",
   "width": 720,
   "height": 1280,
-  "left": 0,
-  "right": 0,
-  "top": 0,
-  "bottom": 0,
-  "bgColor": "rgba(11, 237, 232, 1)",
+  "centerX": 0,
+  "centerY": 0,
   "_$child": [
     {
       "_$id": "r3m2h5np",

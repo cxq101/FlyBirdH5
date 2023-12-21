@@ -8,10 +8,8 @@
   "height": 1280,
   "_mouseState": 2,
   "mouseThrough": true,
-  "left": 0,
-  "right": 0,
-  "top": 0,
-  "bottom": 0,
+  "centerX": 0,
+  "centerY": 0,
   "_$comp": [
     {
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",

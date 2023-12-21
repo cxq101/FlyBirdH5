@@ -7,6 +7,8 @@
   "width": 720,
   "height": 1280,
   "_mouseState": 2,
+  "centerX": 0,
+  "centerY": 0,
   "_$comp": [
     {
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
@@ -37,6 +39,7 @@
       "width": 500,
       "height": 705,
       "visible": false,
+      "centerX": 0,
       "_$child": [
         {
           "_$id": "y68ondg6",
@@ -149,6 +152,7 @@
       "y": 202.00000000000003,
       "width": 500,
       "height": 705,
+      "centerX": 0,
       "_$child": [
         {
           "_$id": "kd1virt0",
@@ -190,12 +194,12 @@
       "_$var": true,
       "_$type": "Button",
       "name": "btnResume",
-      "x": 111,
+      "x": 110,
       "y": 928,
       "width": 500,
       "height": 70,
       "_mouseState": 2,
-      "centerX": 1,
+      "centerX": 0,
       "stateNum": 1,
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "继续",

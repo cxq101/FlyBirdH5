@@ -5,7 +5,7 @@
  * resources/prefabs/views/Help.lh
  */
 export class HelpViewRTBase extends Laya.Box {
-    public btnClose!: Laya.Button;
     public lblDesc!: Laya.Label;
+    public btnClose!: Laya.Button;
 }
 
