@@ -2,7 +2,7 @@ const { regClass } = Laya;
 import { ViewMgr } from "../../core/UI/ViewMgr";
 import { Game } from "../Game";
 import { EViewKey } from "../ViewConst";
-import { LevelConst } from "../level/LevelConst";
+import { ELevelConst } from "../level/LevelConst";
 import { MainViewRTBase } from "./MainViewRT.generated";
 
 @regClass()
@@ -16,11 +16,11 @@ export class MainViewRT extends MainViewRTBase {
     }
 
     private onClickPlay(): void {
-        Game.ins.enterLevel(LevelConst.Level_10001);
+        Game.ins.enterLevel(ELevelConst.Level_10001);
     }
 
     private onClickPractice(): void {
-        Game.ins.enterLevel(LevelConst.LevelPracticeId);
+        Game.ins.enterLevel(ELevelConst.LevelPracticeId);
     }
 
     onAwake(): void {

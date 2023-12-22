@@ -9,19 +9,12 @@
     {
       "_$type": "81d36ae9-c41d-47cc-b112-cc4568ccd384",
       "scriptPath": "../src/level/Level.ts",
-      "spawnPointNode": {
-        "_$ref": "dz84iggd"
-      },
-      "groundNode": {
-        "_$ref": "urqfhmgu"
+      "groundY": 1070,
+      "itemRoot": {
+        "_$ref": "3kns7eqm"
       },
       "obstacleRoot": {
-        "_$ref": "ev0np8qp",
-        "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b"
-      },
-      "itemRoot": {
-        "_$ref": "3kns7eqm",
-        "_$type": "467b4aa2-b001-4847-b1ba-b4a91471676f"
+        "_$ref": "ev0np8qp"
       },
       "inputManager": {
         "_$ref": "c23p57j4",
@@ -39,50 +32,39 @@
   ],
   "_$child": [
     {
-      "_$id": "ev0np8qp",
+      "_$id": "g8ikde3d",
       "_$type": "Sprite",
-      "name": "obstacleRoot",
-      "x": 700,
-      "width": 1,
-      "height": 1,
+      "name": "moveRoot",
+      "x": 2139,
+      "y": 612.9999999999999,
+      "width": 100,
+      "height": 100,
       "_$comp": [
         {
-          "_$type": "04f66d51-58cc-4740-a1b2-a5330d1fc94b",
-          "scriptPath": "../src/level/ObstacleRoot.ts"
+          "_$type": "678888e2-6538-4ca7-b1d9-412189f1a1be",
+          "scriptPath": "../src/level/CameraFollower.ts"
         }
-      ]
-    },
-    {
-      "_$id": "3kns7eqm",
-      "_$type": "Sprite",
-      "name": "itemRoot",
-      "x": 700,
-      "width": 1,
-      "height": 1,
-      "_$comp": [
+      ],
+      "_$child": [
         {
-          "_$type": "467b4aa2-b001-4847-b1ba-b4a91471676f",
-          "scriptPath": "../src/level/ItemRoot.ts"
+          "_$id": "ev0np8qp",
+          "_$type": "Sprite",
+          "name": "obstacleRoot",
+          "x": -1439,
+          "y": -612.9999999999999,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "_$id": "3kns7eqm",
+          "_$type": "Sprite",
+          "name": "itemRoot",
+          "x": -1439,
+          "y": -612.9999999999999,
+          "width": 1,
+          "height": 1
         }
       ]
-    },
-    {
-      "_$id": "dz84iggd",
-      "_$type": "Sprite",
-      "name": "spawnPoint",
-      "x": 250,
-      "y": 800,
-      "width": 100,
-      "height": 100
-    },
-    {
-      "_$id": "urqfhmgu",
-      "_$type": "Sprite",
-      "name": "groundPoint",
-      "x": 261,
-      "y": 1070,
-      "width": 100,
-      "height": 100
     },
     {
       "_$id": "c23p57j4",
@@ -109,15 +91,26 @@
       "active": true,
       "x": 0,
       "y": 0,
-      "visible": true
+      "visible": true,
+      "_$comp": [
+        {
+          "_$override": "dbaae76a-a75c-4382-a42b-2cd24de86b01",
+          "followers": [
+            {
+              "_$ref": "g8ikde3d",
+              "_$type": "678888e2-6538-4ca7-b1d9-412189f1a1be"
+            }
+          ]
+        }
+      ]
     },
     {
       "_$id": "vqq64c9r",
       "_$prefab": "71cac087-be04-4e1c-af5c-d7dce6e12802",
       "name": "Player",
       "active": true,
-      "x": 2135,
-      "y": 834,
+      "x": 250,
+      "y": 800,
       "visible": false
     }
   ]

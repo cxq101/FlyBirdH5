@@ -5,7 +5,7 @@
  */
 
 import { Model } from "../../core/mvc/Model";
-import { LevelConst, LevelEvent } from "./LevelConst";
+import { ELevelConst, LevelEvent } from "./LevelConst";
 import { LevelLocalData } from "./LevelLocalData";
 
 export class LevelModel extends Model {
@@ -100,15 +100,15 @@ export class LevelModel extends Model {
     }
 
     isPracticeMode(): boolean {
-        return this.currId == LevelConst.LevelPracticeId;
+        return this.currId == ELevelConst.LevelPracticeId;
     }
 
     isShowProgress(): boolean {
-        return this.currId == LevelConst.Level_10002 && this.currDistance > this._startSpace;
+        return this.currId == ELevelConst.Level_10002 && this.currDistance > this._startSpace;
     }
 
     isExistTop(): boolean {
-        return  this.currId == LevelConst.Level_10002 && this.currTopDistance > this.currDistance;
+        return  this.currId == ELevelConst.Level_10002 && this.currTopDistance > this.currDistance;
     }
 
     isExistFree(): boolean {

@@ -1,4 +1,5 @@
 import { Background } from "./Background";
+import { CameraFollower } from "./CameraFollower";
 
 /**
  * author: cxq
@@ -8,7 +9,7 @@ import { Background } from "./Background";
 const { regClass, property } = Laya;
 
 @regClass()
-export class BackgroundRoot extends Laya.Script {
+export class BackgroundRoot extends CameraFollower {
     declare owner: Laya.Sprite; 
 
     @property({ type: [Background] })

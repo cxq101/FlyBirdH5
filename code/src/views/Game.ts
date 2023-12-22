@@ -14,7 +14,7 @@ import { Singleton } from "../core/base/Singleton";
 import { Level } from "../level/Level";
 import { PromiseEx } from "../utils/PromiseEx";
 import { ViewLayerZOrder, EViewKey, EViewLayer } from "./ViewConst";
-import { LevelConst } from "./level/LevelConst";
+import { ELevelConst } from "./level/LevelConst";
 
 export class Game extends Singleton<Game>() {
     private _fsm: GameFSM;
@@ -145,7 +145,7 @@ export class Game extends Singleton<Game>() {
     }
 
     private onNextLevelHandler(): void {
-        const levelId = LevelConst.Level_10002;
+        const levelId = ELevelConst.Level_10002;
         this._level.reEnterLevel(levelId);
         ViewMgr.ins.close(EViewKey.WinView);
         ViewMgr.ins.open(EViewKey.HudView);

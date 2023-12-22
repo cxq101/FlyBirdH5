@@ -1,3 +1,5 @@
+import { CameraFollower } from "./CameraFollower";
+
 /**
  * author: cxq
  * time: 2023/12/13 08:48:23
@@ -7,17 +9,14 @@ export interface ICameraFocusTarget {
     velocityX: number;
 }
 
-export interface ICameraFollower {
-    move(distance: number): void;
-}
-
 const { regClass, property } = Laya;
 
 @regClass()
 export class LevelCamera extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    private _followers: ICameraFollower[];
+    @property({ type: [CameraFollower] })
+    private followers: CameraFollower[] = [];
     private _focusTarget: ICameraFocusTarget;
 
     public distance: number = 0;
@@ -40,7 +39,7 @@ export class LevelCamera extends Laya.Script {
 
     private moveBy(distance: number): void {
         this.distance += distance;
-        this._followers.forEach(follow => follow.move(-distance));
+        this.followers.forEach(follow => follow.move(-distance));
     }
 
     private onScrollCompleted(handler: Laya.Handler): void {
@@ -48,7 +47,6 @@ export class LevelCamera extends Laya.Script {
     }
     
     init(target: ICameraFocusTarget): void {
-        this._followers = [];
         this._focusTarget = target;
     }
 
@@ -60,8 +58,8 @@ export class LevelCamera extends Laya.Script {
         Laya.Tween.to(this, { moveToValue: pos }, 800, Laya.Ease.expoIn, Laya.Handler.create(this, this.onScrollCompleted, [scrollCompleted]));
     }
 
-    addFollower(f: ICameraFollower): void {
-        this._followers.push(f);
+    addFollower(f: CameraFollower): void {
+        this.followers.push(f);
     }
 
     onUpdate(): void {
@@ -73,6 +71,6 @@ export class LevelCamera extends Laya.Script {
     }
 
     onDestroy(): void {
-        this._followers = this._focusTarget = null;
+        this.followers = this._focusTarget = null;
     }
 }
