@@ -39,6 +39,7 @@ export class Player extends Laya.Script {
     private _isGround: boolean = false;
     private _isPressed: boolean = false;
     private _pressedTime: number = 0;
+    private _isScrolling: boolean = false;
 
     get isGround(): boolean {
         return this._isGround;
@@ -66,19 +67,26 @@ export class Player extends Laya.Script {
         return [p.x, p.x + this.collisionBox.width];
     }
     
-    spawn(x: number, y: number): void {
-        this.owner.pos(x, y);
-        this.show();
+    spawn(x: number, y?: number): void {
+        this.owner.visible = true;
+        this.owner.pos(x, y == null ? this.owner.y : y);
     }
 
     hide(): void {
-        this.owner.visible = false;
+        this._isScrolling = true;
+        this.stop();
+        Laya.Tween.to(this.owner, { alpha: 0 }, 400, null, Laya.Handler.create(this, () => {
+            this.owner.visible = false;
+        }), 0, true, true);
     }
 
     show(): void {
+        this.owner.alpha = 1;
         this.owner.visible = true;
+        this._isScrolling = false;
+        Laya.Tween.from(this.owner, { alpha: 0 }, 400, null, null, 0, true, true);
     }
-    
+
     stop(): void {
         this.velocityX = this.velocityY = 0;
     }
@@ -104,6 +112,12 @@ export class Player extends Laya.Script {
         this._pressedTime = 0;
     }
 
+    onPressedCancel(): void {
+        this._isPressed = false;
+        this._pressedTime = 0;
+        this.imgIcon.scaleY = 1;
+    }
+
     onRelease(): void {
         let force = this._pressedTime * this.forceVelocity * 0.001;
         force = Math.max(force, this.minForce); 
@@ -119,6 +133,7 @@ export class Player extends Laya.Script {
     }
 
     onUpdate(): void {
+        if (this._isScrolling) return;
         this.move();
         this.press();
     }
