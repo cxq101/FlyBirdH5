@@ -45,6 +45,8 @@ export class Level extends Laya.Script {
 
     @property({ type: LevelCamera, tips: "相机控制" })
     public levelCamera: LevelCamera;
+    @property({ type: ["Record", Number], tips: "配置" })
+    public config: Record<string, number>; 
 
     public backgroundRoot: BackgroundRoot;
 
@@ -118,13 +120,12 @@ export class Level extends Laya.Script {
     init(levelId: number, backgroundRoot: BackgroundRoot): void {
         if (this._isInit) return;
         this._isInit = true;
-        levelId = ELevelConst.Level_10002;
+        // levelId = ELevelConst.Level_10002;
         LevelModel.ins.currId = levelId;
 
-        // let realStartPos = this.obstacleRoot.x - this.spawnPoint[0];
-        let startLine = 1200;
-        let realStartPos = startLine - this.spawnPoint[0];
+        let startLine = this.config[levelId];
         this.moveRoot.x = startLine;
+        let realStartPos = startLine - this.spawnPoint[0];
         LevelModel.ins.setStartSpace(realStartPos);
 
         this.parsePrefabData(levelId);
@@ -145,8 +146,14 @@ export class Level extends Laya.Script {
 
     reEnterLevel(levelId: number): void {
         LevelModel.ins.currId = levelId;
+
         this.levelCamera.backToStart();
         LevelModel.ins.resetDistance();
+
+        let startLine = this.config[levelId];
+        this.moveRoot.x = startLine;
+        let realStartPos = startLine - this.spawnPoint[0];
+        LevelModel.ins.setStartSpace(realStartPos);
 
         this._items = [];
         this.itemRoot.destroyChildren();

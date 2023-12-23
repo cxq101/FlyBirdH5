@@ -5,6 +5,7 @@
  */
 
 import { Model } from "../../core/mvc/Model";
+import { ConfigUtils, DialogConfigData } from "../../utils/ConfigUtils";
 import { ELevelConst, LevelEvent } from "./LevelConst";
 import { LevelLocalData } from "./LevelLocalData";
 
@@ -30,6 +31,8 @@ export class LevelModel extends Model {
     /** 当前关卡最高距离 */
     private _currTopDistance: number = 0;
 
+    private _dialogIndex = 0;
+
     private constructor() {
         super();
         this._localData = new LevelLocalData();
@@ -41,9 +44,9 @@ export class LevelModel extends Model {
 
     set currId(v : number) {
         this._currId = v;
+        this._dialogIndex = 0;
         this._freeJumpTimes = 1;
     }
-    
 
     get isScrollClose() : boolean {
         return this._isScrollClose;
@@ -133,5 +136,24 @@ export class LevelModel extends Model {
 
     saveNewRecord(): void {
         this._localData.newHistoryRecord(this._currId, this.currTopDistance);        
+    }
+
+    setLableDialog(label: Laya.Label): void {
+        const configs: DialogConfigData[] = ConfigUtils.get("dialog");
+        const config = configs.find(c => c.id == this._currId);
+        if (!config) return;
+        let dialog = config.dialogs[this._dialogIndex];
+        this._dialogIndex = (this._dialogIndex + 1) % config.dialogs.length;
+        label.text = dialog.desc;
+        switch (dialog.type) {
+            case 1:
+                label.setVar("n", this.currHistoryTopDistanceFormat);
+                break;
+            case 2:
+                label.setVar("n", this.currHistoryTopDistanceFormat - this.currDistanceFormat);
+                break;
+            default:
+                break;
+        }
     }
 }

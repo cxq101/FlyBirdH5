@@ -23,6 +23,16 @@ export class SkinConfigData {
     }
 }
 
+export class DialogConfigData {
+    id: number;
+    dialogs: { type: number, desc: string }[];
+
+    constructor(data: any) {
+        this.id = data.id;
+        this.dialogs = data.dialogs;
+    }
+}
+
 export interface IConfigData {
     path: string,
     cls: TConstructor
@@ -33,10 +43,14 @@ export const ConfigUtilsMap: { [key: string]: IConfigData } = {
         path: ConfigPath.JSON_Skin,
         cls: SkinConfigData
     },
+    dialog: {
+        path: ConfigPath.JSON_Dialog,
+        cls: DialogConfigData
+    },
 }
 
 export class ConfigUtils {
-    private static jsonMap: {[key: string]: any} = {};
+    private static jsonMap: { [key: string]: any } = {};
 
     static get(key: keyof typeof ConfigUtilsMap) {
         if (this.jsonMap[key] == null) {
@@ -45,15 +59,14 @@ export class ConfigUtils {
             if (res) {
                 let arr = [];
                 for (let key in res.data) {
-                    let data =  new cls(res.data[key]);
+                    let data = new cls(res.data[key]);
                     arr.push(data);
                 }
                 this.jsonMap[key] = arr;
             }
         }
-        return this.jsonMap[key];    
+        return this.jsonMap[key];
     }
 }
 
-  
-  
+

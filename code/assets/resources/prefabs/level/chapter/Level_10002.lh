@@ -236,7 +236,17 @@
           "active": true,
           "x": -486,
           "y": 1100,
-          "visible": true
+          "visible": true,
+          "_$comp": [
+            {
+              "_$override": "f6abc3a7-080f-43b0-bbc5-37f886320d37",
+              "dialogs": [
+                "x0000000000000",
+                "x11111111111111",
+                "x1111111111111_{n}_1"
+              ]
+            }
+          ]
         },
         {
           "_$id": "9pfwg3mw",

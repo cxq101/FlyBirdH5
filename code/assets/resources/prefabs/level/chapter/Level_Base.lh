@@ -32,6 +32,12 @@
       "levelCamera": {
         "_$ref": "wtfhhdmx",
         "_$type": "dbaae76a-a75c-4382-a42b-2cd24de86b01"
+      },
+      "config": {
+        "10000": 1200,
+        "10001": 650,
+        "10002": 1200,
+        "_$type": "Record"
       }
     }
   ],

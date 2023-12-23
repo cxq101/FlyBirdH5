@@ -19,7 +19,7 @@
           "_$prefab": "9546ac15-15a5-4cdc-aa98-b1befed5ee08",
           "name": "Box",
           "active": true,
-          "x": -1688,
+          "x": -1200,
           "y": 1100,
           "visible": true,
           "width": 9688,
@@ -188,7 +188,29 @@
       "_$type": "Sprite",
       "name": "itemRoot",
       "width": 0,
-      "height": 0
+      "height": 0,
+      "_$child": [
+        {
+          "_$id": "7v87vqkd",
+          "_$prefab": "0c873860-edd3-4b21-b5de-76a9c02041e7",
+          "name": "FoCat",
+          "active": true,
+          "x": -486,
+          "y": 1100,
+          "visible": true,
+          "_$comp": [
+            {
+              "_$override": "f6abc3a7-080f-43b0-bbc5-37f886320d37",
+              "dialogs": [
+                "000000000000000",
+                "111111111111111111",
+                "22222222222222222",
+                "333333333333333333"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

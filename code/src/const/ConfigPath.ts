@@ -1,6 +1,7 @@
 export class ConfigPath {
     static JSON_Lang = "resources/config/lang/cn.json";
     static JSON_Skin = "resources/config/skin/skin.json";
+    static JSON_Dialog = "resources/config/dialog.json";
 
     static LH_Hud = "resources/prefabs/views/HUD.lh";
     static LH_Help = "resources/prefabs/views/Help.lh";
@@ -15,6 +16,7 @@ export class ConfigPath {
 
     static EnterLoadList = [
         {url: ConfigPath.JSON_Skin, type: Laya.Loader.JSON},
+        {url: ConfigPath.JSON_Dialog, type: Laya.Loader.JSON},
 
         {url: ConfigPath.LH_Hud, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Help, type: Laya.Loader.HIERARCHY},
