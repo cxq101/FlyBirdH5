@@ -12,8 +12,9 @@
   "color": "#ffffff",
   "_$comp": [
     {
-      "_$type": "fd902ac3-9c8d-435d-8f86-56077acddd4c",
-      "scriptPath": "../src/level/Item.ts"
+      "_$type": "2889180f-9e42-463a-aaf6-75f48d6a4c85",
+      "scriptPath": "../src/level/Item/FinalAward.ts",
+      "type": "FinalAward"
     }
   ]
 }

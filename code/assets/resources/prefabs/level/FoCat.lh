@@ -1,0 +1,87 @@
+{
+  "_$ver": 1,
+  "_$id": "18vny69j",
+  "_$type": "Image",
+  "name": "Image",
+  "x": 510,
+  "y": 1100,
+  "width": 211,
+  "height": 274,
+  "anchorY": 1,
+  "skin": "res://9a39b681-b08a-4f89-8219-860dfea9cc60",
+  "useSourceSize": true,
+  "color": "#ffffff",
+  "_$comp": [
+    {
+      "_$type": "f6abc3a7-080f-43b0-bbc5-37f886320d37",
+      "scriptPath": "../src/level/Item/FoCat.ts",
+      "type": "FoCat",
+      "lblDesc": {
+        "_$ref": "7u643dq2"
+      },
+      "imgDialog": {
+        "_$ref": "49s81o5u"
+      },
+      "collisionBoxNode": {
+        "_$ref": "uhrfltqd"
+      }
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "49s81o5u",
+      "_$type": "Image",
+      "name": "imgDialog",
+      "x": -44,
+      "y": -198,
+      "width": 300,
+      "height": 100,
+      "visible": false,
+      "top": -198,
+      "centerX": 0,
+      "skin": "res://ce260562-333c-46e4-9513-c757b208267a",
+      "color": "#ffffff",
+      "_$child": [
+        {
+          "_$id": "7u643dq2",
+          "_$type": "Label",
+          "name": "lblDesc",
+          "width": 300,
+          "height": 100,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "text": "这是我们\n第二次见面了喵",
+          "fontSize": 26,
+          "color": "#FFFFFF",
+          "align": "center",
+          "valign": "middle",
+          "padding": "0,0,0,0"
+        },
+        {
+          "_$id": "7b9evyz9",
+          "_$type": "Image",
+          "name": "Image",
+          "x": 118,
+          "y": 97,
+          "width": 64,
+          "height": 31,
+          "bottom": -28,
+          "centerX": 0,
+          "skin": "res://1968b190-4b5e-43f1-97e1-4728b44142b5",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    {
+      "_$id": "uhrfltqd",
+      "_$type": "Box",
+      "name": "collisionBoxNode",
+      "x": -1,
+      "y": -2,
+      "width": 214,
+      "height": 277
+    }
+  ]
+}

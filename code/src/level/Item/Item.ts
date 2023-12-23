@@ -1,17 +1,20 @@
-import { Player } from "./Player";
+import { EItemType } from "./EItemType";
 
 /**
  * author: cxq
  * time: 2023/12/12 21:32:32
  * desc: 
  */
-const { regClass, property } = Laya;
+const { regClass, classInfo, property } = Laya;
 
 @regClass()
+@classInfo({ menu: "Level_Item", caption: "Item" })
 export class Item extends Laya.Script {
+    @property({ type: EItemType })
+    public type: EItemType = EItemType.Item;
     declare owner: Laya.Sprite;
-    
-    private _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
+
+    protected _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
     get collisionBox(): Laya.Rectangle {
         let p = Laya.Point.create();
         this.owner.localToGlobal(p);
@@ -19,8 +22,12 @@ export class Item extends Laya.Script {
         return this._collisionBox;
     }
 
+    collisionEvent(): void {
+
+    }
+
     onDestroy(): void {
         this._collisionBox.recover();
-        this._collisionBox = null;     
+        this._collisionBox = null;
     }
 }

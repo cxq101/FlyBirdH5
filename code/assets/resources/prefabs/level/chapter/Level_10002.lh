@@ -18,7 +18,7 @@
           "_$prefab": "9546ac15-15a5-4cdc-aa98-b1befed5ee08",
           "name": "Box",
           "active": true,
-          "x": -1196,
+          "x": -1200,
           "y": 1100,
           "visible": true,
           "width": 9188,
@@ -229,6 +229,15 @@
       "width": 0,
       "height": 0,
       "_$child": [
+        {
+          "_$id": "o90t5jwg",
+          "_$prefab": "0c873860-edd3-4b21-b5de-76a9c02041e7",
+          "name": "FoCat",
+          "active": true,
+          "x": -486,
+          "y": 1100,
+          "visible": true
+        },
         {
           "_$id": "9pfwg3mw",
           "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",

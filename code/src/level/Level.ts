@@ -5,12 +5,13 @@ import { EViewKey } from "../views/ViewConst";
 import { ELevelConst, ILevelPrefabData, LevelConfig } from "../views/level/LevelConst";
 import { LevelModel } from "../views/level/LevelModel";
 import { BackgroundRoot } from "./BackgroundRoot";
-import { Ground } from "./Ground";
 import { InputManager } from "./InputManager";
-import { Item } from "./Item";
+import { EItemType } from "./Item/EItemType";
+import { Ground } from "./Item/Ground";
+import { Item } from "./Item/Item";
+import { Obstacle } from "./Item/Obstacle";
 import { LevelCamera } from "./LevelCamera";
 import { LevelParseHelper } from "./LevelParseHelper";
-import { Obstacle } from "./Obstacle";
 import { Player } from "./Player";
 
 /**
@@ -24,6 +25,9 @@ const { regClass, property } = Laya;
 export class Level extends Laya.Script {
     declare owner: Laya.Sprite;
  
+    @property({ type: Laya.Sprite, tips: "地面根节点" })
+    private moveRoot: Laya.Sprite;
+
     @property({ type: Laya.Sprite, tips: "地面根节点" })
     private groundRoot: Laya.Sprite;
 
@@ -66,14 +70,18 @@ export class Level extends Laya.Script {
         const playerRect = this.player.collisionBox;
         // 
         let item = this.tryCheckCollision(playerRect, this._items);
-        if (item) {
-            let index = this._items.findIndex(i => i == item);
+        // trigger
+        if (item && item.type == EItemType.FinalAward) {
             item.owner.destroy();
+            let index = this._items.findIndex(i => i == item);
             this._items.splice(index, 1);
             Game.ins.win();
-            return;
+        };
+        if (item && item.type == EItemType.FoCat) {
+            item.collisionEvent();
         };
 
+        // collision
         let obstacle = this.tryCheckCollision(playerRect, this._obstacles);
         if (obstacle) {
             this.player.addForce(obstacle.force, obstacle.degrees);
@@ -110,9 +118,13 @@ export class Level extends Laya.Script {
     init(levelId: number, backgroundRoot: BackgroundRoot): void {
         if (this._isInit) return;
         this._isInit = true;
+        levelId = ELevelConst.Level_10002;
         LevelModel.ins.currId = levelId;
 
-        let realStartPos = this.obstacleRoot.x - this.spawnPoint[0];
+        // let realStartPos = this.obstacleRoot.x - this.spawnPoint[0];
+        let startLine = 1200;
+        let realStartPos = startLine - this.spawnPoint[0];
+        this.moveRoot.x = startLine;
         LevelModel.ins.setStartSpace(realStartPos);
 
         this.parsePrefabData(levelId);

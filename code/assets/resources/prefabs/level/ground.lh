@@ -9,7 +9,8 @@
   "_$comp": [
     {
       "_$type": "e55c9a86-5d7f-4c8d-8157-fd18fe255744",
-      "scriptPath": "../src/level/Ground.ts"
+      "scriptPath": "../src/level/Item/Ground.ts",
+      "type": "Ground"
     }
   ]
 }

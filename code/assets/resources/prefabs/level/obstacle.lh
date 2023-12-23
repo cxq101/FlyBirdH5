@@ -10,7 +10,8 @@
   "_$comp": [
     {
       "_$type": "8e4020a3-92de-4433-9c5f-d14d1271b20f",
-      "scriptPath": "../src/level/Obstacle.ts",
+      "scriptPath": "../src/level/Item/Obstacle.ts",
+      "type": "Obstacle",
       "degrees": 135,
       "force": 800
     }

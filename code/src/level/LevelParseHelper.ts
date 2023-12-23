@@ -1,4 +1,6 @@
 import { ELevelConst, ILevelPrefabData, LevelConfig } from "../views/level/LevelConst";
+import { FinalAward } from "./Item/FinalAward";
+import { FoCat } from "./Item/FoCat";
 
 type ILevelParseProp<T extends Laya.Component> = {
     name: string;
