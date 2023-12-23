@@ -34,7 +34,7 @@ export class Player extends Laya.Script {
     private imgIcon: Laya.Image;
 
     @property({ type: Laya.Box, tips: "碰撞检测范围" })
-    private collisionBox: Laya.Box;
+    private collisionBoxNode: Laya.Box;
     
     private _isGround: boolean = false;
     private _isPressed: boolean = false;
@@ -57,14 +57,16 @@ export class Player extends Laya.Script {
         return (1 - 0.3) / this.maxTime;
     }
 
-    isBelowHeight(y: number): boolean {
-        return this.owner.y >= y;
+    private _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
+    get collisionBox(): Laya.Rectangle {
+        let p = Laya.Point.create();
+        this.collisionBoxNode.localToGlobal(p);
+        this._collisionBox.setTo(p.x, p.y, this.collisionBoxNode.width, this.collisionBoxNode.height);
+        return this._collisionBox;
     }
 
-    getGlobalCollisionRange(): [number, number] {
-        let p = Laya.Point.create();
-        this.collisionBox.localToGlobal(p);
-        return [p.x, p.x + this.collisionBox.width];
+    isBelowHeight(y: number): boolean {
+        return this.owner.y >= y;
     }
     
     spawn(x: number, y?: number): void {
@@ -138,6 +140,10 @@ export class Player extends Laya.Script {
         this.press();
     }
 
+    onDestroy(): void {
+        this._collisionBox.recover();
+        this._collisionBox = null;
+    }
     press(): void {
         if (this._isPressed) {
             this._pressedTime += Laya.timer.delta;

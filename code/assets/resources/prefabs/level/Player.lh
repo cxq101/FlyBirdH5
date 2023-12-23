@@ -22,7 +22,7 @@
       "imgIcon": {
         "_$ref": "pb05kpyr"
       },
-      "collisionBox": {
+      "collisionBoxNode": {
         "_$ref": "jvxvhaqc"
       }
     }

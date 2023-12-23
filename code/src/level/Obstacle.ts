@@ -1,3 +1,5 @@
+import { Item } from "./Item";
+
 /**
  * author: cxq
  * time: 2023/12/12 21:32:32
@@ -6,7 +8,7 @@
 const { regClass, property } = Laya;
 
 @regClass()
-export class Obstacle extends Laya.Script {
+export class Obstacle extends Item {
     declare owner: Laya.Sprite;
     @property({ type: Number, tips: "默认的弹跳角度" })
     degrees: number;
@@ -22,11 +24,5 @@ export class Obstacle extends Laya.Script {
     }
 
     onUpdate(): void {
-    }
-
-    getGlobalCollisionRange(): [number, number] {
-        let p = Laya.Point.create();
-        this.owner.localToGlobal(p);
-        return [p.x, p.x + this.owner.width];
     }
 }

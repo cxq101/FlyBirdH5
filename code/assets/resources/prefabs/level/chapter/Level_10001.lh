@@ -7,6 +7,27 @@
   "height": 1280,
   "_$child": [
     {
+      "_$id": "dqz7hmnq",
+      "_$type": "Sprite",
+      "name": "groundRoot",
+      "width": 0,
+      "height": 0,
+      "_$child": [
+        {
+          "_$id": "2eh6l9xi",
+          "_$prefab": "9546ac15-15a5-4cdc-aa98-b1befed5ee08",
+          "name": "Box",
+          "active": true,
+          "x": -1196,
+          "y": 1100,
+          "visible": true,
+          "width": 5196,
+          "height": 180,
+          "bgColor": null
+        }
+      ]
+    },
+    {
       "_$id": "9bir31gf",
       "_$type": "Sprite",
       "name": "obstacleRoot",
@@ -19,7 +40,7 @@
           "name": "obstacle",
           "active": true,
           "x": 13,
-          "y": 1151,
+          "y": 1100,
           "visible": true
         },
         {
@@ -27,8 +48,8 @@
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(7)",
           "active": true,
-          "x": 381,
-          "y": 1151,
+          "x": 422,
+          "y": 1100,
           "visible": true
         },
         {
@@ -36,8 +57,8 @@
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(8)",
           "active": true,
-          "x": 721,
-          "y": 1151,
+          "x": 803,
+          "y": 1100,
           "visible": true
         },
         {
@@ -46,7 +67,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1097,
-          "y": 1151,
+          "y": 1100,
           "visible": true
         },
         {
@@ -55,27 +76,8 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 1443,
-          "y": 1151,
+          "y": 1100,
           "visible": true
-        },
-        {
-          "_$id": "fosif4ns",
-          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
-          "name": "obstacle(11)",
-          "active": true,
-          "x": 2067,
-          "y": 1151,
-          "visible": true
-        },
-        {
-          "_$id": "svzd0ixk",
-          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
-          "name": "obstacle(12)",
-          "active": true,
-          "x": 2531,
-          "y": 1151,
-          "visible": true,
-          "width": 212
         }
       ]
     },
@@ -91,8 +93,8 @@
           "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",
           "name": "finalAward",
           "active": true,
-          "x": 2985,
-          "y": 772,
+          "x": 1886,
+          "y": 800,
           "visible": true
         }
       ]

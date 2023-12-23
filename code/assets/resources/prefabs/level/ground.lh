@@ -1,0 +1,15 @@
+{
+  "_$ver": 1,
+  "_$id": "xi8304iq",
+  "_$type": "Box",
+  "name": "Box",
+  "y": 850,
+  "width": 8000,
+  "height": 425,
+  "_$comp": [
+    {
+      "_$type": "e55c9a86-5d7f-4c8d-8157-fd18fe255744",
+      "scriptPath": "../src/level/Ground.ts"
+    }
+  ]
+}

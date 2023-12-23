@@ -9,12 +9,14 @@
     {
       "_$type": "81d36ae9-c41d-47cc-b112-cc4568ccd384",
       "scriptPath": "../src/level/Level.ts",
-      "groundY": 1070,
-      "itemRoot": {
-        "_$ref": "3kns7eqm"
+      "groundRoot": {
+        "_$ref": "ecxajxg8"
       },
       "obstacleRoot": {
         "_$ref": "ev0np8qp"
+      },
+      "itemRoot": {
+        "_$ref": "3kns7eqm"
       },
       "inputManager": {
         "_$ref": "c23p57j4",
@@ -46,6 +48,15 @@
         }
       ],
       "_$child": [
+        {
+          "_$id": "ecxajxg8",
+          "_$type": "Sprite",
+          "name": "groundRoot",
+          "x": -1439,
+          "y": -612.9999999999999,
+          "width": 1,
+          "height": 1
+        },
         {
           "_$id": "ev0np8qp",
           "_$type": "Sprite",

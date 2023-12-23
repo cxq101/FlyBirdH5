@@ -1,3 +1,5 @@
+import { Player } from "./Player";
+
 /**
  * author: cxq
  * time: 2023/12/12 21:32:32
@@ -9,9 +11,16 @@ const { regClass, property } = Laya;
 export class Item extends Laya.Script {
     declare owner: Laya.Sprite;
     
-    getGlobalCollisionRange(): [number, number] {
+    private _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
+    get collisionBox(): Laya.Rectangle {
         let p = Laya.Point.create();
         this.owner.localToGlobal(p);
-        return [p.x, p.x + this.owner.width];
+        this._collisionBox.setTo(p.x, p.y, this.owner.width, this.owner.height);
+        return this._collisionBox;
+    }
+
+    onDestroy(): void {
+        this._collisionBox.recover();
+        this._collisionBox = null;     
     }
 }
