@@ -21,6 +21,9 @@
       "itemRoot": {
         "_$ref": "3kns7eqm"
       },
+      "effectRoot": {
+        "_$ref": "cpapz4wl"
+      },
       "inputManager": {
         "_$ref": "c23p57j4",
         "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6"
@@ -38,6 +41,12 @@
         "10001": 650,
         "10002": 1200,
         "_$type": "Record"
+      },
+      "animHurt": {
+        "_$ref": "nztdwuer"
+      },
+      "animDust": {
+        "_$ref": "ttwgxoss"
       }
     }
   ],
@@ -75,6 +84,49 @@
           "name": "itemRoot",
           "width": 1,
           "height": 1
+        },
+        {
+          "_$id": "cpapz4wl",
+          "_$type": "Sprite",
+          "name": "effectRoot",
+          "width": 100,
+          "height": 100,
+          "_$child": [
+            {
+              "_$id": "nztdwuer",
+              "_$type": "Animation",
+              "name": "animHurt",
+              "x": 55.00000000000003,
+              "y": 110.00000000000006,
+              "width": 32,
+              "height": 32,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "scaleX": 2,
+              "scaleY": 2,
+              "visible": false,
+              "source": "res://004f66be-4e25-400a-8407-6cade432cf43",
+              "interval": 50,
+              "loop": false,
+              "index": 0
+            },
+            {
+              "_$id": "ttwgxoss",
+              "_$type": "Animation",
+              "name": "animDust",
+              "x": 55.00000000000003,
+              "y": 110.00000000000006,
+              "width": 32,
+              "height": 32,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "visible": false,
+              "source": "res://6c43042e-e0fd-4ab5-af4a-ce0b2512f02a",
+              "interval": 50,
+              "loop": false,
+              "index": 0
+            }
+          ]
         }
       ]
     },

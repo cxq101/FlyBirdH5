@@ -36,10 +36,15 @@ export class Player extends Laya.Script {
     @property({ type: Laya.Box, tips: "碰撞检测范围" })
     private collisionBoxNode: Laya.Box;
     
+    @property({ type: Laya.Sprite, tips: "脚部中心点" })
+    private spFoot: Laya.Sprite;
+
     private _isGround: boolean = false;
     private _isPressed: boolean = false;
     private _pressedTime: number = 0;
     private _isScrolling: boolean = false;
+    private _footPoint: Laya.Point = Laya.Point.create();
+    private _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
 
     get isGround(): boolean {
         return this._isGround;
@@ -57,7 +62,6 @@ export class Player extends Laya.Script {
         return (1 - 0.3) / this.maxTime;
     }
 
-    private _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
     get collisionBox(): Laya.Rectangle {
         let p = Laya.Point.create();
         this.collisionBoxNode.localToGlobal(p);
@@ -65,10 +69,52 @@ export class Player extends Laya.Script {
         return this._collisionBox;
     }
 
+    onPressed(): void {
+        this._isPressed = true;
+        this._pressedTime = 0;
+    }
+
+    onPressedCancel(): void {
+        this._isPressed = false;
+        this._pressedTime = 0;
+        this.imgIcon.scaleY = 1;
+    }
+
+    onRelease(): void {
+        let force = this._pressedTime * this.forceVelocity * 0.001;
+        force = Math.max(force, this.minForce); 
+        this.addForce(force, this.degrees);
+
+        this._isPressed = false;
+        this._pressedTime = 0;
+        this.imgIcon.scaleY = 1;
+    }    
+
+    onStart(): void {
+        this.imgIcon.skin = SkinModel.ins.getCurrentSkin();
+    }
+
+    onUpdate(): void {
+        if (this._isScrolling) return;
+        this.move();
+        this.press();
+    }
+
+    onDestroy(): void {
+        this._collisionBox.recover();
+        this._collisionBox = null;
+    }
+    
     isBelowHeight(y: number): boolean {
         return this.owner.y >= y;
     }
-    
+
+    getFootPoint(sp: Laya.Sprite): Laya.Point {
+        const { x, y } = this.spFoot;
+        this._footPoint.setTo(x, y );
+        return sp.globalToLocal(this.owner.localToGlobal(this._footPoint));
+    }
+
     spawn(x: number, y?: number): void {
         this.owner.visible = true;
         this.owner.pos(x, y == null ? this.owner.y : y);
@@ -109,41 +155,6 @@ export class Player extends Laya.Script {
         this.velocityY = velocityY;
     }
 
-    onPressed(): void {
-        this._isPressed = true;
-        this._pressedTime = 0;
-    }
-
-    onPressedCancel(): void {
-        this._isPressed = false;
-        this._pressedTime = 0;
-        this.imgIcon.scaleY = 1;
-    }
-
-    onRelease(): void {
-        let force = this._pressedTime * this.forceVelocity * 0.001;
-        force = Math.max(force, this.minForce); 
-        this.addForce(force, this.degrees);
-
-        this._isPressed = false;
-        this._pressedTime = 0;
-        this.imgIcon.scaleY = 1;
-    }    
-
-    onStart(): void {
-        this.imgIcon.skin = SkinModel.ins.getCurrentSkin();
-    }
-
-    onUpdate(): void {
-        if (this._isScrolling) return;
-        this.move();
-        this.press();
-    }
-
-    onDestroy(): void {
-        this._collisionBox.recover();
-        this._collisionBox = null;
-    }
     press(): void {
         if (this._isPressed) {
             this._pressedTime += Laya.timer.delta;

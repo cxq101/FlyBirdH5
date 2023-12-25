@@ -32,18 +32,6 @@
         {
           "_$type": "4aed0491-68f4-4b0a-a959-fcfc5204605d",
           "scriptPath": "../src/LevelLoader.ts",
-          "inputManagerPrefab": {
-            "_$uuid": "e28b7355-4b2a-4f85-863f-2d1346c35328",
-            "_$type": "Prefab"
-          },
-          "cameraPrefab": {
-            "_$uuid": "f52f13c2-5641-41d9-b595-df58a169bb21",
-            "_$type": "Prefab"
-          },
-          "playerPrefab": {
-            "_$uuid": "71cac087-be04-4e1c-af5c-d7dce6e12802",
-            "_$type": "Prefab"
-          },
           "levelBasePrefab": {
             "_$uuid": "22bacdad-5bc3-4ab4-99ea-89201788de40",
             "_$type": "Prefab"

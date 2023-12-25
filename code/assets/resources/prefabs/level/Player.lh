@@ -24,6 +24,9 @@
       },
       "collisionBoxNode": {
         "_$ref": "jvxvhaqc"
+      },
+      "spFoot": {
+        "_$ref": "zsecmdrz"
       }
     }
   ],
@@ -52,6 +55,15 @@
       "height": 100,
       "bottom": 0,
       "centerX": 3
+    },
+    {
+      "_$id": "zsecmdrz",
+      "_$type": "Sprite",
+      "name": "spFoot",
+      "x": 55,
+      "y": 110,
+      "width": 1,
+      "height": 1
     }
   ]
 }

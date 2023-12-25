@@ -36,6 +36,9 @@ export class Level extends Laya.Script {
 
     @property({ type: Laya.Sprite, tips: "物品根节点" })
     private itemRoot: Laya.Sprite;
+
+    @property({ type: Laya.Sprite, tips: "特效根节点" })
+    private effectRoot: Laya.Sprite;
     
     @property({ type: InputManager, tips: "关卡输入控制" })
     private inputManager: InputManager;
@@ -48,6 +51,11 @@ export class Level extends Laya.Script {
     @property({ type: ["Record", Number], tips: "配置" })
     public config: Record<string, number>; 
 
+    @property({ type: Laya.Animation, tips: "受击特效" })
+    private animHurt: Laya.Animation;
+    @property({ type: Laya.Animation, tips: "落地特效" })
+    private animDust: Laya.Animation;
+    
     public backgroundRoot: BackgroundRoot;
 
     private _items: Item[] = [];
@@ -87,6 +95,7 @@ export class Level extends Laya.Script {
         let obstacle = this.tryCheckCollision(playerRect, this._obstacles);
         if (obstacle) {
             this.player.addForce(obstacle.force, obstacle.degrees);
+            this.showHurtEffect();
             return;
         };
         
@@ -99,6 +108,7 @@ export class Level extends Laya.Script {
             if (newIsGround) {
                 this.player.stop();
                 this.recordPlayerPos();            
+                this.showDustEffect();
                 this.player.owner.y = ground.owner.y;
             }
         }
@@ -106,6 +116,19 @@ export class Level extends Laya.Script {
 
     private tryCheckCollision<T extends { collisionBox: Laya.Rectangle }>(playerRect: Laya.Rectangle, list: T[]): T {
         return list.find(i => i.collisionBox.intersects(playerRect));
+    }
+
+    private onAnimDustComplete(): void {
+        this.animDust.visible = false;
+    }
+
+    private onAnimHurtComplete(): void {
+        this.animHurt.visible = false;
+    }
+
+    onAwake(): void {
+        this.animDust.on(Laya.Event.COMPLETE, this, this.onAnimDustComplete);
+        this.animHurt.on(Laya.Event.COMPLETE, this, this.onAnimHurtComplete);
     }
 
     onUpdate(): void {
@@ -184,5 +207,19 @@ export class Level extends Laya.Script {
             LevelModel.ins.isScrollClose = false;
         }, null, true));
     }
+
     
+    showDustEffect(): void {
+        this.animDust.visible = true;
+        let point = this.player.getFootPoint(this.effectRoot);
+        this.animDust.pos(point.x, point.y);
+        this.animDust.play(0, false);
+    }
+
+    showHurtEffect(): void {
+        this.animHurt.visible = true;
+        let point = this.player.getFootPoint(this.effectRoot);
+        this.animHurt.pos(point.x, point.y);
+        this.animHurt.play(0, false);
+    }
 }
