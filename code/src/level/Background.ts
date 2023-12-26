@@ -17,9 +17,9 @@ export class Background extends Laya.Script {
 
     /** 初始宽度为原始宽度的3倍 */
     private readonly repeatX: number = 3;
+    private readonly textureWidth: number = 720;
 
     private startPosX: number = 0;
-    private textureWidth: number = 0;
 
     private get distance(): number {
         return Math.abs(this.owner.x - this.startPosX);
@@ -31,14 +31,14 @@ export class Background extends Laya.Script {
     }
 
     private isOutOfBounds(): boolean {
-        return this.distance * this.repeatX > this.owner.width;
+        return this.distance * this.repeatX > this.textureWidth;
     }
 
     onStart(): void {
-        this.startPosX = this.owner.x;
-        this.textureWidth = this.owner.width / this.repeatX;
         const stageW = Laya.stage.width;
+        this.owner.x = -stageW;
         this.owner.width = stageW * this.repeatX;
+        this.startPosX = this.owner.x;
     }
 
     move(distance: number): void {

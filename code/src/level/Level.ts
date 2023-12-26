@@ -95,7 +95,6 @@ export class Level extends Laya.Script {
         // collision
         let obstacle = this.tryCheckCollision(playerRect, this._obstacles);
         if (obstacle) {
-            console.log("obstacle=========", playerRect.x, playerRect.y, obstacle);
             this.player.addForce(obstacle.force, obstacle.degrees);
             this.showHurtEffect();
             return;
