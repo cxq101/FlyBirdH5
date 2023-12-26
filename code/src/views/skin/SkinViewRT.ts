@@ -1,6 +1,5 @@
 const { regClass } = Laya;
 import { ViewMgr } from "../../core/UI/ViewMgr";
-import { model } from "../../core/mvc/MVCDecorator";
 import { EViewKey } from "../ViewConst";
 import { ESkinItemStatus, ISkinListData, SkinEvent } from "./SkinConst";
 import { SkinController } from "./SkinController";

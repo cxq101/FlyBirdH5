@@ -5,5 +5,5 @@ import { EventDispatcher } from "./EventDispatcher";
  * time: 2022/11/13 17:02:32
  * desc: 
  */
-export class Model extends EventDispatcher {
+export abstract class Model extends EventDispatcher {
 }

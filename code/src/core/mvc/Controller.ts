@@ -1,4 +1,4 @@
 import { EventDispatcher } from "./EventDispatcher";
 
-export class Controller extends EventDispatcher {
+export abstract class Controller extends EventDispatcher {
 }

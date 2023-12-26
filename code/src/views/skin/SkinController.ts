@@ -1,5 +1,4 @@
 import { Controller } from "../../core/mvc/Controller";
-import { model, register } from "../../core/mvc/MVCDecorator";
 import { SkinModel } from "./SkinModel";
 
 /**

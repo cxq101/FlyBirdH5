@@ -3,7 +3,6 @@
  * time: 2023/12/19 15:28:18
  * desc: 
  */
-
 import { Model } from "../../core/mvc/Model";
 import { ConfigUtils, DialogConfigData } from "../../utils/ConfigUtils";
 import { ELevelConst, LevelEvent } from "./LevelConst";
