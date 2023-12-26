@@ -105,12 +105,20 @@ export class LevelModel extends Model {
         return this.currId == ELevelConst.LevelPracticeId;
     }
 
+    isSecondLevel(): boolean {
+        return this.currId == ELevelConst.Level_10002;
+    }
+
     isShowProgress(): boolean {
-        return this.currId == ELevelConst.Level_10002 && this.currDistance > this._startSpace;
+        return this.isSecondLevel() && this.currDistance > this._startSpace;
     }
 
     isExistTop(): boolean {
-        return  this.currId == ELevelConst.Level_10002 && this.currTopDistance > this.currDistance;
+        return this.isSecondLevel() && this.currTopDistance > this.currDistance;
+    }
+
+    isExistScrollButton(): boolean {
+        return (this.isPracticeMode() || this.isSecondLevel()) && this.currTopDistance > this.currDistance;
     }
 
     isExistFree(): boolean {

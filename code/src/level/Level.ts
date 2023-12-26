@@ -62,6 +62,7 @@ export class Level extends Laya.Script {
     private _grounds: Ground[] = [];
     private _isInit: boolean = false;
     private _obstacles: Obstacle[] = [];
+    private _enabledCollision: boolean = true;
 
     get spawnPoint(): [number, number] {
         const {x, y} = this.player.owner;
@@ -94,6 +95,7 @@ export class Level extends Laya.Script {
         // collision
         let obstacle = this.tryCheckCollision(playerRect, this._obstacles);
         if (obstacle) {
+            console.log("obstacle=========", playerRect.x, playerRect.y, obstacle);
             this.player.addForce(obstacle.force, obstacle.degrees);
             this.showHurtEffect();
             return;
@@ -133,7 +135,9 @@ export class Level extends Laya.Script {
 
     onUpdate(): void {
         if (!this._isInit) return;
-        this.checkCollision();
+        if (this._enabledCollision) {
+            this.checkCollision();
+        } 
     }
 
     onDestroy(): void {
@@ -196,11 +200,13 @@ export class Level extends Laya.Script {
 
     scrollTo(pos: number): void {
         this.player.hide();
+        this._enabledCollision = false;
         this.inputManager.enabled = false;
         LevelModel.ins.isScrollClose = true;
         ViewMgr.ins.close(EViewKey.HudView);
         this.levelCamera.scrollTo(pos, Laya.Handler.create(this, () => {
             this.player.show();
+            this._enabledCollision = true;
             this.inputManager.enabled = true;
             LevelModel.ins.scrollEnd();
             ViewMgr.ins.open(EViewKey.HudView);

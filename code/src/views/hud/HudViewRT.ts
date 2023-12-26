@@ -33,8 +33,7 @@ export class HudViewRT extends HudViewRTBase {
     }
 
     private updateScrollButton(): void {
-        const isExistTop = LevelModel.ins.isExistTop();
-        this.btnScroll.visible = isExistTop;
+        this.btnScroll.visible = LevelModel.ins.isExistScrollButton();
     }
 
     private onClickBack(): void {
@@ -63,5 +62,9 @@ export class HudViewRT extends HudViewRTBase {
         }
         this.updateView();
         LevelModel.ins.on(LevelEvent.DistanceChanged, this, this.updateView);
+    }
+
+    onDisable(): void {
+        LevelModel.ins.off(LevelEvent.DistanceChanged, this, this.updateView);
     }
 }
