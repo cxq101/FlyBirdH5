@@ -53,6 +53,8 @@ export class GameFSM extends StateMachine<GameStates, GameEvents> {
             t(s.level, e.pause, s.pause, this.onPause),
 
             t(s.win, e.nextLevel, s.level, this.onNextLevel),
+            t(s.win, e.restartLevel, s.level, this.onRestartLevel),
+            t(s.win, e.backHome, s.home, this.onBackHome),
 
             t(s.pause, e.resume, s.level, this.onResume),
             t(s.pause, e.restartLevel, s.level, this.onRestartLevel),

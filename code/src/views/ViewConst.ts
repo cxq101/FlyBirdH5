@@ -5,6 +5,7 @@ export enum EViewKey {
     MainView = "MainView",
     SkinView = "SkinView",
     WinView = "WinView",
+    WinGoldView = "WinGoldView",
 }
 
 export enum EViewLayer {

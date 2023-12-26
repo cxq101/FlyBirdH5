@@ -15,6 +15,7 @@ import { Level } from "../level/Level";
 import { PromiseEx } from "../utils/PromiseEx";
 import { ViewLayerZOrder, EViewKey, EViewLayer } from "./ViewConst";
 import { ELevelConst } from "./level/LevelConst";
+import { LevelModel } from "./level/LevelModel";
 
 export class Game extends Singleton<Game>() {
     private _fsm: GameFSM;
@@ -85,6 +86,7 @@ export class Game extends Singleton<Game>() {
         ViewRegUtils.register(k.HudView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_Hud);
         ViewRegUtils.register(k.PauseView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_PauseView);
         ViewRegUtils.register(k.WinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_WinView);
+        ViewRegUtils.register(k.WinGoldView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_WinGoldView);
     }
 
     private loadRes(): void {
@@ -135,8 +137,12 @@ export class Game extends Singleton<Game>() {
     }
 
     private onWinHandler(): void {
-        ViewMgr.ins.close(EViewKey.HudView);   
-        ViewMgr.ins.open(EViewKey.WinView);   
+        ViewMgr.ins.close(EViewKey.HudView);  
+        if (LevelModel.ins.isSecondLevel()) {
+            ViewMgr.ins.open(EViewKey.WinGoldView);   
+        } else {
+            ViewMgr.ins.open(EViewKey.WinView);   
+        }
     }
 
     private onPauseHandler(): void {
@@ -158,6 +164,7 @@ export class Game extends Singleton<Game>() {
 
     private onRestartLevelHandler(): void {
         ViewMgr.ins.close(EViewKey.PauseView);   
+        ViewMgr.ins.close(EViewKey.WinGoldView);
         this._level.restart();
         ViewMgr.ins.open(EViewKey.HudView);
     }
@@ -166,6 +173,7 @@ export class Game extends Singleton<Game>() {
         this._boot.levelLoader.unloadLevel(this._level);
         this._level = null;
         ViewMgr.ins.close(EViewKey.PauseView);
+        ViewMgr.ins.close(EViewKey.WinGoldView);
         ViewMgr.ins.open(EViewKey.MainView);
     }
 

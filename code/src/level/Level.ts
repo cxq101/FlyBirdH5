@@ -75,6 +75,12 @@ export class Level extends Laya.Script {
             { name: "groundRoot", root: this.groundRoot, components: this._grounds, component: Ground },
             { name: "obstacleRoot", root: this.obstacleRoot, components: this._obstacles, component: Obstacle },
         ]);
+
+        this._items.forEach(i => {
+            if (i.type == EItemType.FinalAward) {
+                (i.owner as Laya.Image).skin = LevelModel.ins.isSecondLevel() ? "resources/scene/goldFish.png" : "resources/scene/silverFish.png";
+            }
+        })
     }
 
     private checkCollision(): void {
@@ -193,8 +199,7 @@ export class Level extends Laya.Script {
     }
 
     restart(): void {
-        this.levelCamera.backToStart();
-        LevelModel.ins.resetDistance();
+        this.reEnterLevel(LevelModel.ins.currId);
     }
 
     scrollTo(pos: number): void {
