@@ -75,7 +75,7 @@
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(10)",
           "active": true,
-          "x": 2100,
+          "x": 2045,
           "y": 1100,
           "visible": true
         },
@@ -84,9 +84,10 @@
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(11)",
           "active": true,
-          "x": 2724,
+          "x": 2654,
           "y": 1100,
-          "visible": true
+          "visible": true,
+          "width": 279
         },
         {
           "_$id": "z7psw2xb",
@@ -151,7 +152,8 @@
           "x": 5674,
           "y": 1100,
           "visible": true,
-          "height": 34
+          "height": 34,
+          "width": 265
         },
         {
           "_$id": "onzl5v4h",
@@ -219,6 +221,15 @@
           "x": 16,
           "y": 1100,
           "visible": true
+        },
+        {
+          "_$id": "rml0h0ga",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(26)",
+          "active": true,
+          "x": 2350,
+          "y": 1100,
+          "visible": true
         }
       ]
     },
@@ -236,17 +247,7 @@
           "active": true,
           "x": -486,
           "y": 1100,
-          "visible": true,
-          "_$comp": [
-            {
-              "_$override": "f6abc3a7-080f-43b0-bbc5-37f886320d37",
-              "dialogs": [
-                "x0000000000000",
-                "x11111111111111",
-                "x1111111111111_{n}_1"
-              ]
-            }
-          ]
+          "visible": true
         },
         {
           "_$id": "9pfwg3mw",
