@@ -13,7 +13,9 @@
     {
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
       "scriptPath": "../src/core/UI/BaseView.ts",
-      "fadeTime": 0
+      "fadeTime": 0,
+      "enterSound": "resources/sound/UI_Forward.mp3",
+      "exitSound": "resources/sound/UI_Back.mp3"
     }
   ],
   "_$child": [
@@ -21,32 +23,37 @@
       "_$id": "89hug5wy",
       "_$type": "Image",
       "name": "Image",
-      "x": 111,
-      "y": 177,
-      "width": 500,
-      "height": 705,
-      "centerX": 1,
-      "centerY": -111,
+      "x": 100,
+      "y": 183,
+      "width": 520,
+      "height": 693,
+      "left": 100,
+      "right": 100,
       "skin": "res://ce260562-333c-46e4-9513-c757b208267a",
-      "color": "#ffffff"
-    },
-    {
-      "_$id": "mog36yx5",
-      "_$var": true,
-      "_$type": "Label",
-      "name": "lblDesc",
-      "x": 130,
-      "y": 231,
-      "width": 460,
-      "height": 413,
-      "centerX": 0,
-      "text": "这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本这是一个帮助文本",
-      "fontSize": 24,
-      "color": "#FFFFFF",
-      "italic": true,
-      "wordWrap": true,
-      "leading": 25,
-      "padding": "0,0,0,0"
+      "color": "#ffffff",
+      "_$child": [
+        {
+          "_$id": "mog36yx5",
+          "_$var": true,
+          "_$type": "Label",
+          "name": "lblDesc",
+          "x": 20,
+          "y": 100,
+          "width": 480,
+          "height": 493,
+          "left": 20,
+          "right": 20,
+          "top": 100,
+          "bottom": 100,
+          "text": "游戏主题：和猫猫一起玩耍吧\n开发者： 墨墨 \n游戏类型： 休闲\n游戏玩法： 通过长按屏幕蓄力，控制猫猫跳跃不同的距离，躲避地上的陷阱，最终获得猫猫心心念念的金色罐头。\n更新和补丁：\n我们致力于不断改进游戏体验，定期发布更新和修复bug的补丁。请关注官方网站获取最新信息。\n",
+          "fontSize": 24,
+          "color": "#FFFFFF",
+          "italic": true,
+          "wordWrap": true,
+          "leading": 25,
+          "padding": "0,0,0,0"
+        }
+      ]
     },
     {
       "_$id": "0tjgyyu0",

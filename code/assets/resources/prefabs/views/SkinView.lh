@@ -14,7 +14,9 @@
     {
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
       "scriptPath": "../src/core/UI/BaseView.ts",
-      "fadeTime": 300
+      "fadeTime": 300,
+      "enterSound": "res://44f800bd-741c-40cd-a4ea-06f541484b07",
+      "exitSound": "res://d1d357a8-fbb2-4a67-ba58-5625b1503cb6"
     }
   ],
   "_$child": [
