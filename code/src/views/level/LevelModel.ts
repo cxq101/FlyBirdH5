@@ -118,7 +118,7 @@ export class LevelModel extends Model {
     }
 
     isExistScrollButton(): boolean {
-        return (this.isPracticeMode() || this.isSecondLevel()) && this.currTopDistance > this.currDistance;
+        return this.isExistFree() && (this.isPracticeMode() || this.isSecondLevel()) && this.currTopDistance > this.currDistance;
     }
 
     isExistFree(): boolean {
@@ -126,6 +126,7 @@ export class LevelModel extends Model {
     }
 
     scrollEnd(): void {
+        this._freeJumpTimes--;
         this.recordPlayerPos(this.currTopDistance);
     }
 

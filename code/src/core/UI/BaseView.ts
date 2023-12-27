@@ -11,6 +11,9 @@ export class BaseView extends Laya.Script {
     @property({ type: Number, tips: "渐入渐出动画效果时间" })
     private fadeTime: number = 100;
 
+    @property({ type: Boolean, tips: "是否开启入场音效" })
+    private soundEnabled: boolean = true;
+
     @property({ type: String, isAsset: true, assetTypeFilter: "Audio" })
     private enterSound: string = ConfigPath.M_UI_Forward;    
 
@@ -73,11 +76,11 @@ export class BaseView extends Laya.Script {
 
     onEnable(): void {
         this.enterAnim();
-        Laya.SoundManager.playSound(this.enterSound);
+        this.soundEnabled && Laya.SoundManager.playSound(this.enterSound);
     }
 
     onDisable(): void {
-        Laya.SoundManager.playSound(this.exitSound);
+        this.soundEnabled && Laya.SoundManager.playSound(this.exitSound);
     }
 
     closeSelf(): void {
