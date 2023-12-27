@@ -1,3 +1,4 @@
+import { ConfigPath } from "../../const/ConfigPath";
 import { IViewKey, IViewParam } from "./UIInterface";
 import { ViewMgr } from "./ViewMgr";
 
@@ -7,8 +8,14 @@ const { regClass, property } = Laya;
 export class BaseView extends Laya.Script {
     declare owner: Laya.Sprite;
 
-    @property({ type: Number })
-    private fadeTime: number = 0;
+    @property({ type: Number, tips: "渐入渐出动画效果时间" })
+    private fadeTime: number = 100;
+
+    @property({ type: String, isAsset: true, assetTypeFilter: "Audio" })
+    private enterSound: string = ConfigPath.M_UI_Forward;    
+
+    @property({ type: String, isAsset: true, assetTypeFilter: "Audio" })
+    private exitSound: string = ConfigPath.M_UI_Back;    
 
     public key: IViewKey;
     private param: IViewParam;
@@ -66,10 +73,11 @@ export class BaseView extends Laya.Script {
 
     onEnable(): void {
         this.enterAnim();
+        Laya.SoundManager.playSound(this.enterSound);
     }
 
     onDisable(): void {
-
+        Laya.SoundManager.playSound(this.exitSound);
     }
 
     closeSelf(): void {

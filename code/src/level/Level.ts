@@ -1,3 +1,4 @@
+import { ConfigPath } from "../const/ConfigPath";
 import { ViewMgr } from "../core/UI/ViewMgr";
 import { MathUtil } from "../utils/MathUtils";
 import { Game } from "../views/Game";
@@ -39,6 +40,9 @@ export class Level extends Laya.Script {
 
     @property({ type: Laya.Sprite, tips: "特效根节点" })
     private effectRoot: Laya.Sprite;
+
+    @property({ type: Laya.Sprite, tips: "ui根节点" })
+    private uiRoot: Laya.Sprite;
     
     @property({ type: InputManager, tips: "关卡输入控制" })
     private inputManager: InputManager;
@@ -80,7 +84,7 @@ export class Level extends Laya.Script {
             if (i.type == EItemType.FinalAward) {
                 (i.owner as Laya.Image).skin = LevelModel.ins.isSecondLevel() ? "resources/scene/goldFish.png" : "resources/scene/silverFish.png";
             }
-        })
+        });
     }
 
     private checkCollision(): void {
@@ -103,6 +107,7 @@ export class Level extends Laya.Script {
         if (obstacle) {
             this.player.addForce(obstacle.force, obstacle.degrees);
             this.showHurtEffect();
+            Laya.SoundManager.playSound(ConfigPath.M_CatHurt);
             return;
         };
         
@@ -117,6 +122,7 @@ export class Level extends Laya.Script {
                 this.recordPlayerPos();            
                 this.showDustEffect();
                 this.player.owner.y = ground.owner.y;
+                Laya.SoundManager.playSound(ConfigPath.M_Foot);
             }
         }
     }
@@ -157,8 +163,10 @@ export class Level extends Laya.Script {
 
         let startLine = this.config[levelId];
         this.moveRoot.x = startLine;
+        this.uiRoot.x = -startLine;
         let realStartPos = startLine - this.spawnPoint[0];
         LevelModel.ins.setStartSpace(realStartPos);
+
 
         this.parsePrefabData(levelId);
 
@@ -184,6 +192,7 @@ export class Level extends Laya.Script {
 
         let startLine = this.config[levelId];
         this.moveRoot.x = startLine;
+        this.uiRoot.x = -startLine;
         let realStartPos = startLine - this.spawnPoint[0];
         LevelModel.ins.setStartSpace(realStartPos);
 

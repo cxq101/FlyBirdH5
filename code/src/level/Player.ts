@@ -1,3 +1,4 @@
+import { ConfigPath } from "../const/ConfigPath";
 import { MathUtil } from "../utils/MathUtils";
 import { SkinModel } from "../views/skin/SkinModel";
 
@@ -84,6 +85,7 @@ export class Player extends Laya.Script {
         let force = this._pressedTime * this.forceVelocity * 0.001;
         force = Math.max(force, this.minForce); 
         this.addForce(force, this.degrees);
+        Laya.SoundManager.playSound(ConfigPath.M_CatJump);
 
         this._isPressed = false;
         this._pressedTime = 0;

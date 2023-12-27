@@ -21,77 +21,43 @@
   ],
   "_$child": [
     {
-      "_$id": "dex91b30",
-      "_$var": true,
-      "_$type": "Button",
-      "name": "btnBack",
-      "x": 91,
-      "y": 1149,
-      "width": 128,
-      "height": 128,
-      "anchorX": 0.5,
-      "anchorY": 0.5,
-      "scaleX": 0.8,
-      "scaleY": 0.8,
-      "_mouseState": 2,
-      "left": 40,
-      "bottom": 80,
-      "stateNum": 1,
-      "skin": "res://6a8c65af-459d-4756-ab23-63dab6df9d5f",
-      "label": "",
-      "labelSize": 20,
-      "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000",
-      "_$comp": [
-        {
-          "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
-          "scriptPath": "../src/core/UI/BaseView.ts",
-          "fadeTime": 300
-        },
-        {
-          "_$type": "64521eff-7e49-4566-9899-03615e713814",
-          "scriptPath": "../src/UIComponents/ScaleButton.ts",
-          "duration": 100,
-          "scale": 0.9,
-          "isAnchorCenterRequired": true
-        }
-      ]
-    },
-    {
-      "_$id": "un7qbpjt",
-      "_$var": true,
-      "_$type": "Button",
-      "name": "btnScroll",
-      "x": 120,
-      "y": 1236,
+      "_$id": "8x3kzp2x",
+      "_$type": "Box",
+      "name": "Box",
+      "y": 1080,
       "width": 200,
-      "height": 60,
-      "anchorX": 0.5,
-      "anchorY": 0.5,
-      "scaleX": 0.8,
-      "scaleY": 0.8,
+      "height": 200,
       "_mouseState": 2,
-      "left": 40,
-      "bottom": 20,
-      "stateNum": 1,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
-      "label": "回到最远>>",
-      "labelSize": 32,
-      "labelPadding": "8,0,0,0",
-      "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000",
-      "_$comp": [
+      "left": 0,
+      "bottom": 0,
+      "_$child": [
         {
-          "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
-          "scriptPath": "../src/core/UI/BaseView.ts",
-          "fadeTime": 300
+          "_$id": "tnll356t",
+          "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
+          "_$var": true,
+          "name": "btnBack",
+          "active": true,
+          "x": 104.00000000000004,
+          "y": 47,
+          "visible": true,
+          "skin": "res://6a8c65af-459d-4756-ab23-63dab6df9d5f"
         },
         {
-          "_$type": "64521eff-7e49-4566-9899-03615e713814",
-          "scriptPath": "../src/UIComponents/ScaleButton.ts",
-          "duration": 100,
-          "scale": 0.9,
-          "isAnchorCenterRequired": true
+          "_$id": "kigfc2o4",
+          "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
+          "_$var": true,
+          "name": "btnScroll",
+          "active": true,
+          "x": 140,
+          "y": 155,
+          "visible": true,
+          "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+          "width": 200,
+          "height": 60,
+          "label": "回到最远>>",
+          "labelSize": 32,
+          "labelPadding": "8,0,0,0",
+          "sizeGrid": "15,15,15,15,0"
         }
       ]
     },
@@ -197,42 +163,21 @@
       "bottom": 0,
       "_$child": [
         {
-          "_$id": "ykkzo151",
+          "_$id": "gr8f7eyj",
+          "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
           "_$var": true,
-          "_$type": "Button",
           "name": "btnContinue",
+          "active": true,
           "x": 360,
-          "y": 794,
+          "y": 788,
+          "visible": true,
+          "centerX": 0,
+          "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
           "width": 200,
           "height": 60,
-          "anchorX": 0.5,
-          "anchorY": 0.5,
-          "scaleX": 0.8,
-          "scaleY": 0.8,
-          "_mouseState": 2,
-          "centerX": 0,
-          "centerY": 154,
-          "stateNum": 1,
-          "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
           "label": "继续",
           "labelSize": 32,
-          "labelPadding": "8,0,0,0",
-          "labelStrokeColor": "#32556b",
-          "strokeColors": "#32556b,#32cc6b,#ff0000",
-          "_$comp": [
-            {
-              "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
-              "scriptPath": "../src/core/UI/BaseView.ts",
-              "fadeTime": 300
-            },
-            {
-              "_$type": "64521eff-7e49-4566-9899-03615e713814",
-              "scriptPath": "../src/UIComponents/ScaleButton.ts",
-              "duration": 100,
-              "scale": 0.9,
-              "isAnchorCenterRequired": true
-            }
-          ]
+          "labelPadding": "8,0,0,0"
         },
         {
           "_$id": "jg1x0scl",
@@ -246,7 +191,7 @@
           "centerY": 0,
           "text": "诅咒已经消除！",
           "fontSize": 40,
-          "color": "#FFFFFF",
+          "color": "rgba(54, 6, 6, 1)",
           "align": "center",
           "padding": "0,0,0,0"
         }

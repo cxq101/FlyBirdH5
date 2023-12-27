@@ -5,7 +5,7 @@
  * resources/prefabs/views/SkinView.lh
  */
 export class SkinViewRTBase extends Laya.Box {
-    public btnClose!: Laya.Button;
     public list!: Laya.List;
+    public btnClose!: Laya.Button;
 }
 

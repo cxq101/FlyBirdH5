@@ -3,6 +3,14 @@ export class ConfigPath {
     static JSON_Skin = "resources/config/skin/skin.json";
     static JSON_Dialog = "resources/config/dialog.json";
 
+    static M_Foot = "resources/sound/Foot.mp3";
+    static M_Main = "resources/sound/m_main.mp3";
+    static M_CatHurt = "resources/sound/CatHurt.mp3";
+    static M_CatJump = "resources/sound/CatJump.mp3";
+    static M_UI_Click = "resources/sound/UI_Click.mp3";
+    static M_UI_Back = "resources/sound/UI_Back.mp3";
+    static M_UI_Forward = "resources/sound/UI_Forward.mp3";
+    
     static LH_Hud = "resources/prefabs/views/HUD.lh";
     static LH_Help = "resources/prefabs/views/Help.lh";
     static LH_MainView = "resources/prefabs/views/MainView.lh";
@@ -30,5 +38,13 @@ export class ConfigPath {
         {url: ConfigPath.LH_Level_10000, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Level_10001, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Level_10002, type: Laya.Loader.HIERARCHY},
+        
+        {url: ConfigPath.M_Foot, type: Laya.Loader.SOUND},
+        {url: ConfigPath.M_Main, type: Laya.Loader.SOUND},
+        {url: ConfigPath.M_CatHurt, type: Laya.Loader.SOUND},
+        {url: ConfigPath.M_CatJump, type: Laya.Loader.SOUND},
+        {url: ConfigPath.M_UI_Click, type: Laya.Loader.SOUND},
+        {url: ConfigPath.M_UI_Back, type: Laya.Loader.SOUND},
+        {url: ConfigPath.M_UI_Forward, type: Laya.Loader.SOUND},
     ];
 }

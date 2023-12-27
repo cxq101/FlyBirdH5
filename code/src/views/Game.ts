@@ -44,21 +44,23 @@ export class Game extends Singleton<Game>() {
         // 设置语言包
         await this.initLangPacks();
         this._boot.setLoading({ desc: "100003", value: 0.05 });
-        await PromiseEx.delay(200);
+        await PromiseEx.delay(20);
 
         // 初始化场景层级
         this.buildScene();
         this._boot.setLoading({ desc: "100001", value: 0.10 });
-        await PromiseEx.delay(200);
+        await PromiseEx.delay(20);
 
         // 初始化场景注册信息
         this.registerAllView();
         this._boot.setLoading({ desc: "100002", value: 0.15 });
-        await PromiseEx.delay(200);
+        await PromiseEx.delay(20);
 
         // 设置加载Common资源
         this._boot.setLoading({ desc: "100004" });
         this.loadRes();
+
+        Laya.SoundManager.setMusicVolume(0.5);
     }
 
     // 设置语言包
@@ -99,12 +101,12 @@ export class Game extends Singleton<Game>() {
     private onLoadCompleted(): void {
         this._boot.setLoading({ value: 0.95 });
 
-        PromiseEx.delay(2000).then(() => {
+        PromiseEx.delay(20).then(() => {
             this._boot.setLoading({ desc: "100005", value:  1.0 });
 
             Laya.Scene.hideLoadingPage(0);
             this._boot.levelLoader.createBackgroundRoot();
-            Laya.timer.once(1000, this, () => {
+            Laya.timer.once(20, this, () => {
                 this._fsm.dispatch(GameEvents.loadComplete);
             })
         });
@@ -128,12 +130,14 @@ export class Game extends Singleton<Game>() {
 
     private onEnterHomeHandler(): void {
         ViewMgr.ins.open(EViewKey.MainView);
+        Laya.SoundManager.playMusic(ConfigPath.M_Main);
     }
 
     private onEnterLevelHandler(levelId: number): void {
         ViewMgr.ins.close(EViewKey.MainView);
         this._level = this._boot.levelLoader.loadLevel(levelId);
         ViewMgr.ins.open(EViewKey.HudView);
+        // Laya.SoundManager.playMusic(ConfigPath.M_Level);
     }
 
     private onWinHandler(): void {
@@ -155,6 +159,7 @@ export class Game extends Singleton<Game>() {
         this._level.reEnterLevel(levelId);
         ViewMgr.ins.close(EViewKey.WinView);
         ViewMgr.ins.open(EViewKey.HudView);
+        // Laya.SoundManager.playMusic(ConfigPath.M_Level);
     }
 
     private onResumeHandler(): void {
@@ -167,6 +172,7 @@ export class Game extends Singleton<Game>() {
         ViewMgr.ins.close(EViewKey.WinGoldView);
         this._level.restart();
         ViewMgr.ins.open(EViewKey.HudView);
+        // Laya.SoundManager.playMusic(ConfigPath.M_Level);
     }
 
     private onBackHomeHandler(): void {
@@ -175,6 +181,7 @@ export class Game extends Singleton<Game>() {
         ViewMgr.ins.close(EViewKey.PauseView);
         ViewMgr.ins.close(EViewKey.WinGoldView);
         ViewMgr.ins.open(EViewKey.MainView);
+        Laya.SoundManager.playMusic(ConfigPath.M_Main);
     }
 
     enterLevel(levelId: number): void {

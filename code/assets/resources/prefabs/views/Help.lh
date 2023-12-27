@@ -49,21 +49,23 @@
       "padding": "0,0,0,0"
     },
     {
-      "_$id": "2l0vfg0i",
+      "_$id": "0tjgyyu0",
+      "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
       "_$var": true,
-      "_$type": "Button",
       "name": "btnClose",
-      "x": 110,
-      "y": 921,
+      "active": true,
+      "x": 360,
+      "y": 950,
+      "visible": true,
+      "centerX": 0,
       "width": 500,
       "height": 60,
-      "_mouseState": 2,
-      "centerX": 0,
-      "stateNum": 1,
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "返回",
       "labelSize": 32,
-      "labelPadding": "3,0,0,0"
+      "labelPadding": "3,0,0,0",
+      "labelStrokeColor": "#32556b",
+      "strokeColors": "#32556b,#32cc6b,#ff0000"
     }
   ]
 }

@@ -35,7 +35,7 @@ export class Background extends Laya.Script {
     }
 
     onStart(): void {
-        const stageW = Laya.stage.width;
+        const stageW = this.textureWidth * this.repeatX;
         this.owner.x = -stageW;
         this.owner.width = stageW * this.repeatX;
         this.startPosX = this.owner.x;

@@ -24,6 +24,9 @@
       "effectRoot": {
         "_$ref": "cpapz4wl"
       },
+      "uiRoot": {
+        "_$ref": "gctua0pd"
+      },
       "inputManager": {
         "_$ref": "c23p57j4",
         "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6"
@@ -127,6 +130,30 @@
               "index": 0
             }
           ]
+        },
+        {
+          "_$id": "gctua0pd",
+          "_$type": "Sprite",
+          "name": "uiRoot",
+          "width": 100,
+          "height": 100,
+          "_$child": [
+            {
+              "_$id": "7thk8ghy",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 150,
+              "y": 640,
+              "width": 120,
+              "height": 28,
+              "text": "长按蓄力 \n       松开跳起!",
+              "fontSize": 45,
+              "color": "rgba(54, 6, 6, 1)",
+              "bold": true,
+              "italic": true,
+              "padding": "0,0,0,0"
+            }
+          ]
         }
       ]
     },
@@ -134,13 +161,15 @@
       "_$id": "c23p57j4",
       "_$type": "Box",
       "name": "InputManager",
+      "x": 23,
+      "y": 70,
       "width": 4334,
       "height": 1280,
       "_mouseState": 2,
-      "left": 0,
-      "right": 0,
-      "top": 0,
-      "bottom": 0,
+      "left": 23,
+      "right": -23,
+      "top": 70,
+      "bottom": -70,
       "_$comp": [
         {
           "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6",
@@ -174,7 +203,7 @@
       "name": "Player",
       "active": true,
       "x": 250,
-      "y": 800,
+      "y": 862,
       "visible": false
     }
   ]

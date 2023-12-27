@@ -1,0 +1,34 @@
+{
+  "_$ver": 1,
+  "_$id": "dex91b30",
+  "_$var": true,
+  "_$type": "Button",
+  "name": "button",
+  "x": 104,
+  "y": 1136,
+  "width": 128,
+  "height": 128,
+  "anchorX": 0.5,
+  "anchorY": 0.5,
+  "_mouseState": 2,
+  "stateNum": 1,
+  "skin": "",
+  "label": "",
+  "labelSize": 20,
+  "labelStrokeColor": "#32556b",
+  "strokeColors": "#32556b,#32cc6b,#ff0000",
+  "_$comp": [
+    {
+      "_$type": "51a3be6d-6057-4f71-bfff-542ad5857756",
+      "scriptPath": "../src/UIComponents/ClickSound.ts",
+      "sound": "res://b82a449d-191b-4e59-8dc1-f7d8f29188bb"
+    },
+    {
+      "_$type": "9ddca619-8a5f-4aac-855a-b4d910266dbf",
+      "scriptPath": "../src/UIComponents/ClickZoom.ts",
+      "duration": 100,
+      "scale": 0.9,
+      "isAnchorCenterRequired": true
+    }
+  ]
+}

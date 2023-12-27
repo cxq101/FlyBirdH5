@@ -90,40 +90,42 @@
       "padding": "0,0,0,0"
     },
     {
-      "_$id": "xtvpn0tq",
+      "_$id": "vlbhgo7h",
+      "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
       "_$var": true,
-      "_$type": "Button",
       "name": "btnHome",
-      "x": 111,
-      "y": 852.0000000000001,
+      "active": true,
+      "x": 361,
+      "y": 887.0000000000001,
+      "visible": true,
       "width": 500,
       "height": 70,
-      "_mouseState": 2,
-      "centerX": 1,
-      "stateNum": 1,
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "主界面",
       "labelSize": 32,
       "labelBold": true,
-      "labelPadding": "10,0,0,0"
+      "labelPadding": "10,0,0,0",
+      "labelStrokeColor": "#32556b",
+      "strokeColors": "#32556b,#32cc6b,#ff0000"
     },
     {
-      "_$id": "8tnrehmh",
+      "_$id": "pauuhy1s",
+      "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
       "_$var": true,
-      "_$type": "Button",
       "name": "btnAgain",
-      "x": 111,
-      "y": 944,
+      "active": true,
+      "x": 361,
+      "y": 979,
+      "visible": true,
       "width": 500,
       "height": 70,
-      "_mouseState": 2,
-      "centerX": 1,
-      "stateNum": 1,
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "再来一局",
       "labelSize": 32,
       "labelBold": true,
-      "labelPadding": "10,0,0,0"
+      "labelPadding": "10,0,0,0",
+      "labelStrokeColor": "#32556b",
+      "strokeColors": "#32556b,#32cc6b,#ff0000"
     }
   ]
 }
