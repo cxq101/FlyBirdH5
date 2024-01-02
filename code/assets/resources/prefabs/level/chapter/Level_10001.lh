@@ -19,7 +19,7 @@
           "name": "Box",
           "active": true,
           "x": -1196,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 5196,
           "height": 180,
@@ -40,7 +40,7 @@
           "name": "obstacle",
           "active": true,
           "x": 13,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -49,7 +49,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 422,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -58,7 +58,7 @@
           "name": "obstacle(8)",
           "active": true,
           "x": 803,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -67,7 +67,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1097,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -76,7 +76,7 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 1443,
-          "y": 1100,
+          "y": 980,
           "visible": true
         }
       ]
@@ -94,7 +94,7 @@
           "name": "finalAward",
           "active": true,
           "x": 1886,
-          "y": 800,
+          "y": 680,
           "visible": true
         }
       ]

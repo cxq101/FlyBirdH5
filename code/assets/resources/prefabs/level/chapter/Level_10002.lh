@@ -19,7 +19,7 @@
           "name": "Box",
           "active": true,
           "x": -1200,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 9188,
           "height": 180,
@@ -40,7 +40,7 @@
           "name": "obstacle",
           "active": true,
           "x": 670,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -49,7 +49,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 1038,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -58,7 +58,7 @@
           "name": "obstacle(8)",
           "active": true,
           "x": 1378,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -67,7 +67,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1754,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -76,7 +76,7 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 2045,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -85,7 +85,7 @@
           "name": "obstacle(11)",
           "active": true,
           "x": 2654,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 279
         },
@@ -95,7 +95,7 @@
           "name": "obstacle(12)",
           "active": true,
           "x": 3188,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 212
         },
@@ -105,7 +105,7 @@
           "name": "obstacle(13)",
           "active": true,
           "x": 3620,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -114,7 +114,7 @@
           "name": "obstacle(14)",
           "active": true,
           "x": 3988,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -123,7 +123,7 @@
           "name": "obstacle(15)",
           "active": true,
           "x": 4328,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -132,7 +132,7 @@
           "name": "obstacle(16)",
           "active": true,
           "x": 4704,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -141,7 +141,7 @@
           "name": "obstacle(17)",
           "active": true,
           "x": 5050,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -150,7 +150,7 @@
           "name": "obstacle(18)",
           "active": true,
           "x": 5674,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "height": 34,
           "width": 265
@@ -161,7 +161,7 @@
           "name": "obstacle(19)",
           "active": true,
           "x": 6138,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 212
         },
@@ -171,7 +171,7 @@
           "name": "obstacle(20)",
           "active": true,
           "x": 6475,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 212
         },
@@ -181,7 +181,7 @@
           "name": "obstacle(21)",
           "active": true,
           "x": 6818,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 212
         },
@@ -191,7 +191,7 @@
           "name": "obstacle(22)",
           "active": true,
           "x": 7176,
-          "y": 1100,
+          "y": 980,
           "visible": true,
           "width": 212
         },
@@ -201,7 +201,7 @@
           "name": "obstacle(23)",
           "active": true,
           "x": 5381,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -210,7 +210,7 @@
           "name": "obstacle(24)",
           "active": true,
           "x": 341,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -219,7 +219,7 @@
           "name": "obstacle(25)",
           "active": true,
           "x": 16,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -228,7 +228,7 @@
           "name": "obstacle(26)",
           "active": true,
           "x": 2350,
-          "y": 1100,
+          "y": 980,
           "visible": true
         }
       ]
@@ -246,7 +246,7 @@
           "name": "FoCat",
           "active": true,
           "x": -486,
-          "y": 1100,
+          "y": 980,
           "visible": true
         },
         {
@@ -255,7 +255,7 @@
           "name": "finalAward",
           "active": true,
           "x": 7607,
-          "y": 796,
+          "y": 680,
           "visible": true,
           "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032"
         }

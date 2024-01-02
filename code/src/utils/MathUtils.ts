@@ -81,13 +81,23 @@ export class MathUtil {
 
     /**
      * 判断两区间是否部分重叠
-     * @param m0 区间0 起始值
-     * @param m1 区间0 结束值
-     * @param n0 区间1 起始值
-     * @param n1 区间1 起始值
+     * @param rangeAMin 区间0 起始值
+     * @param rangeAMax 区间0 结束值
+     * @param rangeBMin 区间1 起始值
+     * @param rangeBMax 区间1 起始值
      * @returns 
      */
-    public static isRangesPartiallyOverlap(m0: number, m1: number, n0: number, n1: number): boolean {
-        return (m0 <= n1 && n1 <= m1) || (n0 <= m1 && m1 <= n1);
+    public static isPartiallyOverlap(rangeAMin: number, rangeAMax: number, rangeBMin: number, rangeBMax: number): boolean {
+        return rangeAMin <= rangeBMax && rangeAMax >= rangeBMin;
+    }
+
+    // 判断一个小数区间是否包括另一个小数区间
+    public static isIntervalIncluding(rangeAMin: number, rangeAMax: number, rangeBMin: number, rangeBMax: number): boolean {
+        return rangeAMin <= rangeBMin && rangeAMax >= rangeBMax;
+    }
+
+    // 判断两个小数区间是否不相交也不包括
+    public static isIntervalsDisjoint(rangeAMin: number, rangeAMax: number, rangeBMin: number, rangeBMax: number): boolean {
+        return rangeAMax < rangeBMin || rangeAMin > rangeBMax;
     }
 }

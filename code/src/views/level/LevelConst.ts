@@ -34,3 +34,18 @@ export const LevelConfig = {
     [ELevelConst.Level_10001]: { path: ConfigPath.LH_Level_10001 },
     [ELevelConst.Level_10002]: { path: ConfigPath.LH_Level_10002 },
 }
+
+export enum ELevelNodeSign {
+    Item = "ItemNode",
+    Ground = "GroundNode",
+    Obstacle = "ObstacleNode",
+}
+
+
+export type ILevelParseProp<T extends Laya.Component> = {
+    name: string;
+    root: Laya.Sprite;
+    components: T[], 
+    component: new () => T;
+}
+
