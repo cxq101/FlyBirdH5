@@ -17,7 +17,7 @@ export class LevelModel extends Model {
         return this._ins;
     }
 
-    private _distanceRatio = 100 / 8000;
+    private _distanceRatio = 100 / 16000;
     private _startSpace = 0;
     private _currId: number;
     private _freeJumpTimes: number;
@@ -44,7 +44,7 @@ export class LevelModel extends Model {
     set currId(v : number) {
         this._currId = v;
         this._dialogIndex = 0;
-        this._freeJumpTimes = 100;
+        this._freeJumpTimes = 1;
     }
 
     get isScrollClose() : boolean {

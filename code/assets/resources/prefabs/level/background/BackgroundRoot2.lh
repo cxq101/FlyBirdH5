@@ -1,0 +1,130 @@
+{
+  "_$ver": 1,
+  "_$id": "kp8ak90h",
+  "_$type": "Sprite",
+  "name": "BackgroundRoot2",
+  "width": 0,
+  "height": 0,
+  "_$comp": [
+    {
+      "_$type": "d5bbea0a-1696-4dc2-8d55-4c7122947b61",
+      "scriptPath": "../src/level/BackgroundRoot.ts",
+      "backgrounds": [
+        {
+          "_$ref": "waengv0c",
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+        },
+        {
+          "_$ref": "z7bofqmd",
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+        },
+        {
+          "_$ref": "rw1mrlhv",
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+        },
+        {
+          "_$ref": "a7q5ee7x",
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+        },
+        {
+          "_$ref": "p1adi5hc",
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d"
+        }
+      ],
+      "autoMove": true,
+      "autoMoveSpeed": -0.5
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "waengv0c",
+      "_$type": "Image",
+      "name": "Image(1)",
+      "width": 2560,
+      "height": 1280,
+      "skin": "res://c7e6e64e-ff8b-44d6-829b-82bebf797afe",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 0.2,
+          "textureWidth": 2560,
+          "repeatX": 3
+        }
+      ]
+    },
+    {
+      "_$id": "z7bofqmd",
+      "_$type": "Image",
+      "name": "Image(2)",
+      "width": 2560,
+      "height": 1280,
+      "skin": "res://1fdee455-2366-46a5-9648-3a1e779977e3",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 0.4,
+          "textureWidth": 2560,
+          "repeatX": 3
+        }
+      ]
+    },
+    {
+      "_$id": "rw1mrlhv",
+      "_$type": "Image",
+      "name": "Image(3)",
+      "width": 2560,
+      "height": 1280,
+      "skin": "res://6727674f-77af-44cf-a1a5-2e28d93b3917",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 0.6,
+          "textureWidth": 2560,
+          "repeatX": 3
+        }
+      ]
+    },
+    {
+      "_$id": "a7q5ee7x",
+      "_$type": "Image",
+      "name": "Image(4)",
+      "width": 2560,
+      "height": 1280,
+      "skin": "res://a2db2819-2113-4c10-b006-75c79a2cf8c9",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 0.8,
+          "textureWidth": 2560,
+          "repeatX": 3
+        }
+      ]
+    },
+    {
+      "_$id": "p1adi5hc",
+      "_$type": "Image",
+      "name": "Image(5)",
+      "width": 2560,
+      "height": 1280,
+      "skin": "res://62bae428-fdce-4a02-90e4-3e6d83864e08",
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
+          "scriptPath": "../src/level/Background.ts",
+          "moveScale": 1,
+          "textureWidth": 2560,
+          "repeatX": 3
+        }
+      ]
+    }
+  ]
+}

@@ -10,24 +10,24 @@ const { regClass, property } = Laya;
 
 @regClass()
 export class Background extends Laya.Script {
-    declare owner: Laya.Sprite;
+    declare owner: Laya.Image;
 
     @property({ type: Number, tips: "移动视差比例" })
     moveScale: number = 1;
+    @property({ type: Number, tips: "纹理默认宽度" })
+    textureWidth: number = 720;
+    @property({ type: Number, tips: "初始宽度为原始宽度的倍数" })
+    repeatX: number = 3;
 
-    /** 初始宽度为原始宽度的3倍 */
-    private readonly repeatX: number = 3;
-    private readonly textureWidth: number = 720;
-
-    private startPosX: number = 0;
+    private _startPosX: number = 0;
 
     private get distance(): number {
-        return Math.abs(this.owner.x - this.startPosX);
+        return Math.abs(this.owner.x - this._startPosX);
     }
 
     private resetPos(): void {
-        let real = this.owner.x - this.startPosX;
-        this.owner.x = this.startPosX + real % this.textureWidth;
+        let real = this.owner.x - this._startPosX;
+        this.owner.x = this._startPosX + real % this.textureWidth;
     }
 
     private isOutOfBounds(): boolean {
@@ -38,7 +38,7 @@ export class Background extends Laya.Script {
         const stageW = this.textureWidth * this.repeatX;
         this.owner.x = -stageW;
         this.owner.width = stageW * this.repeatX;
-        this.startPosX = this.owner.x;
+        this._startPosX = this.owner.x;
     }
 
     move(distance: number): void {

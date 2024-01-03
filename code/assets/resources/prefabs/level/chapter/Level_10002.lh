@@ -3,7 +3,7 @@
   "_$id": "o3vi3w6v",
   "_$type": "Box",
   "y": 148,
-  "width": 8000,
+  "width": 16000,
   "height": 1280,
   "_$child": [
     {
@@ -19,9 +19,9 @@
           "name": "Box",
           "active": true,
           "x": -1200,
-          "y": 980,
+          "y": 1080,
           "visible": true,
-          "width": 9188,
+          "width": 18248,
           "height": 180,
           "bgColor": null
         }
@@ -40,7 +40,7 @@
           "name": "obstacle",
           "active": true,
           "x": 670,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -49,7 +49,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 1038,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -58,7 +58,7 @@
           "name": "obstacle(8)",
           "active": true,
           "x": 1378,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -67,7 +67,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1754,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -76,7 +76,7 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 2045,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -85,7 +85,7 @@
           "name": "obstacle(11)",
           "active": true,
           "x": 2654,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 279
         },
@@ -95,7 +95,7 @@
           "name": "obstacle(12)",
           "active": true,
           "x": 3188,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -105,7 +105,7 @@
           "name": "obstacle(13)",
           "active": true,
           "x": 3620,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -114,7 +114,7 @@
           "name": "obstacle(14)",
           "active": true,
           "x": 3988,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -123,7 +123,7 @@
           "name": "obstacle(15)",
           "active": true,
           "x": 4328,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -132,7 +132,7 @@
           "name": "obstacle(16)",
           "active": true,
           "x": 4704,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -141,7 +141,7 @@
           "name": "obstacle(17)",
           "active": true,
           "x": 5050,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -150,7 +150,7 @@
           "name": "obstacle(18)",
           "active": true,
           "x": 5674,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "height": 34,
           "width": 265
@@ -161,7 +161,7 @@
           "name": "obstacle(19)",
           "active": true,
           "x": 6138,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -171,7 +171,7 @@
           "name": "obstacle(20)",
           "active": true,
           "x": 6475,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -181,7 +181,7 @@
           "name": "obstacle(21)",
           "active": true,
           "x": 6818,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -191,7 +191,7 @@
           "name": "obstacle(22)",
           "active": true,
           "x": 7176,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -201,7 +201,7 @@
           "name": "obstacle(23)",
           "active": true,
           "x": 5381,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -210,7 +210,7 @@
           "name": "obstacle(24)",
           "active": true,
           "x": 341,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -219,7 +219,7 @@
           "name": "obstacle(25)",
           "active": true,
           "x": 16,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -228,8 +228,215 @@
           "name": "obstacle(26)",
           "active": true,
           "x": 2350,
-          "y": 980,
+          "y": 1080,
           "visible": true
+        },
+        {
+          "_$id": "gx1s4e34",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(27)",
+          "active": true,
+          "x": 8191,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "zu88pabt",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(28)",
+          "active": true,
+          "x": 8559,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "d64gn9r9",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(29)",
+          "active": true,
+          "x": 8899,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "b7110ct7",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(30)",
+          "active": true,
+          "x": 9275,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "j1ewlr7i",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(31)",
+          "active": true,
+          "x": 9566,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "xku664wn",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(32)",
+          "active": true,
+          "x": 10175,
+          "y": 1080,
+          "visible": true,
+          "width": 279
+        },
+        {
+          "_$id": "5q5d77uk",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(33)",
+          "active": true,
+          "x": 10709,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "s8pzz9md",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(34)",
+          "active": true,
+          "x": 11141,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "afq10ex4",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(35)",
+          "active": true,
+          "x": 11509,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "2nb6xrcw",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(36)",
+          "active": true,
+          "x": 11849,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "zq619zdy",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(37)",
+          "active": true,
+          "x": 12225,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "15xo83qc",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(38)",
+          "active": true,
+          "x": 12571,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "nwt3f9m3",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(39)",
+          "active": true,
+          "x": 13195,
+          "y": 1080,
+          "visible": true,
+          "height": 34,
+          "width": 265
+        },
+        {
+          "_$id": "bdco10kp",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(40)",
+          "active": true,
+          "x": 13659,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "bt5f60s7",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(41)",
+          "active": true,
+          "x": 13996,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "ncn1fzzi",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(42)",
+          "active": true,
+          "x": 14339,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "7sc4yv4v",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(43)",
+          "active": true,
+          "x": 14697,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "gjqhgnmg",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(44)",
+          "active": true,
+          "x": 12902,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "xb3npjyr",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(45)",
+          "active": true,
+          "x": 7862,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "1bp4juki",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(46)",
+          "active": true,
+          "x": 7537,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "bmszxm1y",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(47)",
+          "active": true,
+          "x": 9871,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "bkkerw2m",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(48)",
+          "active": true,
+          "x": 15081,
+          "y": 1080,
+          "visible": true,
+          "width": 212
         }
       ]
     },
@@ -246,7 +453,7 @@
           "name": "FoCat",
           "active": true,
           "x": -486,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -254,8 +461,8 @@
           "_$prefab": "29640e4c-ede7-4785-b444-0d77ef513c93",
           "name": "FinalGoldAward",
           "active": true,
-          "x": 7607,
-          "y": 680,
+          "x": 15431,
+          "y": 756,
           "visible": true
         }
       ]

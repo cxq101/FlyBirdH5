@@ -28,6 +28,7 @@ export class LevelLoader extends Laya.Script {
         this.root.addChild(node);
         this._backgroundRoot = node.getComponent(BackgroundRoot);
         this._backgroundRoot.enterAnim();
+        this._backgroundRoot.setSkin(0);
     }
 
     loadLevel(levelId: number): Level {
@@ -36,6 +37,8 @@ export class LevelLoader extends Laya.Script {
 
         let level = levelNode.getComponent(Level);
         level.init(levelId, this._backgroundRoot);
+        this._backgroundRoot.autoMove = false;
+        this._backgroundRoot.randomSkin();
         return level;
     }
 

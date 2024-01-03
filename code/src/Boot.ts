@@ -23,7 +23,6 @@ export class Boot extends Laya.Script {
         node.value = 0;
         Laya.Scene.setLoadingPage(node);
         Laya.Scene.showLoadingPage();
-
         Game.ins.init(this);
     }
 

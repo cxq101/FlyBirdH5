@@ -37,7 +37,7 @@
             "_$type": "Prefab"
           },
           "backgroundRootPrefab": {
-            "_$uuid": "c87d95ec-40e6-4d9e-8873-c792ed072d99",
+            "_$uuid": "d4ac30a3-5020-4433-b58e-05930c2497ac",
             "_$type": "Prefab"
           }
         }

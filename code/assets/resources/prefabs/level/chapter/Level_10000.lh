@@ -2,9 +2,7 @@
   "_$ver": 1,
   "_$id": "739x2xqq",
   "_$type": "Box",
-  "x": -3622,
-  "y": -272,
-  "width": 8000,
+  "width": 16000,
   "height": 1280,
   "_$child": [
     {
@@ -20,9 +18,9 @@
           "name": "Box",
           "active": true,
           "x": -1200,
-          "y": 980,
+          "y": 1080,
           "visible": true,
-          "width": 9688,
+          "width": 17688,
           "height": 180,
           "bgColor": null
         }
@@ -41,7 +39,7 @@
           "name": "obstacle",
           "active": true,
           "x": 670,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -50,7 +48,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 1038,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -59,7 +57,7 @@
           "name": "obstacle(8)",
           "active": true,
           "x": 1378,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -68,7 +66,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1754,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -77,7 +75,7 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 2100,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -86,7 +84,7 @@
           "name": "obstacle(11)",
           "active": true,
           "x": 2724,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -95,7 +93,7 @@
           "name": "obstacle(12)",
           "active": true,
           "x": 3188,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -105,7 +103,7 @@
           "name": "obstacle(13)",
           "active": true,
           "x": 3620,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -114,7 +112,7 @@
           "name": "obstacle(14)",
           "active": true,
           "x": 3988,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -123,7 +121,7 @@
           "name": "obstacle(15)",
           "active": true,
           "x": 4328,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -132,7 +130,7 @@
           "name": "obstacle(16)",
           "active": true,
           "x": 4704,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -141,7 +139,7 @@
           "name": "obstacle(17)",
           "active": true,
           "x": 5050,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -150,7 +148,7 @@
           "name": "obstacle(18)",
           "active": true,
           "x": 5674,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -159,7 +157,7 @@
           "name": "obstacle(19)",
           "active": true,
           "x": 6009,
-          "y": 980,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -169,7 +167,7 @@
           "name": "obstacle(20)",
           "active": true,
           "x": 385,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -178,7 +176,7 @@
           "name": "obstacle(21)",
           "active": true,
           "x": 14,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -187,7 +185,7 @@
           "name": "obstacle(22)",
           "active": true,
           "x": 2416,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -196,7 +194,7 @@
           "name": "obstacle(23)",
           "active": true,
           "x": 5354,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -205,7 +203,7 @@
           "name": "obstacle(24)",
           "active": true,
           "x": 6372,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -214,7 +212,7 @@
           "name": "obstacle(25)",
           "active": true,
           "x": 6748,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -223,26 +221,16 @@
           "name": "obstacle(26)",
           "active": true,
           "x": 7094,
-          "y": 980,
+          "y": 1080,
           "visible": true
-        },
-        {
-          "_$id": "an6ez80d",
-          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
-          "name": "obstacle(27)",
-          "active": true,
-          "x": 7718,
-          "y": 980,
-          "visible": true,
-          "width": 366
         },
         {
           "_$id": "ysvaqtkv",
           "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
           "name": "obstacle(28)",
           "active": true,
-          "x": 8053,
-          "y": 980,
+          "x": 7981,
+          "y": 1080,
           "visible": true,
           "width": 212
         },
@@ -252,7 +240,7 @@
           "name": "obstacle(29)",
           "active": true,
           "x": 2429,
-          "y": 980,
+          "y": 1080,
           "visible": true
         },
         {
@@ -261,7 +249,243 @@
           "name": "obstacle(30)",
           "active": true,
           "x": 7398,
-          "y": 980,
+          "y": 1080,
+          "visible": true,
+          "width": 347,
+          "_$child": [
+            {
+              "_$override": "nto3fldb",
+              "y": 1080
+            }
+          ]
+        },
+        {
+          "_$id": "s8k0ptl8",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(31)",
+          "active": true,
+          "x": 9054,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "dqxybqnx",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(32)",
+          "active": true,
+          "x": 9422,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "zwhwvkjt",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(33)",
+          "active": true,
+          "x": 9762,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "xqc6lv4k",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(34)",
+          "active": true,
+          "x": 10138,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "a4r9t1j0",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(35)",
+          "active": true,
+          "x": 10484,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "p8shgyi9",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(36)",
+          "active": true,
+          "x": 11108,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "fw2ncwf1",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(37)",
+          "active": true,
+          "x": 11572,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "4t5lify5",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(38)",
+          "active": true,
+          "x": 12004,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "w82stx1v",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(39)",
+          "active": true,
+          "x": 12372,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "ctftc06m",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(40)",
+          "active": true,
+          "x": 12712,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "gxxzycy8",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(41)",
+          "active": true,
+          "x": 13088,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "5uni23qk",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(42)",
+          "active": true,
+          "x": 13434,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "f2srl9h8",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(43)",
+          "active": true,
+          "x": 14058,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "88hnr52w",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(44)",
+          "active": true,
+          "x": 14393,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "a9u24ahm",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(45)",
+          "active": true,
+          "x": 8769,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "wdvtwpak",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(46)",
+          "active": true,
+          "x": 8398,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "ol93zjfj",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(47)",
+          "active": true,
+          "x": 10800,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "v5uoayw3",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(48)",
+          "active": true,
+          "x": 13738,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "lndavx4b",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(49)",
+          "active": true,
+          "x": 14756,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "x1rnnqhn",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(50)",
+          "active": true,
+          "x": 15132,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "65nku289",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(51)",
+          "active": true,
+          "x": 15478,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "xkvzbzk3",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(52)",
+          "active": true,
+          "x": 16102,
+          "y": 1080,
+          "visible": true,
+          "width": 366
+        },
+        {
+          "_$id": "0tj2nny9",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(53)",
+          "active": true,
+          "x": 16437,
+          "y": 1080,
+          "visible": true,
+          "width": 212
+        },
+        {
+          "_$id": "hutd4teu",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(54)",
+          "active": true,
+          "x": 10813,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "5zqmzdyn",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(55)",
+          "active": true,
+          "x": 15782,
+          "y": 1080,
           "visible": true,
           "width": 347
         }
@@ -280,7 +504,7 @@
           "name": "FoCat",
           "active": true,
           "x": -486,
-          "y": 980,
+          "y": 1080,
           "visible": true
         }
       ]
