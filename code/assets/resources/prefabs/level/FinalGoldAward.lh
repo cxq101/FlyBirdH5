@@ -1,0 +1,20 @@
+{
+  "_$ver": 1,
+  "_$id": "leznwokf",
+  "_$type": "Image",
+  "name": "FinalGoldAward",
+  "x": 268,
+  "y": 549,
+  "width": 200,
+  "height": 200,
+  "_mouseState": 2,
+  "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032",
+  "color": "#ffffff",
+  "_$comp": [
+    {
+      "_$type": "2889180f-9e42-463a-aaf6-75f48d6a4c85",
+      "scriptPath": "../src/level/Item/FinalAward.ts",
+      "type": "FinalAward"
+    }
+  ]
+}

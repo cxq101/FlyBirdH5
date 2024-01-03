@@ -44,7 +44,7 @@ export class LevelModel extends Model {
     set currId(v : number) {
         this._currId = v;
         this._dialogIndex = 0;
-        this._freeJumpTimes = 1;
+        this._freeJumpTimes = 100;
     }
 
     get isScrollClose() : boolean {

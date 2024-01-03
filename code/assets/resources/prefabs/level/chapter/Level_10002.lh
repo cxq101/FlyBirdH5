@@ -250,14 +250,13 @@
           "visible": true
         },
         {
-          "_$id": "9pfwg3mw",
-          "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",
-          "name": "finalAward",
+          "_$id": "luc0jg7i",
+          "_$prefab": "29640e4c-ede7-4785-b444-0d77ef513c93",
+          "name": "FinalGoldAward",
           "active": true,
           "x": 7607,
           "y": 680,
-          "visible": true,
-          "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032"
+          "visible": true
         }
       ]
     }
