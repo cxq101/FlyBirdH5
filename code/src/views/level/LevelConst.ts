@@ -36,11 +36,10 @@ export const LevelConfig = {
 }
 
 export enum ELevelNodeSign {
-    Item = "ItemNode",
-    Ground = "GroundNode",
-    Obstacle = "ObstacleNode",
+    Item = "itemRoot",
+    Ground = "groundRoot",
+    Obstacle = "obstacleRoot",
 }
-
 
 export type ILevelParseProp<T extends Laya.Component> = {
     name: string;

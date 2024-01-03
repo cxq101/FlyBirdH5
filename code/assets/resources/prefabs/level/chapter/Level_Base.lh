@@ -31,6 +31,10 @@
         "_$ref": "c23p57j4",
         "_$type": "e77d553f-b8ef-4b1a-a0fe-060a97f1dcb6"
       },
+      "nodeManager": {
+        "_$ref": "h87ustg8",
+        "_$type": "53d1f0a0-5e30-4a07-85f9-fda851a5a7f3"
+      },
       "player": {
         "_$ref": "vqq64c9r",
         "_$type": "cddd039b-38f1-49c0-9946-08429b716ebf"
@@ -154,6 +158,35 @@
               "padding": "0,0,0,0"
             }
           ]
+        }
+      ]
+    },
+    {
+      "_$id": "h87ustg8",
+      "_$type": "Sprite",
+      "name": "levelNodeManager",
+      "x": 2137.0000000000005,
+      "y": 608.9999999999999,
+      "width": 100,
+      "height": 100,
+      "_$comp": [
+        {
+          "_$type": "53d1f0a0-5e30-4a07-85f9-fda851a5a7f3",
+          "scriptPath": "../src/level/levelParse/LevelNodeManager.ts",
+          "groundRoot": {
+            "_$ref": "ecxajxg8"
+          },
+          "obstacleRoot": {
+            "_$ref": "ev0np8qp"
+          },
+          "itemRoot": {
+            "_$ref": "3kns7eqm"
+          },
+          "camera": {
+            "_$ref": "wtfhhdmx",
+            "_$type": "dbaae76a-a75c-4382-a42b-2cd24de86b01"
+          },
+          "cameraDistance": 200
         }
       ]
     },

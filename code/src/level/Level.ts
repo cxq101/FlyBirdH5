@@ -1,19 +1,15 @@
 import { ConfigPath } from "../const/ConfigPath";
 import { ViewMgr } from "../core/UI/ViewMgr";
-import { MathUtil } from "../utils/MathUtils";
 import { Game } from "../views/Game";
 import { EViewKey } from "../views/ViewConst";
-import { ELevelConst, ILevelPrefabData, LevelConfig } from "../views/level/LevelConst";
+import { ELevelConst } from "../views/level/LevelConst";
 import { LevelModel } from "../views/level/LevelModel";
 import { BackgroundRoot } from "./BackgroundRoot";
 import { InputManager } from "./InputManager";
 import { EItemType } from "./Item/EItemType";
-import { Ground } from "./Item/Ground";
-import { Item } from "./Item/Item";
-import { Obstacle } from "./Item/Obstacle";
 import { LevelCamera } from "./LevelCamera";
-import { LevelParseHelper } from "./LevelParseHelper";
 import { Player } from "./Player";
+import { LevelNodeManager } from "./levelParse/LevelNodeManager";
 
 /**
  * author: cxq
@@ -46,6 +42,9 @@ export class Level extends Laya.Script {
     
     @property({ type: InputManager, tips: "关卡输入控制" })
     private inputManager: InputManager;
+    
+    @property({ type: LevelNodeManager, tips: "关卡节点管理" })
+    private nodeManager: LevelNodeManager;
 
     @property({ type: Player, tips: "角色" })
     private player: Player; 
@@ -62,10 +61,7 @@ export class Level extends Laya.Script {
     
     public backgroundRoot: BackgroundRoot;
 
-    private _items: Item[] = [];
-    private _grounds: Ground[] = [];
     private _isInit: boolean = false;
-    private _obstacles: Obstacle[] = [];
     private _enabledCollision: boolean = true;
 
     get spawnPoint(): [number, number] {
@@ -73,37 +69,25 @@ export class Level extends Laya.Script {
         return [x, y];
     }
 
-    private parsePrefabData(levelId: ELevelConst): void {
-        LevelParseHelper.parse(levelId, [
-            { name: "itemRoot", root: this.itemRoot, components: this._items, component: Item },
-            { name: "groundRoot", root: this.groundRoot, components: this._grounds, component: Ground },
-            { name: "obstacleRoot", root: this.obstacleRoot, components: this._obstacles, component: Obstacle },
-        ]);
-
-        this._items.forEach(i => {
-            if (i.type == EItemType.FinalAward) {
-                (i.owner as Laya.Image).skin = LevelModel.ins.isSecondLevel() ? "resources/scene/goldFish.png" : "resources/scene/silverFish.png";
-            }
-        });
+    private parsePrefabData(levelId: ELevelConst, offset: number): void {
+        this.nodeManager.init(levelId, offset);
     }
 
     private checkCollision(): void {
         const playerRect = this.player.collisionBox;
         // 
-        let item = this.tryCheckCollision(playerRect, this._items);
+        let items = this.nodeManager.items;
+        let item = this.tryCheckCollision(playerRect, items);
         // trigger
-        if (item && item.type == EItemType.FinalAward) {
-            item.owner.destroy();
-            let index = this._items.findIndex(i => i == item);
-            this._items.splice(index, 1);
+        if (item && item.type == EItemType.FinalAward && !Game.ins.isWin()) {
             Game.ins.win();
         };
         if (item && item.type == EItemType.FoCat) {
             item.collisionEvent();
         };
-
         // collision
-        let obstacle = this.tryCheckCollision(playerRect, this._obstacles);
+        let obstacles = this.nodeManager.obstacles;
+        let obstacle = this.tryCheckCollision(playerRect, obstacles);
         if (obstacle) {
             this.player.addForce(obstacle.force, obstacle.degrees);
             this.showHurtEffect();
@@ -111,7 +95,8 @@ export class Level extends Laya.Script {
             return;
         };
         
-        let ground = this.tryCheckCollision(playerRect, this._grounds);
+        let grounds = this.nodeManager.grounds;
+        let ground = this.tryCheckCollision(playerRect, grounds);
         const newIsGround = ground != null;
         const lastIsGround = this.player.isGround;
         if (lastIsGround != newIsGround) {
@@ -168,7 +153,7 @@ export class Level extends Laya.Script {
         LevelModel.ins.setStartSpace(realStartPos);
 
 
-        this.parsePrefabData(levelId);
+        this.parsePrefabData(levelId, startLine);
 
         this.player.spawn(...this.spawnPoint);
 
@@ -196,15 +181,8 @@ export class Level extends Laya.Script {
         let realStartPos = startLine - this.spawnPoint[0];
         LevelModel.ins.setStartSpace(realStartPos);
 
-        this._items = [];
-        this.itemRoot.destroyChildren();
-        
-        this._grounds = [];
-        this.groundRoot.destroyChildren();
-        
-        this._obstacles = []
-        this.obstacleRoot.destroyChildren();
-        this.parsePrefabData(levelId);
+        this.nodeManager.clear();
+        this.parsePrefabData(levelId, startLine);
     }
 
     restart(): void {

@@ -83,4 +83,8 @@ export class SegmentTree {
         
         return [...new Set(result)];
     }
+
+    clear(): void {
+        this.root = null;
+    }
 }
