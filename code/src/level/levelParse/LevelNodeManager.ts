@@ -143,9 +143,11 @@ export class LevelNodeManager extends Laya.Script {
         tree.buildTree(dataList);
         this._tree = tree;
         this._screenOffset = offset;
+        this.refreshNodes();
     }
 
     clear(): void {
+        this._screenRange = null;
         this._prefabMap.forEach((item, data) => this.removeAndRecoverNode(data.sign, item.owner));
         this._prefabMap.clear();
         this._tree.clear();

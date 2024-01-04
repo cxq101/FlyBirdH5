@@ -36,7 +36,6 @@ export class BackgroundRoot extends CameraFollower {
     }
 
     setSkin(index: number): void {
-        console.log("dsdsxx ========", index);
         this.backgrounds.forEach((bg, i) => {
             bg.owner.skin = `resources/scene/bg${index}/Layer_${i}.png`;
         });
