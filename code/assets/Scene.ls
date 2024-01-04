@@ -39,6 +39,10 @@
           "backgroundRootPrefab": {
             "_$uuid": "d4ac30a3-5020-4433-b58e-05930c2497ac",
             "_$type": "Prefab"
+          },
+          "loadMask": {
+            "_$uuid": "0489acc3-ca8d-4eab-b7f6-b9787745be5d",
+            "_$type": "Prefab"
           }
         }
       ]

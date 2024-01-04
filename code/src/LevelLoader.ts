@@ -1,5 +1,8 @@
+import { SceneRegUtils } from "./core/UI/SceneRegUtils";
 import { BackgroundRoot } from "./level/BackgroundRoot";
 import { Level } from "./level/Level";
+import { LevelLoadMask } from "./level/LevelLoadMask";
+import { EViewLayer } from "./views/ViewConst";
 import { LevelModel } from "./views/level/LevelModel";
 
 /**
@@ -16,12 +19,20 @@ export class LevelLoader extends Laya.Script {
 
     @property({ type: Laya.Prefab, tips: "视差滚动背景" })
     backgroundRootPrefab: Laya.Prefab;
-    
 
+    @property({ type: Laya.Prefab, tips: "场景过度动画节点" })
+    loadMask: Laya.Prefab;
+    
     get root(): Laya.Sprite {
         return this.owner.parent as Laya.Sprite; 
     }
     
+    createLoadMask(): LevelLoadMask {
+        let node = this.loadMask.create();
+        SceneRegUtils.tryAddChild(EViewLayer.UILoading, node as Laya.Sprite);
+        return node.getComponent(LevelLoadMask);   
+    }
+
     createBackgroundRoot(): BackgroundRoot {
         let node = this.backgroundRootPrefab.create();
         this.root.addChild(node);

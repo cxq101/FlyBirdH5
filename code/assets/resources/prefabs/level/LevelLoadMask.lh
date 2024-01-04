@@ -1,0 +1,47 @@
+{
+  "_$ver": 1,
+  "_$id": "gs3nq3az",
+  "_$type": "Sprite",
+  "name": "LevelLoadMask",
+  "x": 360,
+  "width": 100,
+  "height": 100,
+  "_$comp": [
+    {
+      "_$type": "25b949e3-44f8-4508-927d-f508dc230745",
+      "scriptPath": "../src/level/LevelLoadMask.ts",
+      "leftSp": {
+        "_$ref": "cmkgwm4p"
+      },
+      "rightSp": {
+        "_$ref": "nk2vbmqr"
+      },
+      "fadeTime": 1000
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "cmkgwm4p",
+      "_$type": "Image",
+      "name": "LeftNode",
+      "x": -328,
+      "width": 720,
+      "height": 1280,
+      "scaleX": -1,
+      "skin": "res://bf1eaf69-a59e-4bc2-adb0-0c55451757f5",
+      "useSourceSize": true,
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "nk2vbmqr",
+      "_$type": "Image",
+      "name": "RightNode",
+      "x": -371,
+      "width": 720,
+      "height": 1280,
+      "skin": "res://bf1eaf69-a59e-4bc2-adb0-0c55451757f5",
+      "useSourceSize": true,
+      "color": "#ffffff"
+    }
+  ]
+}

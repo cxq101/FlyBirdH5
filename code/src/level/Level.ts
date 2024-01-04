@@ -183,7 +183,6 @@ export class Level extends Laya.Script {
 
         this.nodeManager.clear();
         this.parsePrefabData(levelId, startLine);
-        this.backgroundRoot.randomSkin();
     }
 
     restart(): void {
