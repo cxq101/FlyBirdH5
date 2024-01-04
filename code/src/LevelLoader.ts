@@ -17,36 +17,27 @@ export class LevelLoader extends Laya.Script {
     @property({ type: Laya.Prefab, tips: "视差滚动背景" })
     backgroundRootPrefab: Laya.Prefab;
     
-    private _backgroundRoot: BackgroundRoot;
 
     get root(): Laya.Sprite {
         return this.owner.parent as Laya.Sprite; 
     }
     
-    createBackgroundRoot(): void {
+    createBackgroundRoot(): BackgroundRoot {
         let node = this.backgroundRootPrefab.create();
         this.root.addChild(node);
-        this._backgroundRoot = node.getComponent(BackgroundRoot);
-        this._backgroundRoot.enterAnim();
-        this._backgroundRoot.setSkin(0);
+        return node.getComponent(BackgroundRoot);   
     }
 
-    loadLevel(levelId: number): Level {
+    loadLevel(levelId: number, backgroundRoot: BackgroundRoot): Level {
         let levelNode = this.levelBasePrefab.create();
         this.root.addChild(levelNode);
-
         let level = levelNode.getComponent(Level);
-        level.init(levelId, this._backgroundRoot);
-        this._backgroundRoot.autoMove = false;
-        this._backgroundRoot.randomSkin();
+        level.init(levelId, backgroundRoot);
         return level;
     }
 
     unloadLevel(level: Level): void {
-        let levelOwner = level.owner;
-
         LevelModel.ins.currId = null;
-
-        levelOwner.destroy();
+        level.owner.destroy();
     }
 }

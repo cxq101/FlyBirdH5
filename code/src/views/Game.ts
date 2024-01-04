@@ -11,6 +11,7 @@ import { SceneRegUtils } from "../core/UI/SceneRegUtils";
 import { ViewMgr } from "../core/UI/ViewMgr";
 import { ViewRegUtils } from "../core/UI/ViewRegUtils";
 import { Singleton } from "../core/base/Singleton";
+import { BackgroundRoot } from "../level/BackgroundRoot";
 import { Level } from "../level/Level";
 import { PromiseEx } from "../utils/PromiseEx";
 import { ViewLayerZOrder, EViewKey, EViewLayer } from "./ViewConst";
@@ -21,6 +22,7 @@ export class Game extends Singleton<Game>() {
     private _fsm: GameFSM;
     private _boot: Boot;
     private _level: Level;
+    private _backgroundRoot: BackgroundRoot;
 
     init(boot: Boot): void {
         this._boot = boot;
@@ -98,6 +100,12 @@ export class Game extends Singleton<Game>() {
         })
     }
 
+    private openMainView(): void {
+        this._backgroundRoot.setSkin(0);
+        ViewMgr.ins.open(EViewKey.MainView);
+        Laya.SoundManager.playMusic(ConfigPath.M_Main);
+    }
+
     private onLoadCompleted(): void {
         this._boot.setLoading({ value: 0.95 });
 
@@ -105,7 +113,8 @@ export class Game extends Singleton<Game>() {
             this._boot.setLoading({ desc: "100005", value:  1.0 });
 
             Laya.Scene.hideLoadingPage(0);
-            this._boot.levelLoader.createBackgroundRoot();
+            this._backgroundRoot = this._boot.levelLoader.createBackgroundRoot();
+            this._backgroundRoot.enterAnim();
             Laya.timer.once(20, this, () => {
                 this._fsm.dispatch(GameEvents.loadComplete);
             })
@@ -129,13 +138,14 @@ export class Game extends Singleton<Game>() {
     }
 
     private onEnterHomeHandler(): void {
-        ViewMgr.ins.open(EViewKey.MainView);
-        Laya.SoundManager.playMusic(ConfigPath.M_Main);
+        this.openMainView();
     }
 
     private onEnterLevelHandler(levelId: number): void {
         ViewMgr.ins.close(EViewKey.MainView);
-        this._level = this._boot.levelLoader.loadLevel(levelId);
+        this._backgroundRoot.autoMove = false;
+        this._backgroundRoot.randomSkin();
+        this._level = this._boot.levelLoader.loadLevel(levelId, this._backgroundRoot);
         ViewMgr.ins.open(EViewKey.HudView);
         // Laya.SoundManager.playMusic(ConfigPath.M_Level);
     }
@@ -180,8 +190,7 @@ export class Game extends Singleton<Game>() {
         this._level = null;
         ViewMgr.ins.close(EViewKey.PauseView);
         ViewMgr.ins.close(EViewKey.WinGoldView);
-        ViewMgr.ins.open(EViewKey.MainView);
-        Laya.SoundManager.playMusic(ConfigPath.M_Main);
+        this.openMainView();
     }
 
     enterLevel(levelId: number): void {

@@ -1,4 +1,5 @@
 const { regClass } = Laya;
+import { ConfigPath } from "../../const/ConfigPath";
 import { ViewMgr } from "../../core/UI/ViewMgr";
 import { Game } from "../Game";
 import { EViewKey } from "../ViewConst";
