@@ -9,6 +9,9 @@ const { regClass, property } = Laya;
 export class LevelLoadMask extends Laya.Script {
     declare owner: Laya.Sprite;   
 
+    @property({ type: Laya.Box, tips: "mask Node" })
+    private maskBox: Laya.Box;
+    
     @property({ type: Laya.Sprite, tips: "left Node" })
     private leftSp: Laya.Sprite;
     
@@ -22,10 +25,13 @@ export class LevelLoadMask extends Laya.Script {
     private _ungroupHandler: Laya.Handler;
 
     onStart(): void {
-        const halfScreenWidth = Laya.stage.width / 2;
-        this.owner.x = halfScreenWidth;
-        this.leftSp.x = -halfScreenWidth;
-        this.rightSp.x = halfScreenWidth;
+        const { width, height } = Laya.stage;
+        const half = width / 2;
+        this.owner.x = half;
+        this.leftSp.x = -half;
+        this.rightSp.x = half;
+        this.maskBox.size(width, height);
+        this.maskBox.mouseEnabled = false;
     }
 
     pingpong(): void {
@@ -40,8 +46,10 @@ export class LevelLoadMask extends Laya.Script {
         this.rightSp.x = halfScreenWidth;
         Laya.Tween.clearAll(this.leftSp);
         Laya.Tween.clearAll(this.rightSp);
+        this.maskBox.mouseEnabled = true;
         Laya.Tween.to(this.leftSp, { x: 280 }, fadeTime, Laya.Ease.expoOut, Laya.Handler.create(this, () => {
             this._groupHandler && this._groupHandler.run();
+            this.maskBox.mouseEnabled = false;
         }));
         Laya.Tween.to(this.rightSp, { x: -280 }, fadeTime, Laya.Ease.expoOut, Laya.Handler.create(this, () => {
         }));
@@ -55,8 +63,10 @@ export class LevelLoadMask extends Laya.Script {
         this.rightSp.x = -280;
         Laya.Tween.clearAll(this.leftSp);
         Laya.Tween.clearAll(this.rightSp);
+        this.maskBox.mouseEnabled = true;
         Laya.Tween.to(this.leftSp, { x: -halfScreenWidth }, fadeTime, Laya.Ease.linearOut, Laya.Handler.create(this, () => {
             this._ungroupHandler && this._ungroupHandler.run();
+            this.maskBox.mouseEnabled = false;
         }), 200);
         // 延迟200秒 不然会有ui的黑底闪烁
         Laya.Tween.to(this.rightSp, { x: halfScreenWidth }, fadeTime, Laya.Ease.linearOut, Laya.Handler.create(this, () => {

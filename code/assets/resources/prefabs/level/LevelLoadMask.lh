@@ -6,10 +6,14 @@
   "x": 360,
   "width": 100,
   "height": 100,
+  "_mouseState": 2,
   "_$comp": [
     {
       "_$type": "25b949e3-44f8-4508-927d-f508dc230745",
       "scriptPath": "../src/level/LevelLoadMask.ts",
+      "maskBox": {
+        "_$ref": "xdovbwfs"
+      },
       "leftSp": {
         "_$ref": "cmkgwm4p"
       },
@@ -20,6 +24,16 @@
     }
   ],
   "_$child": [
+    {
+      "_$id": "xdovbwfs",
+      "_$type": "Box",
+      "name": "Box",
+      "x": 51,
+      "width": 0,
+      "height": 0,
+      "_mouseState": 2,
+      "centerX": 1
+    },
     {
       "_$id": "cmkgwm4p",
       "_$type": "Image",
