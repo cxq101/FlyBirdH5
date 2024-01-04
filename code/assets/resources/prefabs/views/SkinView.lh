@@ -15,6 +15,7 @@
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
       "scriptPath": "../src/core/UI/BaseView.ts",
       "fadeTime": 300,
+      "soundEnabled": true,
       "enterSound": "res://44f800bd-741c-40cd-a4ea-06f541484b07",
       "exitSound": "res://d1d357a8-fbb2-4a67-ba58-5625b1503cb6"
     }
@@ -75,10 +76,10 @@
       "width": 546,
       "height": 60,
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
-      "label": "X",
+      "label": "返回",
       "labelSize": 30,
       "labelBold": false,
-      "labelPadding": "0,0,0,0",
+      "labelPadding": "8,0,0,0",
       "labelStrokeColor": "#32556b",
       "strokeColors": "#32556b,#32cc6b,#ff0000"
     }

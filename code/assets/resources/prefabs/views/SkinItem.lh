@@ -47,7 +47,7 @@
       "centerY": 0,
       "text": "Label",
       "fontSize": 30,
-      "color": "rgba(126, 80, 80, 1)",
+      "color": "rgba(255, 255, 255, 1)",
       "padding": "0,0,0,0"
     },
     {
@@ -79,15 +79,16 @@
       "height": 40,
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "解锁",
-      "labelSize": 20,
+      "labelSize": 26,
       "labelBold": false,
-      "labelPadding": "0,0,0,0",
+      "labelPadding": "4,0,0,0",
       "labelStrokeColor": "#32556b",
       "strokeColors": "#32556b,#32cc6b,#ff0000",
       "_$child": [
         {
           "_$id": "y7kcamom",
           "_$var": true,
+          "_$index": 0,
           "_$type": "Image",
           "name": "imgVideo",
           "x": 83,

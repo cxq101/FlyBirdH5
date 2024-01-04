@@ -205,17 +205,19 @@
       "_$var": true,
       "_$type": "Label",
       "name": "lblDistance",
-      "x": 192,
-      "y": 16,
-      "width": 120,
+      "y": 241,
+      "width": 720,
       "height": 28,
       "visible": false,
-      "left": 192,
-      "top": 16,
+      "left": 0,
+      "right": 0,
+      "top": 241,
       "text": "Label",
-      "fontSize": 30,
+      "fontSize": 50,
       "color": "#FFFFFF",
-      "padding": "0,0,0,0"
+      "align": "center",
+      "padding": "0,0,0,0",
+      "stroke": 2
     }
   ]
 }

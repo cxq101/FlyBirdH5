@@ -15,8 +15,10 @@
   "skin": "",
   "label": "",
   "labelSize": 20,
+  "labelColors": "#32556b,#32cc6b,#32cc6b",
+  "labelPadding": "8,0,0,0",
   "labelStrokeColor": "#32556b",
-  "strokeColors": "#32556b,#32cc6b,#ff0000",
+  "strokeColors": "#32556b,#32cc6b,#32cc6b",
   "_$comp": [
     {
       "_$type": "51a3be6d-6057-4f71-bfff-542ad5857756",

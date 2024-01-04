@@ -14,6 +14,7 @@
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
       "scriptPath": "../src/core/UI/BaseView.ts",
       "fadeTime": 0,
+      "soundEnabled": true,
       "enterSound": "resources/sound/UI_Forward.mp3",
       "exitSound": "resources/sound/UI_Back.mp3"
     }
@@ -70,7 +71,7 @@
       "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
       "label": "返回",
       "labelSize": 32,
-      "labelPadding": "3,0,0,0",
+      "labelPadding": "8,0,0,0",
       "labelStrokeColor": "#32556b",
       "strokeColors": "#32556b,#32cc6b,#ff0000"
     }
