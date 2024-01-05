@@ -2,6 +2,7 @@
   "name": "FlyBird",
   "minifyJS": true,
   "startupScene": "res://9b931ecf-fde9-44dd-acf3-15f8dc807965",
+  "excludeFilesRule": [],
   "wxgame": {
     "appid": "wx46d32f0f53204c83"
   }

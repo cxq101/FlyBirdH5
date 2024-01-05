@@ -15,14 +15,14 @@
       "_$type": "ProgressBar",
       "name": "progress",
       "x": 100,
-      "y": 1056,
+      "y": 1025,
       "width": 520,
-      "height": 24,
+      "height": 55,
       "left": 100,
       "right": 100,
       "bottom": 200,
-      "skin": "res://ae3de75e-ee9f-478d-9f8b-ede75a4fc296",
-      "value": 0.275
+      "skin": "res://c7269b98-8ad8-4b21-9fa8-e8c58e2cba4e",
+      "value": 0.413
     },
     {
       "_$id": "8im2b2jg",
