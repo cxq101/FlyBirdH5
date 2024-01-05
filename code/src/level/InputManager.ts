@@ -21,6 +21,10 @@ export class InputManager extends Laya.Script {
         this._target = target;
     }
 
+    cancel(): void {
+        this.onMouseOut();
+    }
+
     onMouseDown(): void {
         if (!this.enabled) return;
         if (!this._target.enabledInput || this._isPressing) return;

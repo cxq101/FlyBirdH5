@@ -255,7 +255,7 @@
           "_$child": [
             {
               "_$override": "nto3fldb",
-              "y": 1080
+              "y": 0
             }
           ]
         },
@@ -488,6 +488,42 @@
           "y": 1080,
           "visible": true,
           "width": 347
+        },
+        {
+          "_$id": "rtigmja8",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle",
+          "active": true,
+          "x": 4049.9999999999995,
+          "y": 1079.9999999999998,
+          "visible": true
+        },
+        {
+          "_$id": "64ivuhis",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(1)",
+          "active": true,
+          "x": 4386,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "d04qhxyg",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(2)",
+          "active": true,
+          "x": 5110,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "smzx7o9w",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(3)",
+          "active": true,
+          "x": 5408,
+          "y": 1080,
+          "visible": true
         }
       ]
     },

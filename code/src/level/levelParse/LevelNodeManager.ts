@@ -46,7 +46,7 @@ export class LevelNodeManager extends Laya.Script {
     }
 
     get grounds(): Ground[] {
-        return this.getItemsByType(EItemType.Ground);
+        return this.getItemsByType(EItemType.Ground) as Ground[];
     }
 
     get obstacles(): Obstacle[] {

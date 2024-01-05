@@ -1,0 +1,60 @@
+{
+  "_$ver": 1,
+  "_$id": "vrrt921k",
+  "_$type": "Box",
+  "name": "MoveObstacle",
+  "x": 343.00000000000017,
+  "y": 1080,
+  "width": 34,
+  "height": 200,
+  "mask": {
+    "_$ref": "ujnavrcf"
+  },
+  "_$comp": [
+    {
+      "_$type": "d0ce2201-b6cb-4ab7-948f-b0420f470167",
+      "scriptPath": "../src/level/Item/MoveObstacle.ts",
+      "type": "Obstacle",
+      "degrees": 135,
+      "force": 800,
+      "moveImage": {
+        "_$ref": "0qdxemor"
+      },
+      "moveHight": 200,
+      "moveDuration": 1000,
+      "delayDuration": 1000
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "0qdxemor",
+      "_$type": "Image",
+      "name": "Image",
+      "width": 34,
+      "height": 200,
+      "skin": "res://49a918d1-cac1-49c6-897f-35147e00aae7",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "ujnavrcf",
+      "_$type": "Sprite",
+      "name": "Sprite",
+      "y": -200,
+      "width": 34,
+      "height": 200,
+      "_gcmds": [
+        {
+          "_$type": "DrawRectCmd",
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1,
+          "percent": true,
+          "lineWidth": 1,
+          "lineColor": "#000000",
+          "fillColor": "#FFFFFF"
+        }
+      ]
+    }
+  ]
+}

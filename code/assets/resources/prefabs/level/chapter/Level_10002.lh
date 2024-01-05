@@ -437,6 +437,168 @@
           "y": 1080,
           "visible": true,
           "width": 212
+        },
+        {
+          "_$id": "5yxzwmmk",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle",
+          "active": true,
+          "x": 3276,
+          "y": 1086,
+          "visible": true
+        },
+        {
+          "_$id": "bdxhlnmr",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(1)",
+          "active": true,
+          "x": 4389,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "8xpe0i4f",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(2)",
+          "active": true,
+          "x": 5112,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "n4mcwc49",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(3)",
+          "active": true,
+          "x": 5782,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "pzjb7wj7",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(4)",
+          "active": true,
+          "x": 6217,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "8tp5ygyf",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(5)",
+          "active": true,
+          "x": 6217,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "cu7vp6b9",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(6)",
+          "active": true,
+          "x": 7259,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "1vy3ilq1",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(7)",
+          "active": true,
+          "x": 7914,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "7jr4t2ec",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(8)",
+          "active": true,
+          "x": 8612,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "njav09k0",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(9)",
+          "active": true,
+          "x": 9926,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "hi4j60c7",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(10)",
+          "active": true,
+          "x": 11561,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "bh9zkz2k",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(11)",
+          "active": true,
+          "x": 12278,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "8461cg9a",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(12)",
+          "active": true,
+          "x": 13301,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "fw31fhht",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(13)",
+          "active": true,
+          "x": 13740,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "f5k3ipcr",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(14)",
+          "active": true,
+          "x": 14083,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "sl52i3f8",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(15)",
+          "active": true,
+          "x": 14423,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "dtr66xrn",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(16)",
+          "active": true,
+          "x": 14787,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "og6csdpx",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(17)",
+          "active": true,
+          "x": 15161,
+          "y": 1080,
+          "visible": true
         }
       ]
     },

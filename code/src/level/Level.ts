@@ -89,6 +89,7 @@ export class Level extends Laya.Script {
         let obstacles = this.nodeManager.obstacles;
         let obstacle = this.tryCheckCollision(playerRect, obstacles);
         if (obstacle) {
+            this.inputManager.cancel();
             this.player.addForce(obstacle.force, obstacle.degrees);
             this.showHurtEffect();
             Laya.SoundManager.playSound(ConfigPath.M_CatHurt);
@@ -96,14 +97,24 @@ export class Level extends Laya.Script {
         };
         
         let grounds = this.nodeManager.grounds;
-        let ground = this.tryCheckCollision(playerRect, grounds);
+        let scrollGrounds = grounds.filter(g => g.isScrollBack);
+        let staticGrounds = grounds.filter(g => !g.isScrollBack);
+        let ground = this.tryCheckCollision(playerRect, scrollGrounds);
+        if (!ground) {
+            ground = this.tryCheckCollision(playerRect, staticGrounds);
+        }
         const newIsGround = ground != null;
         const lastIsGround = this.player.isGround;
         if (lastIsGround != newIsGround) {
             this.player.isGround = newIsGround;
             // 落地
             if (newIsGround) {
-                this.player.stop();
+                if (ground.isScrollBack) {
+                    this.player.velocityY = 0;
+                    this.player.velocityX = -ground.moveSpeed;
+                } else {
+                    this.player.stop();
+                }
                 this.recordPlayerPos();            
                 this.showDustEffect();
                 this.player.owner.y = ground.owner.y;

@@ -1,0 +1,18 @@
+{
+  "_$ver": 1,
+  "_$id": "mb9uxp8f",
+  "_$type": "Box",
+  "name": "ScrollGround",
+  "width": 200,
+  "height": 200,
+  "bgColor": "rgba(7, 43, 79, 1)",
+  "_$comp": [
+    {
+      "_$type": "e55c9a86-5d7f-4c8d-8157-fd18fe255744",
+      "scriptPath": "../src/level/Item/Ground.ts",
+      "type": "Ground",
+      "isScrollBack": true,
+      "moveSpeed": 100
+    }
+  ]
+}
