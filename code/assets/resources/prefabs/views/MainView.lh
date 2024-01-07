@@ -21,42 +21,64 @@
   ],
   "_$child": [
     {
+      "_$id": "7k28ozlg",
+      "_$type": "Image",
+      "name": "Image",
+      "x": 124.99999999999996,
+      "y": 300.99999999999994,
+      "width": 496,
+      "height": 126,
+      "skin": "res://b4a7a38b-6dd2-446e-8cf1-0523d67b2e38",
+      "useSourceSize": true,
+      "color": "#ffffff",
+      "_$comp": [
+        {
+          "_$type": "Animator2D",
+          "controller": {
+            "_$uuid": "c5825201-906b-42be-9fdc-d1de1c03b923",
+            "_$type": "AnimationController2D"
+          },
+          "controllerLayers": [
+            {
+              "_$type": "AnimatorControllerLayer2D",
+              "name": "Base Layer",
+              "states": [
+                {
+                  "_$type": "AnimatorState2D",
+                  "name": "Logo",
+                  "clipStart": 0,
+                  "clip": {
+                    "_$uuid": "9eeea00b-7fa5-47dd-86f1-b7664f43b8d9",
+                    "_$type": "AnimationClip2D"
+                  },
+                  "soloTransitions": []
+                }
+              ],
+              "defaultStateName": "Logo"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "_$id": "xj3z2fkm",
       "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
       "_$var": true,
       "name": "btnPlay",
       "active": true,
       "x": 361,
-      "y": 640,
+      "y": 784,
       "visible": true,
       "width": 200,
       "height": 60,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "skin": "res://5d93fb33-86e9-4c0b-ba9b-b8192ec27b11",
       "label": "开始",
-      "labelSize": 32,
+      "labelSize": 28,
       "labelBold": true,
       "labelPadding": "7,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
-    },
-    {
-      "_$id": "vhkpic42",
-      "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
-      "_$var": true,
-      "name": "btnPractice",
-      "active": true,
-      "x": 361,
-      "y": 750,
-      "visible": true,
-      "width": 200,
-      "height": 60,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
-      "label": "训练模式",
-      "labelSize": 32,
-      "labelBold": true,
-      "labelPadding": "7,0,0,0",
-      "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623"
     },
     {
       "_$id": "68dj5txl",
@@ -65,17 +87,18 @@
       "name": "btnSkin",
       "active": true,
       "x": 361,
-      "y": 860,
+      "y": 894,
       "visible": true,
       "width": 200,
       "height": 60,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
-      "label": "商城",
-      "labelSize": 32,
+      "skin": "res://5d93fb33-86e9-4c0b-ba9b-b8192ec27b11",
+      "label": "猫窝",
+      "labelSize": 28,
       "labelBold": true,
       "labelPadding": "7,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623"
     },
     {
       "_$id": "yuogmj57",
@@ -84,17 +107,18 @@
       "name": "btnHelp",
       "active": true,
       "x": 360,
-      "y": 970,
+      "y": 1004,
       "visible": true,
       "width": 200,
       "height": 60,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "skin": "res://5d93fb33-86e9-4c0b-ba9b-b8192ec27b11",
       "label": "关于",
-      "labelSize": 32,
+      "labelSize": 28,
       "labelBold": true,
       "labelPadding": "7,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623"
     }
   ]
 }

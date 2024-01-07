@@ -13,6 +13,6 @@ export class PathUtils {
     }
 
     static getUiImage(icon: string): string {
-        return `resources/ui/${icon}.png`;
+        return `atlas/ui/${icon}.png`;
     }
 }

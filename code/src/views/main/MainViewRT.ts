@@ -28,6 +28,5 @@ export class MainViewRT extends MainViewRTBase {
         this.btnHelp.on(Laya.Event.CLICK, this.onClickHelp);
         this.btnSkin.on(Laya.Event.CLICK, this.onClickSkin);
         this.btnPlay.on(Laya.Event.CLICK, this.onClickPlay);
-        this.btnPractice.on(Laya.Event.CLICK, this.onClickPractice);
     }
 }

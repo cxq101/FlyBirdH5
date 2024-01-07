@@ -26,23 +26,42 @@
       "_$type": "Image",
       "name": "Image",
       "x": 87,
-      "y": 124,
+      "y": 271,
       "width": 546,
-      "height": 812,
+      "height": 738,
       "centerX": 0,
-      "skin": "res://ce260562-333c-46e4-9513-c757b208267a",
-      "sizeGrid": "15,15,15,15,0",
-      "color": "#ffffff"
+      "centerY": 0,
+      "skin": "res://a775c71f-7d3f-440e-a4ea-1d1ec893147a",
+      "color": "#ffffff",
+      "_$child": [
+        {
+          "_$id": "4pev62n6",
+          "_$var": true,
+          "_$type": "Label",
+          "name": "lblTitle",
+          "y": 28,
+          "width": 546,
+          "height": 46,
+          "left": 0,
+          "right": 0,
+          "text": "猫窝",
+          "fontSize": 26,
+          "color": "rgba(255, 248, 214, 1)",
+          "align": "center",
+          "valign": "middle",
+          "padding": "0,0,0,0"
+        }
+      ]
     },
     {
       "_$id": "o36uhulx",
       "_$var": true,
       "_$type": "List",
       "name": "list",
-      "x": 121,
-      "y": 161,
-      "width": 478,
-      "height": 742,
+      "x": 102,
+      "y": 360,
+      "width": 517,
+      "height": 607,
       "_mouseState": 2,
       "centerX": 0,
       "itemTemplate": {
@@ -51,7 +70,7 @@
       },
       "repeatX": 1,
       "repeatY": 5,
-      "spaceY": 20,
+      "spaceY": 9,
       "scrollType": 2,
       "_$child": [
         {
@@ -70,18 +89,36 @@
       "_$var": true,
       "name": "btnClose",
       "active": true,
-      "x": 360,
-      "y": 1030,
+      "x": 601.5,
+      "y": 319.5,
       "visible": true,
-      "width": 546,
-      "height": 60,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
-      "label": "返回",
+      "width": 30,
+      "height": 30,
+      "skin": "res://e8837ca8-8783-423f-93ff-e2d41c736838",
+      "label": "",
       "labelSize": 30,
       "labelBold": false,
       "labelPadding": "8,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "hitArea": {
+        "_$type": "HitArea",
+        "_hitCmds": [
+          {
+            "_$type": "DrawRectCmd",
+            "x": -0.5,
+            "y": -0.5,
+            "width": 2,
+            "height": 2,
+            "percent": true,
+            "lineWidth": 1,
+            "lineColor": "#000000",
+            "fillColor": "#FFFFFF"
+          }
+        ]
+      }
     }
   ]
 }

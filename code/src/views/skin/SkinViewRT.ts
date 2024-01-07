@@ -14,16 +14,14 @@ export class SkinViewRT extends SkinViewRTBase {
 
     private onItemMouse(e: Laya.Event, index: number): void {
         if (e.type == Laya.Event.CLICK) {
-            if (e.target.name == "btnUnlockOrUse") {
-                let listArray = this.list.array as ISkinListData[];
-                let itemData = listArray[index];
-                if (itemData.status === ESkinItemStatus.Idle) {
-                    // ctrl 选择皮肤             
-                    SkinController.ins.adventure(itemData.id);
-                } else if (itemData.status === ESkinItemStatus.Locked) {
-                    // ctrl 播放广告解锁皮肤      
-                    SkinController.ins.unlcok(itemData.id);
-                }
+            let listArray = this.list.array as ISkinListData[];
+            let itemData = listArray[index];
+            if (e.target.name == "btnAdventure") {
+                // ctrl 选择皮肤             
+                SkinController.ins.adventure(itemData.id);
+            } else if (e.target.name == "btnUnlock") {
+                // ctrl 播放广告解锁皮肤      
+                SkinController.ins.unlcok(itemData.id);
             }
         }
     }

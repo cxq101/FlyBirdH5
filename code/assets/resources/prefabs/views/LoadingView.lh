@@ -15,33 +15,34 @@
       "_$type": "ProgressBar",
       "name": "progress",
       "x": 100,
-      "y": 1025,
+      "y": 1045,
       "width": 520,
-      "height": 55,
+      "height": 35,
       "left": 100,
       "right": 100,
       "bottom": 200,
-      "skin": "res://c7269b98-8ad8-4b21-9fa8-e8c58e2cba4e",
-      "value": 0.413
-    },
-    {
-      "_$id": "8im2b2jg",
-      "_$var": true,
-      "_$type": "Label",
-      "name": "lblProgress",
-      "x": 120,
-      "y": 1058,
-      "width": 480,
-      "height": 28,
-      "left": 120,
-      "right": 120,
-      "bottom": 194,
-      "text": "Label",
-      "fontSize": 20,
-      "color": "#FFFFFF",
-      "align": "center",
-      "valign": "middle",
-      "padding": "0,0,0,0"
+      "skin": "res://2c8bf441-1e73-42b0-9120-01a0d7611eae",
+      "value": 0.413,
+      "_$child": [
+        {
+          "_$id": "8im2b2jg",
+          "_$var": true,
+          "_$type": "Label",
+          "name": "lblProgress",
+          "x": 120,
+          "y": 2,
+          "width": 280,
+          "height": 35,
+          "centerX": 0,
+          "centerY": 2,
+          "text": "99%",
+          "fontSize": 20,
+          "color": "#FFFFFF",
+          "align": "center",
+          "valign": "middle",
+          "padding": "0,0,0,0"
+        }
+      ]
     }
   ]
 }

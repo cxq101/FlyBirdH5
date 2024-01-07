@@ -6,8 +6,10 @@
  */
 export class SkinItemRTBase extends Laya.Box {
     public imgBg!: Laya.Image;
-    public lblUsing!: Laya.Label;
-    public btnUnlockOrUse!: Laya.Button;
+    public imgAvatarBg!: Laya.Image;
+    public btnUnlock!: Laya.Button;
     public imgVideo!: Laya.Image;
+    public btnAdventure!: Laya.Button;
+    public imgAdventuring!: Laya.Image;
 }
 

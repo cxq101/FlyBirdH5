@@ -13,21 +13,45 @@
     {
       "_$type": "e3ca7c9c-f606-43ca-b27d-cef4efc321f7",
       "scriptPath": "../src/core/UI/BaseView.ts",
-      "fadeTime": 300
+      "fadeTime": 300,
+      "soundEnabled": true,
+      "enterSound": "resources/sound/UI_Forward.mp3",
+      "exitSound": "resources/sound/UI_Back.mp3"
     }
   ],
   "_$child": [
     {
-      "_$id": "itanwfpf",
+      "_$id": "gmaprr1v",
       "_$type": "Image",
-      "name": "Image",
-      "x": 110,
-      "y": 202,
-      "width": 500,
-      "height": 705,
-      "centerX": 0,
-      "skin": "res://ce260562-333c-46e4-9513-c757b208267a",
-      "color": "#ffffff"
+      "name": "Image(1)",
+      "x": 89,
+      "y": 221,
+      "width": 546,
+      "height": 838,
+      "_mouseState": 2,
+      "centerX": 2,
+      "centerY": 0,
+      "skin": "res://a775c71f-7d3f-440e-a4ea-1d1ec893147a",
+      "color": "#ffffff",
+      "_$child": [
+        {
+          "_$id": "bxku2sfw",
+          "_$var": true,
+          "_$type": "Label",
+          "name": "lblTitle",
+          "y": 28,
+          "width": 546,
+          "height": 46,
+          "left": 0,
+          "right": 0,
+          "text": "奖励",
+          "fontSize": 26,
+          "color": "rgba(255, 248, 214, 1)",
+          "align": "center",
+          "valign": "middle",
+          "padding": "0,0,0,0"
+        }
+      ]
     },
     {
       "_$id": "arn9mgc8",
@@ -35,9 +59,9 @@
       "_$type": "Box",
       "name": "boxPractice",
       "x": 110,
-      "y": 202,
+      "y": 315,
       "width": 500,
-      "height": 705,
+      "height": 639,
       "visible": false,
       "centerX": 0,
       "_$child": [
@@ -87,7 +111,8 @@
           "color": "#FFFFFF",
           "align": "center",
           "valign": "middle",
-          "padding": "0,0,0,0"
+          "padding": "0,0,0,0",
+          "stroke": 2
         },
         {
           "_$id": "u5pbgv09",
@@ -121,7 +146,8 @@
           "italic": true,
           "align": "center",
           "valign": "middle",
-          "padding": "0,0,0,0"
+          "padding": "0,0,0,0",
+          "stroke": 2
         },
         {
           "_$id": "222ze3yr",
@@ -149,9 +175,9 @@
       "_$type": "Box",
       "name": "boxNormal",
       "x": 110,
-      "y": 202.00000000000003,
+      "y": 306,
       "width": 500,
-      "height": 705,
+      "height": 607,
       "centerX": 0,
       "_$child": [
         {
@@ -190,23 +216,26 @@
       ]
     },
     {
-      "_$id": "uwf7ivhn",
+      "_$id": "w5xlmg4r",
       "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
       "_$var": true,
       "name": "btnResume",
       "active": true,
-      "x": 360,
-      "y": 963,
+      "x": 122,
+      "y": 974,
       "visible": true,
-      "width": 500,
-      "height": 70,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "width": 120,
+      "height": 44,
+      "skin": "res://c6e086fa-ba03-453b-b414-2095ce7409f3",
       "label": "继续",
-      "labelSize": 32,
+      "labelSize": 24,
       "labelBold": true,
-      "labelPadding": "10,0,0,0",
+      "labelPadding": "7,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623",
+      "anchorX": 0,
+      "anchorY": 0
     },
     {
       "_$id": "bkf2s9q9",
@@ -214,18 +243,19 @@
       "_$var": true,
       "name": "btnMainMenu",
       "active": true,
-      "x": 360,
-      "y": 1053,
+      "x": 347,
+      "y": 996,
       "visible": true,
-      "width": 500,
-      "height": 70,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "width": 120,
+      "height": 44,
+      "skin": "res://c6e086fa-ba03-453b-b414-2095ce7409f3",
       "label": "主界面",
-      "labelSize": 32,
+      "labelSize": 24,
       "labelBold": true,
-      "labelPadding": "10,0,0,0",
+      "labelPadding": "7,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623"
     },
     {
       "_$id": "qy8mglm6",
@@ -233,18 +263,21 @@
       "_$var": true,
       "name": "btnRestart",
       "active": true,
-      "x": 360,
-      "y": 1143,
+      "x": 522,
+      "y": 994,
       "visible": true,
-      "width": 500,
-      "height": 70,
-      "skin": "res://d073c4ed-afcb-4a17-b09b-8bd6ddb03d74",
+      "width": 120,
+      "height": 44,
+      "skin": "res://c6e086fa-ba03-453b-b414-2095ce7409f3",
       "label": "重新开始",
-      "labelSize": 32,
+      "labelSize": 24,
       "labelBold": true,
-      "labelPadding": "10,0,0,0",
+      "labelPadding": "7,0,0,0",
       "labelStrokeColor": "#32556b",
-      "strokeColors": "#32556b,#32cc6b,#ff0000"
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623",
+      "anchorX": 0.5333333333333333,
+      "anchorY": 0.45454545454545453
     }
   ]
 }

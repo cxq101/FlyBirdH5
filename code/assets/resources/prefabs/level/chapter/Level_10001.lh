@@ -24,26 +24,6 @@
           "width": 5196,
           "height": 180,
           "bgColor": null
-        },
-        {
-          "_$id": "hazf9lu9",
-          "_$prefab": "c8db3abe-2e28-47e2-8ade-45d1a1e7c618",
-          "name": "ScrollGround",
-          "active": true,
-          "x": 162,
-          "y": 1080,
-          "visible": true,
-          "width": 641
-        },
-        {
-          "_$id": "iu8ds2nv",
-          "_$prefab": "c8db3abe-2e28-47e2-8ade-45d1a1e7c618",
-          "name": "ScrollGround(1)",
-          "active": true,
-          "x": 1241,
-          "y": 1080,
-          "visible": true,
-          "width": 202
         }
       ]
     },
@@ -69,7 +49,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 422,
-          "y": 1229,
+          "y": 1080,
           "visible": true
         },
         {
@@ -97,33 +77,6 @@
           "active": true,
           "x": 1443,
           "y": 1080,
-          "visible": true
-        },
-        {
-          "_$id": "vrrt921k",
-          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
-          "name": "MoveObstacle",
-          "active": true,
-          "x": 855.0000000000002,
-          "y": 1080,
-          "visible": true
-        },
-        {
-          "_$id": "g96hnpel",
-          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
-          "name": "MoveObstacle(1)",
-          "active": true,
-          "x": 1156.0000000000002,
-          "y": 1080,
-          "visible": true
-        },
-        {
-          "_$id": "kvs63x14",
-          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
-          "name": "MoveObstacle(2)",
-          "active": true,
-          "x": 481.0000000000002,
-          "y": 1219,
           "visible": true
         },
         {

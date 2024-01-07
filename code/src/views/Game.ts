@@ -104,9 +104,10 @@ export class Game extends Singleton<Game>() {
 
     private openMainView(): void {
         this._backgroundRoot.setSkin(0);
-        this._levelLoadMask.ungroup();
-        ViewMgr.ins.open(EViewKey.MainView);
-        Laya.SoundManager.playMusic(ConfigPath.M_Main);
+        this._levelLoadMask.ungroup(Laya.Handler.create(this, () => {
+            ViewMgr.ins.open(EViewKey.MainView);
+            Laya.SoundManager.playMusic(ConfigPath.M_Main);
+        }));
     }
 
     private onLoadCompleted(): void {

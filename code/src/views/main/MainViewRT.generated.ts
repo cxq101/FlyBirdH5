@@ -6,7 +6,6 @@
  */
 export class MainViewRTBase extends Laya.Box {
     public btnPlay!: Laya.Button;
-    public btnPractice!: Laya.Button;
     public btnSkin!: Laya.Button;
     public btnHelp!: Laya.Button;
 }

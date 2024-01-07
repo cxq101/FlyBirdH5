@@ -5,6 +5,7 @@
  * resources/prefabs/views/PauseView.lh
  */
 export class PauseViewRTBase extends Laya.Box {
+    public lblTitle!: Laya.Label;
     public boxPractice!: Laya.Box;
     public imgNewRecord!: Laya.Image;
     public lblCurrentScore!: Laya.Label;

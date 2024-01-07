@@ -32,7 +32,7 @@ export class BackgroundRoot extends CameraFollower {
     }
 
     randomSkin(): void {
-        this.setSkin(Math.floor(Math.random() * 4));    
+        this.setSkin(Math.floor(Math.random() * 3));    
     }
 
     setSkin(index: number): void {

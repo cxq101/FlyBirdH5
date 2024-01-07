@@ -100,7 +100,6 @@ export class Player extends Laya.Script {
         if (this._isScrolling) return;
         this.move();
         this.press();
-        console.log("player=======", this.owner.y);
     }
 
     onDestroy(): void {

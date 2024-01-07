@@ -5,6 +5,8 @@
  * resources/prefabs/views/WinView.lh
  */
 export class WinViewRTBase extends Laya.Box {
+    public lblTitle!: Laya.Label;
+    public btnClose!: Laya.Button;
     public btnContinue!: Laya.Button;
 }
 
