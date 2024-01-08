@@ -7,6 +7,8 @@
 export class WinViewRTBase extends Laya.Box {
     public lblTitle!: Laya.Label;
     public btnClose!: Laya.Button;
+    public imgSilver!: Laya.Image;
+    public imgReceived!: Laya.Image;
     public btnContinue!: Laya.Button;
 }
 

@@ -145,12 +145,15 @@
             },
             {
               "_$id": "frv9odye",
+              "_$var": true,
               "_$type": "Image",
               "name": "imgSilver",
-              "x": 154,
-              "y": 70.00000000000011,
+              "x": 250,
+              "y": 146.5000000000001,
               "width": 192,
               "height": 153,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
               "centerX": 0,
               "skin": "res://7f4c876a-cfd0-4912-83ed-8a2d21493ec9",
               "useSourceSize": true,
@@ -158,6 +161,7 @@
             },
             {
               "_$id": "rdld1wyq",
+              "_$var": true,
               "_$type": "Image",
               "name": "imgReceived",
               "x": 334.20000000000005,
@@ -170,35 +174,7 @@
               "scaleY": 1.2,
               "skin": "res://58d0b12d-57f7-44e5-909f-337badf46b42",
               "useSourceSize": true,
-              "color": "#ffffff",
-              "_$comp": [
-                {
-                  "_$type": "Animator2D",
-                  "controller": {
-                    "_$uuid": "0b8fb612-4f3f-4786-90fa-2c31993b9ea4",
-                    "_$type": "AnimationController2D"
-                  },
-                  "controllerLayers": [
-                    {
-                      "_$type": "AnimatorControllerLayer2D",
-                      "name": "Base Layer",
-                      "states": [
-                        {
-                          "_$type": "AnimatorState2D",
-                          "name": "WinReceive",
-                          "clipStart": 0,
-                          "clip": {
-                            "_$uuid": "fad80791-dde8-4358-a2e0-a0eb0c5e0bed",
-                            "_$type": "AnimationClip2D"
-                          },
-                          "soloTransitions": []
-                        }
-                      ],
-                      "defaultStateName": "WinReceive"
-                    }
-                  ]
-                }
-              ]
+              "color": "#ffffff"
             }
           ]
         },

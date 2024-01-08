@@ -6,6 +6,8 @@
  */
 export class WinGoldViewRTBase extends Laya.Box {
     public lblTitle!: Laya.Label;
+    public imgGold!: Laya.Image;
+    public imgReceived!: Laya.Image;
     public btnHome!: Laya.Button;
     public btnAgain!: Laya.Button;
 }

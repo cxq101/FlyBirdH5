@@ -5,10 +5,11 @@
   "name": "FinalGoldAward",
   "x": 268,
   "y": 549,
-  "width": 200,
-  "height": 200,
+  "width": 192,
+  "height": 153,
   "_mouseState": 2,
   "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032",
+  "useSourceSize": true,
   "color": "#ffffff",
   "_$comp": [
     {
