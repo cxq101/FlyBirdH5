@@ -31,6 +31,7 @@ export class LevelModel extends Model {
     private _currTopDistance: number = 0;
 
     private _dialogIndex = 0;
+    private _enterLevelCount = 0;
 
     private constructor() {
         super();
@@ -45,6 +46,11 @@ export class LevelModel extends Model {
         this._currId = v;
         this._dialogIndex = 0;
         this._freeJumpTimes = 1;
+        this._enterLevelCount++;
+    }
+
+    get skin(): number {
+        return this._enterLevelCount <= 1 ? 0 : Math.floor(Math.random() * 3);
     }
 
     get isScrollClose() : boolean {

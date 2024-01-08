@@ -48,7 +48,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.2,
+          "moveScale": 0.1,
           "textureWidth": 2560,
           "repeatX": 3
         }
@@ -66,7 +66,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.4,
+          "moveScale": 0.2,
           "textureWidth": 2560,
           "repeatX": 3
         }
@@ -84,7 +84,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.6,
+          "moveScale": 0.4,
           "textureWidth": 2560,
           "repeatX": 3
         }
@@ -102,7 +102,7 @@
         {
           "_$type": "44f267ee-7925-4129-8c33-a9f2920d208d",
           "scriptPath": "../src/level/Background.ts",
-          "moveScale": 0.8,
+          "moveScale": 0.7,
           "textureWidth": 2560,
           "repeatX": 3
         }

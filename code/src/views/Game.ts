@@ -153,7 +153,7 @@ export class Game extends Singleton<Game>() {
     private onEnterLevelGroupHandler(levelId: number): void {
         ViewMgr.ins.close(EViewKey.MainView);
         this._backgroundRoot.autoMove = false;
-        this._backgroundRoot.randomSkin();
+        this._backgroundRoot.setSkin(LevelModel.ins.skin);
         this._level = this._boot.levelLoader.loadLevel(levelId, this._backgroundRoot);
         ViewMgr.ins.open(EViewKey.HudView);
         this._levelLoadMask.ungroup();
