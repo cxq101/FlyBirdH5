@@ -147,12 +147,13 @@
               "_$id": "frv9odye",
               "_$type": "Image",
               "name": "imgSilver",
-              "x": 160,
-              "y": 53.000000000000114,
-              "width": 180,
-              "height": 180,
+              "x": 154,
+              "y": 70.00000000000011,
+              "width": 192,
+              "height": 153,
               "centerX": 0,
               "skin": "res://7f4c876a-cfd0-4912-83ed-8a2d21493ec9",
+              "useSourceSize": true,
               "color": "#ffffff"
             },
             {
@@ -246,12 +247,13 @@
               "_$id": "ajeru3we",
               "_$type": "Image",
               "name": "imgGold",
-              "x": 160,
-              "y": 53.000000000000114,
-              "width": 180,
-              "height": 180,
+              "x": 154,
+              "y": 68.00000000000011,
+              "width": 192,
+              "height": 153,
               "centerX": 0,
               "skin": "res://7c23f567-1532-4224-bb1e-02c4f0e35032",
+              "useSourceSize": true,
               "color": "#ffffff"
             }
           ]
@@ -271,7 +273,7 @@
           "label": "继续",
           "labelSize": 24,
           "labelBold": true,
-          "labelPadding": "7,0,0,0",
+          "labelPadding": "6,0,0,0",
           "labelStrokeColor": "#32556b",
           "strokeColors": "#32556b,#32cc6b,#ff0000",
           "labelColors": "#4e2623,#4e2623,#4e2623"

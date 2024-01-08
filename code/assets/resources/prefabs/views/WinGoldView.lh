@@ -150,7 +150,7 @@
           "label": "主界面",
           "labelSize": 24,
           "labelBold": true,
-          "labelPadding": "7,0,0,0",
+          "labelPadding": "6,0,0,0",
           "labelStrokeColor": "#32556b",
           "strokeColors": "#32556b,#32cc6b,#ff0000",
           "labelColors": "#4e2623,#4e2623,#4e2623"
@@ -170,7 +170,7 @@
           "label": "再来一局",
           "labelSize": 24,
           "labelBold": true,
-          "labelPadding": "7,0,0,0",
+          "labelPadding": "6,0,0,0",
           "labelStrokeColor": "#32556b",
           "strokeColors": "#32556b,#32cc6b,#ff0000",
           "labelColors": "#4e2623,#4e2623,#4e2623"
