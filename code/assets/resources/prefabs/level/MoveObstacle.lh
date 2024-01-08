@@ -5,7 +5,7 @@
   "name": "MoveObstacle",
   "x": 343.00000000000017,
   "y": 1080,
-  "width": 34,
+  "width": 36,
   "height": 200,
   "mask": {
     "_$ref": "ujnavrcf"
@@ -30,9 +30,11 @@
       "_$id": "0qdxemor",
       "_$type": "Image",
       "name": "Image",
-      "width": 34,
+      "width": 36,
       "height": 200,
-      "skin": "res://49a918d1-cac1-49c6-897f-35147e00aae7",
+      "left": 0,
+      "right": 0,
+      "skin": "res://3ba0fbcc-6ed1-4407-b933-84ed01761fb9",
       "color": "#ffffff"
     },
     {
@@ -40,7 +42,7 @@
       "_$type": "Sprite",
       "name": "Sprite",
       "y": -200,
-      "width": 34,
+      "width": 36,
       "height": 200,
       "_gcmds": [
         {
