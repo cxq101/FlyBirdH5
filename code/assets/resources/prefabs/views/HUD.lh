@@ -87,11 +87,11 @@
           "_$var": true,
           "_$type": "Image",
           "name": "imgHead",
-          "x": 149,
+          "x": 124,
           "y": -23,
           "width": 50,
           "height": 52,
-          "anchorX": 1,
+          "anchorX": 0.5,
           "centerY": -15,
           "skin": "res://b3476d59-1d90-4f65-af3a-9bcbac4cd850",
           "color": "#ffffff"
@@ -129,15 +129,16 @@
               "_$id": "78w0tvk2",
               "_$type": "Text",
               "name": "Text",
-              "y": 17,
+              "y": 35,
               "width": 220,
               "height": 30,
               "text": "90%的玩家止步于此",
               "fontSize": 20,
-              "color": "#FFFFFF",
+              "color": "rgba(54, 6, 6, 1)",
               "align": "center",
               "wordWrap": true,
-              "leading": 2
+              "leading": 2,
+              "stroke": 1
             }
           ]
         },
@@ -191,7 +192,7 @@
           "height": 30,
           "centerX": 1,
           "centerY": -27,
-          "text": "诅咒已消除！\n",
+          "text": "诅咒已消除！",
           "fontSize": 28,
           "color": "rgba(148, 71, 24, 1)",
           "bold": true,

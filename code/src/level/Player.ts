@@ -44,6 +44,7 @@ export class Player extends Laya.Script {
     private _isPressed: boolean = false;
     private _pressedTime: number = 0;
     private _isScrolling: boolean = false;
+    private _isPausing: boolean = false;
     private _footPoint: Laya.Point = Laya.Point.create();
     private _collisionBox: Laya.Rectangle = Laya.Rectangle.create();
 
@@ -97,6 +98,7 @@ export class Player extends Laya.Script {
     }
 
     onUpdate(): void {
+        if (this._isPausing) return;
         if (this._isScrolling) return;
         this.move();
         this.press();
@@ -120,6 +122,14 @@ export class Player extends Laya.Script {
     spawn(x: number, y?: number): void {
         this.owner.visible = true;
         this.owner.pos(x, y == null ? this.owner.y : y);
+    }
+
+    pause(): void {
+        this._isPausing = true;
+    }
+
+    resume(): void {
+        this._isPausing = false;
     }
 
     hide(): void {

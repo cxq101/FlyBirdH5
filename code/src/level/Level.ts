@@ -79,8 +79,11 @@ export class Level extends Laya.Script {
         let items = this.nodeManager.items;
         let item = this.tryCheckCollision(playerRect, items);
         // trigger
-        if (item && item.type == EItemType.FinalAward && !Game.ins.isWin()) {
+        if (item && item.type == EItemType.FinalAward) {
             Game.ins.win();
+            this._enabledCollision = false;
+            this.player.stop();
+            this.player.pause();
         };
         if (item && item.type == EItemType.FoCat) {
             item.collisionEvent();
@@ -194,6 +197,8 @@ export class Level extends Laya.Script {
 
         this.nodeManager.clear();
         this.parsePrefabData(levelId, startLine);
+        this._enabledCollision = true;
+        this.player.resume();
     }
 
     restart(): void {
