@@ -38,11 +38,10 @@
       "_$id": "cmkgwm4p",
       "_$type": "Image",
       "name": "LeftNode",
-      "x": -328,
-      "width": 720,
+      "width": 823,
       "height": 1280,
-      "scaleX": -1,
-      "skin": "res://bf1eaf69-a59e-4bc2-adb0-0c55451757f5",
+      "anchorX": 1,
+      "skin": "res://09e43168-88cc-43bc-8882-17e2215c7109",
       "useSourceSize": true,
       "color": "#ffffff"
     },
@@ -50,10 +49,9 @@
       "_$id": "nk2vbmqr",
       "_$type": "Image",
       "name": "RightNode",
-      "x": -371,
-      "width": 720,
+      "width": 779,
       "height": 1280,
-      "skin": "res://bf1eaf69-a59e-4bc2-adb0-0c55451757f5",
+      "skin": "res://5d754b86-5624-4a65-bcb6-3f9db38e9db3",
       "useSourceSize": true,
       "color": "#ffffff"
     }

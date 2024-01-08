@@ -251,13 +251,7 @@
           "x": 7398,
           "y": 1080,
           "visible": true,
-          "width": 347,
-          "_$child": [
-            {
-              "_$override": "nto3fldb",
-              "y": 0
-            }
-          ]
+          "width": 347
         },
         {
           "_$id": "s8k0ptl8",
@@ -540,7 +534,7 @@
           "name": "FoCat",
           "active": true,
           "x": -486,
-          "y": 1080,
+          "y": 1055,
           "visible": true
         }
       ]
