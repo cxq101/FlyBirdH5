@@ -127,8 +127,13 @@ export class ViewMgr extends Singleton<ViewMgr>() {
     public close(key: IViewKey, mode: EViewCloseMode = EViewCloseMode.HIDE): void {
         let view: BaseView = this.getShowView(key);
         if (view) {
-            view.exitAniHandler = new Laya.Handler(this, this._close, [key, mode]);
-            view.exitAnim();
+            let options = view.getParams();
+            if (options && options.enterAnim) {
+                view.exitAniHandler = new Laya.Handler(this, this._close, [key, mode]);
+                view.exitAnim();
+            } else {
+                this._close(key, mode);
+            }
         } else {
             console.warn("warning!!!, viewMgr try to close invalid view ", key, mode);
         }

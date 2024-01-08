@@ -6,6 +6,7 @@
  */
 export class PauseViewRTBase extends Laya.Box {
     public lblTitle!: Laya.Label;
+    public btnClose!: Laya.Button;
     public boxPractice!: Laya.Box;
     public imgNewRecord!: Laya.Image;
     public lblCurrentScore!: Laya.Label;

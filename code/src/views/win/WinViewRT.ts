@@ -9,6 +9,7 @@ export class WinViewRT extends WinViewRTBase {
     }
 
     onAwake(): void {
+        this.btnClose.on(Laya.Event.CLICK, this, this.onClickContinue);
         this.btnContinue.on(Laya.Event.CLICK, this, this.onClickContinue);
     }
 }

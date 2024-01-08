@@ -75,7 +75,7 @@ export class BaseView extends Laya.Script {
     }
 
     onEnable(): void {
-        this.enterAnim();
+        // this.enterAnim();
         this.soundEnabled && Laya.SoundManager.playSound(this.enterSound);
     }
 

@@ -35,6 +35,7 @@ export class PauseViewRT extends PauseViewRTBase {
     }
     
     onAwake(): void {
+        this.btnClose.on(Laya.Event.CLICK, this.onClickResume); 
         this.btnResume.on(Laya.Event.CLICK, this.onClickResume); 
         this.btnRestart.on(Laya.Event.CLICK, this.onClickRestart); 
         this.btnMainMenu.on(Laya.Event.CLICK, this.onClickMainMenu); 

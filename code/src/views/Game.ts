@@ -90,9 +90,9 @@ export class Game extends Singleton<Game>() {
         ViewRegUtils.register(k.SkinView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_SkinView);
         ViewRegUtils.register(k.HelpView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_Help);
         ViewRegUtils.register(k.HudView, l.UI, { showMask: false, extraClick: false, enterAnim: false }, ConfigPath.LH_Hud);
-        ViewRegUtils.register(k.PauseView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_PauseView);
-        ViewRegUtils.register(k.WinView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_WinView);
-        ViewRegUtils.register(k.WinGoldView, l.UI, { showMask: true, extraClick: true, enterAnim: false }, ConfigPath.LH_WinGoldView);
+        ViewRegUtils.register(k.PauseView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_PauseView);
+        ViewRegUtils.register(k.WinView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_WinView);
+        ViewRegUtils.register(k.WinGoldView, l.UI, { showMask: true, extraClick: false, enterAnim: false }, ConfigPath.LH_WinGoldView);
     }
 
     private loadRes(): void {
