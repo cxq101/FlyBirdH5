@@ -17,7 +17,7 @@
       "scriptPath": "../src/core/UI/BaseView.ts",
       "fadeTime": 0,
       "soundEnabled": true,
-      "enterSound": "resources/sound/UI_Forward.mp3",
+      "enterSound": "res://2efda4f8-ebc1-4874-8956-191ec29dcce8",
       "exitSound": "resources/sound/UI_Back.mp3"
     }
   ],

@@ -10,6 +10,7 @@ export class ConfigPath {
     static M_UI_Click = "resources/sound/UI_Click.mp3";
     static M_UI_Back = "resources/sound/UI_Back.mp3";
     static M_UI_Forward = "resources/sound/UI_Forward.mp3";
+    static M_UI_Success = "resources/sound/UI_Success.mp3";
     
     static LH_Hud = "resources/prefabs/views/HUD.lh";
     static LH_Help = "resources/prefabs/views/Help.lh";

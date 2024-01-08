@@ -17,7 +17,7 @@
       "scriptPath": "../src/core/UI/BaseView.ts",
       "fadeTime": 0,
       "soundEnabled": true,
-      "enterSound": "resources/sound/UI_Forward.mp3",
+      "enterSound": "res://2efda4f8-ebc1-4874-8956-191ec29dcce8",
       "exitSound": "resources/sound/UI_Back.mp3"
     }
   ],
@@ -159,15 +159,45 @@
               "_$id": "rdld1wyq",
               "_$type": "Image",
               "name": "imgReceived",
-              "x": 282.00000000000006,
-              "y": 188,
+              "x": 334.20000000000005,
+              "y": 205.4,
               "width": 87,
               "height": 29,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
               "scaleX": 1.2,
               "scaleY": 1.2,
               "skin": "res://58d0b12d-57f7-44e5-909f-337badf46b42",
               "useSourceSize": true,
-              "color": "#ffffff"
+              "color": "#ffffff",
+              "_$comp": [
+                {
+                  "_$type": "Animator2D",
+                  "controller": {
+                    "_$uuid": "0b8fb612-4f3f-4786-90fa-2c31993b9ea4",
+                    "_$type": "AnimationController2D"
+                  },
+                  "controllerLayers": [
+                    {
+                      "_$type": "AnimatorControllerLayer2D",
+                      "name": "Base Layer",
+                      "states": [
+                        {
+                          "_$type": "AnimatorState2D",
+                          "name": "WinReceive",
+                          "clipStart": 0,
+                          "clip": {
+                            "_$uuid": "fad80791-dde8-4358-a2e0-a0eb0c5e0bed",
+                            "_$type": "AnimationClip2D"
+                          },
+                          "soloTransitions": []
+                        }
+                      ],
+                      "defaultStateName": "WinReceive"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
