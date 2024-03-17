@@ -18,7 +18,7 @@
           "name": "Box",
           "active": true,
           "x": -1200,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 17688,
           "height": 180,
@@ -39,7 +39,7 @@
           "name": "obstacle",
           "active": true,
           "x": 670,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -48,7 +48,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 1038,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -57,7 +57,7 @@
           "name": "obstacle(8)",
           "active": true,
           "x": 1378,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -66,7 +66,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1754,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -75,7 +75,7 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 2100,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -84,7 +84,7 @@
           "name": "obstacle(11)",
           "active": true,
           "x": 2724,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -93,7 +93,7 @@
           "name": "obstacle(12)",
           "active": true,
           "x": 3188,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -103,7 +103,7 @@
           "name": "obstacle(13)",
           "active": true,
           "x": 3620,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -112,7 +112,7 @@
           "name": "obstacle(14)",
           "active": true,
           "x": 3988,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -121,7 +121,7 @@
           "name": "obstacle(15)",
           "active": true,
           "x": 4328,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -130,7 +130,7 @@
           "name": "obstacle(16)",
           "active": true,
           "x": 4704,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -139,7 +139,7 @@
           "name": "obstacle(17)",
           "active": true,
           "x": 5050,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -148,7 +148,7 @@
           "name": "obstacle(18)",
           "active": true,
           "x": 5674,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -157,7 +157,7 @@
           "name": "obstacle(19)",
           "active": true,
           "x": 6009,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -167,7 +167,7 @@
           "name": "obstacle(20)",
           "active": true,
           "x": 385,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -176,7 +176,7 @@
           "name": "obstacle(21)",
           "active": true,
           "x": 14,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -185,7 +185,7 @@
           "name": "obstacle(22)",
           "active": true,
           "x": 2416,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -194,7 +194,7 @@
           "name": "obstacle(23)",
           "active": true,
           "x": 5354,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -203,7 +203,7 @@
           "name": "obstacle(24)",
           "active": true,
           "x": 6372,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -212,7 +212,7 @@
           "name": "obstacle(25)",
           "active": true,
           "x": 6748,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -221,7 +221,7 @@
           "name": "obstacle(26)",
           "active": true,
           "x": 7094,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -230,7 +230,7 @@
           "name": "obstacle(28)",
           "active": true,
           "x": 7981,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -240,7 +240,7 @@
           "name": "obstacle(29)",
           "active": true,
           "x": 2429,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -249,7 +249,7 @@
           "name": "obstacle(30)",
           "active": true,
           "x": 7398,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 347
         },
@@ -259,7 +259,7 @@
           "name": "obstacle(31)",
           "active": true,
           "x": 9054,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -268,7 +268,7 @@
           "name": "obstacle(32)",
           "active": true,
           "x": 9422,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -277,7 +277,7 @@
           "name": "obstacle(33)",
           "active": true,
           "x": 9762,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -286,7 +286,7 @@
           "name": "obstacle(34)",
           "active": true,
           "x": 10138,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -295,7 +295,7 @@
           "name": "obstacle(35)",
           "active": true,
           "x": 10484,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -304,7 +304,7 @@
           "name": "obstacle(36)",
           "active": true,
           "x": 11108,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -313,7 +313,7 @@
           "name": "obstacle(37)",
           "active": true,
           "x": 11572,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -323,7 +323,7 @@
           "name": "obstacle(38)",
           "active": true,
           "x": 12004,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -332,7 +332,7 @@
           "name": "obstacle(39)",
           "active": true,
           "x": 12372,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -341,7 +341,7 @@
           "name": "obstacle(40)",
           "active": true,
           "x": 12712,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -350,7 +350,7 @@
           "name": "obstacle(41)",
           "active": true,
           "x": 13088,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -359,7 +359,7 @@
           "name": "obstacle(42)",
           "active": true,
           "x": 13434,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -368,7 +368,7 @@
           "name": "obstacle(43)",
           "active": true,
           "x": 14058,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -377,7 +377,7 @@
           "name": "obstacle(44)",
           "active": true,
           "x": 14393,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -387,7 +387,7 @@
           "name": "obstacle(45)",
           "active": true,
           "x": 8769,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -396,7 +396,7 @@
           "name": "obstacle(46)",
           "active": true,
           "x": 8398,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -405,7 +405,7 @@
           "name": "obstacle(47)",
           "active": true,
           "x": 10800,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -414,7 +414,7 @@
           "name": "obstacle(48)",
           "active": true,
           "x": 13738,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -423,7 +423,7 @@
           "name": "obstacle(49)",
           "active": true,
           "x": 14756,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -432,7 +432,7 @@
           "name": "obstacle(50)",
           "active": true,
           "x": 15132,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -441,7 +441,7 @@
           "name": "obstacle(51)",
           "active": true,
           "x": 15478,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -450,7 +450,7 @@
           "name": "obstacle(52)",
           "active": true,
           "x": 16102,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 366
         },
@@ -460,7 +460,7 @@
           "name": "obstacle(53)",
           "active": true,
           "x": 16437,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -470,7 +470,7 @@
           "name": "obstacle(54)",
           "active": true,
           "x": 10813,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -479,7 +479,7 @@
           "name": "obstacle(55)",
           "active": true,
           "x": 15782,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 347
         },
@@ -489,7 +489,7 @@
           "name": "MoveObstacle",
           "active": true,
           "x": 4049.9999999999995,
-          "y": 1079.9999999999998,
+          "y": 810,
           "visible": true
         },
         {
@@ -498,7 +498,7 @@
           "name": "MoveObstacle(1)",
           "active": true,
           "x": 4386,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -507,7 +507,7 @@
           "name": "MoveObstacle(2)",
           "active": true,
           "x": 5110,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -516,7 +516,7 @@
           "name": "MoveObstacle(3)",
           "active": true,
           "x": 5408,
-          "y": 1080,
+          "y": 810,
           "visible": true
         }
       ]
@@ -534,7 +534,7 @@
           "name": "FoCat",
           "active": true,
           "x": -486,
-          "y": 1055,
+          "y": 785,
           "visible": true
         }
       ]

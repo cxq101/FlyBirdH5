@@ -101,6 +101,26 @@
       "labelColors": "#4e2623,#4e2623,#4e2623"
     },
     {
+      "_$id": "8ncf36nb",
+      "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
+      "_$var": true,
+      "name": "btnTest",
+      "active": true,
+      "x": 360.00000000000006,
+      "y": 1093.9999999999998,
+      "visible": false,
+      "width": 200,
+      "height": 60,
+      "skin": "res://5d93fb33-86e9-4c0b-ba9b-b8192ec27b11",
+      "label": "测试",
+      "labelSize": 28,
+      "labelBold": true,
+      "labelPadding": "7,0,0,0",
+      "labelStrokeColor": "#32556b",
+      "strokeColors": "#32556b,#32cc6b,#ff0000",
+      "labelColors": "#4e2623,#4e2623,#4e2623"
+    },
+    {
       "_$id": "yuogmj57",
       "_$prefab": "15b0bef1-5a2f-48a8-91c9-a4a63e6d9ce0",
       "_$var": true,

@@ -20,6 +20,7 @@ export class ConfigPath {
     static LH_WinView = "resources/prefabs/views/WinView.lh";
     static LH_WinGoldView = "resources/prefabs/views/WinGoldView.lh";
 
+    static LH_Level_Test = "resources/prefabs/level/chapter/Level_Test.lh";
     static LH_Level_10000 = "resources/prefabs/level/chapter/Level_10000.lh";
     static LH_Level_10001 = "resources/prefabs/level/chapter/Level_10001.lh";
     static LH_Level_10002 = "resources/prefabs/level/chapter/Level_10002.lh";
@@ -36,6 +37,7 @@ export class ConfigPath {
         {url: ConfigPath.LH_WinView, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_WinGoldView, type: Laya.Loader.HIERARCHY},
 
+        {url: ConfigPath.LH_Level_Test, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Level_10000, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Level_10001, type: Laya.Loader.HIERARCHY},
         {url: ConfigPath.LH_Level_10002, type: Laya.Loader.HIERARCHY},

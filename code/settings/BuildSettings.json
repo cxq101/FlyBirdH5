@@ -5,5 +5,8 @@
   "excludeFilesRule": [],
   "wxgame": {
     "appid": "wx46d32f0f53204c83"
+  },
+  "bytedancegame": {
+    "appid": "tt9f42e9ff0072f7eb02"
   }
 }

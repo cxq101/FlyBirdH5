@@ -20,13 +20,14 @@ export class MainViewRT extends MainViewRTBase {
         Game.ins.enterLevel(ELevelConst.Level_10001);
     }
 
-    private onClickPractice(): void {
-        Game.ins.enterLevel(ELevelConst.LevelPracticeId);
+    private onClickTest(): void {
+        Game.ins.enterLevel(ELevelConst.LevelTestId);
     }
-
+    
     onAwake(): void {
         this.btnHelp.on(Laya.Event.CLICK, this.onClickHelp);
         this.btnSkin.on(Laya.Event.CLICK, this.onClickSkin);
         this.btnPlay.on(Laya.Event.CLICK, this.onClickPlay);
+        this.btnTest.on(Laya.Event.CLICK, this.onClickTest);
     }
 }

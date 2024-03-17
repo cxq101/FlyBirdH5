@@ -23,6 +23,8 @@ export enum ELevelMode {
 }
 
 export enum ELevelConst {
+    LevelTestId = 0,
+
     LevelPracticeId = 10000,
 
     Level_10001 = 10001,
@@ -30,6 +32,7 @@ export enum ELevelConst {
 }
 
 export const LevelConfig = {
+    [ELevelConst.LevelTestId]: { path: ConfigPath.LH_Level_Test },
     [ELevelConst.LevelPracticeId]: { path: ConfigPath.LH_Level_10000 },
     [ELevelConst.Level_10001]: { path: ConfigPath.LH_Level_10001 },
     [ELevelConst.Level_10002]: { path: ConfigPath.LH_Level_10002 },

@@ -19,7 +19,7 @@
           "name": "Box",
           "active": true,
           "x": -1200,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 18248,
           "height": 180,
@@ -40,7 +40,7 @@
           "name": "obstacle",
           "active": true,
           "x": 670,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -49,7 +49,7 @@
           "name": "obstacle(7)",
           "active": true,
           "x": 1038,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -58,7 +58,7 @@
           "name": "obstacle(8)",
           "active": true,
           "x": 1378,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -67,7 +67,7 @@
           "name": "obstacle(9)",
           "active": true,
           "x": 1754,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -76,7 +76,7 @@
           "name": "obstacle(10)",
           "active": true,
           "x": 2045,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -85,7 +85,7 @@
           "name": "obstacle(11)",
           "active": true,
           "x": 2654,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 279
         },
@@ -95,7 +95,7 @@
           "name": "obstacle(12)",
           "active": true,
           "x": 3188,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -105,7 +105,7 @@
           "name": "obstacle(13)",
           "active": true,
           "x": 3620,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -114,7 +114,7 @@
           "name": "obstacle(14)",
           "active": true,
           "x": 3988,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -123,7 +123,7 @@
           "name": "obstacle(15)",
           "active": true,
           "x": 4328,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -132,7 +132,7 @@
           "name": "obstacle(16)",
           "active": true,
           "x": 4704,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -141,7 +141,7 @@
           "name": "obstacle(17)",
           "active": true,
           "x": 5050,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -150,7 +150,7 @@
           "name": "obstacle(18)",
           "active": true,
           "x": 5674,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "height": 34,
           "width": 265
@@ -161,7 +161,7 @@
           "name": "obstacle(19)",
           "active": true,
           "x": 6138,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -171,7 +171,7 @@
           "name": "obstacle(20)",
           "active": true,
           "x": 6475,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -181,7 +181,7 @@
           "name": "obstacle(21)",
           "active": true,
           "x": 6818,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -191,7 +191,7 @@
           "name": "obstacle(22)",
           "active": true,
           "x": 7176,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -201,7 +201,7 @@
           "name": "obstacle(23)",
           "active": true,
           "x": 5381,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -210,7 +210,7 @@
           "name": "obstacle(24)",
           "active": true,
           "x": 341,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -219,7 +219,7 @@
           "name": "obstacle(25)",
           "active": true,
           "x": 16,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -228,7 +228,7 @@
           "name": "obstacle(26)",
           "active": true,
           "x": 2350,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -237,7 +237,7 @@
           "name": "obstacle(27)",
           "active": true,
           "x": 8191,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -246,7 +246,7 @@
           "name": "obstacle(28)",
           "active": true,
           "x": 8559,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -255,7 +255,7 @@
           "name": "obstacle(29)",
           "active": true,
           "x": 8899,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -264,7 +264,7 @@
           "name": "obstacle(30)",
           "active": true,
           "x": 9275,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -273,7 +273,7 @@
           "name": "obstacle(31)",
           "active": true,
           "x": 9566,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -282,7 +282,7 @@
           "name": "obstacle(32)",
           "active": true,
           "x": 10175,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 279
         },
@@ -292,7 +292,7 @@
           "name": "obstacle(33)",
           "active": true,
           "x": 10709,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -302,7 +302,7 @@
           "name": "obstacle(34)",
           "active": true,
           "x": 11141,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -311,7 +311,7 @@
           "name": "obstacle(35)",
           "active": true,
           "x": 11509,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -320,7 +320,7 @@
           "name": "obstacle(36)",
           "active": true,
           "x": 11849,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -329,7 +329,7 @@
           "name": "obstacle(37)",
           "active": true,
           "x": 12225,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -338,7 +338,7 @@
           "name": "obstacle(38)",
           "active": true,
           "x": 12571,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -347,7 +347,7 @@
           "name": "obstacle(39)",
           "active": true,
           "x": 13195,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "height": 34,
           "width": 265
@@ -358,7 +358,7 @@
           "name": "obstacle(40)",
           "active": true,
           "x": 13659,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -368,7 +368,7 @@
           "name": "obstacle(41)",
           "active": true,
           "x": 13996,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -378,7 +378,7 @@
           "name": "obstacle(42)",
           "active": true,
           "x": 14339,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -388,7 +388,7 @@
           "name": "obstacle(43)",
           "active": true,
           "x": 14697,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -398,7 +398,7 @@
           "name": "obstacle(44)",
           "active": true,
           "x": 12902,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -407,7 +407,7 @@
           "name": "obstacle(45)",
           "active": true,
           "x": 7862,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -416,7 +416,7 @@
           "name": "obstacle(46)",
           "active": true,
           "x": 7537,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -425,7 +425,7 @@
           "name": "obstacle(47)",
           "active": true,
           "x": 9871,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -434,7 +434,7 @@
           "name": "obstacle(48)",
           "active": true,
           "x": 15081,
-          "y": 1080,
+          "y": 810,
           "visible": true,
           "width": 212
         },
@@ -444,7 +444,7 @@
           "name": "MoveObstacle",
           "active": true,
           "x": 3276,
-          "y": 1086,
+          "y": 810,
           "visible": true
         },
         {
@@ -453,7 +453,7 @@
           "name": "MoveObstacle(1)",
           "active": true,
           "x": 4389,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -462,7 +462,7 @@
           "name": "MoveObstacle(2)",
           "active": true,
           "x": 5112,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -471,7 +471,7 @@
           "name": "MoveObstacle(3)",
           "active": true,
           "x": 5782,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -480,7 +480,7 @@
           "name": "MoveObstacle(4)",
           "active": true,
           "x": 6217,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -489,7 +489,7 @@
           "name": "MoveObstacle(5)",
           "active": true,
           "x": 6217,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -498,7 +498,7 @@
           "name": "MoveObstacle(6)",
           "active": true,
           "x": 7259,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -507,7 +507,7 @@
           "name": "MoveObstacle(7)",
           "active": true,
           "x": 7914,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -516,7 +516,7 @@
           "name": "MoveObstacle(8)",
           "active": true,
           "x": 8612,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -525,7 +525,7 @@
           "name": "MoveObstacle(9)",
           "active": true,
           "x": 9926,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -534,7 +534,7 @@
           "name": "MoveObstacle(10)",
           "active": true,
           "x": 11561,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -543,7 +543,7 @@
           "name": "MoveObstacle(11)",
           "active": true,
           "x": 12278,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -552,7 +552,7 @@
           "name": "MoveObstacle(12)",
           "active": true,
           "x": 13301,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -561,7 +561,7 @@
           "name": "MoveObstacle(13)",
           "active": true,
           "x": 13740,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -570,7 +570,7 @@
           "name": "MoveObstacle(14)",
           "active": true,
           "x": 14083,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -579,7 +579,7 @@
           "name": "MoveObstacle(15)",
           "active": true,
           "x": 14423,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -588,7 +588,7 @@
           "name": "MoveObstacle(16)",
           "active": true,
           "x": 14787,
-          "y": 1080,
+          "y": 810,
           "visible": true
         },
         {
@@ -597,7 +597,7 @@
           "name": "MoveObstacle(17)",
           "active": true,
           "x": 15161,
-          "y": 1080,
+          "y": 810,
           "visible": true
         }
       ]
@@ -615,7 +615,7 @@
           "name": "FoCat",
           "active": true,
           "x": -486,
-          "y": 1055,
+          "y": 785,
           "visible": true
         },
         {
@@ -624,7 +624,7 @@
           "name": "FinalGoldAward",
           "active": true,
           "x": 15431,
-          "y": 756,
+          "y": 560,
           "visible": true
         }
       ]

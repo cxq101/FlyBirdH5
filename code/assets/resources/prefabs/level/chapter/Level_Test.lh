@@ -1,0 +1,114 @@
+{
+  "_$ver": 1,
+  "_$id": "jb7wmp40",
+  "_$type": "Box",
+  "name": "Level_10001",
+  "x": -1615,
+  "y": 3,
+  "width": 4000,
+  "height": 1280,
+  "_$child": [
+    {
+      "_$id": "xkpqlhy8",
+      "_$type": "Sprite",
+      "name": "groundRoot",
+      "width": 0,
+      "height": 0,
+      "_$child": [
+        {
+          "_$id": "y4kg9ji5",
+          "_$prefab": "9546ac15-15a5-4cdc-aa98-b1befed5ee08",
+          "name": "Box",
+          "active": true,
+          "x": -1196,
+          "y": 1080,
+          "visible": true,
+          "width": 5196,
+          "height": 180,
+          "bgColor": null
+        }
+      ]
+    },
+    {
+      "_$id": "34bxulf1",
+      "_$type": "Sprite",
+      "name": "obstacleRoot",
+      "width": 1,
+      "height": 1,
+      "_$child": [
+        {
+          "_$id": "vry7yak7",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle",
+          "active": true,
+          "x": 13,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "u7ctqlcu",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(7)",
+          "active": true,
+          "x": 422,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "ycxma0qd",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(8)",
+          "active": true,
+          "x": 803,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "3suykb1q",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(9)",
+          "active": true,
+          "x": 1097,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "tu6waolr",
+          "_$prefab": "64e45b1d-4c5c-4dbf-949c-469041cf1ca7",
+          "name": "obstacle(10)",
+          "active": true,
+          "x": 1443,
+          "y": 1080,
+          "visible": true
+        },
+        {
+          "_$id": "3lcm3rni",
+          "_$prefab": "43b2afc2-28c5-4b68-b5d5-36ed13d41d61",
+          "name": "MoveObstacle(3)",
+          "active": true,
+          "x": 1500.0000000000002,
+          "y": 1080,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "_$id": "4betf6jb",
+      "_$type": "Sprite",
+      "name": "itemRoot",
+      "width": 0,
+      "height": 0,
+      "_$child": [
+        {
+          "_$id": "9q2djghy",
+          "_$prefab": "46e31b81-bdc1-42e6-942e-b36cdcc708f8",
+          "name": "finalAward",
+          "active": true,
+          "x": 1800,
+          "y": 780,
+          "visible": true
+        }
+      ]
+    }
+  ]
+}
